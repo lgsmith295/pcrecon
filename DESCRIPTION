@@ -3,14 +3,17 @@ Type: Package
 Title: Princpal Component Regression for Dendroclimatology
 Version: 0.1.0
 Authors@R: c(
-    person("Laura", "Smith", email = "lsmit224@vols.utk.edu", role = c("aut", "cre")),
+    person("Laura", "Hocking-Smith", email = "lsmit224@vols.utk.edu", role = c("aut", "cre")),
     person("Daniel", "Hocking", email = "djhocking@gmail.com", role = "aut"),
     person("Nicholas", "Nagle", email = "nnagle@utk.edu", role = "aut"))
-Maintainer: Laura Smith <lsmit224@vols.utk.edu>
+Maintainer: Laura Hocking-Smith <lsmit224@vols.utk.edu>
 Description: Principal component regression using tree ring data for paleoclimate reconstruction.
     Use four spaces when indenting paragraphs within the Description.
-License: MIT LICENSE
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.0.2
 Imports: MuMIn
+Date: 2020-04-04
+Suggests: 
+    testthat
