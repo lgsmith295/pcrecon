@@ -2,3 +2,4 @@
 
 export(perf_stats)
 export(stepAICc)
+import(dplyr)
