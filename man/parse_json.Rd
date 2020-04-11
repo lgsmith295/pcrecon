@@ -15,3 +15,8 @@ dataframe of ID, lat, lon, elevation
 \description{
 Parse metadata json files from ITRDB
 }
+\examples{
+\dontrun{
+
+}
+}

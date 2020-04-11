@@ -9,7 +9,6 @@
 #'
 #' @return R2, Pearson_R2, RE, CE for validation data
 #' @details coming soon
-#' @import dplyr
 #' @export
 #'
 #' @examples

@@ -1,5 +1,3 @@
-
-
 #' Parse metadata json files from ITRDB 
 #'
 #' @param dir file directory where json files are saved
@@ -8,6 +6,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
+#' 
+#' }
 parse_json <- function(dir) {
   # make list of files to import
   files <- list.files(dir)
