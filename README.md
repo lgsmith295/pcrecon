@@ -1,8 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# pcreg: Principal Component Regression analysis for tree ring data
-
+# pcreg: Principal Component Regression analysis for tree ring dat
 ## Motivation
 
 ## How to Cite
