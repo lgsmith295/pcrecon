@@ -1,0 +1,13 @@
+---
+title: "pcreg package manuscript"
+author: "Laura Smith"
+date: "4/10/2020"
+output: 
+  redoc::redoc
+---
+
+Set up argument about necessity (current program is a black box that makes replicable science harder) Demonstrate that this package can numerically replicate results of PCreg program. Discuss model choices.
+
+
+
+
