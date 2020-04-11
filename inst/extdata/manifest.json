@@ -1,0 +1,3473 @@
+{
+  "files" : [ {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm569x-noaa.crn",
+    "filesize" : "5173",
+    "MD5" : "00b8228d278345ff86bcee7758cbabb2"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm569xr-noaa.crn",
+    "filesize" : "5209",
+    "MD5" : "d4e84110a4c8b839a4df2fb39014eb61"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm569xa-noaa.crn",
+    "filesize" : "5186",
+    "MD5" : "5a724539c69f8286214e010f31bddd24"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm569e-noaa.rwl",
+    "filesize" : "20864",
+    "MD5" : "954919c015315d4869e40f74c050d08c"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm569l-noaa.rwl",
+    "filesize" : "18610",
+    "MD5" : "6b9ae90097220a92ee93d3ad0dbdcbd5"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm569-noaa.rwl",
+    "filesize" : "21141",
+    "MD5" : "0c04dec717be5348f4d3da724b71f59b"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm569.crn",
+    "filesize" : "6879",
+    "MD5" : "3fdb74b4630af8cee6c88fa08f935fa2"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm569x.crn",
+    "filesize" : "6879",
+    "MD5" : "68b4adfa67b05e568958f16bcd79d9db"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm569-noaa.crn",
+    "filesize" : "5137",
+    "MD5" : "7322600a7031b75e6945bd5882f8e869"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm569r-noaa.crn",
+    "filesize" : "5173",
+    "MD5" : "cbff02f2c38f9eead7e84ffa745f2396"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm569a-noaa.crn",
+    "filesize" : "5150",
+    "MD5" : "6f5dc4e4c079f166bc9960deaf33d3e5"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm569n-noaa.rwl",
+    "filesize" : "17216",
+    "MD5" : "54ac9abc86567ac2072e4f4198e38bdd"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm569x-noaa.rwl",
+    "filesize" : "17216",
+    "MD5" : "5cd5b0aaf5b8a3900e93c336310c4278"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm569.rwl",
+    "filesize" : "22410",
+    "MD5" : "f56375b94665820db4bdf9d50c9e588e"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm569e.rwl",
+    "filesize" : "22411",
+    "MD5" : "5f3983dfd7772681b3b5b76c6b49c162"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm569i.rwl",
+    "filesize" : "22413",
+    "MD5" : "6af59699f4c7238bab296095b3ac17f0"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm569l.rwl",
+    "filesize" : "22410",
+    "MD5" : "7593671cb3e44c05e481c256a0bbb46a"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm569n.rwl",
+    "filesize" : "22415",
+    "MD5" : "6c73bd2340ce654681f23d123af963e9"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm569t.rwl",
+    "filesize" : "22412",
+    "MD5" : "f09e90f8eac4543f5a3d7ce02b02eb6b"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm569x.rwl",
+    "filesize" : "22415",
+    "MD5" : "9d07956995148251ce07522381a25ff9"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm569i-noaa.rwl",
+    "filesize" : "20233",
+    "MD5" : "0bd7627d99e4092f0bbc9ab04a715bc4"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm569t-noaa.rwl",
+    "filesize" : "20211",
+    "MD5" : "8f4a56a9d6bedeb9c1953b22110ad535"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm545n-noaa.crn",
+    "filesize" : "6055",
+    "MD5" : "7916e8e3dede2ec2b8bfb3591b61ae55"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm545t-noaa.crn",
+    "filesize" : "6056",
+    "MD5" : "e488034838330f512c8f81f87dc96e85"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm545x-noaa.crn",
+    "filesize" : "6055",
+    "MD5" : "70345c148c4ff6f9b96ab318321551ff"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm545e.crn",
+    "filesize" : "2132",
+    "MD5" : "23fc57491a6a83a7ba480a7cd51a0f2e"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm545i.crn",
+    "filesize" : "2132",
+    "MD5" : "6e23e5523b3cf8219eef7636e454b7dc"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm545l.crn",
+    "filesize" : "2132",
+    "MD5" : "9b85c95bdddda7424a65cd775c34cc67"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm545n.crn",
+    "filesize" : "2132",
+    "MD5" : "5992f05ee73085cac333ff160a073d71"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm545t.crn",
+    "filesize" : "2132",
+    "MD5" : "a2a0c29011703fde258695c847f306a2"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm545x.crn",
+    "filesize" : "2132",
+    "MD5" : "8805a2461d5b71de9b08057dd6c8cd9c"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm545-noaa.crn",
+    "filesize" : "6019",
+    "MD5" : "3106e86ebe171b0a58a231411d3e46e3"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm545d-noaa.crn",
+    "filesize" : "6021",
+    "MD5" : "b025d7b83a0fa822729d9fefc305afcc"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm545e-noaa.crn",
+    "filesize" : "6055",
+    "MD5" : "f4c1507dacd9b98e9bafb3dbe8920b3c"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm545i-noaa.crn",
+    "filesize" : "6057",
+    "MD5" : "80f322fc7079a100e953101301c369e0"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm545l-noaa.crn",
+    "filesize" : "6054",
+    "MD5" : "0e2325c03e6da1bacc54308911b64eea"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm545x-noaa.rwl",
+    "filesize" : "7627",
+    "MD5" : "cbfb7a823d21231307c8cfbaad68c446"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm545e-noaa.rwl",
+    "filesize" : "8070",
+    "MD5" : "247e89cd835908cd4178e11970499109"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm545l-noaa.rwl",
+    "filesize" : "7593",
+    "MD5" : "fb1796b939398095dab17bcb13b77257"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm545-noaa.rwl",
+    "filesize" : "8141",
+    "MD5" : "30cd8335f1ed257030be234aad57e97e"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm545d-noaa.rwl",
+    "filesize" : "7639",
+    "MD5" : "58269efa2a1740116f5b76dbf087b058"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm545.crn",
+    "filesize" : "2132",
+    "MD5" : "87295ba8edbf1d80b6384057877c39c3"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm545d.crn",
+    "filesize" : "2132",
+    "MD5" : "6d20de55c3d3320c8c7cb332463d1086"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm545.rwl",
+    "filesize" : "4442",
+    "MD5" : "ca47e997a9f609bb029002f3aba8b6f9"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm545d.rwl",
+    "filesize" : "4660",
+    "MD5" : "04df3e720ef564d33776acb80513cf90"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm545e.rwl",
+    "filesize" : "4684",
+    "MD5" : "7b4c905665926e1f57dcd7e38e9b0bed"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm545i.rwl",
+    "filesize" : "4684",
+    "MD5" : "4ad8b56a21004cc02db53561c64bcf02"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm545l.rwl",
+    "filesize" : "4684",
+    "MD5" : "635ce04967a8bc4dff7d45b132b60674"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm545n.rwl",
+    "filesize" : "4684",
+    "MD5" : "8f0c679bea3275e5a94fdefdb0f385f6"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm545t.rwl",
+    "filesize" : "4660",
+    "MD5" : "918b585c62cc377dec178d3f4ee05d3f"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm545x.rwl",
+    "filesize" : "4660",
+    "MD5" : "a2ff12f7bf52c5392bdeeab065e65bae"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm545i-noaa.rwl",
+    "filesize" : "7631",
+    "MD5" : "d77389a1a612616a79e4a3a1f0aa6dd8"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm545t-noaa.rwl",
+    "filesize" : "7631",
+    "MD5" : "2035a50bc5eb542330f95e1bfb97067e"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm545n-noaa.rwl",
+    "filesize" : "7623",
+    "MD5" : "931e67ce0f0b273c81a8a48a6ff9e8bd"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm537.rwl",
+    "filesize" : "15736",
+    "MD5" : "ef511a0e87bda44e3c0f1298d47908c8"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm537d.rwl",
+    "filesize" : "15978",
+    "MD5" : "2299626a46b807786ecfe353ae89fe7c"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm537e.rwl",
+    "filesize" : "15978",
+    "MD5" : "cf78afdb9a923ebbea87157674b39837"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm537i.rwl",
+    "filesize" : "15972",
+    "MD5" : "7dead2079d927152f43c97b284ec4468"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm537l.rwl",
+    "filesize" : "15978",
+    "MD5" : "4dbe706a7934556e3a65556d35be0512"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm537n.rwl",
+    "filesize" : "15830",
+    "MD5" : "34eff55cbdc2d317d6916cf00650f5b0"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm537t.rwl",
+    "filesize" : "15830",
+    "MD5" : "23b77ef4d561a4066851597e6ecfb0e2"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm537x.rwl",
+    "filesize" : "15978",
+    "MD5" : "e945eebb5ef5f95a203a8977cd751cfe"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm537i-noaa.rwl",
+    "filesize" : "26112",
+    "MD5" : "b8a3c36314c0f79d94f2250da976bc68"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm537t-noaa.rwl",
+    "filesize" : "26098",
+    "MD5" : "c2b44511aad0c76d39b951d2b189eaf6"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm537n-noaa.rwl",
+    "filesize" : "26085",
+    "MD5" : "8cee7e17a8a82aa33631d77bc66187d4"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm537x-noaa.rwl",
+    "filesize" : "26085",
+    "MD5" : "77c1bce521d9e69c83f8b25fe069841c"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm537e-noaa.rwl",
+    "filesize" : "27461",
+    "MD5" : "0de6ac8ef7be8abe7e9a3f4c9d53996a"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm537l-noaa.rwl",
+    "filesize" : "26453",
+    "MD5" : "9b833f5309a02fd1c741a834304f6ec3"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm537-noaa.rwl",
+    "filesize" : "27802",
+    "MD5" : "5aa06afbf0fc037ffeba586e4334e377"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm537d-noaa.rwl",
+    "filesize" : "26123",
+    "MD5" : "df4533ba1a92ace810e473d0485ea634"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm537.crn",
+    "filesize" : "3690",
+    "MD5" : "c514328da739544527622eb2194f8c9a"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm537d.crn",
+    "filesize" : "3690",
+    "MD5" : "5f49152c245a1515c5c69c739a33b4bf"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm537e.crn",
+    "filesize" : "3690",
+    "MD5" : "594f06c1168e73a8b3311d2b07dc15ae"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm537i.crn",
+    "filesize" : "3690",
+    "MD5" : "d547477a6ec6283601a81f9d9deb1435"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm537l.crn",
+    "filesize" : "3690",
+    "MD5" : "73ba5009de1824cf8d0d83b7b9e62194"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm537n.crn",
+    "filesize" : "3690",
+    "MD5" : "12d83acf26a67ac9969eeee1b1079096"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm537t.crn",
+    "filesize" : "3690",
+    "MD5" : "60b95d6be5bf42c3b2801a3ad5c6ad2a"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm537x.crn",
+    "filesize" : "3690",
+    "MD5" : "b982c60246bc487b1a5f16ebd93146a6"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm537-noaa.crn",
+    "filesize" : "8700",
+    "MD5" : "135896cac71983da4650b286845803cb"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm537d-noaa.crn",
+    "filesize" : "8702",
+    "MD5" : "9a4ace892b3e1b7429ee397861ab221d"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm537e-noaa.crn",
+    "filesize" : "8736",
+    "MD5" : "a0a47a89609e219e416ded87fafdaec1"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm537i-noaa.crn",
+    "filesize" : "8738",
+    "MD5" : "5467b50c294520b1cba133dbe57d51b6"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm537l-noaa.crn",
+    "filesize" : "8735",
+    "MD5" : "b806e90210bb3e00d3947c13b9b0c3c1"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm537n-noaa.crn",
+    "filesize" : "8736",
+    "MD5" : "f546c05e139f8d0ff4410c304fefa03c"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm537t-noaa.crn",
+    "filesize" : "8737",
+    "MD5" : "cfde4ab235b6308638f4e8895cf38a43"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm537x-noaa.crn",
+    "filesize" : "8736",
+    "MD5" : "f1e965ac0e29e6b1239415a973545602"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm026-noaa.rwl",
+    "filesize" : "67377",
+    "MD5" : "e52ed7a8c9557e22c1a1f89d1e0ae5b8"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm026.crn",
+    "filesize" : "5939",
+    "MD5" : "8367b67e9bc6288ef8f54a70dfdcd8ea"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm026-noaa.crn",
+    "filesize" : "11421",
+    "MD5" : "4684c1d76de0d8d637bc238f162dd993"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm026.rwl",
+    "filesize" : "67488",
+    "MD5" : "3553de8895d1a2295251769f61bc244f"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm500-noaa.crn",
+    "filesize" : "6526",
+    "MD5" : "1f3c4d0d54004ac2eede9316e7f75263"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm500.rwl",
+    "filesize" : "39614",
+    "MD5" : "b8eb0c28fdf485f959cad4b166209032"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm500-noaa.rwl",
+    "filesize" : "42597",
+    "MD5" : "0ab2e3fa3cc988cff8ec1565e2fd380c"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm500.crn",
+    "filesize" : "2624",
+    "MD5" : "c3dc0c7dc7a023d0194511cd06edff5d"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm038-noaa.rwl",
+    "filesize" : "51458",
+    "MD5" : "4c32671d4ab8455ef31c23ac434f5b57"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm038.crn",
+    "filesize" : "4229",
+    "MD5" : "ba186886ba8cdd832caa9052d60f388d"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm038-noaa.crn",
+    "filesize" : "8648",
+    "MD5" : "d58e9dbb85445d97230d56b813cc0c64"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm038.rwl",
+    "filesize" : "63048",
+    "MD5" : "e37fc77b3a0a5040925f6d576c7dfdff"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm597-noaa.rwl",
+    "filesize" : "480212",
+    "MD5" : "015989fcc1f46c594ebce8a0b5167c6c"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm597.rwl",
+    "filesize" : "147210",
+    "MD5" : "1d3d20bbd94e4ee0fd9b6aac5d0060a9"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm597-noaa.crn",
+    "filesize" : "25218",
+    "MD5" : "7c9a1d42e08a7a39494cab5bd77f2085"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm597.crn",
+    "filesize" : "11562",
+    "MD5" : "d64463a11504bda246f522bc25537037"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm598-noaa.rwl",
+    "filesize" : "1382845",
+    "MD5" : "5fe3cea7611b8e83dba41a9e3cdf62bb"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm598.rwl",
+    "filesize" : "303646",
+    "MD5" : "d585172a6e89120b6ec6fa262a287cad"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm598.crn",
+    "filesize" : "11808",
+    "MD5" : "e0463ad16a2d18081fcb3c4fc878c555"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm598-noaa.crn",
+    "filesize" : "25545",
+    "MD5" : "febdb422b302378acbadbbd5afd50d0a"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm051-noaa.rwl",
+    "filesize" : "42179",
+    "MD5" : "da51e5d41e66e000df4885eeac60f23b"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm051.crn",
+    "filesize" : "3060",
+    "MD5" : "843a4a8e41f91f5fabe26bd62a6d07df"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm051-noaa.crn",
+    "filesize" : "6839",
+    "MD5" : "d66ac9dc298907ee299f1b1c45fe8243"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm051.rwl",
+    "filesize" : "54908",
+    "MD5" : "18900c2cea2b4c0ddb893941dad834a6"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm052-noaa.crn",
+    "filesize" : "7549",
+    "MD5" : "f3601d62a91904e535917736c2c2e98c"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm052.rwl",
+    "filesize" : "68154",
+    "MD5" : "6c9325324f808aeb3ee4237903c5c95c"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm052-noaa.rwl",
+    "filesize" : "49681",
+    "MD5" : "b2011e6367eec5043b56b5b845d12652"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm052.crn",
+    "filesize" : "3510",
+    "MD5" : "62e900c2f1849c58e38a2adc2a944a7a"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm043.crn",
+    "filesize" : "3330",
+    "MD5" : "35521b543be83c58da63118d59a451e4"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm043-noaa.crn",
+    "filesize" : "7178",
+    "MD5" : "e262ab81a28acb73bdac682abb50ad02"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm043-noaa.rwl",
+    "filesize" : "37578",
+    "MD5" : "b588d809dae7cb7ae4c00c9672789376"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm043.rwl",
+    "filesize" : "53354",
+    "MD5" : "f5fc4871955dca4a8375e660b47f7dc4"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm055-noaa.rwl",
+    "filesize" : "36846",
+    "MD5" : "1d7b6b155a56b21a722c2e803106318f"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm055.crn",
+    "filesize" : "3869",
+    "MD5" : "61fbac6ef7722355571b9578fd31c5b1"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm055-noaa.crn",
+    "filesize" : "8119",
+    "MD5" : "c6480afcc0103de5fabc699a8a8c3fba"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm055.rwl",
+    "filesize" : "45510",
+    "MD5" : "4eeced179ea7178af85d150764318afc"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm024.rwl",
+    "filesize" : "45510",
+    "MD5" : "4eeced179ea7178af85d150764318afc"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm024-noaa.crn",
+    "filesize" : "7454",
+    "MD5" : "1f32e2ce65d242f143af707f62080c25"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm024-noaa.rwl",
+    "filesize" : "36867",
+    "MD5" : "d259f14956840be6e0b75fcc2df289db"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm024.crn",
+    "filesize" : "3420",
+    "MD5" : "f8494cdb708d209ce732bde4165200e2"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm604-noaa.rwl",
+    "filesize" : "233993",
+    "MD5" : "e94bba0de33dbcb05d88ab245354cb30"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm604.crn",
+    "filesize" : "7626",
+    "MD5" : "78e38a4e405cc87fd639d568fcee0a1a"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm604.rwl",
+    "filesize" : "84902",
+    "MD5" : "c1927ec592b6f9b5d8ffec0238de34e1"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm604-noaa.crn",
+    "filesize" : "18826",
+    "MD5" : "d79267cd37d4e0fa87a68051fb4e5a18"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm501-noaa.rwl",
+    "filesize" : "37171",
+    "MD5" : "de1edc6fd846c745170a1daa799cd3a8"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm501-noaa.crn",
+    "filesize" : "6296",
+    "MD5" : "b23e9c16e667781c2517b8899f816acc"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm501.rwl",
+    "filesize" : "44596",
+    "MD5" : "4195440a8fc4b05c5a6d813e657a82fc"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm501.crn",
+    "filesize" : "2460",
+    "MD5" : "a709a0e8e0319609f815dd7a749cdc0b"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm040-noaa.crn",
+    "filesize" : "8336",
+    "MD5" : "f043ce2396627a3d0cfac19860ff874f"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm040-noaa.rwl",
+    "filesize" : "53338",
+    "MD5" : "0a9a600e1a0e92a917524f7f7f7fbaeb"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm040.crn",
+    "filesize" : "4049",
+    "MD5" : "ff48faeda7bff55b330424e29446f30b"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm040.rwl",
+    "filesize" : "48026",
+    "MD5" : "9d347f4465cbcf03433d9caaeb02fd35"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm039-noaa.rwl",
+    "filesize" : "54902",
+    "MD5" : "6114e09e8c4dcbcdef251c30b720d0d6"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm039.crn",
+    "filesize" : "2970",
+    "MD5" : "17c204ba2deb5684ded12b97c7fd14e2"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm039-noaa.crn",
+    "filesize" : "6803",
+    "MD5" : "7f9ff64d64a336674b226cdbded5a264"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm039.rwl",
+    "filesize" : "61790",
+    "MD5" : "ae3102680b824b0168b3ad80383b912c"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm607-noaa.rwl",
+    "filesize" : "589616",
+    "MD5" : "6129009d48b53f1656726c7f4a34b160"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm607.rwl",
+    "filesize" : "168522",
+    "MD5" : "2b6f8cf51dda5f3bd217d6bb2824cfa5"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm607.crn",
+    "filesize" : "9512",
+    "MD5" : "1acb02fd410066432b420ec0ce03125c"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm607-noaa.crn",
+    "filesize" : "21864",
+    "MD5" : "c229ecc895dfbddf6ff9925d443263c0"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm037-noaa.rwl",
+    "filesize" : "35958",
+    "MD5" : "2a60af5cc4677acbae2ee2ec63ac39a7"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm037.crn",
+    "filesize" : "3330",
+    "MD5" : "2588397fdc64c07c074045793bac5297"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm037-noaa.crn",
+    "filesize" : "7248",
+    "MD5" : "fd5029ab8f468643334d1e7a5c8e858e"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm037.rwl",
+    "filesize" : "35890",
+    "MD5" : "63bdcbbc5f6381fca6ef821f00ee1deb"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm036-noaa.rwl",
+    "filesize" : "40675",
+    "MD5" : "0c301ab8bc378bd5728a4650d2bd2b11"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm036.crn",
+    "filesize" : "2970",
+    "MD5" : "4cb134793ac3250520bcec72a6628812"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm036-noaa.crn",
+    "filesize" : "6782",
+    "MD5" : "5487ed9fa5cc6f5bcfcefd7189b81158"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm036.rwl",
+    "filesize" : "50192",
+    "MD5" : "fdc468c21c190ac4ad8830f9ddcf5d5c"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm050-noaa.rwl",
+    "filesize" : "57687",
+    "MD5" : "ee9e55b3e293845367a41e4e684966bd"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm050.rwl",
+    "filesize" : "47804",
+    "MD5" : "a762f4af78939244f9be26ab1f5b4a28"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm050.crn",
+    "filesize" : "3420",
+    "MD5" : "6a3fa1a96589b590ef53dff128f33fe4"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm050-noaa.crn",
+    "filesize" : "7498",
+    "MD5" : "0126744515af00058f764ba1abf6958a"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm617.rwl",
+    "filesize" : "92651",
+    "MD5" : "5cf5683122bcb0975531f3eaba8290ac"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm617-noaa.rwl",
+    "filesize" : "113033",
+    "MD5" : "eb906bb3804bf2dd26d8e63b469d357a"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm617.crn",
+    "filesize" : "3198",
+    "MD5" : "f0edd9f5a94894784493ccf5277346e2"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm617-noaa.crn",
+    "filesize" : "11404",
+    "MD5" : "f78e16560f7248355c7cd062dcbe105d"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm616-noaa.rwl",
+    "filesize" : "144036",
+    "MD5" : "16cc1ae4b46c13945983d74afd7209ff"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm616.crn",
+    "filesize" : "3526",
+    "MD5" : "8f0f7e8226aa55b7bd59a7200d0f254f"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm616-noaa.crn",
+    "filesize" : "11947",
+    "MD5" : "345d627000a14b274a80be0661197de4"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm616.rwl",
+    "filesize" : "99036",
+    "MD5" : "558a4d29be61e061662c0d845ab52587"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm618-noaa.rwl",
+    "filesize" : "25614",
+    "MD5" : "4ca8c4e240dfbb61ef04e2eee6cf3719"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm618.rwl",
+    "filesize" : "11587",
+    "MD5" : "9fa06424aa429cc97fc90c900befdace"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm600-noaa.rwl",
+    "filesize" : "877735",
+    "MD5" : "802e97bbc12c6080ff09254be8d2a585"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm600.crn",
+    "filesize" : "11644",
+    "MD5" : "7aedd7db32f2751faefcfd0a1fd7a49d"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm600-noaa.crn",
+    "filesize" : "25485",
+    "MD5" : "def00e73a5f99aa3841c0a15de6e804d"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm600.rwl",
+    "filesize" : "330452",
+    "MD5" : "9c0d0505de0254527f19ba1b924e441d"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm588-noaa.rwl",
+    "filesize" : "655346",
+    "MD5" : "603014a83934406e6c166198a5c20d99"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm588.rwl",
+    "filesize" : "181919",
+    "MD5" : "dabc9a5f4355836d77343323f3e1a2b3"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm588r.crn",
+    "filesize" : "11581",
+    "MD5" : "a6c833e2c10acfb760363c63d03835ae"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm588r-noaa.crn",
+    "filesize" : "23744",
+    "MD5" : "7773ba82b8b5a7395de49bc04275783b"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm014-noaa.crn",
+    "filesize" : "10306",
+    "MD5" : "f8f11372956701d9f659e37a3e6de8a1"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm014.crn",
+    "filesize" : "5220",
+    "MD5" : "2047ba649273ca9d69cdb303b75388fa"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm014-noaa.rwl",
+    "filesize" : "122029",
+    "MD5" : "e0776bc9b266be9b18d6c4acaba19fef"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm014.rwl",
+    "filesize" : "38110",
+    "MD5" : "fb352f43f5e4886e1e99c7921261d24b"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm015-noaa.crn",
+    "filesize" : "8905",
+    "MD5" : "5456ab6df62d8ddc6e701b295482f08f"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm015.crn",
+    "filesize" : "4320",
+    "MD5" : "6df6487d677f142fb447ff0c994db75d"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm015-noaa.rwl",
+    "filesize" : "30518",
+    "MD5" : "cd51e937d4b6a37bd54f41c27565fb70"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm015.rwl",
+    "filesize" : "32930",
+    "MD5" : "ba280ff96bd9de42eed91d306aa7c3a9"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm044.rwl",
+    "filesize" : "18574",
+    "MD5" : "ce90cf46291c54a30561cefe498f98a5"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm044-noaa.crn",
+    "filesize" : "9242",
+    "MD5" : "f041df830e709c0c8ec630c79a515958"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm044.crn",
+    "filesize" : "4590",
+    "MD5" : "51536a4e73523b349a41c17fb17ef1f7"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm044-noaa.rwl",
+    "filesize" : "21972",
+    "MD5" : "4134d79c412978509d6c6e5af41226be"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm046.crn",
+    "filesize" : "3060",
+    "MD5" : "3da79b40856b8ab15b30cf09a551e06c"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm046-noaa.crn",
+    "filesize" : "6887",
+    "MD5" : "0c3409518b0f15b513e0cbfc73d5ba76"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm046-noaa.rwl",
+    "filesize" : "14837",
+    "MD5" : "0dccf5b2d4fd741ba98fd6b0b132949d"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm046.rwl",
+    "filesize" : "9398",
+    "MD5" : "906f59d62e154753c2ad0f09279855c8"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm578-noaa.rwl",
+    "filesize" : "50276",
+    "MD5" : "36299c19815871bb3040636babee3984"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm578.crn",
+    "filesize" : "3240",
+    "MD5" : "a412ca0f47dc8c0b7c83526b5b989c90"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm578a.crn",
+    "filesize" : "3240",
+    "MD5" : "743281c28ce1e949f930fbe4ee8f5acd"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm578r.crn",
+    "filesize" : "3159",
+    "MD5" : "89a57f02451e30866f6a59731acd7e1b"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm578-noaa.crn",
+    "filesize" : "7869",
+    "MD5" : "133e43bb23c14e523e8149d6f51bd1bb"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm578a-noaa.crn",
+    "filesize" : "7855",
+    "MD5" : "344c4e11462d821d5c476b827843d86a"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm578r-noaa.crn",
+    "filesize" : "7745",
+    "MD5" : "8c6d57c784f50999ff0f8a932b148288"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm578.rwl",
+    "filesize" : "51927",
+    "MD5" : "6e040faa50f9e03abfe892d355fca77a"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm619-noaa.rwl",
+    "filesize" : "76907",
+    "MD5" : "0cd6966c3917136fbf244685ead0cb1f"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm619.rwl",
+    "filesize" : "39871",
+    "MD5" : "4d0e069762afd134187ffb99419b9530"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm118.rwl",
+    "filesize" : "55278",
+    "MD5" : "56d13b79aeb52022a097e644c5c99e2a"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm118-noaa.rwl",
+    "filesize" : "49942",
+    "MD5" : "7d04de385027cd8be804a62013336f6c"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm118.crn",
+    "filesize" : "4229",
+    "MD5" : "43e9bc6277b650db28f5df5145d35235"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm118-noaa.crn",
+    "filesize" : "8669",
+    "MD5" : "2d63ae76ab3e1f7cada3cec7826c1be8"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm111-noaa.rwl",
+    "filesize" : "51764",
+    "MD5" : "419bd12700b12e23ca7d15f3bdfcd435"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm111.crn",
+    "filesize" : "3330",
+    "MD5" : "684a92893be64a58e84ff5d9f84a40c8"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm111-noaa.crn",
+    "filesize" : "7326",
+    "MD5" : "7eb9ac859fd2d3fa1cb862dee4d44636"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm111.rwl",
+    "filesize" : "61642",
+    "MD5" : "1631cb752442c5c888ce205ae9bfa15e"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm112-noaa.rwl",
+    "filesize" : "79741",
+    "MD5" : "e5ee6afb66bf42434f2abd7d4a628ba4"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm112.crn",
+    "filesize" : "3510",
+    "MD5" : "df3b4ce48f895f7c089868f203429c18"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm112-noaa.crn",
+    "filesize" : "7585",
+    "MD5" : "7d0958d62e79f8a6b482741ccf2d7fc4"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm112.rwl",
+    "filesize" : "74814",
+    "MD5" : "eb28ed676d64133aed5e895d4c592b83"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm555-noaa.rwl",
+    "filesize" : "60862",
+    "MD5" : "e4bec0a01e7f3a50b592f5572b364b4b"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm555.crn",
+    "filesize" : "3444",
+    "MD5" : "bfdf7aa81fe2092618a2600f94f20743"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm555-noaa.crn",
+    "filesize" : "8223",
+    "MD5" : "90123fc465ec052bc803f0f9e5c3e37a"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm555.rwl",
+    "filesize" : "68772",
+    "MD5" : "fa352a18f7189890de1e658d8a01030a"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm558-noaa.rwl",
+    "filesize" : "60451",
+    "MD5" : "6c8b5f7b1f2eb31f823acee58e272a6c"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm558.rwl",
+    "filesize" : "65408",
+    "MD5" : "7339ee947f491170ec20d55dd6a8ac65"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm558.crn",
+    "filesize" : "3034",
+    "MD5" : "f8b33e6414bc6d315a49d42823a57823"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm558-noaa.crn",
+    "filesize" : "7514",
+    "MD5" : "d876cd6ad167c9ada09ee045e6b67f11"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm563.rwl",
+    "filesize" : "33014",
+    "MD5" : "13829be953642955851b43444a9fb542"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm563-noaa.rwl",
+    "filesize" : "27362",
+    "MD5" : "4b165e7330b2c32f8784714fde3c8ad7"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm563.crn",
+    "filesize" : "1968",
+    "MD5" : "cbff8d1a7c701918f7b6c4b982209e50"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm563-noaa.crn",
+    "filesize" : "5632",
+    "MD5" : "3073e6572472c374ccc70a30182b382d"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm548-noaa.rwl",
+    "filesize" : "39044",
+    "MD5" : "fd6c022f2c786201c8d25d44d19f9abc"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm548.crn",
+    "filesize" : "3526",
+    "MD5" : "a4e36257a7ac1b239183cea9e9c72782"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm548-noaa.crn",
+    "filesize" : "8298",
+    "MD5" : "18913580f530b64ecfd3065c6dbf5db1"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm548.rwl",
+    "filesize" : "38870",
+    "MD5" : "0186eb9c747d4517e3c16053b86bc8fe"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm549-noaa.rwl",
+    "filesize" : "56153",
+    "MD5" : "fc60645f8dacdf03332d96306e00ac5f"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm549.crn",
+    "filesize" : "3198",
+    "MD5" : "aa121513549ecc96099b6683d04c7171"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm549-noaa.crn",
+    "filesize" : "7743",
+    "MD5" : "9799f4638ac49e8571e016d0d743049a"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm549.rwl",
+    "filesize" : "76876",
+    "MD5" : "c7188a50217e0fdf06a01e2a1369f77f"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm556.rwl",
+    "filesize" : "45604",
+    "MD5" : "17120ff8f450ccea8c13faa30bfdb586"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm556-noaa.rwl",
+    "filesize" : "40075",
+    "MD5" : "e576b9f84e9d4efb951db5a83a85b75b"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm556.crn",
+    "filesize" : "3690",
+    "MD5" : "c0bfb31670f6ff8a995b346c58ee19c1"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm556-noaa.crn",
+    "filesize" : "8646",
+    "MD5" : "e7f3b14b96356c5366dae0070803812a"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm559-noaa.rwl",
+    "filesize" : "426143",
+    "MD5" : "0298c808d139418b8999b99a88ea69fb"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm559.rwl",
+    "filesize" : "200856",
+    "MD5" : "9f1856fbf5180f17ff8e9a185d562935"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm559.crn",
+    "filesize" : "5166",
+    "MD5" : "8fa2ee870f2ae94142feb348e1d4bd60"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm559-noaa.crn",
+    "filesize" : "11207",
+    "MD5" : "5bf8b80163660917dc583d82e6fe2750"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm550-noaa.rwl",
+    "filesize" : "50692",
+    "MD5" : "cd85ae127a838b161c5d9967a5c1f326"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm550.crn",
+    "filesize" : "4018",
+    "MD5" : "97b262816ade816f51b86b1d4a0e415f"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm550-noaa.crn",
+    "filesize" : "9215",
+    "MD5" : "cdcd07b9316edfb4e26ca890be1683be"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm550.rwl",
+    "filesize" : "64064",
+    "MD5" : "e23b6a971252f19ffceaa624a97d599e"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm551-noaa.rwl",
+    "filesize" : "37506",
+    "MD5" : "2f5bf344c48a4f184ce94f8d25d045dc"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm551.crn",
+    "filesize" : "2624",
+    "MD5" : "a2886a0dcb15255d847a9359622366c7"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm551-noaa.crn",
+    "filesize" : "6798",
+    "MD5" : "1386d394acae53ad85739ee502897df7"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm551.rwl",
+    "filesize" : "38826",
+    "MD5" : "87cca17274bc450e60e5c88e5b6d6442"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm560r-noaa.crn",
+    "filesize" : "18725",
+    "MD5" : "e9a899255b4522378be6f6a54f28c257"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm560.rwl",
+    "filesize" : "202314",
+    "MD5" : "48bc8c470ac99e4ae57974e9c60e13b7"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm560-noaa.rwl",
+    "filesize" : "463736",
+    "MD5" : "94f1d8a628fc403e7d9f962f15f65661"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm560.crn",
+    "filesize" : "9840",
+    "MD5" : "5a886301f7488928d9c7531e9db1b11e"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm560a.crn",
+    "filesize" : "9840",
+    "MD5" : "0da91197988b5669f5beb05a4c4c1873"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm560r.crn",
+    "filesize" : "9758",
+    "MD5" : "7e5aa0a4ea1ac3f13a137a69ef0627ed"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm560-noaa.crn",
+    "filesize" : "18788",
+    "MD5" : "7340a15fe37403feedfa6255cce2f52b"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm560a-noaa.crn",
+    "filesize" : "18775",
+    "MD5" : "f8a6450c6e738ec96116a44304e1c995"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm554-noaa.rwl",
+    "filesize" : "30788",
+    "MD5" : "f4d4c8d183fb3789f08f9da678a0ba54"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm554.crn",
+    "filesize" : "2706",
+    "MD5" : "81bef85a27bd648f7306c2750d8de0a3"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm554-noaa.crn",
+    "filesize" : "7021",
+    "MD5" : "1b25533d5160db37190db5270c67b23d"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm554.rwl",
+    "filesize" : "30616",
+    "MD5" : "707fb1af11b3ad78d313c707dd1a50bf"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm552-noaa.rwl",
+    "filesize" : "68684",
+    "MD5" : "a9e6e061c49aa4e83e746103be6ad0bd"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm552.crn",
+    "filesize" : "3608",
+    "MD5" : "e7370fcc996f4d876d0c2fbbbebd7bfc"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm552-noaa.crn",
+    "filesize" : "8468",
+    "MD5" : "3315325619038eb73cceeec0bf26aace"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm552.rwl",
+    "filesize" : "74228",
+    "MD5" : "a267eb5897e758db5a9a952e3f630e92"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm557.crn",
+    "filesize" : "3854",
+    "MD5" : "c0f2c4b75711832957898ebe78cfffb7"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm557-noaa.crn",
+    "filesize" : "8888",
+    "MD5" : "282bb40cb6148663cabe022cf1f3dd4d"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm557.rwl",
+    "filesize" : "67494",
+    "MD5" : "b99561eab52d70e52c5c534873f8a0ec"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm557-noaa.rwl",
+    "filesize" : "60309",
+    "MD5" : "43d58c90b895016a0400ee844ac82a34"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm585r-noaa.crn",
+    "filesize" : "11668",
+    "MD5" : "82b27b0d01fbebc3d58c7eeeb97ef8e0"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm585-noaa.rwl",
+    "filesize" : "88222",
+    "MD5" : "86b49fb1165d1dfad669481670b978dd"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm585.crn",
+    "filesize" : "3888",
+    "MD5" : "4f12497d0f85542abaf67367b3f098fc"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm585.rwl",
+    "filesize" : "75704",
+    "MD5" : "cd3a6d2bca2c212cf43bc2a309dc71ff"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm585r.crn",
+    "filesize" : "3888",
+    "MD5" : "97bc404969c24e1219a207da82e8e078"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm585a.crn",
+    "filesize" : "3888",
+    "MD5" : "2035540ad9c0688e114e77c32c3568a3"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm585-noaa.crn",
+    "filesize" : "11680",
+    "MD5" : "47ccc5c865a1933c09ca2c4efd2ad7d8"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm585a-noaa.crn",
+    "filesize" : "11722",
+    "MD5" : "f39fc6dabccb87e4ddc353cce58591f4"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm586-noaa.rwl",
+    "filesize" : "168320",
+    "MD5" : "031e4563291ffefca8ae78134530a4b9"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm586.crn",
+    "filesize" : "6075",
+    "MD5" : "2b9233b0b2f2d224edfd8db064d3bcd6"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm586a.crn",
+    "filesize" : "6075",
+    "MD5" : "fcdec01cec8e0ff182b96011deaf0f38"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm586r.crn",
+    "filesize" : "6075",
+    "MD5" : "ba3f7295a3f85c37eac7703b612e5436"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm586-noaa.crn",
+    "filesize" : "15482",
+    "MD5" : "1c1707581291c1144760d36a808d2d6e"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm586a-noaa.crn",
+    "filesize" : "15496",
+    "MD5" : "0fe541e97abe561f0a89e56d9425ea11"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm586r-noaa.crn",
+    "filesize" : "15470",
+    "MD5" : "10ac3e46ef70a1ae2b4ecc72e23f83cd"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm586.rwl",
+    "filesize" : "91695",
+    "MD5" : "201999df0a6cb828d0475dae7d7962f7"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm583.rwl",
+    "filesize" : "41378",
+    "MD5" : "40a17e8de177ecc34a2e6bb52bab0fe7"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm583r-noaa.crn",
+    "filesize" : "15477",
+    "MD5" : "f5d5f0ac090ff845286c88297afb7ba1"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm583-noaa.rwl",
+    "filesize" : "61883",
+    "MD5" : "17f5f7223674c104b4a529b29464524a"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm583.crn",
+    "filesize" : "6075",
+    "MD5" : "0c4df0a38a855e8a6cd507c0b4960673"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm583a.crn",
+    "filesize" : "6075",
+    "MD5" : "713195ccee0002b4de1d3d42d46d29ae"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm583r.crn",
+    "filesize" : "6075",
+    "MD5" : "eff0c26e92e4e5826e6050d731bb183c"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm583-noaa.crn",
+    "filesize" : "15531",
+    "MD5" : "dc43a2e9d767dfee525f8ac49cc7288f"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm583a-noaa.crn",
+    "filesize" : "15503",
+    "MD5" : "da2153cc804be6bc3a99fa6184285fa3"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm587-noaa.rwl",
+    "filesize" : "194247",
+    "MD5" : "98b8097f28654ed3d675548afaf1a4e7"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm587.crn",
+    "filesize" : "5994",
+    "MD5" : "6c3cd1b7732f2b6ddeb07ebe1cc45022"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm587a.crn",
+    "filesize" : "5994",
+    "MD5" : "752d153f0d34fb73c27abc5f5ae3a0aa"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm587r.crn",
+    "filesize" : "5994",
+    "MD5" : "adc5b971daccc392742954abd137fd12"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm587-noaa.crn",
+    "filesize" : "15371",
+    "MD5" : "a4c905225699590f38bea3a667b96b12"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm587a-noaa.crn",
+    "filesize" : "15385",
+    "MD5" : "984c3026f1f97c884de6bb7e942538c7"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm587r-noaa.crn",
+    "filesize" : "15359",
+    "MD5" : "dc328e75162344b15936e16a02ffbbab"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm587.rwl",
+    "filesize" : "127780",
+    "MD5" : "6a6a2183e32c8d036c65bca0c7bc3881"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm584-noaa.rwl",
+    "filesize" : "456483",
+    "MD5" : "59575ea02af65562b9676de5653f97fa"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm584.crn",
+    "filesize" : "11340",
+    "MD5" : "a842e785e69bd3dd137aff4b196897d8"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm584.rwl",
+    "filesize" : "146918",
+    "MD5" : "049a1759dcb89a6d532153962d549306"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm584a.crn",
+    "filesize" : "11340",
+    "MD5" : "cbc07687a951c02b6fdae3f5943deb7d"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm584r.crn",
+    "filesize" : "11259",
+    "MD5" : "ad1b005f0e47890424a214e7d92e7349"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm584-noaa.crn",
+    "filesize" : "24254",
+    "MD5" : "6f39807aa4f46daf341a07e169ec824b"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm584a-noaa.crn",
+    "filesize" : "24228",
+    "MD5" : "39d445a1b7d3f78aea2f802f57cbf048"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm584r-noaa.crn",
+    "filesize" : "24178",
+    "MD5" : "a6d1f3eda1f8933fc116087b94a7a948"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm576a.crn",
+    "filesize" : "3321",
+    "MD5" : "9231cbc92fff404cf3539c46eea083e1"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm576r.crn",
+    "filesize" : "3321",
+    "MD5" : "81a38955ffdb09db1d4d2b5ba87d5b12"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm576-noaa.crn",
+    "filesize" : "8047",
+    "MD5" : "b1cedf25d147e8714f4031c7dd1163ca"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm576a-noaa.crn",
+    "filesize" : "8047",
+    "MD5" : "eaa93152896d3a2feedc258c01017625"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm576r-noaa.crn",
+    "filesize" : "8049",
+    "MD5" : "8e20efe6695df5de56822dff7f3a1d14"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm576-noaa.rwl",
+    "filesize" : "48064",
+    "MD5" : "cc7b51d6fcd5e417b0b150db81db49b6"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm576.crn",
+    "filesize" : "3321",
+    "MD5" : "8165aafc391168f788045658db811c3f"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm576.rwl",
+    "filesize" : "45046",
+    "MD5" : "a73f51130cda8079d5104780affd336c"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm575-noaa.rwl",
+    "filesize" : "25920",
+    "MD5" : "647ac2e2a4f9de7c1483356ed50f1b98"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm575.rwl",
+    "filesize" : "23369",
+    "MD5" : "bf3e238c5e1390c619395b391fc8e562"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm575.crn",
+    "filesize" : "2592",
+    "MD5" : "5d9b1578d3ce19f769f9eb21b2dce54a"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm575a.crn",
+    "filesize" : "2592",
+    "MD5" : "dea0fe1b8aa652d2069f4e49ea2ce1e4"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm575r.crn",
+    "filesize" : "2592",
+    "MD5" : "ae2c39d77d63f0aa0b275406618ac0b6"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm575-noaa.crn",
+    "filesize" : "6867",
+    "MD5" : "e9a64f93fed9f56e04ec1118d15bcba3"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm575a-noaa.crn",
+    "filesize" : "6867",
+    "MD5" : "d0d87ca8de6e7c29da2f7d7912fe9430"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm575r-noaa.crn",
+    "filesize" : "6869",
+    "MD5" : "50f5481f633907d08774175ed811893c"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm574-noaa.rwl",
+    "filesize" : "55346",
+    "MD5" : "4f0ece2d5380d196425d6263f4acb37d"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm574.crn",
+    "filesize" : "3402",
+    "MD5" : "7854cbca25b6c0b80da12432f55b162e"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm574a.crn",
+    "filesize" : "3402",
+    "MD5" : "410f569010cd477b50f062371592f361"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm574r.crn",
+    "filesize" : "3402",
+    "MD5" : "8fa8c4e49c4ebe339fb8e3edf7dca716"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm574-noaa.crn",
+    "filesize" : "8242",
+    "MD5" : "908e57cf128bde2c95a552750f2f5ed1"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm574a-noaa.crn",
+    "filesize" : "8242",
+    "MD5" : "bfa251873efb43d5756b3a29209469c4"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm574.rwl",
+    "filesize" : "44433",
+    "MD5" : "746f3756c6b8bf91135afc2593737414"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm574r-noaa.crn",
+    "filesize" : "8244",
+    "MD5" : "db4fb2aabe0104f9fb94426d0a06128f"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm593-noaa.rwl",
+    "filesize" : "225634",
+    "MD5" : "b1d378d8c4dd1db03b2521b6d5899d1d"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm593.crn",
+    "filesize" : "6150",
+    "MD5" : "c7e00fab5a76ac057f33e97ae5858985"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm593-noaa.crn",
+    "filesize" : "16475",
+    "MD5" : "5ff737294c128f03f8755c05b4f8b6f9"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm593.rwl",
+    "filesize" : "143508",
+    "MD5" : "61032d9cdaf6d6a87c41b6214e01eb9a"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm581-noaa.rwl",
+    "filesize" : "101129",
+    "MD5" : "4c50d58061ec20ebdf774d48d5dbeac0"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm581.crn",
+    "filesize" : "4212",
+    "MD5" : "c9f08b4d8c982455b528416774efbb8c"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm581a.crn",
+    "filesize" : "4212",
+    "MD5" : "3b21482cc772f928ece6375f7778f526"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm581r.crn",
+    "filesize" : "4212",
+    "MD5" : "41f300411a32ca6368810b31e0fa1f9f"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm581-noaa.crn",
+    "filesize" : "9616",
+    "MD5" : "8ee05faa467a3a6add36e762484d7e80"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm581a-noaa.crn",
+    "filesize" : "9616",
+    "MD5" : "426adcdb5e1bcca2362d19d76bbc1068"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm581r-noaa.crn",
+    "filesize" : "9618",
+    "MD5" : "c666871904582dcfcac5c408e78eb401"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm581.rwl",
+    "filesize" : "96767",
+    "MD5" : "cc54a77a9555f6a50499dab28e4f6cc7"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm577-noaa.rwl",
+    "filesize" : "50736",
+    "MD5" : "c7f94d62a8b66562fa24c393787c99c7"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm577.crn",
+    "filesize" : "3564",
+    "MD5" : "596a6695d98ba122da6572c1765d476b"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm577a.crn",
+    "filesize" : "3564",
+    "MD5" : "3d5ccf5329be9afc97594d559e283987"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm577r.crn",
+    "filesize" : "3564",
+    "MD5" : "0f2bacd3b20e72a6cb517d07ad0c8adc"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm577-noaa.crn",
+    "filesize" : "8493",
+    "MD5" : "ebc890c428ff1277e73dde2ce15c02ed"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm577a-noaa.crn",
+    "filesize" : "8493",
+    "MD5" : "4697dc4a2a0fb1256ccafdbc0c161773"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm577r-noaa.crn",
+    "filesize" : "8495",
+    "MD5" : "799b19cfe80b5bd43f2830fd5ff7a203"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm577.rwl",
+    "filesize" : "41802",
+    "MD5" : "cbfb3c69d4ced9f67931bde39994bfaa"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm602.rwl",
+    "filesize" : "102700",
+    "MD5" : "2ee4875dfe93fb514dcc206bf7e769c5"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm602-noaa.rwl",
+    "filesize" : "120387",
+    "MD5" : "360f6489bc823e78fcef82cc07f16e86"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm602.crn",
+    "filesize" : "3362",
+    "MD5" : "515ceaa604925f835246c45d12bbeace"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm602-noaa.crn",
+    "filesize" : "11609",
+    "MD5" : "a92ae45c70179905dec6f2d610e0cbf8"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm605-noaa.rwl",
+    "filesize" : "162709",
+    "MD5" : "5cd082e9daec60ae57a4094fbf0362b1"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm605.rwl",
+    "filesize" : "113242",
+    "MD5" : "801e2370497c93680823d4531b285494"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm605.crn",
+    "filesize" : "4100",
+    "MD5" : "122277152b3f2f6962e02b4757cac7ce"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm605-noaa.crn",
+    "filesize" : "13013",
+    "MD5" : "99bf01828a24b09d41dc4eaba749ccba"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm582-noaa.rwl",
+    "filesize" : "89472",
+    "MD5" : "ab315df3c56dbd2b2dbe24490106619e"
+  }, {
+    "path" : "data/pub/data/paleo/treering/measurements/northamerica/usa/nm582.rwl",
+    "filesize" : "78867",
+    "MD5" : "dacb91345cc571cbead0dc3f8ac4fa78"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm582.crn",
+    "filesize" : "3807",
+    "MD5" : "102ae824d3f37ff5a264c9774b84c4f7"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm582a.crn",
+    "filesize" : "3807",
+    "MD5" : "4922ea29e2d29859285dbcb7552ceac7"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm582r.crn",
+    "filesize" : "3807",
+    "MD5" : "2feafabe8942b7c680ac3d930764b4c5"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm582r-noaa.crn",
+    "filesize" : "8878",
+    "MD5" : "6675f45434a1ede80f6ba2b2872632f8"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm582-noaa.crn",
+    "filesize" : "8876",
+    "MD5" : "7685d28c6190132e32a80f8c2c82028e"
+  }, {
+    "path" : "data/pub/data/paleo/treering/chronologies/northamerica/usa/nm582a-noaa.crn",
+    "filesize" : "8876",
+    "MD5" : "47ecaadf8e9b44423ee30fa67fd47925"
+  } ],
+  "params" : {
+    "minLon" : "-107.3496",
+    "maxLat" : "36.9464",
+    "minLat" : "33.6475",
+    "dataPublisher" : "NOAA",
+    "dataTypeId" : "18",
+    "maxLon" : "-103.0957",
+    "xmlId" : "3761|3935|3963|3964|3965|4031|4032|4052|4160|4162|4164|4186|4510|4604|4701|4704|4766|4789|4906|4917|5049|5050|5051|5065|5067|5479|5480|5481|5483|5502|5698|6594|6616|6617|6626|6632|6636|6637|6839|6853|6857|6868|8641|8642|8643|8644|8645|9103|9104|12721|12722|16965|20396|20404|20406|20410|20416|20420|20422|20426|20446|20448|65474|66861"
+  },
+  "matches" : [ {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-2853.json",
+    "studyName" : "Briffa - Ski Valley Wheeler Peak - PCEN - ITRDB NM569",
+    "sites" : [ {
+      "siteName" : "Ski Valley Wheeler Peak",
+      "files" : [ {
+        "fileName" : "nm569x-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm569x-noaa.crn"
+      }, {
+        "fileName" : "nm569xr-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm569xr-noaa.crn"
+      }, {
+        "fileName" : "nm569xa-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm569xa-noaa.crn"
+      }, {
+        "fileName" : "nm569e-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm569e-noaa.rwl"
+      }, {
+        "fileName" : "nm569l-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm569l-noaa.rwl"
+      }, {
+        "fileName" : "nm569-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm569-noaa.rwl"
+      }, {
+        "fileName" : "nm569.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm569.crn"
+      }, {
+        "fileName" : "nm569x.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm569x.crn"
+      }, {
+        "fileName" : "nm569-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm569-noaa.crn"
+      }, {
+        "fileName" : "nm569r-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm569r-noaa.crn"
+      }, {
+        "fileName" : "nm569a-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm569a-noaa.crn"
+      }, {
+        "fileName" : "nm569n-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm569n-noaa.rwl"
+      }, {
+        "fileName" : "nm569x-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm569x-noaa.rwl"
+      }, {
+        "fileName" : "nm569.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm569.rwl"
+      }, {
+        "fileName" : "nm569e.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm569e.rwl"
+      }, {
+        "fileName" : "nm569i.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm569i.rwl"
+      }, {
+        "fileName" : "nm569l.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm569l.rwl"
+      }, {
+        "fileName" : "nm569n.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm569n.rwl"
+      }, {
+        "fileName" : "nm569t.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm569t.rwl"
+      }, {
+        "fileName" : "nm569x.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm569x.rwl"
+      }, {
+        "fileName" : "nm569i-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm569i-noaa.rwl"
+      }, {
+        "fileName" : "nm569t-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm569t-noaa.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-2946.json",
+    "studyName" : "Cleaveland - Pueblita Canyon - PIED - ITRDB NM545",
+    "sites" : [ {
+      "siteName" : "Pueblita Canyon",
+      "files" : [ {
+        "fileName" : "nm545n-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm545n-noaa.crn"
+      }, {
+        "fileName" : "nm545t-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm545t-noaa.crn"
+      }, {
+        "fileName" : "nm545x-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm545x-noaa.crn"
+      }, {
+        "fileName" : "nm545e.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm545e.crn"
+      }, {
+        "fileName" : "nm545i.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm545i.crn"
+      }, {
+        "fileName" : "nm545l.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm545l.crn"
+      }, {
+        "fileName" : "nm545n.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm545n.crn"
+      }, {
+        "fileName" : "nm545t.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm545t.crn"
+      }, {
+        "fileName" : "nm545x.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm545x.crn"
+      }, {
+        "fileName" : "nm545-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm545-noaa.crn"
+      }, {
+        "fileName" : "nm545d-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm545d-noaa.crn"
+      }, {
+        "fileName" : "nm545e-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm545e-noaa.crn"
+      }, {
+        "fileName" : "nm545i-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm545i-noaa.crn"
+      }, {
+        "fileName" : "nm545l-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm545l-noaa.crn"
+      }, {
+        "fileName" : "nm545x-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm545x-noaa.rwl"
+      }, {
+        "fileName" : "nm545e-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm545e-noaa.rwl"
+      }, {
+        "fileName" : "nm545l-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm545l-noaa.rwl"
+      }, {
+        "fileName" : "nm545-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm545-noaa.rwl"
+      }, {
+        "fileName" : "nm545d-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm545d-noaa.rwl"
+      }, {
+        "fileName" : "nm545.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm545.crn"
+      }, {
+        "fileName" : "nm545d.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm545d.crn"
+      }, {
+        "fileName" : "nm545.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm545.rwl"
+      }, {
+        "fileName" : "nm545d.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm545d.rwl"
+      }, {
+        "fileName" : "nm545e.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm545e.rwl"
+      }, {
+        "fileName" : "nm545i.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm545i.rwl"
+      }, {
+        "fileName" : "nm545l.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm545l.rwl"
+      }, {
+        "fileName" : "nm545n.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm545n.rwl"
+      }, {
+        "fileName" : "nm545t.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm545t.rwl"
+      }, {
+        "fileName" : "nm545x.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm545x.rwl"
+      }, {
+        "fileName" : "nm545i-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm545i-noaa.rwl"
+      }, {
+        "fileName" : "nm545t-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm545t-noaa.rwl"
+      }, {
+        "fileName" : "nm545n-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm545n-noaa.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-2947.json",
+    "studyName" : "Cleaveland - Pueblita Canyon - PSME - ITRDB NM537",
+    "sites" : [ {
+      "siteName" : "Pueblita Canyon",
+      "files" : [ {
+        "fileName" : "nm537.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm537.rwl"
+      }, {
+        "fileName" : "nm537d.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm537d.rwl"
+      }, {
+        "fileName" : "nm537e.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm537e.rwl"
+      }, {
+        "fileName" : "nm537i.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm537i.rwl"
+      }, {
+        "fileName" : "nm537l.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm537l.rwl"
+      }, {
+        "fileName" : "nm537n.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm537n.rwl"
+      }, {
+        "fileName" : "nm537t.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm537t.rwl"
+      }, {
+        "fileName" : "nm537x.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm537x.rwl"
+      }, {
+        "fileName" : "nm537i-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm537i-noaa.rwl"
+      }, {
+        "fileName" : "nm537t-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm537t-noaa.rwl"
+      }, {
+        "fileName" : "nm537n-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm537n-noaa.rwl"
+      }, {
+        "fileName" : "nm537x-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm537x-noaa.rwl"
+      }, {
+        "fileName" : "nm537e-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm537e-noaa.rwl"
+      }, {
+        "fileName" : "nm537l-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm537l-noaa.rwl"
+      }, {
+        "fileName" : "nm537-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm537-noaa.rwl"
+      }, {
+        "fileName" : "nm537d-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm537d-noaa.rwl"
+      }, {
+        "fileName" : "nm537.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm537.crn"
+      }, {
+        "fileName" : "nm537d.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm537d.crn"
+      }, {
+        "fileName" : "nm537e.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm537e.crn"
+      }, {
+        "fileName" : "nm537i.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm537i.crn"
+      }, {
+        "fileName" : "nm537l.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm537l.crn"
+      }, {
+        "fileName" : "nm537n.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm537n.crn"
+      }, {
+        "fileName" : "nm537t.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm537t.crn"
+      }, {
+        "fileName" : "nm537x.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm537x.crn"
+      }, {
+        "fileName" : "nm537-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm537-noaa.crn"
+      }, {
+        "fileName" : "nm537d-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm537d-noaa.crn"
+      }, {
+        "fileName" : "nm537e-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm537e-noaa.crn"
+      }, {
+        "fileName" : "nm537i-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm537i-noaa.crn"
+      }, {
+        "fileName" : "nm537l-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm537l-noaa.crn"
+      }, {
+        "fileName" : "nm537n-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm537n-noaa.crn"
+      }, {
+        "fileName" : "nm537t-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm537t-noaa.crn"
+      }, {
+        "fileName" : "nm537x-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm537x-noaa.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-3075.json",
+    "studyName" : "Dean - Echo Amphitheater - PSME - ITRDB NM026",
+    "sites" : [ {
+      "siteName" : "Echo Amphitheater",
+      "files" : [ {
+        "fileName" : "nm026-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm026-noaa.rwl"
+      }, {
+        "fileName" : "nm026.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm026.crn"
+      }, {
+        "fileName" : "nm026-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm026-noaa.crn"
+      }, {
+        "fileName" : "nm026.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm026.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-3078.json",
+    "studyName" : "Dean - El Valle - PIPO - ITRDB NM500",
+    "sites" : [ {
+      "siteName" : "El Valle",
+      "files" : [ {
+        "fileName" : "nm500-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm500-noaa.crn"
+      }, {
+        "fileName" : "nm500.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm500.rwl"
+      }, {
+        "fileName" : "nm500-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm500-noaa.rwl"
+      }, {
+        "fileName" : "nm500.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm500.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-3079.json",
+    "studyName" : "Dean - Glorietta Mesa - PIED - ITRDB NM038",
+    "sites" : [ {
+      "siteName" : "Glorietta Mesa",
+      "files" : [ {
+        "fileName" : "nm038-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm038-noaa.rwl"
+      }, {
+        "fileName" : "nm038.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm038.crn"
+      }, {
+        "fileName" : "nm038-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm038-noaa.crn"
+      }, {
+        "fileName" : "nm038.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm038.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-22323.json",
+    "studyName" : "Dean - Gobernador Archaeological+Modern - PIPO - ITRDB NM597",
+    "sites" : [ {
+      "siteName" : "Gobernador",
+      "files" : [ {
+        "fileName" : "nm597-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm597-noaa.rwl"
+      }, {
+        "fileName" : "nm597.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm597.rwl"
+      }, {
+        "fileName" : "nm597-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm597-noaa.crn"
+      }, {
+        "fileName" : "nm597.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm597.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-22324.json",
+    "studyName" : "Dean - Jemez-Santa Fe Archaeological+Modern - PIFL - ITRDB NM598",
+    "sites" : [ {
+      "siteName" : "Jemez-Santa Fe",
+      "files" : [ {
+        "fileName" : "nm598-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm598-noaa.rwl"
+      }, {
+        "fileName" : "nm598.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm598.rwl"
+      }, {
+        "fileName" : "nm598.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm598.crn"
+      }, {
+        "fileName" : "nm598-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm598-noaa.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-3090.json",
+    "studyName" : "Dean - Ned Tanks - PIED - ITRDB NM051",
+    "sites" : [ {
+      "siteName" : "Ned Tanks",
+      "files" : [ {
+        "fileName" : "nm051-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm051-noaa.rwl"
+      }, {
+        "fileName" : "nm051.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm051.crn"
+      }, {
+        "fileName" : "nm051-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm051-noaa.crn"
+      }, {
+        "fileName" : "nm051.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm051.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-3091.json",
+    "studyName" : "Dean - Ned Tanks - PIPO - ITRDB NM052",
+    "sites" : [ {
+      "siteName" : "Ned Tanks",
+      "files" : [ {
+        "fileName" : "nm052-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm052-noaa.crn"
+      }, {
+        "fileName" : "nm052.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm052.rwl"
+      }, {
+        "fileName" : "nm052-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm052-noaa.rwl"
+      }, {
+        "fileName" : "nm052.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm052.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-3093.json",
+    "studyName" : "Dean - Paliza - PIED - ITRDB NM043",
+    "sites" : [ {
+      "siteName" : "Paliza",
+      "files" : [ {
+        "fileName" : "nm043.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm043.crn"
+      }, {
+        "fileName" : "nm043-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm043-noaa.crn"
+      }, {
+        "fileName" : "nm043-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm043-noaa.rwl"
+      }, {
+        "fileName" : "nm043.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm043.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-3094.json",
+    "studyName" : "Dean - Pueblito Canyon - PIED - ITRDB NM055",
+    "sites" : [ {
+      "siteName" : "Pueblito Canyon",
+      "files" : [ {
+        "fileName" : "nm055-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm055-noaa.rwl"
+      }, {
+        "fileName" : "nm055.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm055.crn"
+      }, {
+        "fileName" : "nm055-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm055-noaa.crn"
+      }, {
+        "fileName" : "nm055.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm055.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-3095.json",
+    "studyName" : "Dean - Pueblito Canyon - PSME - ITRDB NM024",
+    "sites" : [ {
+      "siteName" : "Pueblito Canyon",
+      "files" : [ {
+        "fileName" : "nm024.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm024.rwl"
+      }, {
+        "fileName" : "nm024-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm024-noaa.crn"
+      }, {
+        "fileName" : "nm024-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm024-noaa.rwl"
+      }, {
+        "fileName" : "nm024.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm024.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-22331.json",
+    "studyName" : "Dean - Rio Grande-Fort Burgwin - PISP - ITRDB NM604",
+    "sites" : [ {
+      "siteName" : "Rio Grande-Fort Burgwin",
+      "files" : [ {
+        "fileName" : "nm604-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm604-noaa.rwl"
+      }, {
+        "fileName" : "nm604.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm604.crn"
+      }, {
+        "fileName" : "nm604.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm604.rwl"
+      }, {
+        "fileName" : "nm604-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm604-noaa.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-3097.json",
+    "studyName" : "Dean - Rito de los Frijoles - PIPO - ITRDB NM501",
+    "sites" : [ {
+      "siteName" : "Rito de los Frijoles",
+      "files" : [ {
+        "fileName" : "nm501-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm501-noaa.rwl"
+      }, {
+        "fileName" : "nm501-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm501-noaa.crn"
+      }, {
+        "fileName" : "nm501.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm501.rwl"
+      }, {
+        "fileName" : "nm501.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm501.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-3099.json",
+    "studyName" : "Dean - Ruidosa Ridge - PIED - ITRDB NM040",
+    "sites" : [ {
+      "siteName" : "Ruidosa Ridge",
+      "files" : [ {
+        "fileName" : "nm040-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm040-noaa.crn"
+      }, {
+        "fileName" : "nm040-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm040-noaa.rwl"
+      }, {
+        "fileName" : "nm040.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm040.crn"
+      }, {
+        "fileName" : "nm040.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm040.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-3100.json",
+    "studyName" : "Dean - Ruidosa Ridge - PSME - ITRDB NM039",
+    "sites" : [ {
+      "siteName" : "Ruidosa Ridge",
+      "files" : [ {
+        "fileName" : "nm039-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm039-noaa.rwl"
+      }, {
+        "fileName" : "nm039.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm039.crn"
+      }, {
+        "fileName" : "nm039-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm039-noaa.crn"
+      }, {
+        "fileName" : "nm039.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm039.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-22334.json",
+    "studyName" : "Dean - Santa Fe-Glorieta Mesa - PISP - ITRDB NM607",
+    "sites" : [ {
+      "siteName" : "Santa Fe-Glorieta Mesa",
+      "files" : [ {
+        "fileName" : "nm607-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm607-noaa.rwl"
+      }, {
+        "fileName" : "nm607.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm607.rwl"
+      }, {
+        "fileName" : "nm607.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm607.crn"
+      }, {
+        "fileName" : "nm607-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm607-noaa.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-3109.json",
+    "studyName" : "Dean - Tajique Canyon - PIED - ITRDB NM037",
+    "sites" : [ {
+      "siteName" : "Tajique Canyon",
+      "files" : [ {
+        "fileName" : "nm037-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm037-noaa.rwl"
+      }, {
+        "fileName" : "nm037.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm037.crn"
+      }, {
+        "fileName" : "nm037-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm037-noaa.crn"
+      }, {
+        "fileName" : "nm037.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm037.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-3110.json",
+    "studyName" : "Dean - Tajique Canyon - PIPO - ITRDB NM036",
+    "sites" : [ {
+      "siteName" : "Tajique Canyon",
+      "files" : [ {
+        "fileName" : "nm036-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm036-noaa.rwl"
+      }, {
+        "fileName" : "nm036.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm036.crn"
+      }, {
+        "fileName" : "nm036-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm036-noaa.crn"
+      }, {
+        "fileName" : "nm036.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm036.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-3111.json",
+    "studyName" : "Dean - Tijeras Canyon - PIED - ITRDB NM050",
+    "sites" : [ {
+      "siteName" : "Tijeras Canyon",
+      "files" : [ {
+        "fileName" : "nm050-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm050-noaa.rwl"
+      }, {
+        "fileName" : "nm050.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm050.rwl"
+      }, {
+        "fileName" : "nm050.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm050.crn"
+      }, {
+        "fileName" : "nm050-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm050-noaa.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-22345.json",
+    "studyName" : "Griffin - Gallinas Mountains - PIPO - ITRDB NM617",
+    "sites" : [ {
+      "siteName" : "Gallinas Mountains 2",
+      "files" : [ {
+        "fileName" : "nm617.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm617.rwl"
+      }, {
+        "fileName" : "nm617-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm617-noaa.rwl"
+      }, {
+        "fileName" : "nm617.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm617.crn"
+      }, {
+        "fileName" : "nm617-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm617-noaa.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-22344.json",
+    "studyName" : "Griffin - Gallinas Mountains - PSME - ITRDB NM616",
+    "sites" : [ {
+      "siteName" : "Gallinas Mountains 2",
+      "files" : [ {
+        "fileName" : "nm616-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm616-noaa.rwl"
+      }, {
+        "fileName" : "nm616.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm616.crn"
+      }, {
+        "fileName" : "nm616-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm616-noaa.crn"
+      }, {
+        "fileName" : "nm616.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm616.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-26411.json",
+    "studyName" : "Griffin - Jimez Mountains - PIPO - ITRDB NM618",
+    "sites" : [ {
+      "siteName" : "Jimez Mountains",
+      "files" : [ {
+        "fileName" : "nm618-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm618-noaa.rwl"
+      }, {
+        "fileName" : "nm618.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm618.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-22326.json",
+    "studyName" : "Griffin - Magdalena Mountains - PSME - ITRDB NM600",
+    "sites" : [ {
+      "siteName" : "Magdalena Mountains",
+      "files" : [ {
+        "fileName" : "nm600-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm600-noaa.rwl"
+      }, {
+        "fileName" : "nm600.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm600.crn"
+      }, {
+        "fileName" : "nm600-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm600-noaa.crn"
+      }, {
+        "fileName" : "nm600.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm600.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-19279.json",
+    "studyName" : "Guiterman - Canyon del Potrero, Mesa Alta - PIPO - ITRDB NM588",
+    "sites" : [ {
+      "siteName" : "Canyon del Potrero, Mesa Alta",
+      "files" : [ {
+        "fileName" : "nm588-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm588-noaa.rwl"
+      }, {
+        "fileName" : "nm588.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm588.rwl"
+      }, {
+        "fileName" : "nm588r.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm588r.crn"
+      }, {
+        "fileName" : "nm588r-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm588r-noaa.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-3835.json",
+    "studyName" : "Lamarche - Jicarita Peak - PIAR - ITRDB NM014",
+    "sites" : [ {
+      "siteName" : "Jicarita Peak",
+      "files" : [ {
+        "fileName" : "nm014-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm014-noaa.crn"
+      }, {
+        "fileName" : "nm014.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm014.crn"
+      }, {
+        "fileName" : "nm014-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm014-noaa.rwl"
+      }, {
+        "fileName" : "nm014.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm014.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-3846.json",
+    "studyName" : "Lamarche - Red Dome - PIAR - ITRDB NM015",
+    "sites" : [ {
+      "siteName" : "Red Dome",
+      "files" : [ {
+        "fileName" : "nm015-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm015-noaa.crn"
+      }, {
+        "fileName" : "nm015.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm015.crn"
+      }, {
+        "fileName" : "nm015-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm015-noaa.rwl"
+      }, {
+        "fileName" : "nm015.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm015.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-4077.json",
+    "studyName" : "O'Brien - Los Alamos New Mexico - PIPO - ITRDB NM044",
+    "sites" : [ {
+      "siteName" : "Los Alamos New Mexico",
+      "files" : [ {
+        "fileName" : "nm044.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm044.rwl"
+      }, {
+        "fileName" : "nm044-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm044-noaa.crn"
+      }, {
+        "fileName" : "nm044.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm044.crn"
+      }, {
+        "fileName" : "nm044-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm044-noaa.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-4078.json",
+    "studyName" : "O'Brien - Los Alamos New Mexico - PSME - ITRDB NM046",
+    "sites" : [ {
+      "siteName" : "Los Alamos New Mexico",
+      "files" : [ {
+        "fileName" : "nm046.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm046.crn"
+      }, {
+        "fileName" : "nm046-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm046-noaa.crn"
+      }, {
+        "fileName" : "nm046-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm046-noaa.rwl"
+      }, {
+        "fileName" : "nm046.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm046.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-4824.json",
+    "studyName" : "Stahle - Capulin Volcano National Monument - PIED - ITRDB NM578",
+    "sites" : [ {
+      "siteName" : "Capulin Volcano National Monument",
+      "files" : [ {
+        "fileName" : "nm578-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm578-noaa.rwl"
+      }, {
+        "fileName" : "nm578.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm578.crn"
+      }, {
+        "fileName" : "nm578a.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm578a.crn"
+      }, {
+        "fileName" : "nm578r.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm578r.crn"
+      }, {
+        "fileName" : "nm578-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm578-noaa.crn"
+      }, {
+        "fileName" : "nm578a-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm578a-noaa.crn"
+      }, {
+        "fileName" : "nm578r-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm578r-noaa.crn"
+      }, {
+        "fileName" : "nm578.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm578.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-27073.json",
+    "studyName" : "Stan - Santa Fe National Forest - PIPO - ITRDB NM619",
+    "sites" : [ {
+      "siteName" : "Santa Fe National Forest",
+      "files" : [ {
+        "fileName" : "nm619-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm619-noaa.rwl"
+      }, {
+        "fileName" : "nm619.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm619.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-4968.json",
+    "studyName" : "Stockton - Clines Corner - PIED - ITRDB NM118",
+    "sites" : [ {
+      "siteName" : "Clines Corner",
+      "files" : [ {
+        "fileName" : "nm118.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm118.rwl"
+      }, {
+        "fileName" : "nm118-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm118-noaa.rwl"
+      }, {
+        "fileName" : "nm118.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm118.crn"
+      }, {
+        "fileName" : "nm118-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm118-noaa.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-4975.json",
+    "studyName" : "Stockton - Gallinas Mountains - PIED - ITRDB NM111",
+    "sites" : [ {
+      "siteName" : "Gallinas Mountains",
+      "files" : [ {
+        "fileName" : "nm111-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm111-noaa.rwl"
+      }, {
+        "fileName" : "nm111.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm111.crn"
+      }, {
+        "fileName" : "nm111-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm111-noaa.crn"
+      }, {
+        "fileName" : "nm111.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm111.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-4976.json",
+    "studyName" : "Stockton - Gallinas Mountains - PSME - ITRDB NM112",
+    "sites" : [ {
+      "siteName" : "Gallinas Mountains",
+      "files" : [ {
+        "fileName" : "nm112-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm112-noaa.rwl"
+      }, {
+        "fileName" : "nm112.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm112.crn"
+      }, {
+        "fileName" : "nm112-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm112-noaa.crn"
+      }, {
+        "fileName" : "nm112.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm112.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-5067.json",
+    "studyName" : "Swetnam - Abouselman Spring - PIPO - ITRDB NM555",
+    "sites" : [ {
+      "siteName" : "Abouselman Spring",
+      "files" : [ {
+        "fileName" : "nm555-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm555-noaa.rwl"
+      }, {
+        "fileName" : "nm555.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm555.crn"
+      }, {
+        "fileName" : "nm555-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm555-noaa.crn"
+      }, {
+        "fileName" : "nm555.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm555.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-5068.json",
+    "studyName" : "Swetnam - Baca - PIPO - ITRDB NM558",
+    "sites" : [ {
+      "siteName" : "Baca",
+      "files" : [ {
+        "fileName" : "nm558-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm558-noaa.rwl"
+      }, {
+        "fileName" : "nm558.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm558.rwl"
+      }, {
+        "fileName" : "nm558.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm558.crn"
+      }, {
+        "fileName" : "nm558-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm558-noaa.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-5070.json",
+    "studyName" : "Swetnam - Burned Mountain - PIPO - ITRDB NM563",
+    "sites" : [ {
+      "siteName" : "Burned Mountain",
+      "files" : [ {
+        "fileName" : "nm563.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm563.rwl"
+      }, {
+        "fileName" : "nm563-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm563-noaa.rwl"
+      }, {
+        "fileName" : "nm563.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm563.crn"
+      }, {
+        "fileName" : "nm563-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm563-noaa.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-5071.json",
+    "studyName" : "Swetnam - Cabresto Canyon - PIED - ITRDB NM548",
+    "sites" : [ {
+      "siteName" : "Cabresto Canyon",
+      "files" : [ {
+        "fileName" : "nm548-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm548-noaa.rwl"
+      }, {
+        "fileName" : "nm548.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm548.crn"
+      }, {
+        "fileName" : "nm548-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm548-noaa.crn"
+      }, {
+        "fileName" : "nm548.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm548.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-5072.json",
+    "studyName" : "Swetnam - Cabresto Canyon - PIPO - ITRDB NM549",
+    "sites" : [ {
+      "siteName" : "Cabresto Canyon",
+      "files" : [ {
+        "fileName" : "nm549-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm549-noaa.rwl"
+      }, {
+        "fileName" : "nm549.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm549.crn"
+      }, {
+        "fileName" : "nm549-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm549-noaa.crn"
+      }, {
+        "fileName" : "nm549.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm549.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-5073.json",
+    "studyName" : "Swetnam - Cat Mesa - PIPO - ITRDB NM556",
+    "sites" : [ {
+      "siteName" : "Cat Mesa",
+      "files" : [ {
+        "fileName" : "nm556.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm556.rwl"
+      }, {
+        "fileName" : "nm556-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm556-noaa.rwl"
+      }, {
+        "fileName" : "nm556.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm556.crn"
+      }, {
+        "fileName" : "nm556-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm556-noaa.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-5076.json",
+    "studyName" : "Swetnam - Elephant Rock - PIPO - ITRDB NM559",
+    "sites" : [ {
+      "siteName" : "Elephant Rock",
+      "files" : [ {
+        "fileName" : "nm559-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm559-noaa.rwl"
+      }, {
+        "fileName" : "nm559.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm559.rwl"
+      }, {
+        "fileName" : "nm559.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm559.crn"
+      }, {
+        "fileName" : "nm559-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm559-noaa.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-5078.json",
+    "studyName" : "Swetnam - Fenton Lake - PIPO - ITRDB NM550",
+    "sites" : [ {
+      "siteName" : "Fenton Lake",
+      "files" : [ {
+        "fileName" : "nm550-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm550-noaa.rwl"
+      }, {
+        "fileName" : "nm550.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm550.crn"
+      }, {
+        "fileName" : "nm550-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm550-noaa.crn"
+      }, {
+        "fileName" : "nm550.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm550.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-5079.json",
+    "studyName" : "Swetnam - Garcia Park - PIPO - ITRDB NM551",
+    "sites" : [ {
+      "siteName" : "Garcia Park",
+      "files" : [ {
+        "fileName" : "nm551-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm551-noaa.rwl"
+      }, {
+        "fileName" : "nm551.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm551.crn"
+      }, {
+        "fileName" : "nm551-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm551-noaa.crn"
+      }, {
+        "fileName" : "nm551.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm551.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-5083.json",
+    "studyName" : "Swetnam - Italian Canyon - PIFL - ITRDB NM560",
+    "sites" : [ {
+      "siteName" : "Italian Canyon",
+      "files" : [ {
+        "fileName" : "nm560r-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm560r-noaa.crn"
+      }, {
+        "fileName" : "nm560.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm560.rwl"
+      }, {
+        "fileName" : "nm560-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm560-noaa.rwl"
+      }, {
+        "fileName" : "nm560.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm560.crn"
+      }, {
+        "fileName" : "nm560a.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm560a.crn"
+      }, {
+        "fileName" : "nm560r.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm560r.crn"
+      }, {
+        "fileName" : "nm560-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm560-noaa.crn"
+      }, {
+        "fileName" : "nm560a-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm560a-noaa.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-5085.json",
+    "studyName" : "Swetnam - Mouth of La Junta - PIPO - ITRDB NM554",
+    "sites" : [ {
+      "siteName" : "Mouth of La Junta",
+      "files" : [ {
+        "fileName" : "nm554-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm554-noaa.rwl"
+      }, {
+        "fileName" : "nm554.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm554.crn"
+      }, {
+        "fileName" : "nm554-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm554-noaa.crn"
+      }, {
+        "fileName" : "nm554.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm554.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-5089.json",
+    "studyName" : "Swetnam - Osha Mountain - PIPO - ITRDB NM552",
+    "sites" : [ {
+      "siteName" : "Osha Mountain",
+      "files" : [ {
+        "fileName" : "nm552-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm552-noaa.rwl"
+      }, {
+        "fileName" : "nm552.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm552.crn"
+      }, {
+        "fileName" : "nm552-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm552-noaa.crn"
+      }, {
+        "fileName" : "nm552.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm552.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-5090.json",
+    "studyName" : "Swetnam - Rio Pueblo - PIPO - ITRDB NM557",
+    "sites" : [ {
+      "siteName" : "Rio Pueblo",
+      "files" : [ {
+        "fileName" : "nm557.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm557.crn"
+      }, {
+        "fileName" : "nm557-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm557-noaa.crn"
+      }, {
+        "fileName" : "nm557.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm557.rwl"
+      }, {
+        "fileName" : "nm557-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm557-noaa.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-9698.json",
+    "studyName" : "Touchan - Bear Canyon Middle - PISF - ITRDB NM585",
+    "sites" : [ {
+      "siteName" : "Bear Canyon Middle",
+      "files" : [ {
+        "fileName" : "nm585r-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm585r-noaa.crn"
+      }, {
+        "fileName" : "nm585-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm585-noaa.rwl"
+      }, {
+        "fileName" : "nm585.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm585.crn"
+      }, {
+        "fileName" : "nm585.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm585.rwl"
+      }, {
+        "fileName" : "nm585r.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm585r.crn"
+      }, {
+        "fileName" : "nm585a.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm585a.crn"
+      }, {
+        "fileName" : "nm585-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm585-noaa.crn"
+      }, {
+        "fileName" : "nm585a-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm585a-noaa.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-9699.json",
+    "studyName" : "Touchan - Bear Canyon West - PSME - ITRDB NM586",
+    "sites" : [ {
+      "siteName" : "Bear Canyon West",
+      "files" : [ {
+        "fileName" : "nm586-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm586-noaa.rwl"
+      }, {
+        "fileName" : "nm586.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm586.crn"
+      }, {
+        "fileName" : "nm586a.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm586a.crn"
+      }, {
+        "fileName" : "nm586r.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm586r.crn"
+      }, {
+        "fileName" : "nm586-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm586-noaa.crn"
+      }, {
+        "fileName" : "nm586a-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm586a-noaa.crn"
+      }, {
+        "fileName" : "nm586r-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm586r-noaa.crn"
+      }, {
+        "fileName" : "nm586.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm586.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-9678.json",
+    "studyName" : "Touchan - Echo Amphitheater Recollection - PSME - ITRDB NM583",
+    "sites" : [ {
+      "siteName" : "Echo Amphitheater",
+      "files" : [ {
+        "fileName" : "nm583.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm583.rwl"
+      }, {
+        "fileName" : "nm583r-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm583r-noaa.crn"
+      }, {
+        "fileName" : "nm583-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm583-noaa.rwl"
+      }, {
+        "fileName" : "nm583.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm583.crn"
+      }, {
+        "fileName" : "nm583a.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm583a.crn"
+      }, {
+        "fileName" : "nm583r.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm583r.crn"
+      }, {
+        "fileName" : "nm583-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm583-noaa.crn"
+      }, {
+        "fileName" : "nm583a-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm583a-noaa.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-9700.json",
+    "studyName" : "Touchan - Fenton Lake Recollection - PSME - ITRDB NM587",
+    "sites" : [ {
+      "siteName" : "Fenton Lake",
+      "files" : [ {
+        "fileName" : "nm587-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm587-noaa.rwl"
+      }, {
+        "fileName" : "nm587.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm587.crn"
+      }, {
+        "fileName" : "nm587a.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm587a.crn"
+      }, {
+        "fileName" : "nm587r.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm587r.crn"
+      }, {
+        "fileName" : "nm587-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm587-noaa.crn"
+      }, {
+        "fileName" : "nm587a-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm587a-noaa.crn"
+      }, {
+        "fileName" : "nm587r-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm587r-noaa.crn"
+      }, {
+        "fileName" : "nm587.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm587.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-9697.json",
+    "studyName" : "Touchan - Mesa Alta - PSME - ITRDB NM584",
+    "sites" : [ {
+      "siteName" : "Mesa Alta",
+      "files" : [ {
+        "fileName" : "nm584-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm584-noaa.rwl"
+      }, {
+        "fileName" : "nm584.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm584.crn"
+      }, {
+        "fileName" : "nm584.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm584.rwl"
+      }, {
+        "fileName" : "nm584a.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm584a.crn"
+      }, {
+        "fileName" : "nm584r.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm584r.crn"
+      }, {
+        "fileName" : "nm584-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm584-noaa.crn"
+      }, {
+        "fileName" : "nm584a-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm584a-noaa.crn"
+      }, {
+        "fileName" : "nm584r-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm584r-noaa.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-5287.json",
+    "studyName" : "Woodhouse - Capulin Volcano - PIED - ITRDB NM576",
+    "sites" : [ {
+      "siteName" : "Capulin Volcano",
+      "files" : [ {
+        "fileName" : "nm576a.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm576a.crn"
+      }, {
+        "fileName" : "nm576r.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm576r.crn"
+      }, {
+        "fileName" : "nm576-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm576-noaa.crn"
+      }, {
+        "fileName" : "nm576a-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm576a-noaa.crn"
+      }, {
+        "fileName" : "nm576r-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm576r-noaa.crn"
+      }, {
+        "fileName" : "nm576-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm576-noaa.rwl"
+      }, {
+        "fileName" : "nm576.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm576.crn"
+      }, {
+        "fileName" : "nm576.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm576.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-5288.json",
+    "studyName" : "Woodhouse - Capulin Volcano - PIPO - ITRDB NM575",
+    "sites" : [ {
+      "siteName" : "Capulin Volcano",
+      "files" : [ {
+        "fileName" : "nm575-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm575-noaa.rwl"
+      }, {
+        "fileName" : "nm575.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm575.rwl"
+      }, {
+        "fileName" : "nm575.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm575.crn"
+      }, {
+        "fileName" : "nm575a.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm575a.crn"
+      }, {
+        "fileName" : "nm575r.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm575r.crn"
+      }, {
+        "fileName" : "nm575-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm575-noaa.crn"
+      }, {
+        "fileName" : "nm575a-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm575a-noaa.crn"
+      }, {
+        "fileName" : "nm575r-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm575r-noaa.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-5292.json",
+    "studyName" : "Woodhouse - Cornay Ranch - PIPO - ITRDB NM574",
+    "sites" : [ {
+      "siteName" : "Cornay Ranch",
+      "files" : [ {
+        "fileName" : "nm574-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm574-noaa.rwl"
+      }, {
+        "fileName" : "nm574.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm574.crn"
+      }, {
+        "fileName" : "nm574a.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm574a.crn"
+      }, {
+        "fileName" : "nm574r.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm574r.crn"
+      }, {
+        "fileName" : "nm574-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm574-noaa.crn"
+      }, {
+        "fileName" : "nm574a-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm574a-noaa.crn"
+      }, {
+        "fileName" : "nm574.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm574.rwl"
+      }, {
+        "fileName" : "nm574r-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm574r-noaa.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-22319.json",
+    "studyName" : "Woodhouse - Echo Amphitheater - PSME - ITRDB NM593",
+    "sites" : [ {
+      "siteName" : "Echo Amphitheater 2",
+      "files" : [ {
+        "fileName" : "nm593-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm593-noaa.rwl"
+      }, {
+        "fileName" : "nm593.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm593.crn"
+      }, {
+        "fileName" : "nm593-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm593-noaa.crn"
+      }, {
+        "fileName" : "nm593.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm593.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-10439.json",
+    "studyName" : "Woodhouse - Las Tablas - PIED - ITRDB NM581",
+    "sites" : [ {
+      "siteName" : "Las Tablas",
+      "files" : [ {
+        "fileName" : "nm581-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm581-noaa.rwl"
+      }, {
+        "fileName" : "nm581.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm581.crn"
+      }, {
+        "fileName" : "nm581a.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm581a.crn"
+      }, {
+        "fileName" : "nm581r.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm581r.crn"
+      }, {
+        "fileName" : "nm581-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm581-noaa.crn"
+      }, {
+        "fileName" : "nm581a-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm581a-noaa.crn"
+      }, {
+        "fileName" : "nm581r-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm581r-noaa.crn"
+      }, {
+        "fileName" : "nm581.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm581.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-5317.json",
+    "studyName" : "Woodhouse - Mill Canyon - PIPO - ITRDB NM577",
+    "sites" : [ {
+      "siteName" : "Mill Canyon",
+      "files" : [ {
+        "fileName" : "nm577-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm577-noaa.rwl"
+      }, {
+        "fileName" : "nm577.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm577.crn"
+      }, {
+        "fileName" : "nm577a.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm577a.crn"
+      }, {
+        "fileName" : "nm577r.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm577r.crn"
+      }, {
+        "fileName" : "nm577-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm577-noaa.crn"
+      }, {
+        "fileName" : "nm577a-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm577a-noaa.crn"
+      }, {
+        "fileName" : "nm577r-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm577r-noaa.crn"
+      }, {
+        "fileName" : "nm577.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm577.rwl"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-22329.json",
+    "studyName" : "Woodhouse - Pueblita Canyon - PSME - ITRDB NM602",
+    "sites" : [ {
+      "siteName" : "Pueblita Canyon 2",
+      "files" : [ {
+        "fileName" : "nm602.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm602.rwl"
+      }, {
+        "fileName" : "nm602-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm602-noaa.rwl"
+      }, {
+        "fileName" : "nm602.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm602.crn"
+      }, {
+        "fileName" : "nm602-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm602-noaa.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-22332.json",
+    "studyName" : "Woodhouse - Rio Pueblo - PIPO - ITRDB NM605",
+    "sites" : [ {
+      "siteName" : "Rio Pueblo 2",
+      "files" : [ {
+        "fileName" : "nm605-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm605-noaa.rwl"
+      }, {
+        "fileName" : "nm605.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm605.rwl"
+      }, {
+        "fileName" : "nm605.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm605.crn"
+      }, {
+        "fileName" : "nm605-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm605-noaa.crn"
+      } ]
+    } ]
+  }, {
+    "download" : "Y",
+    "metadataFile" : "metadata/noaa-tree-10440.json",
+    "studyName" : "Woodhouse - Tres Piedras - PIPO - ITRDB NM582",
+    "sites" : [ {
+      "siteName" : "Tres Piedras",
+      "files" : [ {
+        "fileName" : "nm582-noaa.rwl",
+        "description" : "Raw Measurements - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm582-noaa.rwl"
+      }, {
+        "fileName" : "nm582.rwl",
+        "description" : "Raw Measurements",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/nm582.rwl"
+      }, {
+        "fileName" : "nm582.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm582.crn"
+      }, {
+        "fileName" : "nm582a.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm582a.crn"
+      }, {
+        "fileName" : "nm582r.crn",
+        "description" : "Chronology",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm582r.crn"
+      }, {
+        "fileName" : "nm582r-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm582r-noaa.crn"
+      }, {
+        "fileName" : "nm582-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm582-noaa.crn"
+      }, {
+        "fileName" : "nm582a-noaa.crn",
+        "description" : "Chronology - NOAA Template File",
+        "URL" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm582a-noaa.crn"
+      } ]
+    } ]
+  } ],
+  "info" : {
+    "downloadCreateDate" : "2020-04-11T16:25:38.554Z",
+    "details" : "See the included README.txt for details of the sections in this manifest."
+  }
+}

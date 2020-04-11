@@ -1,0 +1,241 @@
+# Briffa - Ski Valley Wheeler Peak - PCEN - ITRDB NM569
+#-----------------------------------------------------------------------
+#               World Data Service for Paleoclimatology, Boulder
+#                                  and
+#                     NOAA Paleoclimatology Program
+#             National Centers for Environmental Information (NCEI)
+#-----------------------------------------------------------------------
+# Template Version 3.0
+# Encoding: UTF-8
+# NOTE: Please cite original publication, online resource and date accessed when using these data,
+# If there is no publication information, please cite investigator, title, online resource and date accessed.
+#
+# Online_Resource: https://www.ncdc.noaa.gov/paleo/study/2853
+#             Description: NOAA Landing Page of study
+# Online_Resource: https://www1.ncdc.noaa.gov//pub/data/paleo/treering/chronologies/northamerica/usa/nm569xr-noaa.crn
+#    Description: Chronology - NOAA Template File
+# Original_Source_URL: https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm569x.crn
+#    Description: Chronology - Tucson Decadal File
+#
+# Archive: Tree Ring
+#
+# Dataset_DOI: 
+#
+# Parameter_Keywords: minimum density, latewood width, earlywood density, more info, earlywood width, ring width, latewood density, maximum density
+#-------------------
+# Contribution_Date
+# Date: 2002-07-31
+#-------------------
+# File_Last_Modified_Date
+# Date: 2019-01-07
+#-------------------
+# Title
+#   Study_Name: Briffa - Ski Valley Wheeler Peak - PCEN - ITRDB NM569
+#-------------------
+# Investigators: Briffa, K.R.; Schweingruber, F.H.
+#-------------------
+# Description_Notes_and_Keywords
+#     Description: NOAA Template Chronology file added 2019-01-07.
+#-------------------
+# Publication
+# Authors: 
+# Journal_Name: 
+# Published_Title: 
+# Published_Date_or_Year: 
+# Volume: 
+# Pages: 
+# Report_Number: 
+# DOI: 
+# Full_Citation: 
+# Abstract: 
+#-------------------
+#-------------------
+# Site_Information
+# Site_Name:  Ski Valley Wheeler Peak
+# Location: New Mexico
+# Northernmost_Latitude: 36.58
+# Southernmost_Latitude: 36.58
+# Easternmost_Longitude: -105.5
+# Westernmost_Longitude: -105.5
+# Elevation: 3120
+#-------------------
+# Data_Collection
+# Collection_Name:  NM569
+# Earliest_Year: 1828
+# Most_Recent_Year: 1983
+# Time_Unit: AD
+# Notes: 
+#-------------------
+# Species
+# Species_Name: Picea engelmannii Parry ex Engelm.
+# Common_Name: Engelmann spruce
+# Tree_Species_Code: PCEN
+#-------------------
+# Chronology_Information 
+#      Chronology: 
+#-------------------
+# Variables 
+#  variables format: shortname <tab> var components: what,material,error,units,season,archive,detail,method, C or N for Char or Numeric data,additional information
+## age_CE	age,,,year Common Era,,tree ring,,,N,
+## trsgi	tree ring standardized growth index,,,,,tree ring,composited,residual,N,reconstructed from maximum density
+## numsamp	number of samples,,,count,,tree ring,,,N,
+#-------------------
+# Data:
+# Missing_Values: -999
+age_CE	trsgi	numsamp
+1828	 975	  1
+1829	 990	  1
+1830	1027	  3
+1831	 958	  5
+1832	 991	  6
+1833	 985	  7
+1834	1012	  7
+1835	 999	  7
+1836	 964	  9
+1837	1001	 10
+1838	 951	 10
+1839	 947	 10
+1840	 996	 12
+1841	1003	 12
+1842	1015	 13
+1843	1029	 13
+1844	1008	 13
+1845	 982	 16
+1846	1050	 17
+1847	 988	 17
+1848	1038	 18
+1849	 984	 18
+1850	 996	 18
+1851	1073	 18
+1852	 995	 18
+1853	 992	 18
+1854	 958	 18
+1855	1020	 18
+1856	1020	 18
+1857	1019	 18
+1858	 984	 20
+1859	1002	 21
+1860	1032	 21
+1861	1010	 21
+1862	1026	 21
+1863	1034	 22
+1864	 996	 22
+1865	1033	 22
+1866	 930	 22
+1867	 982	 22
+1868	 960	 22
+1869	 986	 22
+1870	 995	 22
+1871	1021	 22
+1872	 950	 22
+1873	 998	 22
+1874	1008	 22
+1875	1003	 22
+1876	 986	 22
+1877	 996	 22
+1878	1026	 22
+1879	1032	 22
+1880	 979	 22
+1881	 974	 22
+1882	 972	 22
+1883	1019	 22
+1884	 928	 22
+1885	 968	 22
+1886	 985	 22
+1887	1009	 22
+1888	1013	 22
+1889	1034	 22
+1890	1038	 22
+1891	1021	 22
+1892	1025	 22
+1893	1015	 22
+1894	1017	 22
+1895	 994	 22
+1896	1005	 22
+1897	1026	 22
+1898	 993	 22
+1899	1033	 22
+1900	1032	 22
+1901	1014	 22
+1902	1051	 22
+1903	 980	 22
+1904	 980	 22
+1905	1008	 22
+1906	 971	 22
+1907	 959	 22
+1908	 990	 22
+1909	 958	 22
+1910	1061	 22
+1911	1012	 22
+1912	 996	 22
+1913	1012	 22
+1914	 971	 22
+1915	 971	 22
+1916	 984	 22
+1917	1012	 22
+1918	1000	 22
+1919	1025	 22
+1920	 930	 21
+1921	 981	 21
+1922	1043	 21
+1923	 955	 21
+1924	1032	 21
+1925	1008	 21
+1926	1024	 21
+1927	 994	 21
+1928	 980	 21
+1929	 947	 21
+1930	1014	 21
+1931	1011	 21
+1932	 989	 21
+1933	1004	 21
+1934	1030	 21
+1935	 974	 21
+1936	1036	 21
+1937	1023	 21
+1938	1012	 21
+1939	1048	 21
+1940	 982	 21
+1941	 958	 21
+1942	1051	 21
+1943	1021	 21
+1944	1009	 21
+1945	 995	 21
+1946	1003	 20
+1947	1012	 20
+1948	 992	 20
+1949	 991	 20
+1950	 999	 20
+1951	1014	 20
+1952	 976	 20
+1953	 968	 20
+1954	 991	 20
+1955	 946	 20
+1956	 980	 20
+1957	 946	 20
+1958	1058	 20
+1959	 965	 19
+1960	1037	 19
+1961	1007	 19
+1962	1053	 19
+1963	1026	 19
+1964	 942	 19
+1965	 975	 19
+1966	1042	 18
+1967	 971	 18
+1968	 985	 18
+1969	1062	 18
+1970	1029	 18
+1971	 968	 18
+1972	1055	 18
+1973	1036	 18
+1974	1011	 18
+1975	 983	 18
+1976	 994	 18
+1977	 989	 18
+1978	 999	 18
+1979	1010	 18
+1980	 996	 18
+1981	 960	 18
+1982	 979	 18
+1983	1017	 18

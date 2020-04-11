@@ -1,0 +1,441 @@
+# Griffin - Gallinas Mountains - PIPO - ITRDB NM617
+#-----------------------------------------------------------------------
+#               World Data Service for Paleoclimatology, Boulder
+#                                  and
+#                     NOAA Paleoclimatology Program
+#             National Centers for Environmental Information (NCEI)
+#-----------------------------------------------------------------------
+# Template Version 3.0
+# Encoding: UTF-8
+# NOTE: Please cite original publication, online resource and date accessed when using these data,
+# If there is no publication information, please cite investigator, title, online resource and date accessed.
+#
+# Online_Resource: https://www.ncdc.noaa.gov/paleo/study/22345
+#             Description: NOAA Landing Page of study
+# Online_Resource: https://www1.ncdc.noaa.gov//pub/data/paleo/treering/chronologies/northamerica/usa/nm617-noaa.crn
+#    Description: Chronology - NOAA Template File
+#
+# Original_Source_URL: https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm617.crn
+#    Description: Chronology - Tucson Decadal File
+#
+# Archive: Tree Ring
+#
+# Dataset_DOI: 
+#
+# Parameter_Keywords: ring width
+#-------------------
+# Contribution_Date
+# Date: 2016-07-07
+#-------------------
+# File_Last_Modified_Date
+# Date: 2018-12-20
+#-------------------
+# Title
+#   Study_Name: Griffin - Gallinas Mountains - PIPO - ITRDB NM617
+#-------------------
+# Investigators: Griffin, D.; Biggs, R.
+#-------------------
+# Description_Notes_and_Keywords
+#     Description: NOAA Template Chronology file added 2018-12-20.
+#-------------------
+# Publication
+# Authors: David W. Stahle, Edward R. Cook, Dorian J. Burnette, Jose Villanueva, Julian Cerano, Jordan N. Burns, Daniel Griffin, Benjamin I. Cook, Rodolfo Acuna, Max C.A. Torbenson, Paul Sjezner, Ian M. Howard
+# Journal_Name: Quaternary Science Reviews
+# Published_Title: The Mexican Drought Atlas: Tree-ring reconstructions of the soil moisture balance during the late pre-Hispanic, colonial, and modern eras
+# Published_Date_or_Year: 2016
+# Volume: 149
+# Pages: 34-60
+# Report_Number: 
+# DOI: 10.1016/j.quascirev.2016.06.018
+# Full_Citation: 
+# Abstract: Mexico has suffered a long history and prehistory of severe sustained drought. Drought over Mexico is modulated by ocean-atmospheric variability in the Atlantic and Pacific, raising the possibility for long-range seasonal climate forecasting, which could help mediate the economic and social impacts of future dry spells. The instrumental record of Mexican climate is very limited before 1920, but tree-ring chronologies developed from old-growth forests in Mexico can provide an excellent proxy representation of the spatial pattern and intensity of past moisture regimes useful for the analysis of climate dynamics and climate impacts. The Mexican Drought Atlas (MXDA) has been developed from an extensive network of 252 climate sensitive tree-ring chronologies in and near Mexico. The MXDA reconstructions extend from 1400 CE-2012 and were calibrated with the instrumental summer (JJA) self-calibrating Palmer Drought Severity Index (scPDSI) on a 0.5 latitude/longitude grid extending over land areas from 14 to 34N and 75-120W using Ensemble Point-by-Point Regression (EPPR) for the 1944-1984 period. The grid point reconstructions were validated for the period 1920-1943 against instrumental gridded scPDSI values based on the fewer weather station observations available during that interval. The MXDA provides a new spatial perspective on the historical impacts of moisture extremes over Mexico during the past 600-years, including the Aztec Drought of One Rabbit in 1454, the drought of El Ano de Hambre in 1785-1786, and the drought that preceded the Mexican Revolution of 1909-1910. 
+#  The El Nino/Southern Oscillation (ENSO) is the most important ocean-atmospheric forcing of moisture variability detected with the MXDA. In fact, the reconstructions suggest that the strongest central equatorial Pacific sea surface temperature (SST) teleconnection to the soil moisture balance over North America may reside in northern Mexico. This ENSO signal has stronger and more time-stable correlations than computed for either the Atlantic Multidecadal Oscillation or Pacific Decadal Oscillation. The extended Multivariate ENSO Index is most highly correlated with reconstructed scPDSI over northern Mexico, where warm events favor moist conditions during the winter, spring, and early summer. This ENSO teleconnection to northern Mexico has been strong over the past 150 years, but it has been comparatively weak and non-stationary in the MXDA over central and southern Mexico where eastern tropical Pacific and Caribbean/tropical Atlantic SSTs seem to be more important. The ENSO teleconnection to northern Mexico is weaker in the available instrumental PDSI, but analyses based on the millennium climate simulations with the Community Earth System Model suggest that the moisture balance during the winter, spring, and early summer over northern Mexico may indeed be particularly sensitive to ENSO forcing. Nationwide drought is predicted to become more common with anthropogenic climate change, but the MXDA reconstructions indicate that intense "All Mexico" droughts have been rare over the past 600 years and their frequency does not appear to have increased substantially in recent decades.
+#-------------------
+# Site_Information
+# Site_Name:  Gallinas Mountains 2
+# Location: New Mexico
+# Northernmost_Latitude: 34.244
+# Southernmost_Latitude: 34.244
+# Easternmost_Longitude: -105.796
+# Westernmost_Longitude: -105.796
+# Elevation: 2439
+#-------------------
+# Data_Collection
+# Collection_Name:  NM617
+# Earliest_Year: 1655
+# Most_Recent_Year: 2008
+# Time_Unit: AD
+# Notes: 
+#-------------------
+# Species
+# Species_Name: Pinus ponderosa Douglas ex C. Lawson
+# Common_Name: ponderosa pine
+# Tree_Species_Code: PIPO
+#-------------------
+# Chronology_Information 
+#      Chronology: 
+#---------------------
+# Variables 
+#  variables format: shortname <tab> var components: what,material,error,units,season,archive,detail,method, C or N for Char or Numeric data,additional information
+## age_CE	age,,,year Common Era,,tree ring,,,N,
+## trsgi	tree ring standardized growth index,,,,,tree ring,composited,standard,N,
+## numsamp	number of samples,,,count,,tree ring,,,N,
+#
+#--------------------
+# Data:
+# Missing_Values: -999
+age_CE	trsgi	numsamp
+1655	1055	  1
+1656	1158	  1
+1657	 903	  1
+1658	 588	  1
+1659	 988	  3
+1660	 819	  3
+1661	1131	  3
+1662	1260	  3
+1663	1085	  3
+1664	 883	  3
+1665	1444	  3
+1666	 779	  3
+1667	 552	  3
+1668	 691	  3
+1669	 912	  3
+1670	 885	  3
+1671	 849	  3
+1672	 991	  3
+1673	 979	  3
+1674	1264	  4
+1675	1414	  5
+1676	 994	  5
+1677	 926	  5
+1678	 857	  5
+1679	 767	  5
+1680	1306	  5
+1681	 973	  5
+1682	1239	  5
+1683	1529	  5
+1684	 583	  5
+1685	 404	  6
+1686	1270	  6
+1687	1309	  6
+1688	1335	  6
+1689	1575	  6
+1690	1236	  6
+1691	 890	  6
+1692	1221	  6
+1693	1062	  6
+1694	1031	  6
+1695	1147	  6
+1696	 687	  6
+1697	1143	  6
+1698	 448	  7
+1699	 655	  7
+1700	 659	  7
+1701	 743	  7
+1702	 967	  8
+1703	1114	  8
+1704	1322	  8
+1705	 675	  8
+1706	1203	  8
+1707	 856	  8
+1708	1199	  8
+1709	 571	  8
+1710	1310	 10
+1711	1233	 10
+1712	1517	 10
+1713	1386	 10
+1714	1048	 10
+1715	 571	 10
+1716	 465	 10
+1717	1021	 10
+1718	1219	 10
+1719	1192	 11
+1720	1655	 11
+1721	1577	 12
+1722	1455	 12
+1723	1054	 14
+1724	1077	 14
+1725	 841	 17
+1726	1126	 17
+1727	 940	 17
+1728	1260	 17
+1729	 722	 17
+1730	 880	 18
+1731	 775	 18
+1732	 921	 19
+1733	 158	 19
+1734	1029	 19
+1735	 776	 19
+1736	 888	 20
+1737	 653	 20
+1738	 843	 20
+1739	 558	 20
+1740	1097	 20
+1741	1245	 20
+1742	1021	 20
+1743	1435	 20
+1744	1486	 20
+1745	1145	 20
+1746	1490	 20
+1747	1488	 20
+1748	  77	 20
+1749	1110	 20
+1750	 826	 20
+1751	1194	 20
+1752	 526	 20
+1753	1016	 20
+1754	1214	 21
+1755	1023	 21
+1756	 840	 21
+1757	  58	 21
+1758	1047	 21
+1759	1051	 21
+1760	 915	 21
+1761	1265	 21
+1762	1327	 21
+1763	 833	 22
+1764	 886	 22
+1765	1034	 23
+1766	1376	 23
+1767	1251	 23
+1768	1168	 23
+1769	1239	 23
+1770	1168	 23
+1771	1409	 23
+1772	 928	 24
+1773	 742	 26
+1774	 999	 27
+1775	 789	 27
+1776	1131	 27
+1777	 841	 28
+1778	 879	 28
+1779	1098	 29
+1780	 728	 30
+1781	 998	 30
+1782	 923	 31
+1783	1314	 31
+1784	1453	 31
+1785	 985	 31
+1786	 833	 31
+1787	1228	 32
+1788	1089	 32
+1789	 600	 32
+1790	 946	 32
+1791	1164	 32
+1792	1070	 33
+1793	1340	 33
+1794	1072	 33
+1795	1155	 33
+1796	 944	 33
+1797	 894	 33
+1798	1024	 33
+1799	1154	 33
+1800	1293	 33
+1801	 902	 34
+1802	 990	 34
+1803	1235	 36
+1804	 974	 36
+1805	 867	 36
+1806	 455	 36
+1807	1210	 36
+1808	1343	 38
+1809	1077	 39
+1810	1198	 43
+1811	1246	 43
+1812	1173	 44
+1813	1484	 45
+1814	1291	 45
+1815	1371	 45
+1816	1463	 45
+1817	 867	 45
+1818	 469	 45
+1819	 527	 45
+1820	 738	 47
+1821	 781	 48
+1822	 482	 48
+1823	 845	 49
+1824	 685	 49
+1825	 976	 50
+1826	 961	 50
+1827	1161	 51
+1828	1177	 51
+1829	1283	 51
+1830	1271	 52
+1831	 765	 52
+1832	 726	 52
+1833	1117	 52
+1834	1178	 52
+1835	1278	 53
+1836	 877	 53
+1837	1028	 54
+1838	1117	 54
+1839	1297	 54
+1840	1083	 54
+1841	 944	 54
+1842	 372	 54
+1843	 551	 54
+1844	 875	 54
+1845	 995	 54
+1846	 981	 54
+1847	 624	 54
+1848	 644	 54
+1849	1224	 54
+1850	 871	 58
+1851	 696	 58
+1852	1044	 58
+1853	1054	 58
+1854	1131	 58
+1855	1013	 59
+1856	1117	 59
+1857	1297	 59
+1858	1339	 59
+1859	 538	 59
+1860	 950	 59
+1861	 925	 59
+1862	 534	 59
+1863	 626	 59
+1864	 444	 59
+1865	 740	 59
+1866	 943	 59
+1867	 956	 59
+1868	1462	 59
+1869	1767	 59
+1870	 898	 60
+1871	1153	 60
+1872	1471	 60
+1873	 519	 60
+1874	 856	 60
+1875	 945	 60
+1876	 757	 60
+1877	 903	 60
+1878	1205	 60
+1879	1063	 60
+1880	 408	 60
+1881	1035	 60
+1882	 895	 60
+1883	 985	 60
+1884	 931	 60
+1885	1208	 60
+1886	 708	 60
+1887	1089	 60
+1888	 929	 60
+1889	1156	 60
+1890	 835	 60
+1891	1012	 60
+1892	 746	 61
+1893	 742	 61
+1894	 716	 61
+1895	 842	 61
+1896	 512	 61
+1897	1078	 61
+1898	1323	 61
+1899	 962	 61
+1900	1193	 61
+1901	1283	 61
+1902	 820	 61
+1903	1351	 61
+1904	 225	 61
+1905	1316	 61
+1906	1249	 61
+1907	1723	 61
+1908	1695	 61
+1909	1147	 61
+1910	 978	 61
+1911	1343	 61
+1912	1335	 61
+1913	 986	 61
+1914	1336	 61
+1915	1163	 61
+1916	1314	 61
+1917	1212	 61
+1918	 844	 61
+1919	1440	 61
+1920	1441	 61
+1921	1250	 61
+1922	 894	 61
+1923	 697	 61
+1924	1146	 61
+1925	 244	 61
+1926	1081	 61
+1927	 938	 61
+1928	1078	 61
+1929	1440	 61
+1930	1218	 61
+1931	1356	 61
+1932	1605	 61
+1933	1226	 61
+1934	 355	 61
+1935	1170	 61
+1936	1181	 61
+1937	1125	 61
+1938	 882	 61
+1939	1057	 61
+1940	1099	 61
+1941	1420	 57
+1942	1241	 57
+1943	1056	 57
+1944	1166	 57
+1945	1014	 57
+1946	 725	 57
+1947	 766	 57
+1948	 742	 57
+1949	 975	 57
+1950	 732	 57
+1951	 608	 42
+1952	 881	 42
+1953	 910	 42
+1954	 331	 42
+1955	 917	 42
+1956	 328	 42
+1957	 678	 42
+1958	 923	 42
+1959	 877	 42
+1960	1081	 42
+1961	1019	 39
+1962	1250	 39
+1963	 832	 39
+1964	 799	 39
+1965	 849	 39
+1966	1033	 39
+1967	 936	 39
+1968	1088	 39
+1969	1005	 39
+1970	1051	 39
+1971	 495	 38
+1972	1210	 38
+1973	1126	 38
+1974	 619	 38
+1975	1185	 38
+1976	1015	 38
+1977	 737	 37
+1978	 984	 37
+1979	1129	 37
+1980	 956	 36
+1981	 982	 36
+1982	 822	 34
+1983	1305	 16
+1984	1404	 16
+1985	1374	 16
+1986	1646	 16
+1987	1328	 16
+1988	1430	 16
+1989	 612	 16
+1990	 496	 16
+1991	 839	 12
+1992	 981	 12
+1993	 978	 12
+1994	 890	 12
+1995	 750	 12
+1996	 452	 12
+1997	1113	 12
+1998	1052	 12
+1999	1093	 12
+2000	 424	 12
+2001	1024	 12
+2002	 420	 12
+2003	 974	 12
+2004	 792	 11
+2005	 950	 11
+2006	 502	 11
+2007	1000	 11
+2008	 987	 10

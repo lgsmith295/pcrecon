@@ -1,0 +1,369 @@
+# Dean - Ruidosa Ridge - PSME - ITRDB NM039
+#-----------------------------------------------------------------------
+#               World Data Service for Paleoclimatology, Boulder
+#                                  and
+#                     NOAA Paleoclimatology Program
+#             National Centers for Environmental Information (NCEI)
+#-----------------------------------------------------------------------
+# Template Version 3.0
+# Encoding: UTF-8
+# NOTE: Please cite original publication, online resource and date accessed when using these data,
+# If there is no publication information, please cite investigator, title, online resource and date accessed.
+#
+# Online_Resource: https://www.ncdc.noaa.gov/paleo/study/3100
+#             Description: NOAA Landing Page of study
+# Online_Resource: https://www1.ncdc.noaa.gov//pub/data/paleo/treering/chronologies/northamerica/usa/nm039-noaa.crn
+#    Description: Chronology - NOAA Template File
+#
+# Original_Source_URL: https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm039.crn
+#    Description: Chronology - Tucson Decadal File
+#
+# Archive: Tree Ring
+#
+# Dataset_DOI: 
+#
+# Parameter_Keywords: more info, ring width
+#-------------------
+# Contribution_Date
+# Date: 2002-04-26
+#-------------------
+# File_Last_Modified_Date
+# Date: 2018-12-20
+#-------------------
+# Title
+#   Study_Name: Dean - Ruidosa Ridge - PSME - ITRDB NM039
+#-------------------
+# Investigators: Dean, J.S.; Robinson, W.J.; Matlock, G.
+#-------------------
+# Description_Notes_and_Keywords
+#     Description: NOAA Template Chronology file added 2018-12-20.
+#-------------------
+# Publication
+# Authors: 
+# Journal_Name: 
+# Published_Title: 
+# Published_Date_or_Year: 
+# Volume: 
+# Pages: 
+# Report_Number: 
+# DOI: 
+# Full_Citation: 
+# Abstract: 
+#-------------------
+# Site_Information
+# Site_Name:  Ruidosa Ridge
+# Location: New Mexico
+# Northernmost_Latitude: 35.53
+# Southernmost_Latitude: 35.53
+# Easternmost_Longitude: -105.57
+# Westernmost_Longitude: -105.57
+# Elevation: 2286
+#-------------------
+# Data_Collection
+# Collection_Name:  NM039
+# Earliest_Year: 1690
+# Most_Recent_Year: 1972
+# Time_Unit: AD
+# Notes: 
+#-------------------
+# Species
+# Species_Name: Pseudotsuga menziesii (Mirb.) Franco
+# Common_Name: Douglas-fir
+# Tree_Species_Code: PSME
+#-------------------
+# Chronology_Information 
+#      Chronology: 
+#---------------------
+# Variables 
+#  variables format: shortname <tab> var components: what,material,error,units,season,archive,detail,method, C or N for Char or Numeric data,additional information
+## age_CE	age,,,year Common Era,,tree ring,,,N,
+## trsgi	tree ring standardized growth index,,,,,tree ring,composited,standard,N,
+## numsamp	number of samples,,,count,,tree ring,,,N,
+#
+#--------------------
+# Data:
+# Missing_Values: -999
+age_CE	trsgi	numsamp
+1690	 838	  1
+1691	 641	  1
+1692	1836	  1
+1693	 943	  1
+1694	1138	  1
+1695	1161	  1
+1696	 470	  1
+1697	 474	  1
+1698	 988	  1
+1699	1093	  1
+1700	 850	  1
+1701	1178	  1
+1702	 498	  1
+1703	1456	  1
+1704	1231	  1
+1705	 453	  1
+1706	1301	  1
+1707	1151	  2
+1708	1641	  2
+1709	1345	  2
+1710	1842	  2
+1711	1016	  3
+1712	2131	  3
+1713	1441	  3
+1714	 794	  4
+1715	1025	  4
+1716	 531	  4
+1717	 762	  4
+1718	 767	  4
+1719	 406	  4
+1720	1223	  4
+1721	1937	  5
+1722	 934	  5
+1723	1203	  5
+1724	1157	  5
+1725	 521	  5
+1726	1451	  5
+1727	1129	  5
+1728	 933	  5
+1729	 330	  5
+1730	 273	  5
+1731	 673	  5
+1732	1208	  5
+1733	 812	  5
+1734	1003	  5
+1735	 549	  5
+1736	 590	  5
+1737	 183	  5
+1738	 444	  5
+1739	 253	  5
+1740	 870	  5
+1741	 907	  5
+1742	 512	  5
+1743	1364	  5
+1744	 821	  5
+1745	 919	  5
+1746	 865	  5
+1747	1858	  5
+1748	 245	  7
+1749	1424	  7
+1750	 391	  8
+1751	1435	  9
+1752	 691	 10
+1753	1077	 10
+1754	1952	 10
+1755	1250	 10
+1756	 705	 10
+1757	 598	 10
+1758	1011	 10
+1759	 946	 10
+1760	 529	 10
+1761	1592	 10
+1762	1705	 10
+1763	 768	 10
+1764	1897	 10
+1765	1075	 10
+1766	1775	 10
+1767	1357	 10
+1768	1537	 10
+1769	1412	 10
+1770	1381	 10
+1771	1343	 10
+1772	 809	 10
+1773	 156	 10
+1774	 952	 10
+1775	 647	 10
+1776	1116	 10
+1777	 786	 11
+1778	1043	 11
+1779	 621	 11
+1780	 479	 11
+1781	 483	 11
+1782	 545	 11
+1783	1169	 11
+1784	1255	 11
+1785	 644	 11
+1786	 758	 11
+1787	1319	 11
+1788	 414	 11
+1789	 460	 11
+1790	 741	 12
+1791	1240	 12
+1792	1160	 12
+1793	1725	 12
+1794	 805	 12
+1795	 819	 12
+1796	 593	 13
+1797	 711	 14
+1798	 896	 14
+1799	1345	 14
+1800	1018	 15
+1801	 354	 15
+1802	 965	 15
+1803	 776	 15
+1804	1110	 15
+1805	 665	 15
+1806	 784	 15
+1807	1504	 16
+1808	 952	 16
+1809	 985	 16
+1810	1009	 17
+1811	1084	 17
+1812	 909	 18
+1813	 952	 18
+1814	 616	 18
+1815	1473	 18
+1816	2380	 18
+1817	1881	 19
+1818	 679	 19
+1819	 562	 19
+1820	 577	 20
+1821	1633	 20
+1822	 135	 20
+1823	 881	 20
+1824	 602	 20
+1825	 981	 20
+1826	 577	 20
+1827	1198	 20
+1828	1656	 20
+1829	1016	 20
+1830	1125	 20
+1831	1298	 20
+1832	1057	 20
+1833	1702	 20
+1834	1780	 20
+1835	 690	 20
+1836	 408	 20
+1837	1485	 20
+1838	1638	 20
+1839	1874	 20
+1840	1688	 20
+1841	1911	 20
+1842	 226	 20
+1843	1334	 20
+1844	2154	 20
+1845	 921	 20
+1846	1046	 20
+1847	 513	 20
+1848	 698	 20
+1849	1407	 20
+1850	 868	 20
+1851	 267	 20
+1852	 922	 20
+1853	 548	 20
+1854	 854	 20
+1855	1125	 20
+1856	1404	 20
+1857	 888	 20
+1858	1299	 20
+1859	 616	 20
+1860	 760	 20
+1861	 358	 20
+1862	 235	 20
+1863	 622	 20
+1864	 395	 20
+1865	 767	 20
+1866	1074	 20
+1867	1315	 20
+1868	1558	 20
+1869	2594	 20
+1870	1090	 20
+1871	 919	 20
+1872	 584	 20
+1873	 235	 20
+1874	 883	 20
+1875	 525	 20
+1876	1029	 20
+1877	1216	 20
+1878	 811	 20
+1879	1054	 20
+1880	  89	 20
+1881	1267	 20
+1882	 994	 20
+1883	 378	 20
+1884	1183	 20
+1885	1181	 20
+1886	1057	 20
+1887	2296	 20
+1888	1884	 20
+1889	 721	 20
+1890	 559	 20
+1891	1311	 20
+1892	 673	 20
+1893	  97	 20
+1894	 758	 20
+1895	 822	 20
+1896	 271	 20
+1897	1566	 20
+1898	 726	 20
+1899	 211	 20
+1900	 999	 20
+1901	 827	 20
+1902	 353	 20
+1903	 898	 20
+1904	  67	 20
+1905	1441	 20
+1906	1317	 20
+1907	1598	 20
+1908	 646	 20
+1909	1044	 20
+1910	 555	 20
+1911	 672	 20
+1912	1532	 20
+1913	 473	 20
+1914	 898	 20
+1915	1282	 20
+1916	2112	 20
+1917	 886	 20
+1918	 464	 20
+1919	2646	 20
+1920	1906	 20
+1921	1414	 20
+1922	 418	 20
+1923	 967	 20
+1924	1254	 20
+1925	  88	 20
+1926	1850	 20
+1927	 668	 20
+1928	1528	 20
+1929	1164	 20
+1930	1027	 20
+1931	1261	 20
+1932	2735	 20
+1933	2010	 20
+1934	 142	 20
+1935	2013	 20
+1936	1037	 20
+1937	1078	 20
+1938	 393	 20
+1939	1038	 20
+1940	 708	 20
+1941	2131	 20
+1942	2042	 20
+1943	 791	 20
+1944	1036	 20
+1945	 750	 20
+1946	 460	 20
+1947	1202	 20
+1948	1219	 20
+1949	2353	 20
+1950	1213	 20
+1951	 475	 20
+1952	  92	 20
+1953	 259	 20
+1954	 497	 20
+1955	  77	 20
+1956	 145	 20
+1957	 130	 20
+1958	1550	 20
+1959	1077	 20
+1960	1115	 20
+1961	 671	 20
+1962	 744	 20
+1963	 811	 20
+1964	 559	 20
+1965	 219	 20
+1966	 788	 20
+1967	 272	 20
+1968	1412	 20
+1969	1477	 20
+1970	 548	 20
+1971	 111	 20
+1972	1481	 20

@@ -1,0 +1,305 @@
+# Cleaveland - Pueblita Canyon - PIED - ITRDB NM545
+#-----------------------------------------------------------------------
+#               World Data Service for Paleoclimatology, Boulder
+#                                  and
+#                     NOAA Paleoclimatology Program
+#             National Centers for Environmental Information (NCEI)
+#-----------------------------------------------------------------------
+# Template Version 3.0
+# Encoding: UTF-8
+# NOTE: Please cite original publication, online resource and date accessed when using these data,
+# If there is no publication information, please cite investigator, title, online resource and date accessed.
+#
+# Online_Resource: https://www.ncdc.noaa.gov/paleo/study/2946
+#             Description: NOAA Landing Page of study
+# Online_Resource: https://www1.ncdc.noaa.gov//pub/data/paleo/treering/chronologies/northamerica/usa/nm545d-noaa.crn
+#    Description: Chronology - NOAA Template File
+#
+# Original_Source_URL: https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm545d.crn
+#    Description: Chronology - Tucson Decadal File
+#
+# Archive: Tree Ring
+#
+# Dataset_DOI: 
+#
+# Parameter_Keywords: minimum density, latewood width, earlywood density, more info, earlywood width, ring width, total ring density, latewood density, maximum density
+#-------------------
+# Contribution_Date
+# Date: 2002-04-26
+#-------------------
+# File_Last_Modified_Date
+# Date: 2018-12-20
+#-------------------
+# Title
+#   Study_Name: Cleaveland - Pueblita Canyon - PIED - ITRDB NM545
+#-------------------
+# Investigators: Cleaveland, M.K.; Harlan, T.P.
+#-------------------
+# Description_Notes_and_Keywords
+#     Description: NOAA Template Chronology file added 2018-12-20.
+#-------------------
+# Publication
+# Authors: 
+# Journal_Name: 
+# Published_Title: 
+# Published_Date_or_Year: 
+# Volume: 
+# Pages: 
+# Report_Number: 
+# DOI: 
+# Full_Citation: 
+# Abstract: 
+#-------------------
+# Site_Information
+# Site_Name:  Pueblita Canyon
+# Location: New Mexico
+# Northernmost_Latitude: 36.68
+# Southernmost_Latitude: 36.68
+# Easternmost_Longitude: -107.32
+# Westernmost_Longitude: -107.32
+# Elevation: 2073
+#-------------------
+# Data_Collection
+# Collection_Name:  NM545
+# Earliest_Year: 1760
+# Most_Recent_Year: 1978
+# Time_Unit: AD
+# Notes: 
+#-------------------
+# Species
+# Species_Name: Pinus edulis Engelm.
+# Common_Name: pinyon
+# Tree_Species_Code: PIED
+#-------------------
+# Chronology_Information 
+#      Chronology: 
+#---------------------
+# Variables 
+#  variables format: shortname <tab> var components: what,material,error,units,season,archive,detail,method, C or N for Char or Numeric data,additional information
+## age_CE	age,,,year Common Era,,tree ring,,,N,
+## trsgi	tree ring standardized growth index,,,,,tree ring,composited,standard,N,
+## numsamp	number of samples,,,count,,tree ring,,,N,
+#
+#--------------------
+# Data:
+# Missing_Values: -999
+age_CE	trsgi	numsamp
+1760	1023	  1
+1761	 981	  1
+1762	 919	  1
+1763	 960	  1
+1764	 939	  1
+1765	 938	  1
+1766	 958	  1
+1767	 998	  1
+1768	 978	  1
+1769	1038	  1
+1770	1017	  1
+1771	 997	  1
+1772	1037	  1
+1773	1036	  1
+1774	1036	  1
+1775	1097	  1
+1776	1056	  1
+1777	1056	  1
+1778	1056	  1
+1779	1015	  1
+1780	1055	  1
+1781	1076	  1
+1782	1035	  1
+1783	 954	  1
+1784	 995	  1
+1785	 954	  1
+1786	 975	  1
+1787	 975	  1
+1788	1036	  1
+1789	1036	  1
+1790	 976	  1
+1791	 956	  1
+1792	1017	  1
+1793	 997	  1
+1794	 997	  1
+1795	 997	  1
+1796	 936	  1
+1797	 998	  1
+1798	 916	  1
+1799	 957	  1
+1800	 998	  1
+1801	 978	  1
+1802	 978	  1
+1803	 978	  1
+1804	 978	  1
+1805	 998	  1
+1806	1080	  1
+1807	 998	  1
+1808	1039	  1
+1809	1039	  1
+1810	 998	  1
+1811	 958	  1
+1812	 958	  1
+1813	 958	  1
+1814	1019	  1
+1815	 998	  1
+1816	 978	  1
+1817	 978	  1
+1818	 998	  1
+1819	1018	  1
+1820	1018	  1
+1821	 998	  1
+1822	1039	  1
+1823	 998	  1
+1824	 977	  1
+1825	 957	  1
+1826	 957	  1
+1827	 957	  1
+1828	 937	  1
+1829	 998	  1
+1830	1038	  1
+1831	1079	  1
+1832	1038	  1
+1833	 998	  1
+1834	1039	  1
+1835	1039	  1
+1836	1100	  1
+1837	1003	  2
+1838	1001	  2
+1839	 967	  2
+1840	 947	  2
+1841	 987	  2
+1842	1034	  2
+1843	1030	  2
+1844	1019	  2
+1845	1033	  3
+1846	1010	  3
+1847	1018	  3
+1848	 963	  3
+1849	 990	  3
+1850	 975	  3
+1851	1058	  3
+1852	 951	  3
+1853	 983	  3
+1854	 973	  3
+1855	 993	  3
+1856	 994	  3
+1857	1034	  3
+1858	1026	  3
+1859	1021	  3
+1860	1025	  3
+1861	1051	  3
+1862	 997	  3
+1863	 982	  3
+1864	1005	  3
+1865	 982	  3
+1866	 951	  3
+1867	 947	  3
+1868	 966	  3
+1869	 948	  3
+1870	1056	  3
+1871	1018	  3
+1872	 989	  3
+1873	 970	  3
+1874	 953	  3
+1875	 979	  3
+1876	1023	  3
+1877	 958	  3
+1878	 995	  3
+1879	1013	  3
+1880	1005	  4
+1881	1036	  4
+1882	1008	  4
+1883	 975	  4
+1884	 952	  4
+1885	1018	  4
+1886	1023	  4
+1887	1059	  4
+1888	 986	  4
+1889	 977	  4
+1890	1052	  4
+1891	 994	  4
+1892	1044	  4
+1893	1061	  4
+1894	1042	  4
+1895	 975	  4
+1896	1040	  4
+1897	 951	  4
+1898	 979	  4
+1899	1022	  4
+1900	1003	  4
+1901	 961	  4
+1902	1018	  4
+1903	 947	  4
+1904	1007	  4
+1905	 970	  4
+1906	 986	  4
+1907	 986	  4
+1908	1086	  4
+1909	1054	  4
+1910	1052	  4
+1911	 963	  4
+1912	1003	  4
+1913	 980	  4
+1914	 989	  4
+1915	 965	  4
+1916	 985	  4
+1917	 992	  4
+1918	1032	  4
+1919	1006	  4
+1920	 979	  4
+1921	 982	  4
+1922	1032	  4
+1923	1002	  4
+1924	 973	  4
+1925	 987	  4
+1926	 970	  4
+1927	 951	  4
+1928	1014	  4
+1929	 999	  4
+1930	1021	  4
+1931	1052	  4
+1932	 999	  4
+1933	 978	  4
+1934	1015	  4
+1935	 983	  4
+1936	 994	  4
+1937	 962	  4
+1938	1035	  4
+1939	1048	  4
+1940	 990	  4
+1941	 975	  4
+1942	1009	  4
+1943	 988	  4
+1944	1002	  4
+1945	1000	  4
+1946	1026	  4
+1947	1007	  4
+1948	 958	  4
+1949	 966	  4
+1950	1029	  4
+1951	1039	  4
+1952	 956	  4
+1953	1015	  4
+1954	1017	  4
+1955	1021	  4
+1956	1006	  4
+1957	 953	  4
+1958	 957	  4
+1959	 983	  4
+1960	1020	  4
+1961	 996	  4
+1962	1018	  4
+1963	1011	  4
+1964	 993	  4
+1965	 950	  4
+1966	1014	  4
+1967	1014	  4
+1968	1003	  4
+1969	 959	  4
+1970	1043	  4
+1971	 994	  4
+1972	 988	  4
+1973	 955	  4
+1974	1002	  4
+1975	 989	  4
+1976	1058	  4
+1977	1045	  4
+1978	  .3	38 

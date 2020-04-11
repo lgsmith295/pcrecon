@@ -1,0 +1,383 @@
+# Swetnam - Mouth of La Junta - PIPO - ITRDB NM554
+#-----------------------------------------------------------------------
+#               World Data Service for Paleoclimatology, Boulder
+#                                  and
+#                     NOAA Paleoclimatology Program
+#             National Centers for Environmental Information (NCEI)
+#-----------------------------------------------------------------------
+# Template Version 3.0
+# Encoding: UTF-8
+# NOTE: Please cite original publication, online resource and date accessed when using these data,
+# If there is no publication information, please cite investigator, title, online resource and date accessed.
+#
+# Online_Resource: https://www.ncdc.noaa.gov/paleo/study/5085
+#             Description: NOAA Landing Page of study
+# Online_Resource: https://www1.ncdc.noaa.gov//pub/data/paleo/treering/chronologies/northamerica/usa/nm554-noaa.crn
+#    Description: Chronology - NOAA Template File
+#
+# Original_Source_URL: https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm554.crn
+#    Description: Chronology - Tucson Decadal File
+#
+# Archive: Tree Ring
+#
+# Dataset_DOI: 
+#
+# Parameter_Keywords: more info, ring width
+#-------------------
+# Contribution_Date
+# Date: 2002-04-26
+#-------------------
+# File_Last_Modified_Date
+# Date: 2018-12-20
+#-------------------
+# Title
+#   Study_Name: Swetnam - Mouth of La Junta - PIPO - ITRDB NM554
+#-------------------
+# Investigators: Swetnam, T.W.; Caprio, A.C.; Lynch, A.M.
+#-------------------
+# Description_Notes_and_Keywords
+#     Description: NOAA Template Chronology file added 2018-12-20.
+#-------------------
+# Publication
+# Authors: 
+# Journal_Name: 
+# Published_Title: 
+# Published_Date_or_Year: 
+# Volume: 
+# Pages: 
+# Report_Number: 
+# DOI: 
+# Full_Citation: 
+# Abstract: 
+#-------------------
+# Site_Information
+# Site_Name:  Mouth of La Junta
+# Location: New Mexico
+# Northernmost_Latitude: 36.12
+# Southernmost_Latitude: 36.12
+# Easternmost_Longitude: -105.52
+# Westernmost_Longitude: -105.52
+# Elevation: 2713
+#-------------------
+# Data_Collection
+# Collection_Name:  NM554
+# Earliest_Year: 1690
+# Most_Recent_Year: 1986
+# Time_Unit: AD
+# Notes: 
+#-------------------
+# Species
+# Species_Name: Pinus ponderosa Douglas ex C. Lawson
+# Common_Name: ponderosa pine
+# Tree_Species_Code: PIPO
+#-------------------
+# Chronology_Information 
+#      Chronology: 
+#---------------------
+# Variables 
+#  variables format: shortname <tab> var components: what,material,error,units,season,archive,detail,method, C or N for Char or Numeric data,additional information
+## age_CE	age,,,year Common Era,,tree ring,,,N,
+## trsgi	tree ring standardized growth index,,,,,tree ring,composited,standard,N,
+## numsamp	number of samples,,,count,,tree ring,,,N,
+#
+#--------------------
+# Data:
+# Missing_Values: -999
+age_CE	trsgi	numsamp
+1690	 852	  4
+1691	 606	  4
+1692	1253	  4
+1693	1174	  4
+1694	 882	  4
+1695	 957	  4
+1696	 457	  4
+1697	1644	  4
+1698	1315	  4
+1699	1342	  4
+1700	 753	  5
+1701	1201	  5
+1702	 915	  5
+1703	1371	  5
+1704	 996	  5
+1705	 685	  5
+1706	1261	  5
+1707	 713	  5
+1708	1128	  5
+1709	 631	  5
+1710	1396	  5
+1711	1112	  5
+1712	1327	  5
+1713	 825	  5
+1714	 477	  5
+1715	 451	  5
+1716	 485	  5
+1717	1163	  5
+1718	1425	  5
+1719	 476	  5
+1720	1819	  6
+1721	1693	  6
+1722	1443	  6
+1723	1245	  6
+1724	1067	  6
+1725	1183	  6
+1726	2008	  6
+1727	1375	  6
+1728	 767	  6
+1729	  82	  6
+1730	 644	  6
+1731	1197	  6
+1732	1130	  6
+1733	 193	  6
+1734	1738	  6
+1735	 476	  6
+1736	 462	  6
+1737	 238	  6
+1738	 378	  6
+1739	 468	  6
+1740	 695	  7
+1741	 508	  7
+1742	 866	  7
+1743	1260	  7
+1744	1265	  7
+1745	1377	  7
+1746	1775	  7
+1747	1433	  7
+1748	 419	  7
+1749	1199	  7
+1750	 814	  7
+1751	1581	  7
+1752	 508	  7
+1753	1025	  7
+1754	1514	  7
+1755	1650	  8
+1756	1034	  8
+1757	 817	  8
+1758	1583	  8
+1759	1367	  8
+1760	1325	  8
+1761	1734	  8
+1762	1471	  8
+1763	1107	  8
+1764	1435	  8
+1765	1273	  8
+1766	1270	  8
+1767	1159	  8
+1768	 780	  8
+1769	 662	  8
+1770	 551	  8
+1771	 607	  8
+1772	 365	  8
+1773	 165	  8
+1774	 326	  8
+1775	 376	  8
+1776	 660	  8
+1777	 647	  8
+1778	 675	  8
+1779	 786	  8
+1780	 270	  8
+1781	 350	  8
+1782	 696	  8
+1783	 970	  8
+1784	1050	  8
+1785	 859	  8
+1786	1178	  8
+1787	1464	  9
+1788	1081	  9
+1789	 587	  9
+1790	1352	  9
+1791	1149	 11
+1792	1213	 12
+1793	1436	 13
+1794	1302	 14
+1795	1180	 15
+1796	1230	 15
+1797	 886	 15
+1798	 856	 15
+1799	 957	 15
+1800	 689	 15
+1801	 359	 15
+1802	 419	 15
+1803	 874	 15
+1804	 883	 15
+1805	 958	 15
+1806	 605	 15
+1807	 531	 16
+1808	 511	 16
+1809	 458	 16
+1810	 571	 16
+1811	 840	 16
+1812	 704	 16
+1813	 958	 16
+1814	 854	 16
+1815	 937	 16
+1816	1047	 16
+1817	 973	 16
+1818	 450	 16
+1819	 874	 16
+1820	1300	 15
+1821	1173	 15
+1822	1055	 15
+1823	 820	 15
+1824	 599	 15
+1825	1112	 15
+1826	1090	 15
+1827	1573	 15
+1828	1247	 15
+1829	1083	 15
+1830	1266	 15
+1831	1028	 15
+1832	1262	 15
+1833	1302	 15
+1834	1260	 15
+1835	1690	 15
+1836	 921	 15
+1837	1121	 15
+1838	1279	 15
+1839	1510	 15
+1840	1478	 17
+1841	1080	 17
+1842	 538	 17
+1843	1075	 17
+1844	1082	 17
+1845	1044	 17
+1846	 708	 17
+1847	 628	 17
+1848	 880	 17
+1849	1036	 17
+1850	 981	 17
+1851	 328	 17
+1852	1218	 17
+1853	1605	 17
+1854	1762	 17
+1855	1449	 17
+1856	1358	 17
+1857	 785	 17
+1858	1465	 17
+1859	 597	 17
+1860	1030	 17
+1861	 453	 17
+1862	 919	 17
+1863	1014	 17
+1864	1438	 17
+1865	1022	 17
+1866	1295	 17
+1867	1334	 17
+1868	1441	 17
+1869	1640	 17
+1870	1443	 17
+1871	1211	 17
+1872	1357	 17
+1873	 885	 17
+1874	 876	 17
+1875	 948	 17
+1876	1269	 17
+1877	1250	 17
+1878	1139	 17
+1879	1211	 17
+1880	 187	 17
+1881	 321	 17
+1882	 778	 17
+1883	 605	 17
+1884	1001	 17
+1885	1430	 17
+1886	1500	 17
+1887	1898	 17
+1888	1508	 17
+1889	1126	 17
+1890	 915	 17
+1891	1237	 17
+1892	1240	 17
+1893	 768	 17
+1894	 902	 17
+1895	1254	 17
+1896	 806	 17
+1897	1270	 17
+1898	 906	 17
+1899	 603	 17
+1900	 629	 17
+1901	 707	 17
+1902	 563	 17
+1903	1030	 17
+1904	 182	 17
+1905	 992	 17
+1906	1016	 17
+1907	1641	 17
+1908	1695	 17
+1909	1623	 17
+1910	1338	 17
+1911	1375	 17
+1912	1230	 17
+1913	1145	 17
+1914	1577	 17
+1915	1148	 17
+1916	1134	 17
+1917	 737	 17
+1918	 933	 17
+1919	 983	 17
+1920	 736	 17
+1921	1387	 17
+1922	 510	 17
+1923	 820	 17
+1924	 966	 17
+1925	 881	 17
+1926	1218	 17
+1927	1186	 17
+1928	 779	 17
+1929	1426	 17
+1930	1155	 17
+1931	 990	 17
+1932	 852	 17
+1933	 905	 17
+1934	 355	 17
+1935	1062	 17
+1936	 774	 17
+1937	1038	 17
+1938	 986	 17
+1939	 956	 17
+1940	1244	 17
+1941	1529	 17
+1942	1151	 17
+1943	 834	 17
+1944	1056	 17
+1945	 922	 17
+1946	 723	 17
+1947	 859	 17
+1948	1058	 17
+1949	1243	 17
+1950	 401	 17
+1951	 333	 17
+1952	 925	 17
+1953	 849	 17
+1954	 651	 17
+1955	1007	 17
+1956	 379	 17
+1957	 575	 17
+1958	 508	 17
+1959	 503	 17
+1960	 792	 17
+1961	 821	 17
+1962	 910	 17
+1963	 461	 17
+1964	 589	 17
+1965	1120	 17
+1966	 860	 17
+1967	 807	 17
+1968	 875	 17
+1969	1327	 17
+1970	1010	 17
+1971	 423	 17
+1972	 825	 17
+1973	 775	 17
+1974	 667	 17
+1975	1237	 17
+1976	1109	 17
+1977	 850	 17
+1978	1079	 17
+1979	1078	 17
+1980	1022	 17
+1981	1364	 17
+1982	1486	 17
+1983	1163	 17
+1984	1195	 17
+1985	1435	 17
+1986	2256	 17

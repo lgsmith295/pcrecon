@@ -1,0 +1,535 @@
+# Touchan - Bear Canyon Middle - PISF - ITRDB NM585
+#-----------------------------------------------------------------------
+#               World Data Service for Paleoclimatology, Boulder
+#                                  and
+#                     NOAA Paleoclimatology Program
+#             National Centers for Environmental Information (NCEI)
+#-----------------------------------------------------------------------
+# Template Version 3.0
+# Encoding: UTF-8
+# NOTE: Please cite original publication, online resource and date accessed when using these data,
+# If there is no publication information, please cite investigator, title, online resource and date accessed.
+#
+# Online_Resource: https://www.ncdc.noaa.gov/paleo/study/9698
+#             Description: NOAA Landing Page of study
+# Online_Resource: https://www1.ncdc.noaa.gov//pub/data/paleo/treering/chronologies/northamerica/usa/nm585a-noaa.crn
+#    Description: Chronology - NOAA Template File
+#
+# Original_Source_URL: https://www1.ncdc.noaa.gov/pub/data/paleo/treering/chronologies/northamerica/usa/nm585a.crn
+#    Description: Chronology - Tucson Decadal File
+#
+# Archive: Tree Ring
+#
+# Dataset_DOI: 
+#
+# Parameter_Keywords: ring width
+#-------------------
+# Contribution_Date
+# Date: 2010-10-30
+#-------------------
+# File_Last_Modified_Date
+# Date: 2020-01-31
+#-------------------
+# Title
+#   Study_Name: Touchan - Bear Canyon Middle - PISF - ITRDB NM585
+#-------------------
+# Investigators: Touchan, R.; Woodhouse, C.A.; Meko, D.M.; Allen, C.
+#-------------------
+# Description_Notes_and_Keywords
+#     Description:  NOAA Template Chronology file added 2020-01-31.
+#-------------------
+# Publication
+# Authors: 
+# Journal_Name: International Journal of Climatology
+# Published_Title: Millennial precipitation reconstruction for the Jemez Mountains,  New Mexico, reveals changing drought signal
+# Published_Date_or_Year: 2010
+# Volume: 
+# Pages: 
+# Report_Number: 
+# DOI: 10.1002/joc.2117
+# Full_Citation: Touchan, R., C.A. Woodhouse, D.M. Meko, and C. Allen.  2010. Millennial precipitation reconstruction for the Jemez Mountains, 
+#  New Mexico, reveals changing drought signal.  
+#  Int. J. Climatol.  Published on line 23 March 2010
+# Abstract: Drought is a recurring phenomenon in the American Southwest. Since the frequency and severity of hydrologic droughts and other hydroclimatic events are of critical importance to the ecology and rapidly growing human population of this region, knowledge of long-term natural hydroclimatic variability is valuable for resource managers and policy-makers. An October-June precipitation reconstruction for the period AD 824-2007 was developed from multi-century tree-ring records of Pseudotsuga menziesii (Douglas-fir), Pinus strobiformis (Southwestern white pine) and Pinus ponderosa (Ponderosa pine) for the Jemez Mountains in Northern New Mexico. Calibration and verification statistics for the period 1896-2007 show a high level of skill, and account for a significant portion of the observed variance (>50%) irrespective of which period is used to develop or verify the regression model. Split-sample validation supports our use of a reconstruction model based on the full period of reliable observational data (1896-2007). A recent segment of the reconstruction (2000-2006) emerges as the driest 7-year period sensed by the trees in the entire record. That this period was only moderately dry in precipitation anomaly likely indicates accentuated stress from other factors, such as warmer temperatures. Correlation field maps of actual and reconstructed October-June total precipitation, sea surface temperatures and 500-mb geopotential heights show characteristics that are similar to those indicative of El Ni?o-Southern Oscillation patterns, particularly with regard to ocean and atmospheric conditions in the equatorial and north Pacific. Our 1184-year reconstruction of hydroclimatic variability provides long-term perspective on current and 20th century wet and dry events in Northern New Mexico, is useful to guide expectations of future variability, aids sustainable water management, provides scenarios for drought planning and as inputs for hydrologic models under a broader range of conditions than those provided by historical climate records.
+#-------------------
+# Funding_Agency
+# Funding_Agency_Name: US Geological Survey
+# Grant_Number: 04HQAG0121
+#-------------------
+# Site_Information
+# Site_Name:  Bear Canyon Middle
+# Location: New Mexico
+# Northernmost_Latitude: 35.9166
+# Southernmost_Latitude: 35.9166
+# Easternmost_Longitude: -106.6667
+# Westernmost_Longitude: -106.6667
+# Elevation: 2597
+#-------------------
+# Data_Collection
+# Collection_Name:  NM585
+# Earliest_Year: 1568
+# Most_Recent_Year: 2007
+# Time_Unit: AD
+# Notes: 
+#-------------------
+# Species
+# Species_Name: Pinus strobiformis Engelm.
+# Common_Name: southwestern white pine
+# Tree_Species_Code: PISF
+#-------------------
+# Chronology_Information 
+#      Chronology: 
+#---------------------
+# Variables 
+#  variables format: shortname <tab> var components: what,material,error,units,season,archive,detail,method, C or N for Char or Numeric data,additional information
+## age_CE	age,,,time unit>age unit>year Common Era,,tree ring,,,N,
+## trsgi	tree ring standardized growth index,,,,,tree ring,composited,computational method>tree ring chronology method>ARSTAN,N,
+## numsamp	number of samples,,,dimensionless>count,,tree ring,,,N,
+#
+#--------------------
+# Data:
+# Missing_Values: -999
+age_CE	trsgi	numsamp
+1565	 250	  1
+1566	1431	  1
+1567	 892	  1
+1568	 502	  1
+1569	1644	  1
+1570	 808	  1
+1571	 564	  1
+1572	 733	  1
+1573	 658	  1
+1574	 490	  1
+1575	 696	  1
+1576	1064	  1
+1577	 847	  1
+1578	 729	  1
+1579	 496	  1
+1580	 978	  1
+1581	1027	  1
+1582	1068	  1
+1583	 447	  1
+1584	 853	  1
+1585	 546	  1
+1586	1247	  1
+1587	 901	  1
+1588	1235	  1
+1589	1177	  1
+1590	 913	  1
+1591	1275	  1
+1592	1213	  1
+1593	1137	  1
+1594	1953	  1
+1595	1658	  1
+1596	1357	  1
+1597	1552	  1
+1598	 935	  1
+1599	1395	  1
+1600	1317	  1
+1601	1284	  1
+1602	1773	  1
+1603	1573	  1
+1604	1097	  1
+1605	1387	  1
+1606	1562	  1
+1607	 980	  1
+1608	1655	  1
+1609	1276	  1
+1610	 356	  1
+1611	1350	  1
+1612	1843	  1
+1613	1021	  2
+1614	1438	  2
+1615	1314	  2
+1616	1676	  2
+1617	1209	  3
+1618	 997	  3
+1619	 991	  3
+1620	1232	  3
+1621	1385	  3
+1622	 989	  3
+1623	 934	  4
+1624	 692	  4
+1625	 608	  4
+1626	 790	  4
+1627	 874	  4
+1628	 766	  4
+1629	 827	  4
+1630	1002	  4
+1631	 607	  4
+1632	 660	  4
+1633	 965	  4
+1634	 914	  4
+1635	 854	  5
+1636	1201	  5
+1637	1151	  5
+1638	 804	  5
+1639	 835	  5
+1640	1420	  6
+1641	1000	  6
+1642	 840	  6
+1643	1122	  6
+1644	 846	  6
+1645	 722	  6
+1646	 993	  6
+1647	 823	  6
+1648	 844	  6
+1649	 876	  6
+1650	1023	  6
+1651	1207	  6
+1652	1379	  6
+1653	1698	  6
+1654	1023	  6
+1655	1392	  6
+1656	1234	  6
+1657	1125	  6
+1658	1133	  6
+1659	 855	  6
+1660	 943	  6
+1661	1191	  6
+1662	 962	  6
+1663	 977	  6
+1664	 846	  6
+1665	1004	  6
+1666	 772	  6
+1667	 771	  6
+1668	 668	  6
+1669	 810	  6
+1670	 781	  6
+1671	 820	  7
+1672	1048	  7
+1673	1226	  7
+1674	1072	  7
+1675	 946	  8
+1676	1031	  9
+1677	1130	  9
+1678	1128	  9
+1679	1116	  9
+1680	1211	  9
+1681	 944	  9
+1682	1101	  9
+1683	1056	  9
+1684	 973	 10
+1685	 613	 10
+1686	1051	 10
+1687	 815	 10
+1688	1006	 11
+1689	1312	 11
+1690	1102	 12
+1691	 938	 13
+1692	1419	 13
+1693	1252	 13
+1694	1031	 13
+1695	1011	 13
+1696	 602	 13
+1697	 983	 13
+1698	 797	 13
+1699	1133	 13
+1700	 866	 13
+1701	1130	 13
+1702	 879	 13
+1703	 983	 13
+1704	 777	 13
+1705	 866	 13
+1706	1050	 13
+1707	 868	 13
+1708	 981	 14
+1709	 910	 14
+1710	1225	 14
+1711	1087	 14
+1712	1018	 14
+1713	 867	 14
+1714	 834	 14
+1715	 652	 14
+1716	 678	 14
+1717	 913	 14
+1718	1009	 14
+1719	 898	 14
+1720	1311	 14
+1721	1009	 15
+1722	1204	 15
+1723	 972	 16
+1724	 946	 16
+1725	 871	 17
+1726	 911	 17
+1727	 916	 17
+1728	1098	 17
+1729	 508	 17
+1730	 612	 17
+1731	 784	 17
+1732	 739	 17
+1733	 661	 17
+1734	 938	 18
+1735	 471	 18
+1736	 955	 18
+1737	 678	 17
+1738	 939	 17
+1739	 813	 17
+1740	 969	 17
+1741	1058	 17
+1742	 992	 17
+1743	1454	 17
+1744	1316	 17
+1745	1216	 18
+1746	1275	 18
+1747	1205	 18
+1748	 716	 19
+1749	1252	 19
+1750	 898	 19
+1751	1058	 19
+1752	 645	 19
+1753	 990	 19
+1754	1052	 20
+1755	 955	 20
+1756	 809	 20
+1757	 908	 20
+1758	 907	 20
+1759	1092	 20
+1760	 904	 20
+1761	1150	 20
+1762	1122	 20
+1763	 921	 20
+1764	1101	 20
+1765	 989	 20
+1766	1231	 20
+1767	1108	 20
+1768	 880	 20
+1769	 963	 20
+1770	1027	 20
+1771	1054	 20
+1772	 968	 20
+1773	 611	 20
+1774	 838	 20
+1775	 808	 20
+1776	 965	 20
+1777	 810	 20
+1778	1060	 21
+1779	 895	 21
+1780	 838	 22
+1781	 878	 22
+1782	 804	 22
+1783	1145	 23
+1784	1211	 23
+1785	 866	 24
+1786	 738	 24
+1787	1123	 24
+1788	 874	 24
+1789	 756	 24
+1790	1174	 24
+1791	 945	 24
+1792	 905	 25
+1793	1251	 25
+1794	1153	 25
+1795	 879	 25
+1796	 961	 25
+1797	 868	 25
+1798	 905	 25
+1799	 893	 25
+1800	1082	 25
+1801	 592	 25
+1802	 984	 24
+1803	 975	 24
+1804	 976	 24
+1805	 885	 24
+1806	 641	 24
+1807	 895	 24
+1808	1098	 24
+1809	 847	 25
+1810	 940	 25
+1811	 895	 26
+1812	 875	 26
+1813	 952	 26
+1814	 859	 26
+1815	1251	 26
+1816	1411	 26
+1817	1175	 26
+1818	 722	 27
+1819	 964	 27
+1820	1100	 27
+1821	1048	 27
+1822	 678	 28
+1823	 921	 28
+1824	 970	 28
+1825	1134	 28
+1826	1057	 29
+1827	1126	 29
+1828	1390	 29
+1829	1263	 29
+1830	1193	 29
+1831	1068	 29
+1832	1022	 30
+1833	1140	 31
+1834	 923	 31
+1835	1107	 31
+1836	 832	 31
+1837	 938	 31
+1838	 909	 31
+1839	1147	 30
+1840	1155	 31
+1841	 942	 31
+1842	 774	 31
+1843	 830	 31
+1844	 944	 31
+1845	 882	 31
+1846	1062	 31
+1847	 535	 31
+1848	 857	 31
+1849	1067	 31
+1850	 991	 31
+1851	 559	 31
+1852	1243	 32
+1853	 988	 32
+1854	1134	 32
+1855	1115	 32
+1856	1105	 34
+1857	1014	 34
+1858	1273	 34
+1859	1022	 34
+1860	1169	 34
+1861	 622	 34
+1862	 991	 35
+1863	1270	 35
+1864	1054	 35
+1865	 980	 35
+1866	1181	 35
+1867	1317	 35
+1868	1382	 35
+1869	1165	 35
+1870	1250	 36
+1871	 819	 36
+1872	1294	 36
+1873	 741	 36
+1874	1091	 36
+1875	1015	 36
+1876	1055	 36
+1877	1219	 36
+1878	 972	 37
+1879	 926	 37
+1880	 427	 37
+1881	 746	 37
+1882	1170	 37
+1883	 880	 37
+1884	1021	 37
+1885	1271	 37
+1886	1009	 39
+1887	1096	 39
+1888	1089	 40
+1889	1176	 40
+1890	 814	 41
+1891	1136	 41
+1892	1144	 41
+1893	 652	 41
+1894	 973	 41
+1895	1207	 41
+1896	 540	 41
+1897	1234	 41
+1898	1161	 42
+1899	 718	 42
+1900	 634	 42
+1901	 746	 42
+1902	 763	 42
+1903	1059	 42
+1904	 490	 42
+1905	 773	 42
+1906	 765	 42
+1907	1125	 42
+1908	1103	 41
+1909	 822	 41
+1910	 789	 41
+1911	1084	 41
+1912	1061	 41
+1913	1138	 41
+1914	1356	 41
+1915	1155	 41
+1916	1178	 41
+1917	1012	 41
+1918	1007	 41
+1919	1308	 41
+1920	1096	 41
+1921	 975	 41
+1922	 621	 41
+1923	 769	 41
+1924	 757	 41
+1925	 635	 41
+1926	 726	 41
+1927	 807	 41
+1928	 681	 41
+1929	 816	 41
+1930	 851	 41
+1931	 815	 41
+1932	1148	 41
+1933	1253	 41
+1934	1320	 41
+1935	1230	 41
+1936	1227	 41
+1937	1536	 41
+1938	1327	 41
+1939	 932	 41
+1940	1440	 41
+1941	1302	 41
+1942	1138	 41
+1943	1129	 41
+1944	1198	 41
+1945	1003	 41
+1946	 802	 41
+1947	1043	 41
+1948	1148	 41
+1949	1368	 41
+1950	 689	 41
+1951	 487	 41
+1952	1051	 41
+1953	 671	 41
+1954	 705	 41
+1955	 630	 41
+1956	 713	 41
+1957	 823	 41
+1958	 766	 41
+1959	1078	 41
+1960	 977	 41
+1961	1003	 41
+1962	 985	 41
+1963	 624	 41
+1964	 978	 41
+1965	1271	 41
+1966	1049	 41
+1967	 791	 41
+1968	 978	 41
+1969	1276	 41
+1970	1200	 41
+1971	 510	 41
+1972	 754	 41
+1973	 840	 41
+1974	 824	 41
+1975	1135	 41
+1976	 890	 41
+1977	 747	 41
+1978	1033	 41
+1979	1212	 41
+1980	 913	 41
+1981	 934	 41
+1982	 997	 41
+1983	1267	 41
+1984	1190	 41
+1985	1254	 41
+1986	1632	 41
+1987	1416	 41
+1988	1539	 41
+1989	 926	 41
+1990	1188	 41
+1991	1067	 41
+1992	1189	 41
+1993	1047	 41
+1994	 985	 41
+1995	1426	 41
+1996	 571	 41
+1997	1206	 41
+1998	1136	 41
+1999	1475	 41
+2000	 723	 40
+2001	 781	 40
+2002	 417	 40
+2003	1003	 40
+2004	 765	 40
+2005	 708	 40
+2006	 512	 40
+2007	1330	 40
