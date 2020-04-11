@@ -5,15 +5,10 @@
 #' @return dataframe of ID, lat, lon, elevation
 #' @export
 #'
-#' @examples
-<<<<<<< HEAD
 #' \dontrun{
 #' 
 #' }
-parse_json <- function(dir) {
-=======
 parse_json <- function(dir, center = TRUE) {
->>>>>>> 105964cabf091f79525d036ed76af78bbe94aa9a
   # make list of files to import
   files <- list.files(dir)
   
