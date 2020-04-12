@@ -13,11 +13,10 @@
 #' @export
 #'
 #' @examples
+#' 
 filter_spat <- function(ID, lat, lon, center, radius, climate = NULL, type = "radius") {
-  # is it best to have them read in three vectors for ID, lat, long - requiring that they be the same length? 
-  df <- data.frame(cbind(ID, lat, lon))
+  stores <- sf::st_sfc(st_multipoint(cbind(ID, lon, lat)), crs = 4326)
   if (type == "radius") {
-    
     
     
     
