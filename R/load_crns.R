@@ -1,20 +1,24 @@
 #' Title
 #'
+#' @description
+#'
+#' @usage
+#'
 #' @param dir path to directory containing chronologies as character string
 #' @param crns vector of character strings containing the names of the chronologies wanting to read into R
-#' @param include 
+#' @param include
 #' @param logfile character string indicating path to the log file for errors associated with reading in chronologies. The path is the same as `dir` if not otherwise specified.
 #'
 #' @return dataframe with a year column and columns for each chronology containing values
 #' @export
 #' @importFrom magrittr %>%
 #' @import dplR
-#' 
+#'
 #' @details coming soon
 #'
 #' @examples
 #' \dontrun{
-#' 
+#'
 #' }
 load_crns <- function(dir, crns, include = NULL, logfile = "read_crns.log") {
   log_con <- file.path(dir, logfile)

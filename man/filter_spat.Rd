@@ -27,6 +27,3 @@ filter_spat(ID, lat, lon, center, radius, climate = NULL, type = "radius")
 \description{
 Spatial Filtering of Tree Ring Data
 }
-\examples{
-
-}

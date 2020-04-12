@@ -3,6 +3,7 @@
 export(filter_spat)
 export(load_crns)
 export(perf_stats)
+export(read_crn)
 export(stepAICc)
 import(dplR)
 importFrom(magrittr,"%>%")
