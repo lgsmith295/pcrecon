@@ -6,7 +6,7 @@
 \usage{
 load_crns(dir, crns, include = NULL, logfile = "read_crns.log")
 
-load_crns(dir, crns, include = NULL, logfile = "read_crns.log")
+
 }
 \arguments{
 \item{dir}{path to directory containing chronologies as character string}
@@ -27,9 +27,7 @@ dataframe with a year column and columns for each chronology and their leads and
 dataframe with a year column and columns for each chronology containing values
 }
 \description{
-Title
 
-Title
 }
 \details{
 The lag is the number of years to shift the chronology backwards. It defaults to zero because relative to the climate you do not expect the previous tree rings to correlate to current year climate. The lead is the number of years to shift the chronology forward such that this years climate conditions would influence growth in those future years. For example, `lead = 0` would just to the current year. Making `lead = 1` would ONLY put in a chronology shifted one year ahead of the climate (e.g. 2010 climate would affect 2011 tree growth). Setting `lead = c(0, 1, 2)` would create three columns such that the current climate would affect current year tree rings AND tree rings the next year and the year after.

@@ -1,19 +1,34 @@
-
-read_crn <- function (fname, header = NULL, encoding = getOption("encoding"), 
-          long = TRUE) 
+#' Read Tuscon Format Chronology File
+#'
+#' @description This function reads in a Tucson (decadal) format file of tree-ring chronologies (.crn). It is a modification of the dplR function `read.crn` that does not print to screen.
+#' @usage read.crn(fname, header = NULL, encoding = getOption("encoding"), long = TRUE)
+#' @param fname a character vector giving the file name of the crn file.
+#' @param header logical flag indicating whether the file has a header. If NULL then the function will attempt to determine if a header exists
+#' @param encoding the name of the encoding to be used when reading the crn file. Usually the default value will work, but a crn file written in a non-default encoding may crash the function. In that case, identifying the encoding and specifying it here should fix the problem. Examples of popular encodings available on many systems are "ASCII", "UTF-8", and "latin1" alias "ISO-8859-1". See the help of file.
+#' @param long logical flag indicating whether to automatically detect when an input file uses more than 4 characters for the decade. If FALSE, the function assumes 6 characters are used for the site ID and 4 characters for the decade, which is the standard. If TRUE (the default), long records may work.
+#'
+#' @details This reads in a standard crn file as defined according to the standards of the ITRDB at http://www1.ncdc.noaa.gov/pub/data/paleo/treering/treeinfo.txt. Despite the standards at the ITRDB, this occasionally fails due to formatting problems.
+#'
+#' @return A data.frame with each chronology in columns and the years as rows. The chronology IDs are the column names and the years are the row names. If the file includes sample depth that is included as the last column (samp.depth). The output class is class "crn" and "data.frame"
+#' @author Original Authors: Andy Bunn. Patched and improved by Mikko Korpela.
+#' @export
+#'
+#' @examples
+read_crn <- function (fname, header = NULL, encoding = getOption("encoding"),
+          long = TRUE)
 {
   con <- file(fname, encoding = encoding)
   on.exit(close(con))
   long2 <- isTRUE(long)
   if (is.null(header)) {
     hdr1 <- readLines(con, n = 1)
-    if (length(hdr1) == 0) 
+    if (length(hdr1) == 0)
       stop("file is empty")
-    if (nchar(hdr1) < 10) 
+    if (nchar(hdr1) < 10)
       stop("first line in the crn file ends before col 10")
-    yrcheck <- suppressWarnings(as.numeric(substr(hdr1, 7, 
+    yrcheck <- suppressWarnings(as.numeric(substr(hdr1, 7,
                                                   10)))
-    if (is.null(yrcheck) || length(yrcheck) != 1 || is.na(yrcheck) | 
+    if (is.null(yrcheck) || length(yrcheck) != 1 || is.na(yrcheck) |
         yrcheck < -10000 || yrcheck > 10000) {
       message("There appears to be a header in the crn file")
       is.head <- TRUE
@@ -31,50 +46,50 @@ read_crn <- function (fname, header = NULL, encoding = getOption("encoding"),
   }
   if (is.head) {
     dat1 <- readLines(con, n = 4)
-    if (length(dat1) < 4) 
+    if (length(dat1) < 4)
       stop("file has under 4 lines")
     dat1 <- dat1[4]
   }
   else {
     dat1 <- readLines(con, n = 1)
-    if (length(dat1) == 0) 
+    if (length(dat1) == 0)
       stop("file is empty")
   }
-  if (nchar(dat1) < 10) 
+  if (nchar(dat1) < 10)
     stop("first data line ends before col 10")
   decade_pos <- 7L
   yrcheck <- as.numeric(substr(dat1, decade_pos, 10L))
-  if (is.null(yrcheck) || length(yrcheck) != 1 || is.na(yrcheck) || 
-      yrcheck < -10000 || yrcheck > 10000) 
-    stop(gettextf("cols %d-%d of first data line not a year", 
+  if (is.null(yrcheck) || length(yrcheck) != 1 || is.na(yrcheck) ||
+      yrcheck < -10000 || yrcheck > 10000)
+    stop(gettextf("cols %d-%d of first data line not a year",
                   decade_pos, 10L, domain = "R-dplR"), domain = NA)
   if (long2) {
     year_now <- 1900 + as.POSIXlt(Sys.Date())$year
     if (yrcheck > year_now) {
-      tmp_pos <- regexpr(" *-[[:digit:]]+$", substr(dat1, 
+      tmp_pos <- regexpr(" *-[[:digit:]]+$", substr(dat1,
                                                     2, 10))[[1L]] + 1L
       if (tmp_pos > 0L) {
         decade_pos <- tmp_pos
-        message(gettextf("Using cols %d-%d for decade field", 
+        message(gettextf("Using cols %d-%d for decade field",
                          decade_pos, 10L, domain = "R-dplR"), domain = NA)
       }
       else {
-        warning(gettextf("year %d is in the future", 
+        warning(gettextf("year %d is in the future",
                          yrcheck, domain = "R-dplR"), domain = NA)
       }
     }
   }
   decade_fix <- decade_pos - 7L
   nlines <- length(readLines(con, n = -1))
-  skip.lines <- if (is.head) 
+  skip.lines <- if (is.head)
     3
   else 0
   on.exit()
-  chron.stats <- utils::read.fwf(con, c(6 + decade_fix, 4 - decade_fix, 
+  chron.stats <- utils::read.fwf(con, c(6 + decade_fix, 4 - decade_fix,
                                  6, 6, 6, 7, 9, 9, 10), skip = nlines - 1, strip.white = TRUE)
   if (is.numeric(chron.stats[[3]]) && !dplR:::is.int(as.numeric(chron.stats[[3]]))) {
-    names(chron.stats) <- c("SiteID", "nYears", "AC[1]", 
-                            "StdDev", "MeanSens", "MeanRWI", "IndicesSum", "IndicesSS", 
+    names(chron.stats) <- c("SiteID", "nYears", "AC[1]",
+                            "StdDev", "MeanSens", "MeanRWI", "IndicesSum", "IndicesSS",
                             "MaxSeries")
     # cat(gettext("Embedded chronology statistics\n", domain = "R-dplR"))
     # print(chron.stats)
@@ -85,9 +100,9 @@ read_crn <- function (fname, header = NULL, encoding = getOption("encoding"),
   }
   while (decade_fix >= -5L) {
     con <- file(fname, encoding = encoding)
-    dat <- utils::read.fwf(con, c(6 + decade_fix, 4 - decade_fix, 
-                           rep(c(4, 3), 10)), skip = skip.lines, n = n_dat, 
-                    colClasses = c("character", rep("integer", 21)), 
+    dat <- utils::read.fwf(con, c(6 + decade_fix, 4 - decade_fix,
+                           rep(c(4, 3), 10)), skip = skip.lines, n = n_dat,
+                    colClasses = c("character", rep("integer", 21)),
                     strip.white = TRUE)
     dat <- dat[!is.na(dat[[2]]), , drop = FALSE]
     series <- dat[[1]]
@@ -99,7 +114,7 @@ read_crn <- function (fname, header = NULL, encoding = getOption("encoding"),
     }
     else {
       sign_table <- table(sign(diff(decade.yr)))
-      if (length(sign_table) == 1L || sum(sign_table) - 
+      if (length(sign_table) == 1L || sum(sign_table) -
           max(sign_table) <= nseries - 1L) {
         break
       }
@@ -108,7 +123,7 @@ read_crn <- function (fname, header = NULL, encoding = getOption("encoding"),
   }
   decade_pos2 <- decade_fix + 7L
   if (decade_pos2 != decade_pos) {
-    message(gettextf("Using cols %d-%d for decade field", 
+    message(gettextf("Using cols %d-%d for decade field",
                      decade_pos2, 10L, domain = "R-dplR"), domain = NA)
   }
   # cat(sprintf(ngettext(nseries, "There is %d series\n", "There are %d series\n", domain = "R-dplR"), nseries))
@@ -126,7 +141,7 @@ read_crn <- function (fname, header = NULL, encoding = getOption("encoding"),
     idx <- which(series.index == i)
     for (j in idx) {
       yr <- (decade.yr[j]%/%10) * 10
-      row.seq <- seq(from = yr - min.year + 1, by = 1, 
+      row.seq <- seq(from = yr - min.year + 1, by = 1,
                      length.out = 10)
       crn.mat[row.seq, i] <- x[j, ]
       if (i == 1) {
@@ -135,7 +150,7 @@ read_crn <- function (fname, header = NULL, encoding = getOption("encoding"),
     }
   }
   crn.mat[which(crn.mat[, -ncol.crn.mat] == 9990)] <- NA
-  crn.mat <- crn.mat[!matrixStats:::rowAlls(is.na(crn.mat[, -ncol.crn.mat, 
+  crn.mat <- crn.mat[!matrixStats:::rowAlls(is.na(crn.mat[, -ncol.crn.mat,
                                             drop = FALSE])), , drop = FALSE]
   sd.one <- all(crn.mat[, ncol.crn.mat] == 1)
   if (sd.one) {
