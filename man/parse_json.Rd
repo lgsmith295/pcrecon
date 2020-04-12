@@ -4,7 +4,7 @@
 \alias{parse_json}
 \title{Parse metadata json files from ITRDB}
 \usage{
-parse_json(dir)
+parse_json(dir, center = TRUE)
 }
 \arguments{
 \item{dir}{file directory where json files are saved}
@@ -14,9 +14,4 @@ dataframe of ID, lat, lon, elevation
 }
 \description{
 Parse metadata json files from ITRDB
-}
-\examples{
-\dontrun{
-
-}
 }
