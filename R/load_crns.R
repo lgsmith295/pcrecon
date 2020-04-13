@@ -13,6 +13,7 @@
 #' @export
 #' @importFrom magrittr %>%
 #' @import dplR
+#' @import stringr
 #'
 #' @details coming soon
 #'
