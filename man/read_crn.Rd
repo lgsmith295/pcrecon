@@ -24,6 +24,11 @@ This function reads in a Tucson (decadal) format file of tree-ring chronologies 
 \details{
 This reads in a standard crn file as defined according to the standards of the ITRDB at http://www1.ncdc.noaa.gov/pub/data/paleo/treering/treeinfo.txt. Despite the standards at the ITRDB, this occasionally fails due to formatting problems.
 }
+\examples{
+\dontrun{
+df <- load_crns(dir = system.file("extdata/crns", package = "pcreg", mustWork = TRUE), crns = list.files(system.file("extdata/crns", package = "pcreg", mustWork = TRUE)))
+}
+}
 \author{
 Original Authors: Andy Bunn. Patched and improved by Mikko Korpela.
 }
