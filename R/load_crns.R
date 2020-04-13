@@ -21,12 +21,16 @@
 #' df <- load_crns(dir = system.file("extdata/crns", package = "pcreg", mustWork = TRUE), crns = list.files(system.file("extdata/crns", package = "pcreg", mustWork = TRUE)))
 #' }
 load_crns <- function(dir, crns, include = NULL, logfile = "read_crns.log") {
+
   log_con <- file.path(dir, logfile)
   cat(paste0("Log File for Reading Chronologies: ", Sys.time()), file = log_con, sep = "\n", append = FALSE)
   pb <- txtProgressBar(min = 0, max = length(crns), style = 3)
   j <- 0
   for (i in 1:length(crns)) {
     setTxtProgressBar(pb, i)
+    if(!stringr::str_detect(crns[i], "\\.crn")) {
+      crns[i] <- paste0(crns[i], ".crn")
+    }
     chron <- tryCatch(withCallingHandlers(suppressMessages(read_crn(file.path(dir, crns[i])))), error = function(e) e)
     if(inherits(chron, "error")) {
       # warning(paste0("Not able to read chronology ", crns[i], " - skipping"))
