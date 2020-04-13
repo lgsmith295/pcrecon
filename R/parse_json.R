@@ -25,6 +25,7 @@ parse_json <- function(dir, center = TRUE) {
 
     # extract site info
   ID <- df_flat$site$paleoData[[1]][1:10]
+  names(ID)[names(ID) == "dataTableName"] <- "ID"
 
   # species info
   species <- df_flat$site$paleoData[[1]]$species[[1]][1:2]
@@ -38,7 +39,6 @@ parse_json <- function(dir, center = TRUE) {
                     minElevationMeters = as.numeric(df_flat$site$geo.properties.minElevationMeters),
                     maxElevationMeters = as.numeric(df_flat$site$geo.properties.maxElevationMeters)),
                     stringsAsFactors = FALSE)
-
 
 
   df_temp <- bind_cols(ID, species, geo) %>% # can add more here as desired
