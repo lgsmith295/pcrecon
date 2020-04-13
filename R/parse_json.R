@@ -41,12 +41,12 @@ parse_json <- function(dir, center = TRUE) {
                     stringsAsFactors = FALSE)
 
 
-  df_temp <- bind_cols(ID, species, geo) %>% # can add more here as desired
-    mutate(chron_length = mostRecentYear - earliestYear)
+  df_temp <- dplyr::bind_cols(ID, species, geo) %>% # can add more here as desired
+    dplyr::mutate(chron_length = mostRecentYear - earliestYear)
 
 
   # combine all files
-  df_meta <- bind_rows(df_meta, df_temp)
+  df_meta <- dplyr::bind_rows(df_meta, df_temp)
   }
 
 
@@ -58,7 +58,7 @@ parse_json <- function(dir, center = TRUE) {
     df_meta$lon <- rowMeans(data.frame(df_meta$easternmostLongitude, df_meta$westernmostLongitude))
     df_meta$elev <- rowMeans(data.frame(df_meta$minElevationMeters, df_meta$maxElevationMeters))
     df_meta <- df_meta %>%
-      select(-maxElevationMeters, -minElevationMeters, -easternmostLongitude, -westernmostLongitude,
+      dplyr::select(-maxElevationMeters, -minElevationMeters, -easternmostLongitude, -westernmostLongitude,
              -northernmostLatitude, -southernmostLatitude)
     return(df_meta)
 
