@@ -26,7 +26,6 @@ This reads in a standard crn file as defined according to the standards of the I
 }
 \examples{
 \dontrun{
-df <- load_crns(dir = system.file("extdata/crns", package = "pcreg", mustWork = TRUE), crns = list.files(system.file("extdata/crns", package = "pcreg", mustWork = TRUE)))
 }
 }
 \author{

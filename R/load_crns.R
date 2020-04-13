@@ -18,7 +18,7 @@
 #'
 #' @examples
 #' \dontrun{
-#'
+#' df <- load_crns(dir = system.file("extdata/crns", package = "pcreg", mustWork = TRUE), crns = list.files(system.file("extdata/crns", package = "pcreg", mustWork = TRUE)))
 #' }
 load_crns <- function(dir, crns, include = NULL, logfile = "read_crns.log") {
   log_con <- file.path(dir, logfile)

@@ -39,6 +39,6 @@ coming soon
 
 }
 \dontrun{
-
+df <- load_crns(dir = system.file("extdata/crns", package = "pcreg", mustWork = TRUE), crns = list.files(system.file("extdata/crns", package = "pcreg", mustWork = TRUE)))
 }
 }

@@ -15,7 +15,6 @@
 #'
 #' @examples
 #' \dontrun{
-#' df <- load_crns(dir = system.file("extdata/crns", package = "pcreg", mustWork = TRUE), crns = list.files(system.file("extdata/crns", package = "pcreg", mustWork = TRUE)))
 #' }
 read_crn <- function (fname, header = NULL, encoding = getOption("encoding"),
           long = TRUE)
