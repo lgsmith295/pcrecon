@@ -10,6 +10,8 @@
 #' @export
 #'
 #' @examples
+#' # metadata returned from parse_json function, must be a dataframe or matrix containing columns lat, lon, and ID
+#' select_crns_rad <- filter_rad(data = metadata, cent_lat = 35.65, cent_lon = -105.32, radius = 150)
 #'
 filter_rad <- function(data, cent_lat, cent_lon, radius = 150, climate = NULL) {
 
@@ -46,35 +48,43 @@ filter_rad <- function(data, cent_lat, cent_lon, radius = 150, climate = NULL) {
 #' Spatial Filtering of Points Based on Climate Footprint
 #'
 #' @param data dataframe containing columns labeled ID, lat, and lon
-#' @param footprint Raster stack object
+#' @param footprint Raster or SpatialPolygonDataFrame object
 #' @param r minimum correlation coefficient for spatial selection
-#' @param alpha alpha value , default null because you do this when making the footprint in KNMI
+#' @param alpha alpha value , default null because you set this when making the footprint in KNMI
 #'
-#' @return
+#' @return character vector of chronology names that fall within the area where correlation >= r
 #' @export
 #'
 #' @examples
+#' # Climate footprint .nc file is a netCDF file downloaded from KNMI climate explorer with correlations between PRISM precipitation (1895-present) and streamflow at Gallinas Creek near Montezuma, NM.
 #'
-filter_foot <- function(data, footprint, r, alpha) {
+#' #' footprint <- raster::raster("inst/extdata/gallinas_cf.nc")
+#' select_crns_fp <- filter_foot(data = metadata, footprint = footprint, r = 0.5)
+#'
+filter_foot <- function(data, footprint, r = 0.4, alpha = NULL) {
   # parse dataframe and store as spatial object
   lat <- data$lat
   lon <- data$lon
   ID <- data$ID
 
-  crns <- sf::st_sfc(sf::st_multipoint(cbind(lon, lat)), crs = 4326)
-  stores_proj <- sf::st_transform(crns, ' +proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0')
+  # check class of footprint object, convert to polygon from raster if needed
+  if (class(footprint) == "RasterLayer") {
+    footprint <- rasterToPolygons(footprint)
+  }
+    crns <- sf::st_sfc(sf::st_multipoint(cbind(lon, lat)), crs = 4326)
+    crns <- sf::st_transform(crns, sf::st_crs(footprint))
 
-  tr_points <- sf::st_cast(stores_proj, "POINT") %>%
-    sf::st_sf(cbind(ID, stores_proj))
+    tr_points <- sf::st_cast(crns, "POINT")
+    tr_points <- sf::st_sf(cbind(ID, data.frame(tr_points)))
 
 
+    fp = sf::st_as_sf(footprint)
+    points = sf::st_as_sf(tr_points)
+    intersect <- suppressMessages(suppressWarnings(data.frame(sf::st_intersection(fp, points))))
 
+    small_df <- dplyr::filter(intersect, correlation >= r)
+    select_crns <- as.character(small_df$ID, stringsAsFactors = FALSE)
 
-
-
+    return(select_crns)
 }
-
-
-
-
 

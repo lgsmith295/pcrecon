@@ -4,23 +4,27 @@
 \alias{filter_foot}
 \title{Spatial Filtering of Points Based on Climate Footprint}
 \usage{
-filter_foot(data, footprint, r, alpha)
+filter_foot(data, footprint, r = 0.4, alpha = NULL)
 }
 \arguments{
 \item{data}{dataframe containing columns labeled ID, lat, and lon}
 
-\item{footprint}{Raster stack object}
+\item{footprint}{Raster or SpatialPolygonDataFrame object}
 
 \item{r}{minimum correlation coefficient for spatial selection}
 
-\item{alpha}{alpha value , default null because you do this when making the footprint in KNMI}
+\item{alpha}{alpha value , default null because you set this when making the footprint in KNMI}
 }
 \value{
-
+character vector of chronology names that fall within the area where correlation >= r
 }
 \description{
 Spatial Filtering of Points Based on Climate Footprint
 }
 \examples{
+# Climate footprint .nc file is a netCDF file downloaded from KNMI climate explorer with correlations between PRISM precipitation (1895-present) and streamflow at Gallinas Creek near Montezuma, NM.
+
+#' footprint <- raster::raster("inst/extdata/gallinas_cf.nc")
+select_crns_fp <- filter_foot(data = metadata, footprint = footprint, r = 0.5)
 
 }
