@@ -61,7 +61,7 @@ filter_rad <- function(data, cent_lat, cent_lon, radius = 150, climate = NULL) {
 #' #' footprint <- raster::raster("inst/extdata/gallinas_cf.nc")
 #' select_crns_fp <- filter_foot(data = metadata, footprint = footprint, r = 0.5)
 #'
-filter_foot <- function(data, footprint, r = 0.4, alpha = NULL) {
+filter_foot <- function(data, footprint, r = 0.5, alpha = NULL) {
   # parse dataframe and store as spatial object
   lat <- data$lat
   lon <- data$lon
