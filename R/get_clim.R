@@ -1,4 +1,4 @@
-#' Load in Climate Variable
+#' Get months of interest for climate analysis, sum or average them
 #'
 #' @param climate dataframe or matrix in either 13 column (where there is a column for year and for each month) or long (where there are columns for year, month, and value) formats.
 #' @param mos months of interest
