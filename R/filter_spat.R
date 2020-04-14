@@ -69,7 +69,7 @@ filter_foot <- function(data, footprint, r = 0.5, alpha = NULL) {
 
   # check class of footprint object, convert to polygon from raster if needed
   if (class(footprint) == "RasterLayer") {
-    footprint <- rasterToPolygons(footprint)
+    footprint <- raster::rasterToPolygons(footprint)
   }
     crns <- sf::st_sfc(sf::st_multipoint(cbind(lon, lat)), crs = 4326)
     crns <- sf::st_transform(crns, sf::st_crs(footprint))
