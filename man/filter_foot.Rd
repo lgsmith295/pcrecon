@@ -4,7 +4,7 @@
 \alias{filter_foot}
 \title{Spatial Filtering of Points Based on Climate Footprint}
 \usage{
-filter_foot(data, footprint, r = 0.4, alpha = NULL)
+filter_foot(data, footprint, r = 0.5, alpha = NULL)
 }
 \arguments{
 \item{data}{dataframe containing columns labeled ID, lat, and lon}
