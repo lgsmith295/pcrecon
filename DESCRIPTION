@@ -17,7 +17,9 @@ Depends: R (>= 3.6.3)
 Imports: 
     dplR (>= 1.7.0),
     dplyr (>= 0.8.3),
+    jsonlite (>= 1.6),
     magrittr (>= 1.5),
+    matrixStats (>= 0.55.0),
     MuMIn (>= 1.43.15),
     rgdal (<= 1.4-8),
     sf (>= 0.9-0),
