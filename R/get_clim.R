@@ -65,21 +65,19 @@ load_clim <- function(clim, mos, type, prewhiten.clim = TRUE) {
 }
     if (isTRUE(prewhiten.clim)){
       x <- data.frame(clim_small[ , 2])
-      x.ar <- apply(x, 2, ar_prewhiten)
+      x.ar <- apply(x, 2, ar_prewhiten, model = TRUE)
 
       values <- x.ar$clim_small...2.[[1]]
       ar <- x.ar$clim_small...2.[[2]]
 
 
       clim_small <- data.frame(cbind(year, values))
-      clim_return <- list(clim_small, ifexists())
-    }
 
-  if (exists("ar")) {
-    clim_small <- list(clim_small, ar)
+      clim_return <- list(clim_small, ar)
+    } else {
+    clim_return <- clim_small
   }
-  return(clim_small)
-
-   }
+  return(clim_return)
+}
 
 
