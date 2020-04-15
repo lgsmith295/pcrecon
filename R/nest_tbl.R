@@ -12,16 +12,16 @@ nest_tbl <- function(select_crns_cor) {
 
   for (i in 2:ncol(select_crns_cor)) {
     logic <- !is.na(select_crns_cor[ ,i])
-    years <- PCA_chrons$year[logic]
+    years <- select_crns_cor$year[logic]
     start <- as.numeric(years[1])
     end <- as.numeric(tail(years, n=1))
-    periods_df[i-1, 1] <- colnames(PCA_chrons[i])
+    periods_df[i-1, 1] <- colnames(select_crns_cor[i])
     periods_df[i-1, 2] <- start
     periods_df[i-1, 3] <- end
   }
 
   periods_df <- periods_df %>%
-    arrange(desc(startYR))
+    dplyr::arrange(desc(startYR))
 
   return(periods_df)
 }
