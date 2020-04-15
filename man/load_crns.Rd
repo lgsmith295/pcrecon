@@ -2,14 +2,18 @@
 % Please edit documentation in R/load_crns.R
 \name{load_crns}
 \alias{load_crns}
-\title{Title}
+\title{Load crn chronology files into R}
 \usage{
-
+load_crns(dir, crns, type = "standard", logfile = "read_crns.log")
 }
 \arguments{
 \item{dir}{path to directory containing chronologies as character string}
 
 \item{crns}{vector of character strings containing the names of the chronologies wanting to read into R}
+
+\item{type_crn}{character vector of codes indicating type(s) of chronologies to include. Default = "S" (standard). See details for available options (from ITRDB)}
+
+\item{type_measure}{character vector of codes indicating type(s) of measurements to include. Default = "R" (Ring Width). See details for available options (from ITRDB)}
 
 \item{logfile}{character string indicating path to the log file for errors associated with reading in chronologies. The path is the same as `dir` if not otherwise specified.}
 }
@@ -17,13 +21,34 @@
 dataframe with a year column and columns for each chronology containing values
 }
 \description{
-
+load_crns reads a list of `.crn` files into R and makes them into a dataframe
 }
 \details{
 coming soon
+
+    Code Measurement Type (`type_measure`)
+    D Total Ring Density
+    E Earlywood Width
+    I Earlywood Density
+    L Latewood Width
+    N Minimum Density
+    R Ring Width
+    T Latewood Density
+    X Maximum Density
+    P Latewood Percent
+
+    Code Chronology Type (`type_crn`)
+    A ARSTND
+    P Low Pass Filter
+    R Residual
+    S Standard
+    W Re-Whitened Residual
+    N Measurements Only
 }
 \examples{
-\dontrun{
-df <- load_crns(dir = system.file("extdata/crns", package = "pcreg", mustWork = TRUE), crns = list.files(system.file("extdata/crns", package = "pcreg", mustWork = TRUE)))
-}
+df <- load_crns(dir = system.file("extdata/crns",
+package = "pcreg"),
+crns = c("nm014", "nm537", "nm545", "nm576"),
+ type_crn = "S",
+ type_measure = "R")
 }

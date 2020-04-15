@@ -52,7 +52,7 @@ If all inputs are integer and logical, then the output
 Stepwise AIC corrected for small samples sizes
 }
 \details{
-Function adapted from the MASS package to calculate AICc rather than AIC. 
+Function adapted from the MASS package to calculate AICc rather than AIC.
     The set of models searched is determined by the scope argument. The right-hand-side of its lower component is always included in the model, and right-hand-side of the model is included in the upper component. If scope is a single formula, it specifies the upper component, and the lower model is empty. If scope is missing, the initial model is used as the upper model. Models specified by scope can be templates to update object as used by update.formula.
     There is a potential problem in using glm fits with a variable scale, as in that case the deviance is not simply related to the maximized log-likelihood. The glm method for extractAIC makes the appropriate adjustment for a gaussian family, but may need to be amended for other cases. (The binomial and poisson families have fixed scale by default and do not correspond to a particular maximum-likelihood problem for variable scale.)
     Where a conventional deviance exists (e.g. for lm, aov and glm fits) this is quoted in the analysis of variance table: it is the unscaled deviance.
