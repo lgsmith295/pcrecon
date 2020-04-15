@@ -28,17 +28,15 @@ load_clim <- function(clim, mos, type, prewhiten.clim = TRUE) {
    if (!all(names == colnames(climate))) {
         stop("If climate dataframe is in long format, 3 columns must be named: year, month, value.")
       } else {
-   as.character(mos)
-   clim_small <- climate[which(climate$month == mos), ]
-   if (isTRUE(prewhiten)){
-     x <- clim_small[ ,-year]
-     x.ar <- apply(x, 2, ar.func, ...)
-     clim_small <- cbind(clim_small$year, x.ar)
-   }
+        as.character(mos)
+        clim_small <- climate[which(climate$month == mos), ]
+      }
+
+
   }
-  if (type == "individual") {
-    clim <- tidyr::pivot_wider(clim_small, names_from = month)
-  }
+  # if (type == "individual") {
+  #   clim <- tidyr::pivot_wider(clim_small, names_from = month)
+  # }
 
   if (type == "mean") {
     clim <- tidyr::pivot_wider(clim_small, names_from = month)
@@ -50,7 +48,7 @@ load_clim <- function(clim, mos, type, prewhiten.clim = TRUE) {
     year <- clim$year
     mean <- means$means
 
-   clim <- data.frame(cbind(year, mean))
+   clim_small <- data.frame(cbind(year, mean))
   }
 
   if (type == "sum") {
@@ -63,12 +61,25 @@ load_clim <- function(clim, mos, type, prewhiten.clim = TRUE) {
     year <- clim$year
     sum <- sums$sums
 
-    clim <- data.frame(cbind(year, sum))
+    clim_small <- data.frame(cbind(year, sum))
+}
+    if (isTRUE(prewhiten.clim)){
+      x <- data.frame(clim_small[ , 2])
+      x.ar <- apply(x, 2, ar_prewhiten)
 
+      values <- x.ar$clim_small...2.[[1]]
+      ar <- x.ar$clim_small...2.[[2]]
+
+
+      clim_small <- data.frame(cbind(year, values))
+      clim_return <- list(clim_small, ifexists())
+    }
+
+  if (exists("ar")) {
+    clim_small <- list(clim_small, ar)
   }
+  return(clim_small)
+
    }
 
- return(clim)
-
-}
 
