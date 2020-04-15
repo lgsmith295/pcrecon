@@ -15,10 +15,11 @@
 #' @examples
 filter_cor <- function(crns, lead = 1, clim, window, type = "pearson", alternative = "two.sided", r = 0.25, alpha = 0.90, prewhiten.crn = TRUE){
 
-  if (isTRUE(prewhiten)){
-    x <- crns[ ,-year]
-    x.ar <- apply(x, 2, ar.func, ...)
-    crns <- cbind(crns$year, x.ar)
+  if (isTRUE(prewhiten.crn)){
+    year <- crns$year
+    x <- dplyr::select(crns, -year)
+    x.ar <- apply(x, 2, ar_prewhiten, model = FALSE)
+    crns <- data.frame(cbind(year, x.ar))
   }
 
   crn_window <- crns %>%
@@ -52,7 +53,7 @@ filter_cor <- function(crns, lead = 1, clim, window, type = "pearson", alternati
     cors_table_small <- dplyr::filter(cors_table, cors_table$correlation >= r ) %>%
       dplyr::filter(p_value <= 1-alpha)
 
-    select_crns <- crns_table(cors_table_small)
+    select_crns <- crns_table(crns, cors_table_small)
 
     nests <- nest_tbl(select_crns)
 
@@ -60,7 +61,7 @@ filter_cor <- function(crns, lead = 1, clim, window, type = "pearson", alternati
       dplyr::filter(year >= min(nests$startYR)) %>%
       dplyr::filter(year <= max(nests$endYR))
 
-    list <- list(cors_table = cors_table, cors_table_small = cors_table_small, select_crns = select_crns, nests)
+    list <- list(cors_table = cors_table, cors_table_small = cors_table_small, select_crns = select_crns, nests = nests)
     class(list) <- "PCR_crns"
 
     return(list)
@@ -79,7 +80,7 @@ filter_cor <- function(crns, lead = 1, clim, window, type = "pearson", alternati
 #'
 #' @examples
 #'
-crns_table <- function(cors_table_small) {
+crns_table <- function(crns = crns, cors_table_small = cors_table_small) {
  for (i in 1:nrow(cors_table_small)) {
   chron <- crns[ ,cors_table_small$chronology[i]]
   if (cors_table_small$leads[i] != 0) {
