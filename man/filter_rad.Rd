@@ -22,5 +22,7 @@ character vector of chronology names within the selected radius
 Spatial Filtering of Points Based on Radius From a Point
 }
 \examples{
+# metadata returned from parse_json function, must be a dataframe or matrix containing columns lat, lon, and ID
+select_crns_rad <- filter_rad(data = metadata, cent_lat = 35.65, cent_lon = -105.32, radius = 150)
 
 }
