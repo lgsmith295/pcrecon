@@ -12,7 +12,8 @@ filter_cor(
   type = "pearson",
   alternative = "two.sided",
   r = 0.25,
-  alpha = 0.9
+  alpha = 0.9,
+  prewhiten.crn = TRUE
 )
 }
 \arguments{

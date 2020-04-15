@@ -4,14 +4,14 @@
 \alias{load_clim}
 \title{Get months of interest for climate analysis, sum or average them}
 \usage{
-load_clim(climate, mos, type)
+load_clim(clim, mos, type, prewhiten.clim = TRUE)
 }
 \arguments{
-\item{climate}{dataframe or matrix in either 13 column (where there is a column for year and for each month) or long (where there are columns for year, month, and value) formats.}
-
 \item{mos}{months of interest}
 
 \item{type}{output either individual months, sums of months, or means. "individual", "sum", or "mean"}
+
+\item{climate}{dataframe or matrix in either 13 column (where there is a column for year and for each month) or long (where there are columns for year, month, and value) formats.}
 }
 \value{
 dataframe of monthly data

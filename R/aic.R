@@ -26,7 +26,7 @@
 #' @note The model fitting must apply the models to the same dataset. This may be a problem if there are missing values and an na.action other than na.fail is used (as is the default in R). We suggest you remove the missing values first.
 #' @references Venables, W. N. and Ripley, B. D. (2002) Modern Applied Statistics with S. Fourth edition. Springer.
 #'
-#' @importFrom stats, deviance, extractAIC, factor.scope, formula, nobs, terms, update, update.formula
+#' @import stats
 #' @export
 # @importFrom MuMIn AICc
 #' @examples

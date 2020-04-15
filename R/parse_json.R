@@ -4,7 +4,7 @@
 #' @param center logical whether to report the center of the field site as a single lat/lon or a full location bounding box. Defaults to TRUE.
 #'
 #' @return dataframe of ID, lat, lon, elevation
-#' @import jsonlite, matrixStats
+#' @import jsonlite
 #' @export
 #'
 #' @examples
