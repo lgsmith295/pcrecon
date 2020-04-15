@@ -54,13 +54,14 @@ filter_cor <- function(crns, lead = 1, clim, window, type = "pearson", alternati
 
     select_crns <- crns_table(cors_table_small)
 
-    nests_df <- nest_tbl(select_crns)
+    nests <- nest_tbl(select_crns)
 
     select_crns <- select_crns %>%
-      dplyr::filter(year >= min(nests_df$startYR)) %>%
-      dplyr::filter(year <= max(nests_df$endYR))
+      dplyr::filter(year >= min(nests$startYR)) %>%
+      dplyr::filter(year <= max(nests$endYR))
 
-    list <- list(cors_table = cors_table, cors_table_small = cors_table_small, select_crns = select_crns)
+    list <- list(cors_table = cors_table, cors_table_small = cors_table_small, select_crns = select_crns, nests)
+    class(list) <- "PCR_crns"
 
     return(list)
 
