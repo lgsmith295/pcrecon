@@ -4,7 +4,7 @@
 \alias{read_crn}
 \title{Read Tuscon Format Chronology File}
 \usage{
-read.crn(fname, header = NULL, encoding = getOption("encoding"), long = TRUE)
+read_crn(fname, header = NULL, encoding = getOption("encoding"), long = TRUE)
 }
 \arguments{
 \item{fname}{a character vector giving the file name of the crn file.}

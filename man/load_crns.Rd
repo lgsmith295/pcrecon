@@ -4,22 +4,32 @@
 \alias{load_crns}
 \title{Title}
 \usage{
-load_crns(dir, crns, include = NULL, logfile = "read_crns.log")
+load_crns(
+  dir,
+  crns,
+  type_crn = "S",
+  type_measure = "R",
+  logfile = "read_crns.log"
+)
 
-
+load_crns(dir, crns, type = "standard", logfile = "read_crns.log")
 }
 \arguments{
 \item{dir}{path to directory containing chronologies as character string}
 
 \item{crns}{vector of character strings containing the names of the chronologies wanting to read into R}
 
-\item{include}{}
+\item{type_crn}{character vector of codes indicating type(s) of chronologies to include. Default = "S" (standard). See details for available options (from ITRDB)}
+
+\item{type_measure}{character vector of codes indicating type(s) of measurements to include. Default = "R" (Ring Width). See details for available options (from ITRDB)}
 
 \item{logfile}{character string indicating path to the log file for errors associated with reading in chronologies. The path is the same as `dir` if not otherwise specified.}
 
 \item{lag}{vector of positive integers indicating which lags should be included. Defaults to zero.}
 
 \item{lead}{vector of positive integers indicating which leads should be included. Defaults to current year and one}
+
+\item{include}{}
 }
 \value{
 dataframe with a year column and columns for each chronology and their leads and lags
@@ -27,18 +37,39 @@ dataframe with a year column and columns for each chronology and their leads and
 dataframe with a year column and columns for each chronology containing values
 }
 \description{
-
+load_crns reads a list of `.crn` files into R and makes them into a dataframe
 }
 \details{
 The lag is the number of years to shift the chronology backwards. It defaults to zero because relative to the climate you do not expect the previous tree rings to correlate to current year climate. The lead is the number of years to shift the chronology forward such that this years climate conditions would influence growth in those future years. For example, `lead = 0` would just to the current year. Making `lead = 1` would ONLY put in a chronology shifted one year ahead of the climate (e.g. 2010 climate would affect 2011 tree growth). Setting `lead = c(0, 1, 2)` would create three columns such that the current climate would affect current year tree rings AND tree rings the next year and the year after.
 
 coming soon
+
+    Code Measurement Type (`type_measure`)
+    D Total Ring Density
+    E Earlywood Width
+    I Earlywood Density
+    L Latewood Width
+    N Minimum Density
+    R Ring Width
+    T Latewood Density
+    X Maximum Density
+    P Latewood Percent
+
+    Code Chronology Type (`type_crn`)
+    A ARSTND
+    P Low Pass Filter
+    R Residual
+    S Standard
+    W Re-Whitened Residual
+    N Measurements Only
 }
 \examples{
 \dontrun{
 
 }
-\dontrun{
-df <- load_crns(dir = system.file("extdata/crns", package = "pcreg", mustWork = TRUE), crns = list.files(system.file("extdata/crns", package = "pcreg", mustWork = TRUE)))
-}
+df <- load_crns(dir = system.file("extdata/crns",
+package = "pcreg"),
+crns = c("nm014", "nm537", "nm545", "nm576"),
+ type_crn = "S",
+ type_measure = "R")
 }
