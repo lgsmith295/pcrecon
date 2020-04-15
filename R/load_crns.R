@@ -16,7 +16,7 @@
 #' @importFrom magrittr %>%
 #' @import dplR
 #' @import stringr
-#' @importFrom utils, setTxtProgressBar, txtProgressBar
+#' @importFrom utils setTxtProgressBar txtProgressBar
 #'
 #' @details coming soon
 #'
@@ -62,7 +62,7 @@ load_crns <- function(dir, crns, type_crn = "S", type_measure = "R", logfile = "
   files <- files[!(stringr::str_detect(files, "-noaa"))]
 
   # Filter to filenames containing the locations names (e.g. nm537.crn and nm537r.crn)
-  files <- files[stringr::str_detect(files, paste(crns, collapse = "|"))]
+  files <- files[stringr::str_detect(files, regex(paste(crns, collapse = "|"), ignore_case = TRUE))]
   files <- files[stringr::str_detect(files, "\\.crn$")]
 
   # stringr::str_detect(files[i], "^[[:alpha:]]{2}\\.crn") # statecode.crn = standard
