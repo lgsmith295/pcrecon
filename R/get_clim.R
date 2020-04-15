@@ -9,7 +9,7 @@
 #' @export
 #'
 #' @examples
-load_clim <- function(climate, mos, type) {
+load_clim <- function(clim, mos, type, prewhiten.clim = TRUE) {
   if (!(ncol(climate) %in% c(3,13))) {
     stop("Climate data must being in 13 column or long formats. See documentation for description")
   }  else {
@@ -30,6 +30,11 @@ load_clim <- function(climate, mos, type) {
       } else {
    as.character(mos)
    clim_small <- climate[which(climate$month == mos), ]
+   if (isTRUE(prewhiten)){
+     x <- clim_small[ ,-year]
+     x.ar <- apply(x, 2, ar.func, ...)
+     clim_small <- cbind(clim_small$year, x.ar)
+   }
   }
   if (type == "individual") {
     clim <- tidyr::pivot_wider(clim_small, names_from = month)
