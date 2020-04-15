@@ -13,7 +13,14 @@
 #' @export
 #'
 #' @examples
-filter_cor <- function(crns, lead = 1, clim, window, type = "pearson", alternative = "two.sided", r = 0.25, alpha = 0.90){
+filter_cor <- function(crns, lead = 1, clim, window, type = "pearson", alternative = "two.sided", r = 0.25, alpha = 0.90, prewhiten.crn = TRUE){
+
+  if (isTRUE(prewhiten)){
+    x <- crns[ ,-year]
+    x.ar <- apply(x, 2, ar.func, ...)
+    crns <- cbind(crns$year, x.ar)
+  }
+
   crn_window <- crns %>%
     dplyr::filter(year %in% window) %>% ## starts_with doesn't work here as below. why?
     dplyr::select(-dplyr::starts_with('year',ignore.case = TRUE))
