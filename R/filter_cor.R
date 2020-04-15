@@ -14,20 +14,19 @@
 #'
 #' @examples
 filter_cor <- function(crns, lead = 1, clim, window, type = "pearson", alternative = "two.sided", r = 0.25, alpha = 0.90){
-
   crn_window <- crns %>%
     dplyr::filter(year %in% window) %>% ## starts_with doesn't work here as below. why?
-    dplyr::select(-starts_with('year',ignore.case = TRUE))
+    dplyr::select(-dplyr::starts_with('year',ignore.case = TRUE))
 
   clim_window <- clim %>%
     dplyr::filter(year %in% window) %>% ## starts_with doesn't work here as below. why?
-    dplyr::select(-starts_with('year',ignore.case = TRUE))
+    dplyr::select(-dplyr::starts_with('year',ignore.case = TRUE))
 
   leads <- c(0:lead)
 
   rows <- ncol(crn_window) * length(leads)
 
-cors_table <- as.data.frame(matrix(NA, nrow = rows, ncol = 4))
+  cors_table <- as.data.frame(matrix(NA, nrow = rows, ncol = 4))
   names <-  c("chronology", "leads", "correlation", "p_value")
   colnames(cors_table) <- names
 
@@ -38,27 +37,23 @@ for (j in 1:length(leads)) {
   for (i in 1:length(crn_names)) {
     k <- k + 1
     crn <- as.vector(as.numeric(crn_window[ ,i]))
-    clim<- as.vector(as.numeric(clim_window[ , ])) #subset to month j for when there are more than one month
+    clim<- as.vector(as.numeric(clim_window[ , ])) #add subset to month j for when there are more than one month
     cor <- cor.test( clim, dplyr::lead(crn, leads[j]), conf.level = alpha, type = type, alternative = alternative)
     cors_table[k, ] <- cbind(crn_names[i], leads[j], cor$estimate, cor$p.value)
 }
 }
-    cors_table_small <- filter(cors_table, cors_table$correlation >= r ) %>%
-      filter(p_value <= 1-alpha)
+    cors_table_small <- dplyr::filter(cors_table, cors_table$correlation >= r ) %>%
+      dplyr::filter(p_value <= 1-alpha)
 
-    keepers <- c("year", cors_table_small$chronology)
+    select_crns <- crns_table(cors_table_small)
 
-    select_crns_cor <- subset(crns, select=keepers)
+    nests_df <- nest_tbl(select_crns)
 
-    select_crns_cor <- PCA_chrons %>%
-      arrange(year)
+    select_crns <- select_crns %>%
+      dplyr::filter(year >= min(nests_df$startYR)) %>%
+      dplyr::filter(year <= max(nests_df$endYR))
 
-    nests_df <- nest_tbl(select_crns_cor)
-
-    select_crns_cor <- select_crns_cor %>%
-      filter(year >= min(nests_df$startYR)) %>%
-      filter(year <= max(nests_df$endYR))
-    list <- list(cors_table = cors_table, cors_table_small = cors_table_small, select_crns_cor_sub = select_crns_cor_sub)
+    list <- list(cors_table = cors_table, cors_table_small = cors_table_small, select_crns = select_crns)
 
     return(list)
 
@@ -67,5 +62,37 @@ for (j in 1:length(leads)) {
 
 
 
+#' Fill table of chronologies and lead chronologies based on correlation output
+#'
+#' @param cors_table_small dataframe of filtered chronology names, leads, correlation, and p values.
+#'
+#' @return dataframe of chronologies, including lead chronologies, that met threshold correlation values for analysis
+#'
+#'
+#' @examples
+#'
+crns_table <- function(cors_table_small) {
+ for (i in 1:nrow(cors_table_small)) {
+  chron <- crns[ ,cors_table_small$chronology[i]]
+  if (cors_table_small$leads[i] != 0) {
+    lead_val <- as.integer(cors_table_small$leads[i])
+    chronology_name <- paste0(cors_table_small$chronology[i], "_lag", lead_val)
+    chron_lead <- dplyr::lead(chron, lead_val )
+    chron <- data.frame(chron_lead)
+    colnames(chron) <- chronology_name
+  } else {
+  chronology_name <- cors_table_small$chronology[i]
+  chron <- data.frame(chron)
+  colnames(chron) <- chronology_name
+  }
+  if (i == 1) {
+    crns_select <- cbind(year = crns$year, chron)
+  } else {
+    crns_select <- cbind(crns_select, chron)
+  }
 
+  }
+  return (crns_select)
+
+}
 
