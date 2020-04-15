@@ -1,3 +1,20 @@
+#' Title
+#'
+#' @param clim
+#' @param crns
+#' @param nests
+#' @param calib
+#' @param valid
+#' @param pc.calc
+#' @param scale.var
+#' @param weight
+#'
+#' @return
+#' @export
+#'
+#' @examples
+pcreg <- function(clim, crns, nests, calib, valid, pc.calc, scale.var, weight){
+
 number_nests <- nrow(periods_df)
 
 for (i in 1 : number_nests) {
@@ -128,4 +145,5 @@ for (i in 1 : number_nests) {
   PCA_chrons <- PCA_chrons %>%
     dplyr::select(-!!periods_df$ID[i])
 
+}
 }
