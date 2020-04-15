@@ -18,14 +18,15 @@
 #'
 #'   Zero-length vectors have sum 0 by definition. See
 #'   \url{http://en.wikipedia.org/wiki/Empty_sum} for more details.
-#' @details Function adapted from the MASS package to calculate AICc rather than AIC. 
+#' @details Function adapted from the MASS package to calculate AICc rather than AIC.
 #'     The set of models searched is determined by the scope argument. The right-hand-side of its lower component is always included in the model, and right-hand-side of the model is included in the upper component. If scope is a single formula, it specifies the upper component, and the lower model is empty. If scope is missing, the initial model is used as the upper model. Models specified by scope can be templates to update object as used by update.formula.
 #'     There is a potential problem in using glm fits with a variable scale, as in that case the deviance is not simply related to the maximized log-likelihood. The glm method for extractAIC makes the appropriate adjustment for a gaussian family, but may need to be amended for other cases. (The binomial and poisson families have fixed scale by default and do not correspond to a particular maximum-likelihood problem for variable scale.)
 #'     Where a conventional deviance exists (e.g. for lm, aov and glm fits) this is quoted in the analysis of variance table: it is the unscaled deviance.
 #'     The stepwise-selected model is returned, with up to two additional components. There is an "anova" component corresponding to the steps taken in the search, as well as a "keep" component if the keep= argument was supplied in the call. The "Resid. Dev" column of the analysis of deviance table refers to a constant minus twice the maximized log likelihood: it will be a deviance only in cases where a saturated model is well-defined (thus excluding lm, aov and survreg fits, for example).
 #' @note The model fitting must apply the models to the same dataset. This may be a problem if there are missing values and an na.action other than na.fail is used (as is the default in R). We suggest you remove the missing values first.
 #' @references Venables, W. N. and Ripley, B. D. (2002) Modern Applied Statistics with S. Fourth edition. Springer.
-#' 
+#'
+#' @importFrom stats, deviance, extractAIC, factor.scope, formula, nobs, terms, update, update.formula
 #' @export
 # @importFrom MuMIn AICc
 #' @examples
@@ -50,12 +51,12 @@
 stepAICc <- function(object, scope, scale = 0, direction = c("both", "backward", "forward"), trace = 1, keep = NULL, steps = 1000, use.start = FALSE,vk = 2, ...) {
   mydeviance <- function(x, ...) {
     dev <- deviance(x)
-    if (!is.null(dev)) 
+    if (!is.null(dev))
       dev
     else MuMIn::AICc(x, k=0)
   }
   cut.string <- function(string) {
-    if (length(string) > 1L) 
+    if (length(string) > 1L)
       string[-1L] <- paste("\n", string[-1L], sep = "")
     string
   }
@@ -64,7 +65,7 @@ stepAICc <- function(object, scope, scale = 0, direction = c("both", "backward",
     namc <- names(keep)
     nc <- length(keep)
     nr <- length(k1)
-    array(unlist(keep, recursive = FALSE), c(nr, nc), list(namr, 
+    array(unlist(keep, recursive = FALSE), c(nr, nc), list(namr,
                                                            namc))
   }
   step.results <- function(models, fit, object, usingCp = FALSE) {
@@ -74,15 +75,15 @@ stepAICc <- function(object, scope, scale = 0, direction = c("both", "backward",
     rdf <- sapply(models, "[[", "df.resid")
     ddf <- c(NA, abs(diff(rdf)))
     AIC <- sapply(models, "[[", "AIC")
-    heading <- c("Stepwise Model Path \nAnalysis of Deviance Table", 
-                 "\nInitial Model:", deparse(formula(object)), "\nFinal Model:", 
+    heading <- c("Stepwise Model Path \nAnalysis of Deviance Table",
+                 "\nInitial Model:", deparse(formula(object)), "\nFinal Model:",
                  deparse(formula(fit)), "\n")
-    aod <- if (usingCp) 
-      data.frame(Step = change, Df = ddf, Deviance = dd, 
-                 `Resid. Df` = rdf, `Resid. Dev` = rd, Cp = AIC, 
+    aod <- if (usingCp)
+      data.frame(Step = change, Df = ddf, Deviance = dd,
+                 `Resid. Df` = rdf, `Resid. Dev` = rd, Cp = AIC,
                  check.names = FALSE)
-    else data.frame(Step = change, Df = ddf, Deviance = dd, 
-                    `Resid. Df` = rdf, `Resid. Dev` = rd, AIC = AIC, 
+    else data.frame(Step = change, Df = ddf, Deviance = dd,
+                    `Resid. Df` = rdf, `Resid. Dev` = rd, AIC = AIC,
                     check.names = FALSE)
     attr(aod, "heading") <- heading
     class(aod) <- c("Anova", "data.frame")
@@ -91,12 +92,12 @@ stepAICc <- function(object, scope, scale = 0, direction = c("both", "backward",
   }
   Terms <- terms(object)
   object$formula <- Terms
-  if (inherits(object, "lme")) 
+  if (inherits(object, "lme"))
     object$call$fixed <- Terms
-  else if (inherits(object, "gls")) 
+  else if (inherits(object, "gls"))
     object$call$model <- Terms
   else object$call$formula <- Terms
-  if (use.start) 
+  if (use.start)
     warning("'use.start' cannot be used with R's version of 'glm'")
   md <- missing(direction)
   direction <- match.arg(direction)
@@ -105,61 +106,61 @@ stepAICc <- function(object, scope, scale = 0, direction = c("both", "backward",
   if (missing(scope)) {
     fdrop <- numeric()
     fadd <- attr(Terms, "factors")
-    if (md) 
+    if (md)
       forward <- FALSE
   }
   else {
     if (is.list(scope)) {
-      fdrop <- if (!is.null(fdrop <- scope$lower)) 
+      fdrop <- if (!is.null(fdrop <- scope$lower))
         attr(terms(update.formula(object, fdrop)), "factors")
       else numeric()
-      fadd <- if (!is.null(fadd <- scope$upper)) 
+      fadd <- if (!is.null(fadd <- scope$upper))
         attr(terms(update.formula(object, fadd)), "factors")
     }
     else {
-      fadd <- if (!is.null(fadd <- scope)) 
+      fadd <- if (!is.null(fadd <- scope))
         attr(terms(update.formula(object, scope)), "factors")
       fdrop <- numeric()
     }
   }
   models <- vector("list", steps)
-  if (!is.null(keep)) 
+  if (!is.null(keep))
     keep.list <- vector("list", steps)
   n <- nobs(object, use.fallback = TRUE)
   fit <- object
   bAIC <- extractAIC(fit, scale, k = k, ...)
   edf <- bAIC[1L]
   bAIC <- MuMIn::AICc(fit, k=k)
-  if (is.na(bAIC)) 
+  if (is.na(bAIC))
     stop("AIC is not defined for this model, so 'stepAIC' cannot proceed")
-  if (bAIC == -Inf) 
+  if (bAIC == -Inf)
     stop("AIC is -infinity for this model, so 'stepAIC' cannot proceed")
   nm <- 1
   Terms <- terms(fit)
   if (trace) {
-    cat("Start:  AIC=", format(round(bAIC, 2)), "\n", cut.string(deparse(formula(fit))), 
+    cat("Start:  AIC=", format(round(bAIC, 2)), "\n", cut.string(deparse(formula(fit))),
         "\n\n", sep = "")
     utils::flush.console()
   }
-  models[[nm]] <- list(deviance = mydeviance(fit), df.resid = n - 
+  models[[nm]] <- list(deviance = mydeviance(fit), df.resid = n -
                          edf, change = "", AIC = bAIC)
-  if (!is.null(keep)) 
+  if (!is.null(keep))
     keep.list[[nm]] <- keep(fit, bAIC)
   usingCp <- FALSE
   while (steps > 0) {
     steps <- steps - 1
     AIC <- bAIC
     ffac <- attr(Terms, "factors")
-    if (!is.null(sp <- attr(Terms, "specials")) && !is.null(st <- sp$strata)) 
+    if (!is.null(sp <- attr(Terms, "specials")) && !is.null(st <- sp$strata))
       ffac <- ffac[-st, ]
     scope <- factor.scope(ffac, list(add = fadd, drop = fdrop))
     aod <- NULL
     change <- NULL
     if (backward && length(scope$drop)) {
-      aod <- dropterm(fit, scope$drop, scale = scale, 
+      aod <- dropterm(fit, scope$drop, scale = scale,
                       trace = max(0, trace - 1), k = k, ...)
       rn <- row.names(aod)
-      row.names(aod) <- c(rn[1L], paste("-", rn[-1L], 
+      row.names(aod) <- c(rn[1L], paste("-", rn[-1L],
                                         sep = " "))
       if (any(aod$Df == 0, na.rm = TRUE)) {
         zdf <- aod$Df == 0 & !is.na(aod$Df)
@@ -170,28 +171,28 @@ stepAICc <- function(object, scope, scale = 0, direction = c("both", "backward",
           warning("0 df terms are changing AIC")
           zdf <- zdf[!ch]
         }
-        if (length(zdf) > 0L) 
+        if (length(zdf) > 0L)
           change <- rev(rownames(aod)[zdf])[1L]
       }
     }
     if (is.null(change)) {
       if (forward && length(scope$add)) {
-        aodf <- addterm(fit, scope$add, scale = scale, 
+        aodf <- addterm(fit, scope$add, scale = scale,
                         trace = max(0, trace - 1), k = k, ...)
         rn <- row.names(aodf)
-        row.names(aodf) <- c(rn[1L], paste("+", rn[-1L], 
+        row.names(aodf) <- c(rn[1L], paste("+", rn[-1L],
                                            sep = " "))
-        aod <- if (is.null(aod)) 
+        aod <- if (is.null(aod))
           aodf
         else rbind(aod, aodf[-1, , drop = FALSE])
       }
       attr(aod, "heading") <- NULL
-      if (is.null(aod) || ncol(aod) == 0) 
+      if (is.null(aod) || ncol(aod) == 0)
         break
-      nzdf <- if (!is.null(aod$Df)) 
+      nzdf <- if (!is.null(aod$Df))
         aod$Df != 0 | is.na(aod$Df)
       aod <- aod[nzdf, ]
-      if (is.null(aod) || ncol(aod) == 0) 
+      if (is.null(aod) || ncol(aod) == 0)
         break
       nc <- match(c("Cp", "AIC"), names(aod))
       nc <- nc[!is.na(nc)][1L]
@@ -200,7 +201,7 @@ stepAICc <- function(object, scope, scale = 0, direction = c("both", "backward",
         print(aod[o, ])
         utils::flush.console()
       }
-      if (o[1L] == 1) 
+      if (o[1L] == 1)
         break
       change <- rownames(aod)[o[1L]]
     }
@@ -208,26 +209,26 @@ stepAICc <- function(object, scope, scale = 0, direction = c("both", "backward",
     fit <- update(fit, paste("~ .", change), evaluate = FALSE)
     fit <- eval.parent(fit)
     nnew <- nobs(fit, use.fallback = TRUE)
-    if (all(is.finite(c(n, nnew))) && nnew != n) 
+    if (all(is.finite(c(n, nnew))) && nnew != n)
       stop("number of rows in use has changed: remove missing values?")
     Terms <- terms(fit)
     bAIC <- extractAIC(fit, scale, k = k, ...)
     edf <- bAIC[1L]
     bAIC <- MuMIn::AICc(fit, k=k)
     if (trace) {
-      cat("\nStep:  AIC=", format(round(bAIC, 2)), "\n", 
+      cat("\nStep:  AIC=", format(round(bAIC, 2)), "\n",
           cut.string(deparse(formula(fit))), "\n\n", sep = "")
       utils::flush.console()
     }
-    if (bAIC >= AIC + 1e-07) 
+    if (bAIC >= AIC + 1e-07)
       break
     nm <- nm + 1
-    models[[nm]] <- list(deviance = mydeviance(fit), df.resid = n - 
+    models[[nm]] <- list(deviance = mydeviance(fit), df.resid = n -
                            edf, change = change, AIC = bAIC)
-    if (!is.null(keep)) 
+    if (!is.null(keep))
       keep.list[[nm]] <- keep(fit, bAIC)
   }
-  if (!is.null(keep)) 
+  if (!is.null(keep))
     fit$keep <- re.arrange(keep.list[seq(nm)])
   step.results(models = models[seq(nm)], fit, object, usingCp)
 }
