@@ -40,7 +40,7 @@ filter_cor <- function(crns, lead = 1, clim, window, type = "pearson", alternati
   crn_names <- colnames(crn_window)
 
  k <- 0
-for (j in 1:length(leads)) {
+ for (j in 1:length(leads)) {
   for (i in 1:length(crn_names)) {
     k <- k + 1
     crn <- as.vector(as.numeric(crn_window[ ,i]))
