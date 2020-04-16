@@ -4,7 +4,13 @@
 \alias{perf_stats}
 \title{Performance statistics of calibration and validation date from reconstruction}
 \usage{
-perf_stats(valid_est, observed, valid_yrs, calib_yrs, mod_id = "m")
+perf_stats(
+  valid_est,
+  observed,
+  valid_yrs = valid,
+  calib_yrs = calib,
+  mod_id = "m"
+)
 }
 \arguments{
 \item{valid_est}{dataframe of years and fit estimates from validation period}
@@ -13,9 +19,9 @@ perf_stats(valid_est, observed, valid_yrs, calib_yrs, mod_id = "m")
 
 \item{valid_yrs}{integer vector of years for validation}
 
-\item{mod_id}{character string identifying the model}
+\item{calib_yrs}{integer vector of years used in calibration}
 
-\item{cal_yrs}{integer vector of years used in calibration}
+\item{mod_id}{character string identifying the model}
 }
 \value{
 R2, Pearson_R2, RE, CE for validation data

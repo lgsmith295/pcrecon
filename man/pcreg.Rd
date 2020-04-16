@@ -5,7 +5,16 @@
 \alias{pcreg}
 \title{pcreg: A package for conducting principle component regression on tree ring data for climate reconstruction}
 \usage{
-pcreg(clim, crns, nests, calib, valid, pc.calc, scale.var, weight)
+pcreg(
+  PCR_crns,
+  clim,
+  calib,
+  valid,
+  pc.calc = calib,
+  select.pc,
+  scale.var,
+  weight = NULL
+)
 }
 \arguments{
 \item{weight}{}

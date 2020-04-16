@@ -4,7 +4,7 @@
 \alias{crns_table}
 \title{Fill table of chronologies and lead chronologies based on correlation output}
 \usage{
-crns_table(cors_table_small)
+crns_table(crns = crns, cors_table_small = cors_table_small)
 }
 \arguments{
 \item{cors_table_small}{dataframe of filtered chronology names, leads, correlation, and p values.}

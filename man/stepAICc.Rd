@@ -13,7 +13,7 @@ stepAICc(
   keep = NULL,
   steps = 1000,
   use.start = FALSE,
-  vk = 2,
+  k = 2,
   ...
 )
 }
@@ -32,11 +32,11 @@ stepAICc(
 
 \item{steps}{the maximum number of steps to be considered. The default is 1000 (essentially as many as required). It is typically used to stop the process early.}
 
+\item{k}{the multiple of the number of degrees of freedom used for the penalty. Only k = 2 gives the genuine AIC: k = log(n) is sometimes referred to as BIC or SBC.}
+
 \item{...}{any additional arguments to extractAIC. (None are currently used.)}
 
 \item{starts}{if true the updated fits are done starting at the linear predictor for the currently selected model. This may speed up the iterative calculations for glm (and other fits), but it can also slow them down. Not used in R.}
-
-\item{k}{the multiple of the number of degrees of freedom used for the penalty. Only k = 2 gives the genuine AIC: k = log(n) is sometimes referred to as BIC or SBC.}
 }
 \value{
 If all inputs are integer and logical, then the output
