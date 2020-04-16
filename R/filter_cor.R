@@ -54,6 +54,7 @@ filter_cor <- function(crns, lead = 1, clim, window, type = "pearson", alternati
       dplyr::filter(p_value <= 1-alpha)
 
     select_crns <- crns_table(crns, cors_table_small)
+    select_crns <- dplyr::arrange(select_crns, year)
 
     nests <- nest_tbl(select_crns)
 
