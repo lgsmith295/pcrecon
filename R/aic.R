@@ -27,6 +27,7 @@
 #' @references Venables, W. N. and Ripley, B. D. (2002) Modern Applied Statistics with S. Fourth edition. Springer.
 #'
 #' @import stats
+#' @import MASS
 #' @export
 # @importFrom MuMIn AICc
 #' @examples
@@ -48,7 +49,7 @@
 #' cpus.lm2 <- stepAIC(cpus.lm, trace = FALSE)
 #' cpus.lm2$anova
 #' }
-stepAICc <- function(object, scope, scale = 0, direction = c("both", "backward", "forward"), trace = 1, keep = NULL, steps = 1000, use.start = FALSE,vk = 2, ...) {
+stepAICc <- function(object, scope, scale = 0, direction = c("both", "backward", "forward"), trace = 1, keep = NULL, steps = 1000, use.start = FALSE, k = 2, ...) {
   mydeviance <- function(x, ...) {
     dev <- deviance(x)
     if (!is.null(dev))
@@ -157,7 +158,7 @@ stepAICc <- function(object, scope, scale = 0, direction = c("both", "backward",
     aod <- NULL
     change <- NULL
     if (backward && length(scope$drop)) {
-      aod <- dropterm(fit, scope$drop, scale = scale,
+      aod <- MASS::dropterm(fit, scope$drop, scale = scale,
                       trace = max(0, trace - 1), k = k, ...)
       rn <- row.names(aod)
       row.names(aod) <- c(rn[1L], paste("-", rn[-1L],
