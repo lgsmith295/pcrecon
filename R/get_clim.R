@@ -6,7 +6,6 @@
 #'
 #'
 #' @return dataframe of monthly data
-#' @export
 #'
 #' @examples
 load_clim <- function(clim, mos, type, prewhiten.clim = TRUE) {
@@ -34,44 +33,42 @@ load_clim <- function(clim, mos, type, prewhiten.clim = TRUE) {
 
 
   }
-  # if (type == "individual") {
-  #   clim <- tidyr::pivot_wider(clim_small, names_from = month)
-  # }
+  if (type == "individual") {
+    clim_small <- tidyr::pivot_wider(clim_small, values = month)
+    if (ncol(clim) > 2){
+      stop("For individual month option, select only one month at a time")
+    }
+
+  }
 
   if (type == "mean") {
     clim <- tidyr::pivot_wider(clim_small, names_from = month)
-    means  <- clim %>%
+    values  <- clim %>%
      dplyr::select(-year)
 
-    means <- dplyr::mutate(means, means = rowMeans(means))
+     values <- rowMeans(values)
 
-    year <- clim$year
-    mean <- means$means
-
-   clim_small <- data.frame(cbind(year, mean))
+     clim_small <- data.frame(cbind(year = clim$year, values))
   }
 
   if (type == "sum") {
     clim <- tidyr::pivot_wider(clim_small, names_from = month)
-    sums  <- clim %>%
-      dplyr::select(-year)
+    values  <- clim %>%
+     dplyr::select(-year)
 
-    sums <- dplyr::mutate(sums, sums = rowSums(sums))
+    values <- rowSums(sums)
 
-    year <- clim$year
-    sum <- sums$sums
-
-    clim_small <- data.frame(cbind(year, sum))
+    clim_small <- data.frame(cbind(year = clim$year, values))
 }
     if (isTRUE(prewhiten.clim)){
       x <- data.frame(clim_small[ , 2])
-      x.ar <- apply(x, 2, ar_prewhiten, model = TRUE)
+      x.ar <- apply(x, 2, ar_prewhiten, return = "both")
 
       values <- x.ar$clim_small...2.[[1]]
       ar <- x.ar$clim_small...2.[[2]]
 
 
-      clim_small <- data.frame(cbind(year, values))
+      clim_small <- data.frame(cbind(year = clim$year, values))
 
       clim_return <- list(clim_small, ar)
     } else {
