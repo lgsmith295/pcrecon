@@ -1,11 +1,21 @@
 #' PCreg
 #'
-#' @param clim
 #' @param crns
-#' @param nests
+#' @param lead
+#' @param prewhiten.crn
+#' @param climate
+#' @param mos
+#' @param method
+#' @param prewhiten.clim
+#' @param cor.window
+#' @param type
+#' @param alternative
+#' @param r
+#' @param alpha
 #' @param calib
 #' @param valid
 #' @param pc.calc
+#' @param select.pc
 #' @param scale.var
 #' @param weight
 #'
@@ -13,14 +23,23 @@
 #' @export
 #'
 #' @examples
-pcreg <- function(PCR_crns, clim, calib, valid, pc.calc = calib, select.pc, scale.var, weight = NULL){
+pcreg <- function(crns, lead = 1, prewhiten.crn = TRUE, climate, mos = 5:8, method = "mean", prewhiten.clim = FALSE,  cor.window = "calib", type = "pearson", alternative = "two.sided", r = 0.25, alpha = 0.90, calib, valid, pc.calc = "calib", select.pc = "eigenvalue1", scale.var = "calib", weight = NULL){
 
-  if (class(PCR_crns) != "PCR_crns") {
-  stop("PCR_crns must be of class PCR_crns, as returned by function filter_cor()")
-  }
+full <- min(c(valid, calib)): max(c(valid,calib))
+
+if(prewhiten.clim == TRUE) { clim_ar <- load_clim(clim = climate, mos = mos, type = method, prewhiten.clim = prewhiten.clim)
+
+clim <- data.frame(clim_ar[[1]])
+} else {
+  clim <- load_clim(clim = climate, mos = mos, type = method, prewhiten.clim = prewhiten.clim)
+}
+
+PCR_crns <- filter_cor(crns = crns, clim = clim, lead = lead, cor.window = cor.window, type = type, alternative = alternative, r = r, alpha = alpha, prewhiten.crn = prewhiten.crn, prewhiten.clim = prewhiten.clim, calib = calib)
+
+
 periods_df <- PCR_crns$nests
 PCA_chrons <- PCR_crns$select_crns
-full <- min(c(valid, calib)): max(c(valid,calib))
+
 
 number_nests <- nrow(periods_df)
 
@@ -28,15 +47,13 @@ number_nests <- nrow(periods_df)
 for (i in 1 : number_nests) {
   nest_yrs <- c(periods_df$startYR[i] : min(periods_df$endYR))
 ## make check for start year < end year
-  PCA <- calc_PCs(periods_df, PCA_chrons, pc.calc, nest_yrs)
+  PCA <- calc_PCs(periods_df, PCA_chrons, pc.calc, nest_yrs, calib = calib)
 
   select_PC <- select_PCs(data = PCA)
 
-  df <- mod_df(data = select_PC$PC_vals, eig = select_PC$eigval_small, nest_yrs, calib)
-
+  df <- mod_df(clim = clim, data = select_PC$PC_vals, eig = select_PC$eigval_small, nest_yrs = nest_yrs, calib = calib)
 
   full_mod <- lm(formula = clim~., data = df)
-
 
   step_mod <- stepAICc(full_mod, trace = TRUE, k = 3)
 
@@ -54,7 +71,7 @@ for (i in 1 : number_nests) {
 
   #### reconstruction
   predict_nest <- predict(step_mod, PCA_predict, se.fit=TRUE, interval="confidence", level=0.95)
-  recon_nest <- as.data.frame(cbind(year = nest_yrs, predict_nest[["fit"]]+ mean(clim$mean)))
+  recon_nest <- as.data.frame(cbind(year = nest_yrs, predict_nest[["fit"]]+ mean(clim$values)))
 
   #### validation
   valid_est <- dplyr::filter(recon_nest, recon_nest$year %in% valid) %>%
@@ -89,7 +106,7 @@ for (i in 1 : number_nests) {
   mn <- mean(recon_nest$fit)
 
   sd_recon <- sd(recon_nest$fit)
-  sd_clim <- sd(clim$mean)
+  sd_clim <- sd(clim$values)
   recon_nest$fit <- mn + (recon_nest$fit - mn) * sd_clim/sd_recon
 
   #### Add reconstruction to dataframe
@@ -103,8 +120,14 @@ for (i in 1 : number_nests) {
     dplyr::select(-!!periods_df$ID[i])
 
 }
+recon_list <- list(clim = clim, PCR_crns = PCR_crns, recon = recon, validation_stats = stats_table, model_stats = model_table)
 
-return(recon)
+if(prewhiten.clim == TRUE){
+recon_list <- list(clim = clim, PCR_crns = PCR_crns, recon = recon, validation_stats = stats_table, model_stats = model_table, clim_ar = clim_ar[[2]], crn_ar = PCR_crns$crn.ar)
+
+}
+class(recon_list) <- "PCReg_recon"
+return(recon_list)
 }
 
 
@@ -118,12 +141,15 @@ return(recon)
 #' @return
 #'
 #' @examples
-calc_PCs <- function(periods_df, PCA_chrons, pc.calc, nest_yrs) {
+calc_PCs <- function(periods_df, PCA_chrons, pc.calc, nest_yrs, calib, full) {
 nest <- PCA_chrons %>%
   dplyr::filter(PCA_chrons$year %in% nest_yrs) %>%
   dplyr::select(-year)
-chrons_period <- PCA_chrons %>%
-  dplyr::filter(PCA_chrons$year %in% pc.calc)
+
+chrons_period <- switch(pc.calc,
+                        calib = dplyr::filter(PCA_chrons, year %in% calib),
+                        full = dplyr::filter(PCA_chrons, year %in% full))
+
 
 PCA_chrons_calib <- chrons_period %>%
   dplyr::select(-year)
@@ -165,7 +191,7 @@ list(eigval_small = eigval_small, PC_vals = PC_vals)
 #' @return
 #'
 #' @examples
-mod_df <- function(data = PC_vals, eig = eigval_small, nest_yrs, calib) {
+mod_df <- function(data = PC_vals, clim, eig = eigval_small, nest_yrs, calib) {
 #### linear model and Step AICc
 clim_full <- as.data.frame(dplyr::filter(clim, clim$year %in% nest_yrs))
 clim <- dplyr::filter(clim_full, clim_full$year %in% calib)
