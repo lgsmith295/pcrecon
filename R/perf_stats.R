@@ -16,15 +16,15 @@
 #' "coming soon"
 #' }
 perf_stats <- function(valid_est, observed, valid_yrs = valid, calib_yrs = calib, mod_id = "m") {
-  if(!all(colnames(observed) == c("year", "mean"))) {
-    stop("observed must be a dataframe that includes the columns year and mean")
+  if(!all(colnames(observed) == c("year", "values"))) {
+    stop("observed must be a dataframe that includes the columns year and values")
   }
   x_valid <- dplyr::filter(observed, observed$year %in% valid_yrs)
   x_calib <- dplyr::filter(observed, observed$year %in% calib_yrs)
-  R2 <- 1 - ((sum((x_valid$mean - valid_est$fit)^2)) / (sum((x_valid$mean - mean(x_valid$mean))^2)))
-  Pearson_R2 <- (sum((x_valid$mean - mean(x_valid$mean)) * (valid_est$fit - mean(valid_est$fit))))^2 / (sum((x_valid$mean - mean(x_valid$mean))^2) * sum((valid_est$fit - mean(valid_est$fit))^2))
-  RE <- 1 - sum((x_valid$mean - valid_est$fit) ^ 2) / sum((x_valid$mean - mean(x_calib$mean, na.rm = TRUE))^2)
-  CE <- 1 - sum((x_valid$mean - valid_est$fit) ^ 2) / sum((x_valid$mean - mean(x_valid$mean)) ^ 2)
+  R2 <- 1 - ((sum((x_valid$values - valid_est$fit)^2)) / (sum((x_valid$values - mean(x_valid$values))^2)))
+  Pearson_R2 <- (sum((x_valid$values - mean(x_valid$values)) * (valid_est$fit - mean(valid_est$fit))))^2 / (sum((x_valid$values - mean(x_valid$values))^2) * sum((valid_est$fit - mean(valid_est$fit))^2))
+  RE <- 1 - sum((x_valid$values - valid_est$fit) ^ 2) / sum((x_valid$values - mean(x_calib$values, na.rm = TRUE))^2)
+  CE <- 1 - sum((x_valid$values - valid_est$fit) ^ 2) / sum((x_valid$values - mean(x_valid$values)) ^ 2)
   df <- data.frame(model = mod_id, R2, Pearson_R2, RE, CE, stringsAsFactors = FALSE)
   return(df)
 }
