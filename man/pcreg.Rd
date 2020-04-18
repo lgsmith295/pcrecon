@@ -6,13 +6,23 @@
 \title{pcreg: A package for conducting principle component regression on tree ring data for climate reconstruction}
 \usage{
 pcreg(
-  PCR_crns,
-  clim,
+  crns,
+  lead = 1,
+  prewhiten.crn = TRUE,
+  climate,
+  mos = 5:8,
+  method = "mean",
+  prewhiten.clim = FALSE,
+  cor.window = "calib",
+  type = "pearson",
+  alternative = "two.sided",
+  r = 0.25,
+  alpha = 0.9,
   calib,
   valid,
-  pc.calc = calib,
-  select.pc,
-  scale.var,
+  pc.calc = "calib",
+  select.pc = "eigenvalue1",
+  scale.var = "calib",
   weight = NULL
 )
 }

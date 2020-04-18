@@ -8,12 +8,16 @@ filter_cor(
   crns,
   lead = 1,
   clim,
-  window,
+  cor.window,
   type = "pearson",
   alternative = "two.sided",
   r = 0.25,
   alpha = 0.9,
-  prewhiten.crn = TRUE
+  prewhiten.crn = TRUE,
+  prewhiten.clim = TRUE,
+  calib = calib,
+  valid = valid,
+  full = full
 )
 }
 \arguments{
@@ -23,13 +27,13 @@ filter_cor(
 
 \item{clim}{dataframe, such as returned by the get_clim function, containing columns for year and either: individual months climate data (may be more than one), a sum of >1 months climate data, or the average of >1 months data}
 
-\item{window}{years to include in correlation analysis, calibration period in original PCreg software}
-
 \item{alternative}{indicates the alternative hypothesiss and must be one of "two.sided", "greater", or "less".}
 
 \item{r}{minimum correlation coefficient needed to retain chronology. Defaults to 0.25.}
 
 \item{alpha}{minimum alpha value for rejection of null hypothesis. Defaults to 0.90}
+
+\item{window}{years to include in correlation analysis, calibration period in original PCreg software}
 
 \item{method}{type of correlation analysis, "pearson" or "spearman". Defaults to "pearson"}
 }

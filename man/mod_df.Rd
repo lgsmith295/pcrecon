@@ -4,7 +4,7 @@
 \alias{mod_df}
 \title{Create dataframe containing clim and select PCs for linear model}
 \usage{
-mod_df(data = PC_vals, eig = eigval_small, nest_yrs, calib)
+mod_df(data = PC_vals, clim, eig = eigval_small, nest_yrs, calib)
 }
 \arguments{
 \item{data}{PCA values}

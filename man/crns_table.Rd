@@ -2,7 +2,7 @@
 % Please edit documentation in R/filter_cor.R
 \name{crns_table}
 \alias{crns_table}
-\title{Fill table of chronologies and lead chronologies based on correlation output}
+\title{Fill table of chronologies and lead chronologies that pass correlation filtering}
 \usage{
 crns_table(crns = crns, cors_table_small = cors_table_small)
 }
@@ -13,7 +13,7 @@ crns_table(crns = crns, cors_table_small = cors_table_small)
 dataframe of chronologies, including lead chronologies, that met threshold correlation values for analysis
 }
 \description{
-Fill table of chronologies and lead chronologies based on correlation output
+Fill table of chronologies and lead chronologies that pass correlation filtering
 }
 \examples{
 

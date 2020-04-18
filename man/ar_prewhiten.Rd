@@ -4,7 +4,7 @@
 \alias{ar_prewhiten}
 \title{Autoregressive Prewhitening}
 \usage{
-ar_prewhiten(x, model = FALSE, ...)
+ar_prewhiten(x, return = "both", ...)
 }
 \arguments{
 \item{...}{}

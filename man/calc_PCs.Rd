@@ -4,7 +4,7 @@
 \alias{calc_PCs}
 \title{calculate PCs}
 \usage{
-calc_PCs(periods_df, PCA_chrons, pc.calc, nest_yrs)
+calc_PCs(periods_df, PCA_chrons, pc.calc, nest_yrs, calib, full)
 }
 \arguments{
 \item{periods_df}{dataframe of nests}
