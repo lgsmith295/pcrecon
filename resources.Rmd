@@ -1,0 +1,78 @@
+---
+title: "Resources for Package Development"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Package Development
+
+The main resource is the Hadley Wickam <u>R Packages</u> book: <http://r-pkgs.had.co.nz/>
+
+The comprehensive, but dense resource for packages contributed to CRAN is *Writing R Extensions* at <https://cran.r-project.org/doc/manuals/r-release/R-exts.html>. It is written in a more technical language accessible to software developers but more challenging for scientists new to writing R packages and software development.
+
+At the other end of the spectrum, Karl Broman has a very nice minimal tutorial to making an R package <https://kbroman.org/pkg_primer/>
+
+## Packages
+
+- `devtools`
+- `usethis`
+- `testthat`
+- `remotes`
+- `roxygen2`
+- `stringr`
+
+## Functions
+
+- `devtools::load_all()`
+- `usethis::use_package()` - Adds to DESCRIPTION file, good to include `min_version` argument
+- `devtools::document()`
+- `usethis::use_build_ignore(c("yourfolder1", "yourfolder2", "yourfile"))` - add files and folders not part of package (e.g. test development scripts, analyses, manuscripts)
+- `usethis::use_vignette()`
+- `devtools::check()` - will automatically run `document()` before checking I think
+- `devtools::build()` - don't need to document or check before this. It will do all.
+
+
+## Testing & Error Handling
+
+- Best example of setting up a `tryCatch`: <https://rsangole.netlify.com/post/try-catch/>
+- *R Packages* testing chapter: <http://r-pkgs.had.co.nz/tests.html>
+
+## Connecting Packages
+
+- <https://kbroman.org/pkg_primer/pages/depends.html>
+
+## Classes and Generics
+
+- <http://r-pkgs.had.co.nz/man.html>
+
+## Documentation
+
+- <https://kbroman.org/pkg_primer/pages/docs.html>
+- [RStudio Writing Documentation](https://support.rstudio.com/hc/en-us/articles/200532317-Writing-Package-Documentation)
+
+
+
+## Handling Strings
+
+- `regex` documentation: <https://stat.ethz.ch/R-manual/R-devel/library/base/html/regex.html>
+- `stringr` cheatsheet: <http://edrub.in/CheatSheets/cheatSheetStringr.pdf>
+- Hadley *R for Data Science* strings: <https://r4ds.had.co.nz/strings.html>
+- [Blog Example](https://towardsdatascience.com/using-stringr-and-regex-to-extract-features-from-textual-alphanumeric-and-punctuation-data-in-r-2565256c0a77)
+
+
+## Packaging Data
+
+- Hosting Data via drat: <https://journal.r-project.org/archive/2017/RJ-2017-026/RJ-2017-026.pdf>
+- Data as a GitHub R package: <https://journal.r-project.org/archive/2017/RJ-2017-026/RJ-2017-026.pdf>
+
+
+## README
+
+- Jeff Walker Example with versioning: <https://github.com/walkerjeffd/sheds-temp-model#configuration>
+- Semantic Versioning: <https://semver.org/>
+
+
+

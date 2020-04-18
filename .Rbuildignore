@@ -5,3 +5,9 @@
 ^CONDUCT\.md$
 ^CONTRIBUTING\.md$
 ^pcreg\.Rproj$
+^manuscript\.Rmd$
+^resources\.md$
+^resources\.Rmd$
+^resources\.html$
+^analysis$
+^analysis/informal$

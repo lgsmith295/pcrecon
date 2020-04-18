@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 Title <- "Title of your paper goes here"
 ```
 
-# pcreg: Principal Component Regression analysis for tree ring data
+# pcreg: Principal Component Regression for tree ring data
 
 ## Motivation
 

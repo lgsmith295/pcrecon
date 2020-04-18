@@ -3,7 +3,6 @@
 export(filter_cor)
 export(filter_foot)
 export(filter_rad)
-export(load_clim)
 export(load_crns)
 export(parse_json)
 export(pcreg)
