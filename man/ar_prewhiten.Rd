@@ -15,3 +15,6 @@ ar_prewhiten(x, return = "both", ...)
 \description{
 Autoregressive Prewhitening
 }
+\details{
+Function modified from ar.prewhiten in the dplR package
+}
