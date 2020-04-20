@@ -4,3 +4,5 @@
 .Ruserdata
 *.log
 inst/doc
+doc
+Meta
