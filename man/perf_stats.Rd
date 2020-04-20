@@ -6,6 +6,7 @@
 \usage{
 perf_stats(
   valid_est,
+  calib_est,
   observed,
   valid_yrs = valid,
   calib_yrs = calib,

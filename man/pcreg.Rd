@@ -12,16 +12,19 @@ pcreg(
   climate,
   mos = 5:8,
   method = "mean",
-  prewhiten.clim = FALSE,
+  prewhiten.clim = TRUE,
+  calib,
+  valid,
+  plot = TRUE,
   cor.window = "calib",
   type = "pearson",
   alternative = "two.sided",
   r = 0.25,
   alpha = 0.9,
-  calib,
-  valid,
   pc.calc = "calib",
   select.pc = "eigenvalue1",
+  cum.perc = NULL,
+  m = NULL,
   scale.var = "calib",
   weight = NULL
 )
@@ -41,3 +44,6 @@ foo, bar and baz.
 The pcreg functions ...
 }
 
+\examples{
+
+}
