@@ -9,7 +9,7 @@
 #'
 #' @examples
 #'  read_crn_head(system.file("extdata/crns/nm575.crn", package = "pcreg"))
-read_crn_head <- function(fname, err = "log", logfile = "read_crns.log") {
+read_crn_head <- function(fname, err = "warn", logfile = "read_crns.log") {
 
   if(!(err %in% c("stop", "warn", "log"))) {
     stop("err must be indicated as either stop, warn, or log")

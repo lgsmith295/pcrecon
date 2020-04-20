@@ -4,7 +4,8 @@
 \alias{load_crns}
 \title{Load crn chronology files into R}
 \usage{
-load_crns(dir, crns, type = "standard", logfile = "read_crns.log")
+load_crns(dir, crns, type_crn = "S", type_measure = "R",
+    logfile = "read_crns.log")
 }
 \arguments{
 \item{dir}{path to directory containing chronologies as character string}

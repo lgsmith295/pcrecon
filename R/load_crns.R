@@ -3,7 +3,8 @@
 #' @description load_crns reads a list of `.crn` files into R and makes them into a dataframe
 #'
 #' @aliases load_crns
-#' @usage load_crns(dir, crns, type = "standard", logfile = "read_crns.log")
+#' @usage load_crns(dir, crns, type_crn = "S", type_measure = "R",
+#'     logfile = "read_crns.log")
 #'
 #' @param dir path to directory containing chronologies as character string
 #' @param crns vector of character strings containing the names of the chronologies wanting to read into R
@@ -58,10 +59,12 @@ load_crns <- function(dir, crns, type_crn = "S", type_measure = "R", logfile = "
     type_crn <- "S"
   }
 
-  type_crn2 <- type_crn
-  type_measure2 <- type_measure
-  if("S" %in% type_crn) type_crn2 <- c(type_crn, " ", "", "_")
-  if("R" %in% type_measure) type_measure2 <- c(type_measure, " ", "", "_")
+  crns <- stringr::str_remove(basename(crns), "\\.crn$")
+
+  # type_crn2 <- type_crn
+  # type_measure2 <- type_measure
+  # if("S" %in% type_crn) type_crn2 <- c(type_crn, " ", "", "_")
+  # if("R" %in% type_measure) type_measure2 <- c(type_measure, " ", "", "_")
 
   # noaa data are so different maybe use separate function for those
 
@@ -89,7 +92,7 @@ load_crns <- function(dir, crns, type_crn = "S", type_measure = "R", logfile = "
   # files <- files[grepl('[[:digit:]]\\.crn', files)]
 
   # Parse those headers using Nicholas' read_crn_head
-  tmp2 <- lapply(file.path(dir, files), read_crn_head, logfile = log_con)
+  tmp2 <- lapply(file.path(dir, files), read_crn_head)
   # rbind that into a data.frame
   tmp2 <- do.call(rbind, tmp2)
 
@@ -106,18 +109,25 @@ load_crns <- function(dir, crns, type_crn = "S", type_measure = "R", logfile = "
     dplyr::mutate(type_fname = dplyr::if_else(is.na(type_fname), "S", type_fname),
                   type_m = dplyr::if_else(is.na(type_m), "R", type_m))
 
-  if(type_measure %in% c("E", "L", "T", "X")) {
     df <- df %>%
-      dplyr::filter(type_m == type_measure2) #,
+      dplyr::filter(type_m == type_measure) #,
                   # type_c %in% type_crn,
                   # grepl(lat_lon, pattern='[[:digit:]]{4,4}-[[:digit:]]{5,5}'))
+
+if(type_measure %in% c("E", "L", "T", "X")) {
+  df <- df %>%
+    dplyr::filter(type_fname != "A")
+  }
+
+  if(type_crn %in% c("S")) {
+    df <- df %>%
+      dplyr::filter(type_fname %in% c("S", "E", "L", "T", "X"))
   }
 
   if(type_crn %in% c("A")) {
     df <- df %>%
-      dplyr::filter(type_fname == type_crn2)
+      dplyr::filter(type_fname == type_crn)
   }
-
 
   # tryCatch - if df returns nothing
 
@@ -156,6 +166,8 @@ load_crns <- function(dir, crns, type_crn = "S", type_measure = "R", logfile = "
     chron <- tibble::rownames_to_column(chron, "year") %>%
       dplyr::select(-samp.depth) %>%
       dplyr::mutate(year = as.integer(as.numeric(year)))
+
+    # check that years make sense
 
     success_sites[j] <- df$site[i]
     # Moved from read_crn_head

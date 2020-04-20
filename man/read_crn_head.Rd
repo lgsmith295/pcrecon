@@ -4,7 +4,7 @@
 \alias{read_crn_head}
 \title{Parse chronology file headers}
 \usage{
-read_crn_head(fname, err = "log", logfile = "read_crns.log")
+read_crn_head(fname, err = "warn", logfile = "read_crns.log")
 }
 \arguments{
 \item{fname}{character string of full path to file and including file ending}

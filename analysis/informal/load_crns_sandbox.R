@@ -4,10 +4,6 @@ dir <- system.file("extdata/crns", package = "pcreg", mustWork = TRUE)
 
 df <- load_crns(dir = system.file("extdata/crns", package = "pcreg", mustWork = TRUE), crns = list.files(system.file("extdata/crns", package = "pcreg", mustWork = TRUE)))
 
-df <- load_crns(dir = system.file("extdata/crns", package = "pcreg", mustWork = TRUE),
-                crns = list.files(system.file("extdata/crns", package = "pcreg", mustWork = TRUE)),
-                type = "noaa")
-
 
 foo <- read.table(file = system.file("extdata/crns", "nm014-noaa.crn", package = "pcreg", mustWork = TRUE), header = TRUE, sep = "", comment.char = "#")
 
