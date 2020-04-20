@@ -136,39 +136,5 @@ window_filter <- function(crns, clim, cor.window, calib, valid, full){
   clim_window <- clim_window %>%
     dplyr::select(-dplyr::starts_with('year',ignore.case = TRUE))
 
-#
-# if (cor.window == "calib") {
-#   crn_window <- crns %>%
-#     dplyr::filter(year %in% calib) %>%
-#     dplyr::select(-dplyr::starts_with('year',ignore.case = TRUE))
-#
-#   clim_window <- clim %>%
-#     dplyr::filter(year %in% calib) %>%
-#     dplyr::select(-dplyr::starts_with('year',ignore.case = TRUE))
-# } else {
-#
-#   if (cor.window == "valid") {
-#   crn_window <- crns %>%
-#     dplyr::filter(year %in% valid) %>%
-#     dplyr::select(-dplyr::starts_with('year',ignore.case = TRUE))
-#
-#   clim_window <- clim %>%
-#     dplyr::filter(year %in% valid) %>%
-#     dplyr::select(-dplyr::starts_with('year',ignore.case = TRUE))
-# } else {
-#
-# if (cor.window == "full") {
-#   crn_window <- crns %>%
-#     dplyr::filter(year %in% full) %>%
-#     dplyr::select(-dplyr::starts_with('year',ignore.case = TRUE))
-#
-#   clim_window <- clim %>%
-#     dplyr::filter(year %in% full) %>%
-#     dplyr::select(-dplyr::starts_with('year',ignore.case = TRUE))
-# } else {
-#   stop("cor.window must be indicated as either valid, calib, or full ")
-# }
-# }
-# }
   df <- list(crn_window = crn_window, clim_window = clim_window)
 }
