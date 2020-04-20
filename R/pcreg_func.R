@@ -89,9 +89,16 @@ pcreg <- function(crns, lead = 1, prewhiten.crn = TRUE, climate, mos = 5:8, meth
     stats <- perf_stats(valid_est, calib_est, observed, valid_yrs = valid, calib_yrs = calib, mod_id = i)
 
     if(i == 1) {
-      stats_table <- stats$validation_stats
+      val_stats_table <- stats$validation_stats
     } else {
-      stats_table <- dplyr::bind_rows(stats_table, stats$validation_stats)
+      val_stats_table <- dplyr::bind_rows(val_stats_table, stats$validation_stats)
+
+    }
+
+    if(i == 1) {
+      cal_stats_table <- stats$calibration_stats
+    } else {
+      cal_stats_table <- dplyr::bind_rows(cal_stats_table, stats$calibration_stats)
 
     }
 
@@ -129,11 +136,11 @@ pcreg <- function(crns, lead = 1, prewhiten.crn = TRUE, climate, mos = 5:8, meth
 
   if(prewhiten.clim == TRUE){
     red_recon <- redden_recon(recon, clim_ar[[2]])
-    recon_list <- list(clim = clim, PCR_crns = PCR_crns, recon = red_recon, validation_stats = stats_table, model_stats = model_table, clim_ar = clim_ar[[2]], crn_ar = PCR_crns$crn.ar, reddened_recon = red_recon)
+    recon_list <- list(clim = clim, PCR_crns = PCR_crns, recon = red_recon, validation_stats = val_stats_table, model_stats = model_table, calibration_stats = cal_stats_table, clim_ar = clim_ar[[2]], crn_ar = PCR_crns$crn.ar)
 
   }
 
-  recon_list <- list(clim = clim, PCR_crns = PCR_crns, recon = recon, validation_stats = stats_table, model_stats = model_table)
+  recon_list <- list(clim = clim, PCR_crns = PCR_crns, recon = recon, validation_stats = val_stats_table, model_stats = model_table, calibration_stats = cal_stats_table)
   class(recon_list) <- "PCReg_recon"
   return(recon_list)
 }
