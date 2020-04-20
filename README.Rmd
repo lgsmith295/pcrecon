@@ -20,6 +20,10 @@ Title <- "Title of your paper goes here"
 
 ## How to Cite
 
+```{r, echo = FALSE}
+utils::citation("pcreg")
+```
+
 ## Installation
 
 The most up-to-date version can be installed from the GitHub repository using the `remotes` package. It can also be accomplished with the `devtools` package but devtools got a bit bloated and the components were split into individual packages. `remotes` is more streamlined if not engaging in lots of full package development and just wanting to install packages from online sources besides CRAN.
@@ -33,6 +37,14 @@ remotes::install_github("https://github.com/lgsmith295/pcreg")
 ## Versioning
 
 ## How to Use
+
+The vignette is the best place to start for understanding the use of the functions in the package. The `reconstruction` vignette goes through all the steps necessary to go from ITRDB data to a climate reconstruction using tree ring data.
+
+```{r}
+library(pcreg)
+utils::browseVignettes("pcreg")
+vignette("reconstruction")
+```
 
 ## Licenses
 

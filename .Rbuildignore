@@ -11,3 +11,5 @@
 ^resources\.html$
 ^analysis$
 ^analysis/informal$
+^doc$
+^Meta$

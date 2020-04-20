@@ -96,6 +96,8 @@ load_crns <- function(dir, crns, type_crn = "S", type_measure = "R", logfile = "
                   # type_c %in% type_crn,
                   grepl(lat_lon, pattern='[[:digit:]]{4,4}-[[:digit:]]{5,5}'))
 
+  # tryCatch - if df returns nothing
+
   # Create properly formatted lat/lon coordinates (convert from dddmm to decimal)
   df <- df %>%
     dplyr::mutate(lat = as.numeric(substr(lat_lon, 1, 2)) + as.numeric(substr(lat_lon, 3, 4)) / 60,

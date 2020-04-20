@@ -20,3 +20,38 @@ df <- load_crns(dir = system.file("extdata/crns",
                 crns = all_crn,
                 type_crn = "S",
                 type_measure = "R")
+
+# 014 should read in one standard but not -noaa
+# 537 has -noaa, d, d-noaa, e, e-noaa, i, i-noaa, l, l-noaa, n, n-noaa, t, t-noaa, x, x-noaa
+#560 has -noaa, a, r, r-noaa
+crns_test <- c("nm014", "nm537", "nm560")
+df <- load_crns(dir = system.file("extdata/crns",
+                                  package = "pcreg"),
+                crns = crns_test,
+                type_crn = "S",
+                type_measure = "R")
+colnames(df)
+
+crns_test <- c("nm014", "nm537", "nm560")
+df <- load_crns(dir = system.file("extdata/crns",
+                                  package = "pcreg"),
+                crns = crns_test,
+                type_crn = "A",
+                type_measure = "R")
+colnames(df)
+
+crns_test <- c("nm014", "nm537", "nm560")
+df <- load_crns(dir = system.file("extdata/crns",
+                                  package = "pcreg"),
+                crns = crns_test,
+                type_crn = "R",
+                type_measure = "R")
+colnames(df)
+
+crns_test <- c("nm014", "nm537", "nm560")
+df <- load_crns(dir = system.file("extdata/crns",
+                                  package = "pcreg"),
+                crns = crns_test,
+                type_crn = "S",
+                type_measure = "E")
+colnames(df)
