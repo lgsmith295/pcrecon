@@ -33,11 +33,11 @@ read_crn <- function (fname, header = NULL, encoding = getOption("encoding"),
                                                   10)))
     if (is.null(yrcheck) || length(yrcheck) != 1 || is.na(yrcheck) |
         yrcheck < -10000 || yrcheck > 10000) {
-      message("There appears to be a header in the crn file")
+  #     message("There appears to be a header in the crn file")
       is.head <- TRUE
     }
     else {
-      message("There does not appear to be a header in the crn file")
+  #     message("There does not appear to be a header in the crn file")
       is.head <- FALSE
     }
   }
@@ -130,6 +130,7 @@ read_crn <- function (fname, header = NULL, encoding = getOption("encoding"),
                      decade_pos2, 10L, domain = "R-dplR"), domain = NA)
   }
   # cat(sprintf(ngettext(nseries, "There is %d series\n", "There are %d series\n", domain = "R-dplR"), nseries))
+
   series.index <- match(series, series.ids)
   min.year <- (min(decade.yr)%/%10) * 10
   max.year <- ((max(decade.yr) + 10)%/%10) * 10

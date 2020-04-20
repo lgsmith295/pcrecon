@@ -11,9 +11,9 @@ load_crns(dir, crns, type = "standard", logfile = "read_crns.log")
 
 \item{crns}{vector of character strings containing the names of the chronologies wanting to read into R}
 
-\item{type_crn}{character vector of codes indicating type(s) of chronologies to include. Default = "S" (standard). See details for available options (from ITRDB)}
+\item{type_crn}{character code indicating type of chronologies to include. Default = "S" (standard). See details for available options (from ITRDB)}
 
-\item{type_measure}{character vector of codes indicating type(s) of measurements to include. Default = "R" (Ring Width). See details for available options (from ITRDB)}
+\item{type_measure}{character code indicating type of measurements to include. Default = "R" (Ring Width). See details for available options (from ITRDB)}
 
 \item{logfile}{character string indicating path to the log file for errors associated with reading in chronologies. The path is the same as `dir` if not otherwise specified.}
 }
@@ -25,6 +25,8 @@ load_crns reads a list of `.crn` files into R and makes them into a dataframe
 }
 \details{
 coming soon
+
+    There is no clear and consistent way that metadata about the measurement type and chronology type are clearly denoted in the ITRDB. The filename is potentially the most consistent, with the file header being the next most consistent for the measurement type, but not the standardization type.
 
     Code Measurement Type (`type_measure`)
     D Total Ring Density

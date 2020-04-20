@@ -7,8 +7,8 @@
 #'
 #' @param dir path to directory containing chronologies as character string
 #' @param crns vector of character strings containing the names of the chronologies wanting to read into R
-#' @param type_crn character vector of codes indicating type(s) of chronologies to include. Default = "S" (standard). See details for available options (from ITRDB)
-#' @param type_measure character vector of codes indicating type(s) of measurements to include. Default = "R" (Ring Width). See details for available options (from ITRDB)
+#' @param type_crn character code indicating type of chronologies to include. Default = "S" (standard). See details for available options (from ITRDB)
+#' @param type_measure character code indicating type of measurements to include. Default = "R" (Ring Width). See details for available options (from ITRDB)
 #' @param logfile character string indicating path to the log file for errors associated with reading in chronologies. The path is the same as `dir` if not otherwise specified.
 #'
 #' @return dataframe with a year column and columns for each chronology containing values
@@ -19,6 +19,8 @@
 #' @importFrom utils setTxtProgressBar txtProgressBar
 #'
 #' @details coming soon
+#'
+#'     There is no clear and consistent way that metadata about the measurement type and chronology type are clearly denoted in the ITRDB. The filename is potentially the most consistent, with the file header being the next most consistent for the measurement type, but not the standardization type.
 #'
 #'     Code Measurement Type (`type_measure`)
 #'     D Total Ring Density
@@ -47,12 +49,24 @@
 #'  type_measure = "R")
 load_crns <- function(dir, crns, type_crn = "S", type_measure = "R", logfile = "read_crns.log") {
 
-  if("S" %in% type_crn) type_crn <- c(type_crn, " ", "", "_")
-  if("R" %in% type_measure) type_measure <- c(type_measure, " ", "", "_")
+  if(!(type_crn %in% c("S", "A"))) stop("Chronology type must be specified as 'S' or 'A'.")
+  if(!(type_measure %in% c("R", "E", "L", "T", "X"))) stop("Chronology type must be specified as 'E', 'L', 'T', or 'X'.")
+  if(type_crn == "A" & type_measure != "R") stop("Chronology type must be Standard ('S') when using earlywood, latewood, or density measurements")
+
+  if(type_measure %in% c("E", "L", "T", "X")) {
+    warning("Chronology type is assumed to be Standard ('S') when using earlywood, latewood, or density measurements but this is not explicitly specified in the ITRDB")
+    type_crn <- "S"
+  }
+
+  type_crn2 <- type_crn
+  type_measure2 <- type_measure
+  if("S" %in% type_crn) type_crn2 <- c(type_crn, " ", "", "_")
+  if("R" %in% type_measure) type_measure2 <- c(type_measure, " ", "", "_")
 
   # noaa data are so different maybe use separate function for those
 
   log_con <- file.path(dir, logfile)
+  cat(paste0("Log File for Reading Chronologies: ", Sys.time()), file = log_con, sep = "\n", append = FALSE)
 
   # Vector of location names (e.g. nm537) from spatial filtering = crns
   # Vector of all filenames in the directory = files
@@ -75,13 +89,13 @@ load_crns <- function(dir, crns, type_crn = "S", type_measure = "R", logfile = "
   # files <- files[grepl('[[:digit:]]\\.crn', files)]
 
   # Parse those headers using Nicholas' read_crn_head
-  tmp2 <- lapply(file.path(dir, files), read_crn_head)
+  tmp2 <- lapply(file.path(dir, files), read_crn_head, logfile = log_con)
   # rbind that into a data.frame
   tmp2 <- do.call(rbind, tmp2)
 
   df <- tmp1 %>%
     dplyr::left_join(data.frame(tmp2, stringsAsFactors = FALSE), by = "fname") %>%
-    dplyr::select(fname, species_code, site, type_fname, type_m, type_c, lat_lon) %>%
+    dplyr::select(fname, sp_code, site, type_fname, type_m, type_c, lat_lon) %>%
     dplyr::mutate(type_fname = stringr::str_to_upper(type_fname),
                   type_m = dplyr::na_if(type_m, " "),
                   type_c = dplyr::na_if(type_c, " ")) %>%
@@ -90,25 +104,38 @@ load_crns <- function(dir, crns, type_crn = "S", type_measure = "R", logfile = "
   # Filter by measurement types and chronology types & to have valid lat-lon strings and valid year ranges (year filter not implemented)
   df <- df %>%
     dplyr::mutate(type_fname = dplyr::if_else(is.na(type_fname), "S", type_fname),
-                  type_m = dplyr::if_else(is.na(type_m), "R", type_m)) %>%
-    dplyr::filter(type_fname %in% type_crn,
-                  type_m %in% type_measure,
+                  type_m = dplyr::if_else(is.na(type_m), "R", type_m))
+
+  if(type_measure %in% c("E", "L", "T", "X")) {
+    df <- df %>%
+      dplyr::filter(type_m == type_measure2) #,
                   # type_c %in% type_crn,
-                  grepl(lat_lon, pattern='[[:digit:]]{4,4}-[[:digit:]]{5,5}'))
+                  # grepl(lat_lon, pattern='[[:digit:]]{4,4}-[[:digit:]]{5,5}'))
+  }
+
+  if(type_crn %in% c("A")) {
+    df <- df %>%
+      dplyr::filter(type_fname == type_crn2)
+  }
+
 
   # tryCatch - if df returns nothing
 
   # Create properly formatted lat/lon coordinates (convert from dddmm to decimal)
   df <- df %>%
-    dplyr::mutate(lat = as.numeric(substr(lat_lon, 1, 2)) + as.numeric(substr(lat_lon, 3, 4)) / 60,
-           lon=as.numeric(substr(lat_lon, 6, 8)) + as.numeric(substr(lat_lon, 9, 10)) / 60) %>%
+    # dplyr::mutate(lat = as.numeric(substr(lat_lon, 1, 2)) + as.numeric(substr(lat_lon, 3, 4)) / 60,
+    #        lon=as.numeric(substr(lat_lon, 6, 8)) + as.numeric(substr(lat_lon, 9, 10)) / 60) %>%
     dplyr::select(-lat_lon)
 
   # Pass the resulting list of filenames to the read_crn function
   crns_files <- df$fname
-  cat(paste0("Log File for Reading Chronologies: ", Sys.time()), file = log_con, sep = "\n", append = FALSE)
-  pb <- txtProgressBar(min = 0, max = length(crns), style = 3)
+
+  # head_problems <- crns[!(crns %in% names(df))]
+  # cat(paste0("\n", " Problems parsing headers and therefore not read in: ", head_problems), file = log_con, sep = ",", append = TRUE)
+
+  try(pb <- txtProgressBar(min = 0, max = length(crns_files), style = 3))
   j <- 0
+  success_sites <- NULL
   for(i in 1:length(crns_files)) {
     setTxtProgressBar(pb, i)
     chron <- tryCatch(
@@ -129,6 +156,12 @@ load_crns <- function(dir, crns, type_crn = "S", type_measure = "R", logfile = "
     chron <- tibble::rownames_to_column(chron, "year") %>%
       dplyr::select(-samp.depth) %>%
       dplyr::mutate(year = as.integer(as.numeric(year)))
+
+    success_sites[j] <- df$site[i]
+    # Moved from read_crn_head
+    # first = row.names(crn)[1]
+    # last = tail(row.names(crn), 1)
+
     }
     if(j == 1) {
       all_chronologies <- chron
@@ -137,6 +170,14 @@ load_crns <- function(dir, crns, type_crn = "S", type_measure = "R", logfile = "
     }
   }
   # close(log_con)
+
+  failed <- crns[!(crns %in% success_sites)]
+  if(length(failed) == 0) {
+    cat(paste0("\n All sites successfully read in."), file = log_con, sep = "\n", append = TRUE)
+  } else {
+    cat(paste(c("\n Sites attempted but not successfully read in:", failed),  collapse = " "), file = log_con, append = TRUE)
+  }
+
   close(pb)
   return(all_chronologies)
 }

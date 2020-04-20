@@ -4,13 +4,17 @@
 \alias{read_crn_head}
 \title{Parse chronology file headers}
 \usage{
-read_crn_head(fname)
+read_crn_head(fname, err = "log", logfile = "read_crns.log")
 }
 \arguments{
 \item{fname}{character string of full path to file and including file ending}
+
+\item{err}{character string indicating type of error handling where `stop` will throw and error, `warn` will print warning to the screen, and `log` will pass the test for use in a log file. Defaults to `log`.}
+
+\item{logfile}{character string indicating path to the log file for errors associated with reading in chronologies. The path is the same as `dir` if not otherwise specified.}
 }
 \value{
-dataframe of site_id, site_name, species_code, type_c, type_m, elev, lat_lon, years, first, last, fname
+dataframe of fname, site_id, site_name, sp_code (species code), type_c (chronology type), type_m (measurement type), elev, lat_lon, years
 }
 \description{
 Parse chronology file headers
