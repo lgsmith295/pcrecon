@@ -7,15 +7,18 @@
 #' @param mos
 #' @param method
 #' @param prewhiten.clim
+#' @param calib
+#' @param valid
+#' @param plot
 #' @param cor.window
 #' @param type
 #' @param alternative
 #' @param r
 #' @param alpha
-#' @param calib
-#' @param valid
 #' @param pc.calc
 #' @param select.pc
+#' @param cum.perc
+#' @param m
 #' @param scale.var
 #' @param weight
 #'
@@ -23,7 +26,8 @@
 #' @export
 #'
 #' @examples
-pcreg <- function(crns, lead = 1, prewhiten.crn = TRUE, climate, mos = 5:8, method = "mean", prewhiten.clim = FALSE,  cor.window = "calib", type = "pearson", alternative = "two.sided", r = 0.25, alpha = 0.90, calib, valid, pc.calc = "calib", select.pc = "eigenvalue1", scale.var = "calib", weight = NULL){
+#'
+pcreg <- function(crns, lead = 1, prewhiten.crn = TRUE, climate, mos = 5:8, method = "mean", prewhiten.clim = TRUE, calib, valid, plot = TRUE, cor.window = "calib", type = "pearson", alternative = "two.sided", r = 0.25, alpha = 0.90, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc = NULL, m = NULL, scale.var = "calib", weight = NULL){
 
   full <- min(c(valid, calib)): max(c(valid,calib))
 
@@ -47,9 +51,9 @@ pcreg <- function(crns, lead = 1, prewhiten.crn = TRUE, climate, mos = 5:8, meth
   for (i in 1 : number_nests) {
     nest_yrs <- c(periods_df$startYR[i] : min(periods_df$endYR))
     ## make check for start year < end year
-    PCA <- calc_PCs(periods_df, PCA_chrons, pc.calc, nest_yrs, calib = calib)
+    PCA <- calc_PCs(periods_df, PCA_chrons, pc.calc, nest_yrs, calib, full)
 
-    select_PC <- select_PCs(data = PCA)
+    select_PC <- select_PCs(data = PCA, type = select.pc)
 
     df <- mod_df(clim = clim, data = select_PC$PC_vals, eig = select_PC$eigval_small, nest_yrs = nest_yrs, calib = calib)
 
@@ -122,7 +126,7 @@ pcreg <- function(crns, lead = 1, prewhiten.crn = TRUE, climate, mos = 5:8, meth
     #### Add reconstruction to dataframe
 
     if(i == 1){
-    recon <- recon_nest
+      recon <- recon_nest
     }else{
       recon <- dplyr::arrange(dplyr::bind_rows(recon, recon_nest), year)
     }
@@ -145,57 +149,6 @@ pcreg <- function(crns, lead = 1, prewhiten.crn = TRUE, climate, mos = 5:8, meth
   return(recon_list)
 }
 
-
-
-#' calculate PCs
-#'
-#' @param periods_df dataframe of nests
-#' @param PCA_chrons dataframe containing chronologies
-#' @param period period of time over which to calculate PCs, calibration or nest_yrs
-#'
-#' @return
-#'
-#' @examples
-calc_PCs <- function(periods_df, PCA_chrons, pc.calc, nest_yrs, calib, full) {
-  nest <- PCA_chrons %>%
-    dplyr::filter(PCA_chrons$year %in% nest_yrs) %>%
-    dplyr::select(-year)
-
-  chrons_period <- switch(pc.calc,
-                          calib = dplyr::filter(PCA_chrons, year %in% calib),
-                          full = dplyr::filter(PCA_chrons, year %in% full))
-
-
-  PCA_chrons_calib <- chrons_period %>%
-    dplyr::select(-year)
-
-  PCA <- prcomp(PCA_chrons_calib, scale = TRUE)
-
-  list(PCA = PCA, chrons_period = chrons_period, nest = nest)
-}
-
-#' select PCs
-#'
-#' @param data list object from calc_PCs
-#'
-#' @return
-#'
-#' @examples
-select_PCs <- function(data = PCA, type = NULL) {
-  #extract PC values
-  PC_values <- as.data.frame(data$PCA$x)
-  PC_vals <- cbind(year = data$chrons_period$year, PC_values)
-
-  # get eigenvalues and select those with cumulative variance explained <80%
-  eigval <- as.data.frame(factoextra::get_eig(data$PCA))
-  PC <- c(1:ncol(data$PCA$x))
-  PC <- paste0("PC", PC)
-
-  eigval <- cbind(eigval, PC)
-  eigval_small <- dplyr::filter(eigval, eigval$eigenvalue >= 0.9999)
-
-  list(eigval_small = eigval_small, PC_vals = PC_vals)
-}
 
 
 #' Create dataframe containing clim and select PCs for linear model
@@ -224,7 +177,7 @@ mod_df <- function(data = PC_vals, clim, eig = eigval_small, nest_yrs, calib) {
 }
 
 
-#' validation model stats
+#' linear regression model stats
 #'
 #' @param data AIC selected linear model object
 #'
