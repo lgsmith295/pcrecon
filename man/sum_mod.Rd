@@ -2,7 +2,7 @@
 % Please edit documentation in R/pcreg_func.R
 \name{sum_mod}
 \alias{sum_mod}
-\title{model stats for table}
+\title{validation model stats}
 \usage{
 sum_mod(data = step_mod, i, nest_yrs)
 }
@@ -13,5 +13,5 @@ sum_mod(data = step_mod, i, nest_yrs)
 
 }
 \description{
-model stats for table
+validation model stats
 }
