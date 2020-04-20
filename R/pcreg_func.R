@@ -1,20 +1,7 @@
 #' PCreg
 #'
-#' @param crns
-#' @param lead
-#' @param prewhiten.crn
-#' @param climate
-#' @param mos
-#' @param method
-#' @param prewhiten.clim
-#' @param calib
-#' @param valid
+#' @param data
 #' @param plot
-#' @param cor.window
-#' @param type
-#' @param alternative
-#' @param r
-#' @param alpha
 #' @param pc.calc
 #' @param select.pc
 #' @param cum.perc
@@ -27,22 +14,17 @@
 #'
 #' @examples
 #'
-pcreg <- function(crns, lead = 1, prewhiten.crn = TRUE, climate, mos = 5:8, method = "mean", prewhiten.clim = TRUE, calib, valid, plot = TRUE, cor.window = "calib", type = "pearson", alternative = "two.sided", r = 0.25, alpha = 0.90, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc = NULL, m = NULL, scale.var = "calib", weight = NULL){
-
-  full <- min(c(valid, calib)): max(c(valid,calib))
-
-  if(prewhiten.clim == TRUE) { clim_ar <- load_clim(clim = climate, mos = mos, type = method, prewhiten.clim = prewhiten.clim)
-
-  clim <- data.frame(clim_ar[[1]])
-  } else {
-    clim <- load_clim(clim = climate, mos = mos, type = method, prewhiten.clim = prewhiten.clim)
-  }
-
-  PCR_crns <- filter_cor(crns = crns, clim = clim, lead = lead, cor.window = cor.window, type = type, alternative = alternative, r = r, alpha = alpha, prewhiten.crn = prewhiten.crn, prewhiten.clim = prewhiten.clim, calib = calib)
+pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc = NULL, m = NULL, scale.var = "calib", weight = NULL, plot = TRUE, save.out = "csv", dir = "PCregOutput/"){
+  calib <- data$calib
+  valid <- data$valid
+  full <- data$full
+  prewhiten.crn <- data$prewhiten.crn
+  prewhiten.clim <-data$prewhiten.clim
 
 
-  periods_df <- PCR_crns$nests
-  PCA_chrons <- PCR_crns$select_crns
+  periods_df <- data$nests
+  PCA_chrons <- data$select_crns
+  clim <- data$clim
 
 
   number_nests <- nrow(periods_df)
@@ -53,7 +35,7 @@ pcreg <- function(crns, lead = 1, prewhiten.crn = TRUE, climate, mos = 5:8, meth
     ## make check for start year < end year
     PCA <- calc_PCs(periods_df, PCA_chrons, pc.calc, nest_yrs, calib, full)
 
-    select_PC <- select_PCs(data = PCA, type = select.pc)
+    select_PC <- select_PCs(data = PCA, type = select.pc, m = m, cum.perc = cum.perc)
 
     df <- mod_df(clim = clim, data = select_PC$PC_vals, eig = select_PC$eigval_small, nest_yrs = nest_yrs, calib = calib)
 
@@ -139,13 +121,31 @@ pcreg <- function(crns, lead = 1, prewhiten.crn = TRUE, climate, mos = 5:8, meth
   }
 
   if(prewhiten.clim == TRUE){
-    red_recon <- redden_recon(recon, clim_ar[[2]])
-    recon_list <- list(clim = clim, PCR_crns = PCR_crns, recon = red_recon, validation_stats = val_stats_table, model_stats = model_table, calibration_stats = cal_stats_table, clim_ar = clim_ar[[2]], crn_ar = PCR_crns$crn.ar)
+    red_recon <- redden_recon(recon, data$clim_ar)
+    recon_list <- list(clim = clim, recon = red_recon, validation_stats = val_stats_table,
+                       model_stats = model_table, calibration_stats = cal_stats_table, clim_ar = data$clim_ar,                            crn_ar = data$crn_ar)
 
+  } else {
+
+    recon_list <- list(clim = clim, recon = recon, validation_stats = val_stats_table, model_stats = model_table,                         calibration_stats = cal_stats_table)
+  }
+  class(recon_list) <- "PCReg_recon"
+
+  if(!is.null(save.out)){
+    to_save <- list(reconstruction = recon_list$recon, model_statistics = cbind(recon_list$model_stats, recon_list$calibration_stats[ ,-c(1:3)]), validation_statistics = recon_list$validation_stats)
+    save_data(data = to_save, save.out, dir)
   }
 
-  recon_list <- list(clim = clim, PCR_crns = PCR_crns, recon = recon, validation_stats = val_stats_table, model_stats = model_table, calibration_stats = cal_stats_table)
-  class(recon_list) <- "PCReg_recon"
+  if(plot == TRUE){
+    df <- dplyr::full_join(recon_list$recon, data$clim)
+
+    print(ggplot2::ggplot(df) +
+            ggplot2::geom_line(ggplot2::aes(y = fit, x = year, colour = "reconstructed")) +
+            ggplot2::geom_line(ggplot2::aes(y = rollingmean(df$fit, 10), x = year, colour = "10 year rolling avg"),                                             size = 0.75) +
+            ggplot2::geom_line(ggplot2::aes(y = values, x = year, colour = "observed"))) +
+      ggplot2::theme_bw()
+  }
+
   return(recon_list)
 }
 
@@ -195,3 +195,15 @@ sum_mod <- function(data = step_mod, i, nest_yrs){
 
   model_table <- data.frame(model = formula[3], sigma, r.sq, adj.r.sq, stringsAsFactors = FALSE, nest_lwr = min(nest_yrs))
 }
+
+
+#' Rolling Mean
+#'
+#' @param x
+#' @param n
+#'
+#' @return
+#'
+#' @examples
+rollingmean <- function(x, n = 10){
+  stats::filter(x, rep(1 / n, n), sides = 2)}

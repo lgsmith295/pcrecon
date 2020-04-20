@@ -85,6 +85,8 @@ filter_foot <- function(data, footprint, r = 0.5, alpha = NULL) {
     small_df <- dplyr::filter(intersect, correlation >= r)
     select_crns <- as.character(small_df$ID, stringsAsFactors = FALSE)
 
+    if(length(select_crns) == 0) warning("No chronologies found within this area")
+
     return(select_crns)
 }
 

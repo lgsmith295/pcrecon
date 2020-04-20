@@ -1,7 +1,7 @@
 #' select PCs
 #'
 #' @param data list object from calc_PCs
-#' @param type eigval1, firstm, cum.perc, mean, and all
+#' @param type eigenvalue1, firstm, cum.perc, mean, and all
 #' @param cum.perc
 #' @param m
 #'
@@ -9,6 +9,9 @@
 #'
 #' @examples
 select_PCs <- function(data = PCA, type = select.pc, cum.perc = NULL, m = NULL ) {
+  if(!type %in% c("eigenvalue1", "cum.perc", "mean")) {
+    stop("select.pc must be one of: eigenvalue1, cum.perc, or mean")
+  }
   #extract PC values
   PCs <- as.data.frame(data$PCA$x)
   PC_df <- cbind(year = data$chrons_period$year, PCs)
@@ -20,11 +23,9 @@ select_PCs <- function(data = PCA, type = select.pc, cum.perc = NULL, m = NULL )
   eigval <- cbind(eigval, PC)
 
   eigval_small <- switch(type,
-                         eigval1 = dplyr::filter(eigval, eigval$eigenvalue >= 0.999),
-                         firstm = eigval[complete.cases(eigval[1:m, ]), ],
+                         eigenvalue1 = dplyr::filter(eigval, eigval$eigenvalue >= 0.999),
                          cum.perc = dplyr::filter(eigval, eigval$cumulative.variance.percent >= cum.perc),
-                         mean = dplyr::filter(eigval, eigval$eigenvalue >= mean(eigval$eigenvalue)),
-                         all = eigval)
+                         mean = dplyr::filter(eigval, eigval$eigenvalue >= mean(eigval$eigenvalue)))
 
   list <- list(eigval_small = eigval_small, PC_vals = PC_df)
 }
