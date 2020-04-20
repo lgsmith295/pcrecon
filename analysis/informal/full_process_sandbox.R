@@ -13,7 +13,7 @@ footprint <- raster::raster("inst/extdata/gallinas_cf.nc")
 select_crns_fp <- filter_foot(data = metadata, footprint = footprint, r = 0.5)
 
 ## build large dataframe of chronologies selected from the spatial filter
-crns_df <- load_crns(dir = system.file("extdata/crns", package = "pcreg", mustWork = TRUE), crns = select_crns_rad)
+crns_df <- load_crns(dir = system.file("extdata/crns", package = "pcreg", mustWork = TRUE), crns = select_crns_fp)
 crns_df <- dplyr::arrange(crns_df, year)
 
 ## load in climate and rename columns
@@ -21,11 +21,15 @@ climate <- read.csv("inst/extdata/gallinas_flow.csv")
 names <- c("year", 1:12)
 colnames(climate) <- names
 
+## eval clim
+
+data <- eval_clim(crns = crns_df, lead = 1, prewhiten.crn = TRUE, climate = climate, mos = 5:8, method = "mean", prewhiten.clim = TRUE, calib = 1927:1957, valid = 1957:1968, cor.window = "calib", type = "pearson", alternative = "two.sided", r = -1, alpha = 0, print.out = TRUE, save.out = "csv", dir = "PCregOutput/")
+
 ## run PCreg function!
-recon1 <- pcreg(crns = crns_df, lead = 1, prewhiten.crn = TRUE, climate = climate, mos = 5:8, method = "mean", prewhiten.clim = TRUE,  cor.window = "calib", type = "pearson", alternative = "two.sided", r = 0.25, alpha = 0.90, calib = 1929:1935, valid = 1935:1950, pc.calc = "calib", select.pc = "eigenvalue1", scale.var = "calib", weight = NULL)
+recon <- pcreg(data = data, pc.calc = "calib", select.pc = "eigenvalue1", scale.var = "calib", plot = TRUE, weight = NULL, cum.perc = NULL, m = 10, save.out = "csv", dir = "PCregOutput/")
 
 
-# arguments for pcreg function check
+# arguments for clim_eval function check
 crns <- crns_df
 lead <- 1
 prewhiten.crn <- TRUE
@@ -40,8 +44,17 @@ r <- 0.25
 alpha <- 0.90
 calib <- 1927:1957
 valid <- 1957:1967
+print.out <- TRUE
+save.out <- "table"
+dir <- "PCregOutput/"
+
+
+
+
+
+
 pc.calc <- "calib"
-select.pc <- "eigenvalue1"
+select.pc <- "all"
 scale.var <- 'calib'
 weight <- NULL
 i <- 1
@@ -49,4 +62,4 @@ i <- 1
 
 read_in <- colnames(crns_df[ ,-1])
 
-didnt_load <- select_crns_rad[!stringr::str_detect(select_crns_rad, regex(paste(read_in, collapse = "|"), ignore_case = TRUE))]
+didnt_load <- select_crns_fp[!stringr::str_detect(select_crns_fp, regex(paste(read_in, collapse = "|"), ignore_case = TRUE))]
