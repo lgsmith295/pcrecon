@@ -17,20 +17,41 @@ crns_df <- load_crns(dir = system.file("extdata/crns", package = "pcreg", mustWo
 crns_df <- dplyr::arrange(crns_df, year)
 
 ## load in climate and rename columns
-climate <- read.csv("inst/extdata/gallinas_flow.csv")
-colnames(climate) <- c("year", c(1:12))
+# clim2 <- read.table("inst/extdata/nm_clim.txt")
 
+# clim <- clim2[-1, ]
+
+
+climate <- read.csv("inst/extdata/gallinas_flow.csv")
 clim_long <- climate %>%
   tidyr::pivot_longer(cols = -year, names_to = "month") %>%
   dplyr::mutate(log_clim = log(.$value)) %>%
   dplyr::select(-value)
 
-names <- c("year", "month", "value")
-colnames(clim_long) <- names
+clim_long$log_clim <- round(clim_long$log_clim, 4)
+clim <- tidyr::pivot_wider(clim_long, names_from = month, values_from = log_clim)
+
+names <- c("year", c(1:12))
+names(clim) <- names
+
+# gdata::write.fwf(x = data.frame(clim), file = "clm_test.txt", width = c(c(9, rep(7, 12))))
+#
+# table <- read.table("inst/extdata/nm_clim.prn")
+# table <- table[-1, ]
+# names(table) <- names
+# table_long <- tidyr::pivot_longer(table, cols = -year, names_to = "month")
+#
+#
+#
+# check <- cbind(clim_long, table_long$value) %>%
+#   mutate(check = clim_long$log_clim == table_long$value)
+#
+# names <- c("year", "month", "value")
+# colnames(clim_long) <- names
 
 ## eval clim
 
-data <- eval_clim(crns = crns_df, lag = 1, prewhiten.crn = TRUE, climate = clim_long, mos = 5:8, method = "mean", prewhiten.clim = TRUE, calib = 1927:1945, valid = 1946:1968, cor.window = "valid", type = "pearson", alternative = "two.sided", r = 0.3, alpha = 0.9, print.out = TRUE, save.out = "csv", dir = "test/")
+data <- eval_clim(crns = crns_df, lag = 0, prewhiten.crn = FALSE, climate = clim, mos = 5:8, method = "mean", prewhiten.clim = FALSE, calib = 1927:1945, valid = 1946:1972, cor.window = "calib", type = "pearson", alternative = "two.sided", r = 0.00, alpha = 0.9, print.out = TRUE, save.out = "csv", dir = "test/")
 
 ## run PCreg function!
 recon <- pcreg(data = data, pc.calc = "calib", select.pc = "mean", scale.var = "calib", plot = TRUE, weight = NULL, cum.perc = NULL, save.out = "csv", dir = dir)
@@ -38,12 +59,25 @@ recon <- pcreg(data = data, pc.calc = "calib", select.pc = "mean", scale.var = "
 resid_check(data = recon)
 
 recon_filter <- recon$recon %>%
-  dplyr::filter(year %in% c(1580:1968))
+  dplyr::filter(year %in% c(1700:1972))
+
+pcreg_comp <- read.csv("inst/extdata/pcreg_comp.csv")
+
+lm_chck <- pcreg_comp %>%
+  dplyr::filter(year %in% c(1700:1972))
+summary(lm(lm_chck$values ~ recon_filter$fit))
+
+
+#### sd 0.79 mn
 
 ggplot2::ggplot(recon_filter) +
-  #geom_ribbon(aes(ymin = new_lwr, ymax = new_upr, x = year), fill = "gray50", alpha = 0.5) +
-  ggplot2::geom_line(ggplot2::aes(y = exp(fit), x = year), color = "red") +
-  ggplot2::geom_line(data = data$clim, ggplot2::aes(y = exp(values), x = year), color = "black")
+  #geom_ribbon(aes(ymin = lwr, ymax = upr, x = year), fill = "gray50", alpha = 0.5) +
+  ggplot2::geom_line(data = pcreg_comp, ggplot2::aes(y = values, x = year), color = "blue") +
+  ggplot2::geom_line(ggplot2::aes(y = fit, x = year), color = "red")
+  #ggplot2::geom_line(data = data$clim, ggplot2::aes(y = values, x = year), color = "black") +
+
+
+
 
 # arguments for clim_eval function check
 crns <- crns_df
@@ -71,6 +105,7 @@ weight <- NULL
 i <- 1
 
 
-read_in <- colnames(crns_df[ ,-1])
+step_read_in <- colnames(crns_df[ ,-1])
 
 didnt_load <- select_crns_fp[!stringr::str_detect(select_crns_fp, regex(paste(read_in, collapse = "|"), ignore_case = TRUE))]
+
