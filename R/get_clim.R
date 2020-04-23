@@ -8,27 +8,27 @@
 #' @return dataframe of monthly data
 #'
 #' @examples
-load_clim <- function(clim, mos, type, prewhiten.clim = TRUE) {
-  if (!(ncol(climate) %in% c(3,13))) {
+load_clim <- function(clim, mos, type = method, prewhiten.clim = TRUE) {
+  if (!(ncol(clim) %in% c(3,13))) {
     stop("Climate data must being in 13 column or long formats. See documentation for description")
   }  else {
-   if (ncol(climate) == 13) {
+   if (ncol(clim) == 13) {
     names <- (c("year", 1:12))
-   }
-    if (!all(names == colnames(climate))) {
+    if (!all(names == colnames(clim))) {
       stop("If climate dataframe is in 13 column format, columns must be named year and months 1-12")
    } else {
-    climate <- tidyr::pivot_longer(climate, -year, names_to = "month", values_to = "value")
-    climate$month <- as.character(climate$month)
-    }
-   if (ncol(climate) == 3) {
+    clim <- tidyr::pivot_longer(clim, -year, names_to = "month", values_to = "value")
+    clim$month <- as.character(clim$month)
+   }
+  }
+   if (ncol(clim) == 3) {
       names <- c("year", "month", "value")
    }
-   if (!all(names == colnames(climate))) {
+   if (!all(names == colnames(clim))) {
         stop("If climate dataframe is in long format, 3 columns must be named: year, month, value.")
       } else {
         as.character(mos)
-        clim_small <- climate[which(climate$month == mos), ]
+        clim_small <- clim[which(clim$month == mos), ]
       }
 
 
