@@ -19,7 +19,7 @@ Imports:
     dplyr (>= 0.8.3),
     jsonlite (>= 1.6),
     magrittr (>= 1.5),
-    MASS (>= 7.3-51.5),
+    MASS (>= 7.3-51.4),
     matrixStats (>= 0.55.0),
     MuMIn (>= 1.43.15),
     rgdal (<= 1.4-8),
