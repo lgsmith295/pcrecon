@@ -15,11 +15,15 @@
 #' @examples
 #'
 pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc = NULL, m = NULL, scale.var = "calib", weight = NULL, plot = TRUE, save.out = "csv", dir = "PCregOutput/"){
+
+  if(class(data) != "PCreg_data"){ stop( "data must be object class PCreg_data, as is returned from the eval_clim function. See documentation for details")}
+
   calib <- data$calib
   valid <- data$valid
   full <- data$full
   prewhiten.crn <- data$prewhiten.crn
   prewhiten.clim <-data$prewhiten.clim
+  dir <- data$dir
 
 
   periods_df <- data$nests
@@ -35,13 +39,24 @@ pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc =
     ## make check for start year < end year
     PCA <- calc_PCs(periods_df, PCA_chrons, pc.calc, nest_yrs, calib, full)
 
+    if(i ==1){
+    PCA_list <- list(PCA$PCA)
+    } else {
+    PCA_list[[i]] <- PCA$PCA
+    }
+
     select_PC <- select_PCs(data = PCA, type = select.pc, m = m, cum.perc = cum.perc)
 
     df <- mod_df(clim = clim, data = select_PC$PC_vals, eig = select_PC$eigval_small, nest_yrs = nest_yrs, calib = calib)
 
+
     full_mod <- lm(formula = clim~., data = df)
 
-    step_mod <- stepAICc(full_mod, trace = TRUE, k = 3)
+    step_mod <- stepAICc(full_mod) ## check and document the k = 3 option. During test runs this is what made it select the same model as PCreg.
+
+    if(isTRUE(length(step_mod$coefficients) == 1)) {
+      warning(paste0("For nest ", i, ", years " , min(nest_yrs), " to ", min(recon_nest$year), " , the AIC selected linear regression is the intercept only model."))
+    }
 
     model_stats <- sum_mod(data = step_mod, i, nest_yrs)
 
@@ -52,12 +67,18 @@ pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc =
 
     }
 
+    if(i ==1){
+      LM_list <- list(step_mod)
+    } else {
+      LM_list[[i]] <- step_mod
+    }
+
     #### PCs for rest of nest years
     PCA_predict <- as.data.frame(predict(PCA$PCA , PCA$nest))
 
     #### reconstruction
     predict_nest <- predict(step_mod, PCA_predict, se.fit=TRUE, interval="confidence", level=0.95)
-    recon_nest <- as.data.frame(cbind(year = nest_yrs, predict_nest[["fit"]]+ mean(clim$values)))
+    recon_nest <- as.data.frame(cbind(year = nest_yrs, predict_nest[["fit"]]))
 
     #### validation
     valid_est <- dplyr::filter(recon_nest, recon_nest$year %in% valid) %>%
@@ -88,6 +109,16 @@ pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc =
 
     }
 
+
+    #### scale to variance of calibration
+
+    mn <- mean(calib_est$fit)
+
+    sd_recon <- sd(calib_est$fit)
+    sd_clim <- sd(obs_cal$values)
+    recon_nest$fit <- mn + (recon_nest$fit - mn) * sd_clim/sd_recon
+
+
     #### filter recon to new nest years
 
     if(i == 1) {
@@ -98,12 +129,6 @@ pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc =
         dplyr::filter(year %in% new_years)
     }
 
-    #### scale to variance of calibration
-    mn <- mean(recon_nest$fit)
-
-    sd_recon <- sd(recon_nest$fit)
-    sd_clim <- sd(clim$values)
-    recon_nest$fit <- mn + (recon_nest$fit - mn) * sd_clim/sd_recon
 
     #### Add reconstruction to dataframe
 
@@ -122,12 +147,14 @@ pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc =
 
   if(prewhiten.clim == TRUE){
     red_recon <- redden_recon(recon, data$clim_ar)
+    red_recon$red_upr <- recon_nest$fit + resid_up
+    red_recon$red_lwr <- recon_nest$fit - resid_low
     recon_list <- list(clim = clim, recon = red_recon, validation_stats = val_stats_table,
-                       model_stats = model_table, calibration_stats = cal_stats_table, clim_ar = data$clim_ar,                            crn_ar = data$crn_ar)
+                       model_stats = model_table, calibration_stats = cal_stats_table, clim_ar = data$clim_ar,                            crn_ar = data$crn_ar, PCA = PCA_list, LM = LM_list)
 
   } else {
 
-    recon_list <- list(clim = clim, recon = recon, validation_stats = val_stats_table, model_stats = model_table,                         calibration_stats = cal_stats_table)
+    recon_list <- list(clim = clim, recon = recon, validation_stats = val_stats_table, model_stats = model_table,                         calibration_stats = cal_stats_table, PCA = PCA_list, LM = LM_list)
   }
   class(recon_list) <- "PCReg_recon"
 
@@ -141,7 +168,7 @@ pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc =
 
     print(ggplot2::ggplot(df) +
             ggplot2::geom_line(ggplot2::aes(y = fit, x = year, colour = "reconstructed")) +
-            ggplot2::geom_line(ggplot2::aes(y = rollingmean(df$fit, 10), x = year, colour = "10 year rolling avg"),                                             size = 0.75) +
+            ggplot2::geom_line(ggplot2::aes(y = rollingmean(x = df$fit, 10), x = year, colour = "10 year rolling avg"),                                             size = 0.75) +
             ggplot2::geom_line(ggplot2::aes(y = values, x = year, colour = "observed"))) +
       ggplot2::theme_bw()
   }
@@ -172,7 +199,9 @@ mod_df <- function(data = PC_vals, clim, eig = eigval_small, nest_yrs, calib) {
 
   PC_common_small <- dplyr:: select(PC_common, MOD_PCs)
 
-  df <- cbind(clim = clim[ ,2] - mean(clim[ ,2]), PC_common_small)
+  clim_calib <- dplyr::filter(clim, year %in% calib)
+
+  df <- cbind(clim = clim[ ,2], PC_common_small)
 
 }
 
