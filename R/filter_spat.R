@@ -7,6 +7,8 @@
 #' @param radius distance from center in km, default 150
 #'
 #' @return character vector of chronology names within the selected radius
+#'
+#' @import ggplot2
 #' @export
 #'
 #' @examples
@@ -43,7 +45,6 @@ filter_rad <- function(data, cent_lat, cent_lon, radius = 150, climate = NULL) {
 
   return (select_crns)
 }
-
 
 #' Spatial Filtering of Points Based on Climate Footprint
 #'

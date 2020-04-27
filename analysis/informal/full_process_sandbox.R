@@ -24,7 +24,7 @@ circle <- sf::st_buffer(center_aea, radius_m)
 states <- ggplot2::map_data("state")
 
 df_states <- tibble::tibble(region = state.name, state = state.abb) %>%
-  dplyr::mutate(region = stringr::str_to_lower(df_states$region))
+  dplyr::mutate(region = stringr::str_to_lower(.$region))
 
 metadata1 <- metadata %>%
   dplyr::rename(latitude = lat, longitude = lon) %>%
