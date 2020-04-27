@@ -109,14 +109,22 @@ load_crns <- function(dir, crns, type_crn = "S", type_measure = "R", logfile = "
     dplyr::mutate(type_fname = dplyr::if_else(is.na(type_fname), "S", type_fname),
                   type_m = dplyr::if_else(is.na(type_m), "R", type_m))
 
-    df <- df %>%
-      dplyr::filter(type_m == type_measure) #,
+  # if(type_measure != "R") {
+  #   df <- df %>%
+  #     dplyr::filter(type_m == type_measure) #, # this filter will fail when header line 3 author names happen to have an "e" or "l" or "x" in that position
                   # type_c %in% type_crn,
                   # grepl(lat_lon, pattern='[[:digit:]]{4,4}-[[:digit:]]{5,5}'))
+  # } # this makes the big assumption that a filename ending with "r.crn" always means a residual chronology and never "ring-width" chronology type.
+
+if(type_measure == "R") {
+  df <- df %>%
+    dplyr::filter(!(type_fname %in% c("R", "E", "L", "T", "X")))
+}
 
 if(type_measure %in% c("E", "L", "T", "X")) {
   df <- df %>%
-    dplyr::filter(type_fname != "A")
+    dplyr::filter(type_fname == type_measure | type_m == type_measure,
+                  type_fname != "A")
   }
 
   if(type_crn %in% c("S")) {
@@ -183,7 +191,9 @@ if(type_measure %in% c("E", "L", "T", "X")) {
   }
   # close(log_con)
 
-  failed <- crns[!(crns %in% success_sites)]
+  # failed <- crns[!(regex(crns, ignore_case = TRUE) %in% colnames(all_chronologies))]
+  failed <- crns[!(stringr::str_detect(crns, regex(paste(success_sites, collapse = "|"), ignore_case = TRUE)))]
+  # failed <- crns[!(regex(crns, ignore_case = TRUE) %in% success_sites)]
   if(length(failed) == 0) {
     cat(paste0("\n All sites successfully read in."), file = log_con, sep = "\n", append = TRUE)
   } else {
