@@ -77,8 +77,13 @@ pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc =
     PCA_predict <- as.data.frame(predict(PCA$PCA , PCA$nest))
 
     #### reconstruction
+
+    clim_full <- as.data.frame(dplyr::filter(clim, clim$year %in% nest_yrs))
+
+    observed <- dplyr::filter(clim_full, clim_full$year %in% full)
+
     predict_nest <- predict(step_mod, PCA_predict, se.fit=TRUE, interval="confidence", level=0.95)
-    recon_nest <- as.data.frame(cbind(year = nest_yrs, predict_nest[["fit"]]))
+    recon_nest <- as.data.frame(cbind(year = nest_yrs, values = predict_nest[["fit"]]))
 
     #### validation
     valid_est <- dplyr::filter(recon_nest, recon_nest$year %in% valid) %>%
@@ -86,10 +91,6 @@ pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc =
 
     calib_est <- dplyr::filter(recon_nest, recon_nest$year %in% calib) %>%
       dplyr::select(fit)
-
-    clim_full <- as.data.frame(dplyr::filter(clim, clim$year %in% nest_yrs))
-
-    observed <- dplyr::filter(clim_full, clim_full$year %in% full)
 
     obs_cal <- dplyr::filter(clim_full, clim_full$year %in% calib)
 
@@ -112,11 +113,26 @@ pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc =
 
     #### scale to variance of calibration
 
+    full_est <-dplyr::filter(recon_nest, year %in% full)
     mn <- mean(calib_est$fit)
 
     sd_recon <- sd(calib_est$fit)
     sd_clim <- sd(obs_cal$values)
+
     recon_nest$fit <- mn + (recon_nest$fit - mn) * sd_clim/sd_recon
+
+    #### redden nest values
+
+    if(prewhiten.clim == TRUE){
+      recon_nest <- redden_recon(recon = recon_nest, ar.model = data$clim_ar)
+}
+
+    ################### SAVE - THIS IS HOW SCALING FOR NPW WORKS IN PCREG########## dunno why it's different for reddened recons... :/
+    # mn <- mean(calib_est$fit)
+    #
+    # sd_recon <- sd(calib_est$fit)
+    # sd_clim <- sd(obs_cal$values)
+    # recon_nest$fit <- mn + (recon_nest$fit - mn) * sd_clim/sd_recon
 
 
     #### filter recon to new nest years
@@ -145,17 +161,12 @@ pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc =
 
   }
 
-  if(prewhiten.clim == TRUE){
-    red_recon <- redden_recon(recon, data$clim_ar)
-    red_recon$red_upr <- recon_nest$fit + resid_up
-    red_recon$red_lwr <- recon_nest$fit - resid_low
-    recon_list <- list(clim = clim, recon = red_recon, validation_stats = val_stats_table,
-                       model_stats = model_table, calibration_stats = cal_stats_table, clim_ar = data$clim_ar,                            crn_ar = data$crn_ar, PCA = PCA_list, LM = LM_list)
-
-  } else {
 
     recon_list <- list(clim = clim, recon = recon, validation_stats = val_stats_table, model_stats = model_table,                         calibration_stats = cal_stats_table, PCA = PCA_list, LM = LM_list)
-  }
+
+    if(isTRUE(prewhiten.clim)){recon_list <- list(clim = clim, recon = recon, validation_stats = val_stats_table,
+                       model_stats = model_table, calibration_stats = cal_stats_table, clim_ar = data$clim_ar,                            crn_ar = data$crn_ar, PCA = PCA_list, LM = LM_list)}
+
   class(recon_list) <- "PCReg_recon"
 
   if(!is.null(save.out)){
@@ -234,5 +245,4 @@ sum_mod <- function(data = step_mod, i, nest_yrs){
 #' @return
 #'
 #' @examples
-rollingmean <- function(x, n = 10){
-  stats::filter(x, rep(1 / n, n), sides = 2)}
+rollingmean <- function(x, n = 10){stats::filter(x, rep(1 / n, n), sides = 2)}
