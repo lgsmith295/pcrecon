@@ -21,15 +21,16 @@ read_crn_head <- function(fname, err = "warn", logfile = "read_crns.log") {
     tmp <- base::switch(err,
                         warn = {
                           warning(mes)
-                          return(NULL)
+                          # return(NULL)
                         },
                         stop = stop(mes),
                         log = {
                           cat(mes, file = file.path(dirname(fname), logfile), sep = "\n", append = TRUE)
-                          return(NULL)
+                          # return(NULL)
                         }
     )
-  } else {
+  }
+  # } else {
 
   # crn <- try(read_crn(fname))
   #
@@ -44,5 +45,5 @@ read_crn_head <- function(fname, err = "warn", logfile = "read_crns.log") {
                       years = substr(header[[2]], 68, 76),
                       fname = basename(fname)))
   # else return(NULL)
-  }
+  # }
 }

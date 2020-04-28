@@ -6,7 +6,7 @@
 \usage{
 filter_cor(
   crns,
-  lead = 1,
+  lag = 1,
   clim,
   cor.window,
   type = "pearson",
@@ -23,7 +23,7 @@ filter_cor(
 \arguments{
 \item{crns}{dataframe, such as returned by the load_crns function, where there is a column containing years and one column for each chronology}
 
-\item{lead}{single value indicating the maximum number of years to shift chronology data forward. 0 indicates no lead, 2 will evaluate 0, 1, and 2 year leads, etc. Defaults to 1.}
+\item{lag}{single value indicating the maximum number of years to shift chronology data forward. 0 indicates no lag, 2 will evaluate 0, 1, and 2 year lags, etc. Defaults to 1.}
 
 \item{clim}{dataframe, such as returned by the get_clim function, containing columns for year and either: individual months climate data (may be more than one), a sum of >1 months climate data, or the average of >1 months data}
 

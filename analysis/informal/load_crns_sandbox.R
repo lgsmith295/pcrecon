@@ -26,10 +26,10 @@ df <- load_crns(dir = system.file("extdata/crns",
                 crns = crns_test,
                 type_crn = "S",
                 type_measure = "R")
-colnames(df)
+colnames(df) # expect "year"  "nm014" "nm537" "nm560" "nm569"
 
-foo <- read_crn(system.file("extdata/crns/nm569.crn", package = "pcreg"))
-str(foo)
+# foo <- read_crn(system.file("extdata/crns/nm569.crn", package = "pcreg"))
+# str(foo)
 
 crns_test <- c("nm014", "nm537", "nm560")
 df <- load_crns(dir = system.file("extdata/crns",
@@ -37,7 +37,7 @@ df <- load_crns(dir = system.file("extdata/crns",
                 crns = crns_test,
                 type_crn = "A",
                 type_measure = "R")
-colnames(df)
+colnames(df) # expect "year"   "nm560a"
 
 crns_test <- c("nm014", "nm537", "nm560")
 df <- load_crns(dir = system.file("extdata/crns",
@@ -53,5 +53,23 @@ df <- load_crns(dir = system.file("extdata/crns",
                 crns = crns_test,
                 type_crn = "S",
                 type_measure = "E")
+colnames(df) # expect "year"   "nm537e"
+
+# test with crn files with < 4 header rows (nm588, nm602) - nm588r but no standard, 602 = standard
+crns_test <- c("nm014", "nm588", "nm602")
+df <- load_crns(dir = system.file("extdata/crns",
+                                  package = "pcreg"),
+                crns = crns_test,
+                type_crn = "S",
+                type_measure = "R")
+colnames(df) # expect "year"  "nm014" "nm602"
+
+
+crns_test <- c("nm038", "nm605", "nm606", "nm607")
+df <- load_crns(dir = system.file("extdata/crns",
+                                  package = "pcreg"),
+                crns = crns_test,
+                type_crn = "S",
+                type_measure = "R")
 colnames(df)
 

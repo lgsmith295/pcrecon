@@ -6,27 +6,16 @@
 \title{pcreg: A package for conducting principle component regression on tree ring data for climate reconstruction}
 \usage{
 pcreg(
-  crns,
-  lead = 1,
-  prewhiten.crn = TRUE,
-  climate,
-  mos = 5:8,
-  method = "mean",
-  prewhiten.clim = TRUE,
-  calib,
-  valid,
-  plot = TRUE,
-  cor.window = "calib",
-  type = "pearson",
-  alternative = "two.sided",
-  r = 0.25,
-  alpha = 0.9,
+  data,
   pc.calc = "calib",
   select.pc = "eigenvalue1",
   cum.perc = NULL,
   m = NULL,
   scale.var = "calib",
-  weight = NULL
+  weight = NULL,
+  plot = TRUE,
+  save.out = "csv",
+  dir = "PCregOutput/"
 )
 }
 \arguments{

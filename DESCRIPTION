@@ -1,6 +1,6 @@
 Package: pcreg
 Type: Package
-Title: Princpal Component Regression for Dendroclimatology
+Title: Principal Component Regression for Dendroclimatology
 Version: 0.1.0
 Authors@R: c(
     person("Laura", "Hocking-Smith", email = "lsmit224@vols.utk.edu", role = c("aut", "cre")),
@@ -17,6 +17,7 @@ Depends: R (>= 3.6.3)
 Imports: 
     dplR (>= 1.7.0),
     dplyr (>= 0.8.3),
+    ggplot2 (>= 3.2.1),
     jsonlite (>= 1.6),
     magrittr (>= 1.5),
     MASS (>= 7.3-51.4),
