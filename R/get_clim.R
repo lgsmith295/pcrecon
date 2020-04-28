@@ -8,7 +8,7 @@
 #' @return dataframe of monthly data
 #'
 #' @examples
-load_clim <- function(clim, mos, type = method, prewhiten.clim = TRUE) {
+load_clim <- function(clim, mos, type = method, prewhiten.clim = TRUE, full = full) {
   if (!(ncol(clim) %in% c(3,13))) {
     stop("Climate data must being in 13 column or long formats. See documentation for description")
   }  else {
@@ -48,7 +48,8 @@ load_clim <- function(clim, mos, type = method, prewhiten.clim = TRUE) {
 
      values <- rowMeans(values)
 
-     clim_small <- data.frame(cbind(year = clim$year, values))
+     clim_small <- data.frame(cbind(year = clim$year, values = values))
+     clim_small <- dplyr::filter(clim_small, year %in% full)
   }
 
   if (type == "sum") {
@@ -58,17 +59,19 @@ load_clim <- function(clim, mos, type = method, prewhiten.clim = TRUE) {
 
     values <- rowSums(sums)
 
-    clim_small <- data.frame(cbind(year = clim$year, values))
+    clim_small <- data.frame(cbind(year = clim$year, values = values))
+    clim_small <- dplyr::filter(clim_small, year %in% full)
 }
     if (isTRUE(prewhiten.clim)){
+
       x <- data.frame(clim_small[ , 2])
       x.ar <- apply(x, 2, ar_prewhiten, return = "both")
 
       values <- x.ar$clim_small...2.[[1]]
       ar <- x.ar$clim_small...2.[[2]]
 
-
       clim_small <- data.frame(cbind(year = clim$year, values))
+
 
       clim_return <- list(clim_small, ar)
     } else {
