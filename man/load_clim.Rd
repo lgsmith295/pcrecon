@@ -4,7 +4,7 @@
 \alias{load_clim}
 \title{Get months of interest for climate analysis, sum or average them}
 \usage{
-load_clim(clim, mos, type = method, prewhiten.clim = TRUE)
+load_clim(clim, mos, type = method, prewhiten.clim = TRUE, full = full)
 }
 \arguments{
 \item{mos}{months of interest}

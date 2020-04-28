@@ -2,18 +2,18 @@
 % Please edit documentation in R/filter_cor.R
 \name{crns_table}
 \alias{crns_table}
-\title{Fill table of chronologies and lag chronologies that pass correlation filtering}
+\title{Fill table of chronologies and lead chronologies that pass correlation filtering}
 \usage{
 crns_table(crns = crns, cors_table_small = cors_table_small)
 }
 \arguments{
-\item{cors_table_small}{dataframe of filtered chronology names, lags, correlation, and p values.}
+\item{cors_table_small}{dataframe of filtered chronology names, leads, correlation, and p values.}
 }
 \value{
-dataframe of chronologies, including lag chronologies, that met threshold correlation values for analysis
+dataframe of chronologies, including lead chronologies, that met threshold correlation values for analysis
 }
 \description{
-Fill table of chronologies and lag chronologies that pass correlation filtering
+Fill table of chronologies and lead chronologies that pass correlation filtering
 }
 \examples{
 

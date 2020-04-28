@@ -6,7 +6,7 @@
 \usage{
 eval_clim(
   crns,
-  lag = 1,
+  lead = 1,
   prewhiten.crn = TRUE,
   climate,
   mos = 5:8,
