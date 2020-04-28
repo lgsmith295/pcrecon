@@ -14,6 +14,7 @@ ar_prewhiten <- function (x, return = "both", ...)
   idx.goody <- !is.na(x)
   ar <- ar(x[idx.goody])
   x[idx.goody] <- ar$resid + ar$x.mean
+
   if(return == "resid"){
     ret <- x
   }
