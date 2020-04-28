@@ -1,0 +1,318 @@
+{
+  "xmlId" : "13094",
+  "NOAAStudyId" : "15311",
+  "studyName" : "Mirror Lake, New Hampshire 170 Year Tree Ring Nitrogen Isotope Data",
+  "doi" : "https://doi.org/10.25921/wdge-p784",
+  "dataPublisher" : "NOAA",
+  "contactInfo" : {
+    "type" : "CONTACT INFORMATION",
+    "shortName" : "DOC/NOAA/NESDIS/NCEI",
+    "longName" : "National Centers for Environmental Information, NESDIS, NOAA, U.S. Department of Commerce ",
+    "address" : "325 Broadway, E/NE31",
+    "city" : "Boulder",
+    "state" : "CO",
+    "postalCode" : "80305-3328",
+    "country" : "USA",
+    "dataCenterUrl" : "https://www.ncdc.noaa.gov/data-access/paleoclimatology-data",
+    "email" : "paleo@noaa.gov",
+    "phone" : "303-497-6280",
+    "fax" : "303-497-6513",
+    "constraints" : "Please cite original publication, online resource, dataset and publication DOIs (where available), and date accessed when using downloaded data. If there is no publication information, please cite investigator, title, online resource, and date accessed. The appearance of external links associated with a dataset does not constitute endorsement by the Department of Commerce/National Oceanic and Atmospheric Administration of external Web sites or the information, products or services contained therein. For other than authorized activities, the Department of Commerce/NOAA does not exercise any editorial control over the information you may find at these locations. These links are provided consistent with the stated purpose of this Department of Commerce/NOAA Web site."
+  },
+  "dataType" : "TREE RING",
+  "investigators" : "McLauchlan, K.K.; Craine, J.M.; Oswald, W.; Leavitt, P.R.; Likens, G.E.",
+  "version" : "1.0",
+  "funding" : [ {
+    "fundingAgency" : "US National Science Foundation",
+    "fundingGrant" : null
+  }, {
+    "fundingAgency" : "Natural Sciences and Engineering Research Council of Canada (NSERC)",
+    "fundingGrant" : null
+  }, {
+    "fundingAgency" : "Andrew W. Mellon Foundation",
+    "fundingGrant" : null
+  } ],
+  "studyNotes" : "Nitrogen isotopic data (d15N) for 5 tree species for the past 150 years, from cores collected near Mirror Lake, New Hampshire.  Data from cores of Tsuga canadensis, Acer saccharum, Betula papyrifera, Fagus grandifolia, and Fraxinus americana are included. 5.15-mm diameter increment bores were acquired from 22 trees divided among the three subwatersheds of Mirror Lake.  Each bore was cut into 30-mg sections with sections divided along boundaries between ring widths. On average, a section contained wood deposited during 2.75 years. The 15N:14N ratio of each section was determined at the University of California, Davis, on a PDZ Europa 20-20 isotope ratio mass spectrometer.  \r\nIITRDB008",
+  "onlineResourceLink" : "https://www.ncdc.noaa.gov/paleo/study/15311",
+  "difMetadataLink" : "http://www1.ncdc.noaa.gov/pub/data/metadata/published/paleo/dif/xml/noaa-tree-15311.xml",
+  "isoMetadataLink" : "http://www1.ncdc.noaa.gov/pub/data/metadata/published/paleo/iso/xml/noaa-tree-15311.xml",
+  "originalSource" : null,
+  "dataTypeInformation" : "https://www.ncdc.noaa.gov/data-access/paleoclimatology-data/datasets/tree-ring",
+  "studyCode" : "IITRDB008",
+  "scienceKeywords" : [ "biogeochemical cycles" ],
+  "reconstruction" : "N",
+  "contributionDate" : "2013-10-28",
+  "entryId" : "noaa-tree-15311",
+  "earliestYearBP" : 115,
+  "mostRecentYearBP" : -55,
+  "earliestYearCE" : 1835,
+  "mostRecentYearCE" : 2005,
+  "publication" : [ {
+    "author" : {
+      "name" : "Kendra K. McLauchlan, Joseph M. Craine, W. Wyatt Oswald, Peter R. Leavitt, and Gene E. Likens"
+    },
+    "pubYear" : 2007,
+    "title" : "Changes in nitrogen cycling during the past century in a northern hardwood forest",
+    "journal" : "Proceedings of the National Academy of Sciences",
+    "volume" : "104",
+    "edition" : null,
+    "issue" : "18",
+    "pages" : "7466-7470",
+    "reportNumber" : null,
+    "citation" : "Kendra K. McLauchlan, Joseph M. Craine, W. Wyatt Oswald, Peter R. Leavitt, and Gene E. Likens. 2007. Changes in nitrogen cycling during the past century in a northern hardwood forest. Proceedings of the National Academy of Sciences, 104(18), 7466-7470. doi: 10.1073/pnas.0610546104",
+    "type" : "publication",
+    "identifier" : {
+      "type" : "doi",
+      "id" : "10.1073/pnas.0610546104",
+      "url" : "http://dx.doi.org/10.1073/pnas.0610546104"
+    },
+    "abstract" : "Nitrogen (N) availability, defined here as the supply of N to terrestrial plants and soil microorganisms relative to their N demands, limits the productivity of many temperate zone forests and in part determines ecosystem carbon (C) content. Despite multidecadal monitoring of N in streams, the long-term record of N availability in forests of the northeastern United States is largely unknown. Therefore, although these forests have been receiving anthropogenic N deposition for the past few decades, it is still uncertain whether terrestrial N availability has changed during this time and, subsequently, whether forest ecosystems have responded to increased N deposition. Here, we used stable N isotopes in tree rings and lake sediments to demonstrate that N availability in a northeastern forest has declined over the past 75 years, likely because of ecosystem recovery from Euro-American land use. Forest N availability has only recently returned to levels forecast from presettlement trajectories, rendering the trajectory of future forest N cycling uncertain. Our results suggest that chronic disturbances caused by humans, especially logging and agriculture, are major drivers of terrestrial N cycling in forest ecosystems today, even a century after cessation.",
+    "pubRank" : "1"
+  } ],
+  "site" : [ {
+    "NOAASiteId" : "55649",
+    "siteName" : "Mirror Lake",
+    "mappable" : "Y",
+    "locationName" : "Continent>North America>United States Of America>New Hampshire",
+    "geo" : {
+      "geoType" : "Feature",
+      "geometry" : {
+        "type" : "POINT",
+        "coordinates" : [ "43.6167", "-71.25" ]
+      },
+      "properties" : {
+        "southernmostLatitude" : "43.6167",
+        "northernmostLatitude" : "43.6167",
+        "westernmostLongitude" : "-71.25",
+        "easternmostLongitude" : "-71.25",
+        "minElevationMeters" : "178",
+        "maxElevationMeters" : "178"
+      }
+    },
+    "paleoData" : [ {
+      "dataTableName" : "Mirror2007ACSAd15N",
+      "NOAADataTableId" : "25283",
+      "earliestYear" : 1835,
+      "mostRecentYear" : 2005,
+      "timeUnit" : "AD",
+      "earliestYearBP" : 115,
+      "mostRecentYearBP" : -55,
+      "earliestYearCE" : 1835,
+      "mostRecentYearCE" : 2005,
+      "coreLengthMeters" : null,
+      "dataTableNotes" : null,
+      "species" : [ {
+        "speciesCode" : "ACSH",
+        "scientificName" : "Acer saccharum Marsh.",
+        "commonName" : [ "sugar maple" ]
+      } ],
+      "dataFile" : [ {
+        "fileUrl" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/isotope/northamerica/usa/newhampshire/mirror2007acsa-d15n.txt",
+        "urlDescription" : "Data",
+        "linkText" : "mirror2007acsa-d15n.txt",
+        "variables" : [ {
+          "cvDataType" : "TREE RING",
+          "cvWhat" : "age variable>age",
+          "cvMaterial" : null,
+          "cvError" : null,
+          "cvUnit" : "time unit>age unit>year Common Era",
+          "cvSeasonality" : null,
+          "cvDetail" : null,
+          "cvMethod" : null,
+          "cvAdditionalInfo" : null,
+          "cvFormat" : "Numeric",
+          "cvShortName" : null
+        }, {
+          "cvDataType" : "TREE RING",
+          "cvWhat" : "chemical composition>isotope>isotope ratio>delta 15N",
+          "cvMaterial" : "biological material>tissue>wood",
+          "cvError" : null,
+          "cvUnit" : "concentration unit>parts per notation unit>parts per thousand>per mil",
+          "cvSeasonality" : null,
+          "cvDetail" : "normalized",
+          "cvMethod" : "laboratory method>spectroscopy>mass spectrometry>isotope ratio mass spectrometry",
+          "cvAdditionalInfo" : "\"Acer saccharum, standardized to a mean of zero\"",
+          "cvFormat" : "Numeric",
+          "cvShortName" : null
+        } ],
+        "NOAAKeywords" : [ "earth science>paleoclimate>tree-ring>width>more info" ]
+      } ]
+    }, {
+      "dataTableName" : "Mirror2007BEPAd15N",
+      "NOAADataTableId" : "25284",
+      "earliestYear" : 1909,
+      "mostRecentYear" : 2005,
+      "timeUnit" : "AD",
+      "earliestYearBP" : 41,
+      "mostRecentYearBP" : -55,
+      "earliestYearCE" : 1909,
+      "mostRecentYearCE" : 2005,
+      "coreLengthMeters" : null,
+      "dataTableNotes" : null,
+      "species" : [ ],
+      "dataFile" : [ {
+        "fileUrl" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/isotope/northamerica/usa/newhampshire/mirror2007bepa-d15n.txt",
+        "urlDescription" : "Data",
+        "linkText" : "mirror2007bepa-d15n.txt",
+        "variables" : [ {
+          "cvDataType" : "TREE RING",
+          "cvWhat" : "age variable>age",
+          "cvMaterial" : null,
+          "cvError" : null,
+          "cvUnit" : "time unit>age unit>year Common Era",
+          "cvSeasonality" : null,
+          "cvDetail" : null,
+          "cvMethod" : null,
+          "cvAdditionalInfo" : null,
+          "cvFormat" : "Numeric",
+          "cvShortName" : null
+        }, {
+          "cvDataType" : "TREE RING",
+          "cvWhat" : "chemical composition>isotope>isotope ratio>delta 15N",
+          "cvMaterial" : "biological material>tissue>wood",
+          "cvError" : null,
+          "cvUnit" : "concentration unit>parts per notation unit>parts per thousand>per mil",
+          "cvSeasonality" : null,
+          "cvDetail" : "normalized",
+          "cvMethod" : "laboratory method>spectroscopy>mass spectrometry>isotope ratio mass spectrometry",
+          "cvAdditionalInfo" : "\"Betula papyrifera, standardized to a mean of zero\"",
+          "cvFormat" : "Numeric",
+          "cvShortName" : null
+        } ],
+        "NOAAKeywords" : [ "earth science>paleoclimate>tree-ring>width>more info" ]
+      } ]
+    }, {
+      "dataTableName" : "Mirror2007FAGRd15N",
+      "NOAADataTableId" : "25285",
+      "earliestYear" : 1896,
+      "mostRecentYear" : 2005,
+      "timeUnit" : "AD",
+      "earliestYearBP" : 54,
+      "mostRecentYearBP" : -55,
+      "earliestYearCE" : 1896,
+      "mostRecentYearCE" : 2005,
+      "coreLengthMeters" : null,
+      "dataTableNotes" : null,
+      "species" : [ ],
+      "dataFile" : [ {
+        "fileUrl" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/isotope/northamerica/usa/newhampshire/mirror2007fagr-d15n.txt",
+        "urlDescription" : "Data",
+        "linkText" : "mirror2007fagr-d15n.txt",
+        "variables" : [ {
+          "cvDataType" : "TREE RING",
+          "cvWhat" : "age variable>age",
+          "cvMaterial" : null,
+          "cvError" : null,
+          "cvUnit" : "time unit>age unit>year Common Era",
+          "cvSeasonality" : null,
+          "cvDetail" : null,
+          "cvMethod" : null,
+          "cvAdditionalInfo" : null,
+          "cvFormat" : "Numeric",
+          "cvShortName" : null
+        }, {
+          "cvDataType" : "TREE RING",
+          "cvWhat" : "chemical composition>isotope>isotope ratio>delta 15N",
+          "cvMaterial" : "biological material>tissue>wood",
+          "cvError" : null,
+          "cvUnit" : "concentration unit>parts per notation unit>parts per thousand>per mil",
+          "cvSeasonality" : null,
+          "cvDetail" : "normalized",
+          "cvMethod" : "laboratory method>spectroscopy>mass spectrometry>isotope ratio mass spectrometry",
+          "cvAdditionalInfo" : "\"Fagus grandifolia, standardized to a mean of zero\"",
+          "cvFormat" : "Numeric",
+          "cvShortName" : null
+        } ],
+        "NOAAKeywords" : [ "earth science>paleoclimate>tree-ring>width>more info" ]
+      } ]
+    }, {
+      "dataTableName" : "Mirror2007FRAMd15N",
+      "NOAADataTableId" : "25286",
+      "earliestYear" : 1905,
+      "mostRecentYear" : 2005,
+      "timeUnit" : "AD",
+      "earliestYearBP" : 45,
+      "mostRecentYearBP" : -55,
+      "earliestYearCE" : 1905,
+      "mostRecentYearCE" : 2005,
+      "coreLengthMeters" : null,
+      "dataTableNotes" : null,
+      "species" : [ ],
+      "dataFile" : [ {
+        "fileUrl" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/isotope/northamerica/usa/newhampshire/mirror2007fram-d15n.txt",
+        "urlDescription" : "Data",
+        "linkText" : "mirror2007fram-d15n.txt",
+        "variables" : [ {
+          "cvDataType" : "TREE RING",
+          "cvWhat" : "age variable>age",
+          "cvMaterial" : null,
+          "cvError" : null,
+          "cvUnit" : "time unit>age unit>year Common Era",
+          "cvSeasonality" : null,
+          "cvDetail" : null,
+          "cvMethod" : null,
+          "cvAdditionalInfo" : null,
+          "cvFormat" : "Numeric",
+          "cvShortName" : null
+        }, {
+          "cvDataType" : "TREE RING",
+          "cvWhat" : "chemical composition>isotope>isotope ratio>delta 15N",
+          "cvMaterial" : "biological material>tissue>wood",
+          "cvError" : null,
+          "cvUnit" : "concentration unit>parts per notation unit>parts per thousand>per mil",
+          "cvSeasonality" : null,
+          "cvDetail" : "normalized",
+          "cvMethod" : "laboratory method>spectroscopy>mass spectrometry>isotope ratio mass spectrometry",
+          "cvAdditionalInfo" : "\"Fraxinus americana, standardized to a mean of zero\"",
+          "cvFormat" : "Numeric",
+          "cvShortName" : null
+        } ],
+        "NOAAKeywords" : [ "earth science>paleoclimate>tree-ring>width>more info" ]
+      } ]
+    }, {
+      "dataTableName" : "Mirror2007TSCAd15N",
+      "NOAADataTableId" : "25287",
+      "earliestYear" : 1835,
+      "mostRecentYear" : 2005,
+      "timeUnit" : "AD",
+      "earliestYearBP" : 115,
+      "mostRecentYearBP" : -55,
+      "earliestYearCE" : 1835,
+      "mostRecentYearCE" : 2005,
+      "coreLengthMeters" : null,
+      "dataTableNotes" : null,
+      "species" : [ ],
+      "dataFile" : [ {
+        "fileUrl" : "https://www1.ncdc.noaa.gov/pub/data/paleo/treering/isotope/northamerica/usa/newhampshire/mirror2007tsca-d15n.txt",
+        "urlDescription" : "Data",
+        "linkText" : "mirror2007tsca-d15n.txt",
+        "variables" : [ {
+          "cvDataType" : "TREE RING",
+          "cvWhat" : "age variable>age",
+          "cvMaterial" : null,
+          "cvError" : null,
+          "cvUnit" : "time unit>age unit>year Common Era",
+          "cvSeasonality" : null,
+          "cvDetail" : null,
+          "cvMethod" : null,
+          "cvAdditionalInfo" : null,
+          "cvFormat" : "Numeric",
+          "cvShortName" : null
+        }, {
+          "cvDataType" : "TREE RING",
+          "cvWhat" : "chemical composition>isotope>isotope ratio>delta 15N",
+          "cvMaterial" : "biological material>tissue>wood",
+          "cvError" : null,
+          "cvUnit" : "concentration unit>parts per notation unit>parts per thousand>per mil",
+          "cvSeasonality" : null,
+          "cvDetail" : "normalized",
+          "cvMethod" : "laboratory method>spectroscopy>mass spectrometry>isotope ratio mass spectrometry",
+          "cvAdditionalInfo" : "\"Tsuga canadensis, standardized to a mean of zero\"",
+          "cvFormat" : "Numeric",
+          "cvShortName" : null
+        } ],
+        "NOAAKeywords" : [ "earth science>paleoclimate>tree-ring>width>more info" ]
+      } ]
+    } ]
+  } ]
+}
