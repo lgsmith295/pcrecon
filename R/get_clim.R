@@ -28,7 +28,14 @@ load_clim <- function(clim, mos, type = method, prewhiten.clim = TRUE, full = fu
         stop("If climate dataframe is in long format, 3 columns must be named: year, month, value.")
       } else {
         as.character(mos)
-        clim_small <- clim[which(clim$month == mos), ]
+
+        clim_prev <- data.frame(year = clim$year, month = as.numeric(clim$month) *-1, value = lag(clim$value, 12))
+
+        clim <- rbind(clim, clim_prev)
+        clim <- arrange(clim, year)
+
+        clim_small <- clim[which(clim$month %in% mos), ]
+
       }
 
 
@@ -46,7 +53,7 @@ load_clim <- function(clim, mos, type = method, prewhiten.clim = TRUE, full = fu
     values  <- clim %>%
      dplyr::select(-year)
 
-     values <- rowMeans(values)
+     values <- rowMeans(values, na.rm = TRUE)
 
      clim_small <- data.frame(cbind(year = clim$year, values = values))
      clim_small <- dplyr::filter(clim_small, year %in% full)
@@ -57,7 +64,7 @@ load_clim <- function(clim, mos, type = method, prewhiten.clim = TRUE, full = fu
     values  <- clim %>%
      dplyr::select(-year)
 
-    values <- rowSums(sums)
+    values <- rowSums(sums, na.rm = TRUE)
 
     clim_small <- data.frame(cbind(year = clim$year, values = values))
     clim_small <- dplyr::filter(clim_small, year %in% full)
