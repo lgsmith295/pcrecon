@@ -1,10 +1,27 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# pcreg: Principal Component Regression analysis for tree ring dat
+# pcreg: Principal Component Regression for tree ring data
+
 ## Motivation
 
 ## How to Cite
+
+    #> 
+    #> To cite package 'pcreg' in publications use:
+    #> 
+    #>   Laura Hocking-Smith, Daniel Hocking and Nicholas Nagle (2020). pcreg:
+    #>   Princpal Component Regression for Dendroclimatology. R package
+    #>   version 0.1.0.
+    #> 
+    #> A BibTeX entry for LaTeX users is
+    #> 
+    #>   @Manual{,
+    #>     title = {pcreg: Princpal Component Regression for Dendroclimatology},
+    #>     author = {Laura Hocking-Smith and Daniel Hocking and Nicholas Nagle},
+    #>     year = {2020},
+    #>     note = {R package version 0.1.0},
+    #>   }
 
 ## Installation
 
@@ -15,17 +32,47 @@ were split into individual packages. `remotes` is more streamlined if
 not engaging in lots of full package development and just wanting to
 install packages from online sources besides CRAN.
 
-    # install.packages("remotes")
-    library(remotes)
-    remotes::install_github("https://github.com/lgsmith295/pcreg")
+``` r
+# install.packages("remotes")
+library(remotes)
+remotes::install_github("lgsmith295/pcreg", build_vignettes = TRUE)
+```
 
 ## Versioning
 
 ## How to Use
 
+The vignette is the best place to start for understanding the use of the
+functions in the package. The `reconstruction` vignette goes through all
+the steps necessary to go from ITRDB data to a climate reconstruction
+using tree ring data.
+
+``` r
+library(pcreg)
+browseVignettes("pcreg")
+vignette("reconstruction")
+```
+
 ## Licenses
 
 See the [DESCRIPTION](DESCRIPTION) and [LICENSE](LICENSE) files.
+
+## Reporting Issues
+
+Please report bugs to Github Issues
+<https://github.com/lgsmith295/pcreg/issues>. Search existing issues
+before reporting to see if it’s already been reported and to check on
+the current status. If reporting a new issue add the “bug” label. Try to
+describe the problem in detail and include your OS and R
+`sessionInfo()`. Bugs can be addressed most efficiently if you include a
+reproducible example.
+
+If there is something you would like to see added to the package, follow
+the same instructions as above but use the “enhancement” label option. A
+good description of the reasoning behind the feature request can be
+helpful for prioritizing issues. If you have code to fix a bug or
+provide and enhancement, please submit a GitHub pull request after
+reading our contributor guidelines and code of conduct.
 
 ## Contributions
 

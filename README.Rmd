@@ -50,6 +50,12 @@ vignette("reconstruction")
 
 See the [DESCRIPTION](DESCRIPTION) and [LICENSE](LICENSE) files.
 
+## Reporting Issues
+
+Please report bugs to Github Issues <https://github.com/lgsmith295/pcreg/issues>. Search existing issues before reporting to see if it's already been reported and to check on the current status. If reporting a new issue add the "bug" label. Try to describe the problem in detail and include your OS and R `sessionInfo()`. Bugs can be addressed most efficiently if you include a reproducible example.
+
+If there is something you would like to see added to the package, follow the same instructions as above but use the "enhancement" label option. A good description of the reasoning behind the feature request can be helpful for prioritizing issues. If you have code to fix a bug or provide and enhancement, please submit a GitHub pull request after reading our contributor guidelines and code of conduct.
+
 ## Contributions
 
 We welcome contributions from everyone. Before you get started, please see our [contributor guidelines](CONTRIBUTING.md). Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
