@@ -2,6 +2,7 @@
 #'
 #' @param crns dataframe, such as returned by the load_crns function, where there is a column containing years and one column for each chronology
 #' @param lead single value indicating the maximum number of years to shift chronology data forward. 0 indicates no lead, 2 will evaluate 0, 1, and 2 year leads, etc. Defaults to 1.
+#' @param lag
 #' @param clim dataframe, such as returned by the get_clim function, containing columns for year and either: individual months climate data (may be more than one), a sum of >1 months climate data, or the average of >1 months data
 #' @param window years to include in correlation analysis, calibration period in original PCreg software
 #' @param method type of correlation analysis, "pearson" or "spearman". Defaults to "pearson"
@@ -13,7 +14,7 @@
 #' @export
 #'
 #' @examples
-filter_cor <- function(crns, lead = 1, clim, cor.window, type = "pearson", alternative = "two.sided", r = 0.25, alpha = 0.90, prewhiten.crn = TRUE, prewhiten.clim = TRUE, calib = calib, valid = valid, full = full){
+filter_cor <- function(crns, lead = 1, lag = NULL, clim, cor.window, type = "pearson", alternative = "two.sided", r = 0.25, alpha = 0.90, prewhiten.crn = TRUE, prewhiten.clim = TRUE, calib = calib, valid = valid, full = full){
 
 if(isTRUE(prewhiten.crn)){
     year <- crns$year
@@ -30,8 +31,8 @@ if(isTRUE(prewhiten.crn)){
 
   rows <- ncol(df$crn_window) * length(leads)
 
-  cors_table <- as.data.frame(matrix(NA, nrow = rows, ncol = 4))
-  names <-  c("chronology", "leads", "correlation", "p_value")
+  cors_table <- as.data.frame(matrix(NA, nrow = rows, ncol = 5))
+  names <-  c("chronology", "leads", "lags", "correlation", "p_value")
   colnames(cors_table) <- names
 
   crn_names <- colnames(df$crn_window)
@@ -43,9 +44,25 @@ if(isTRUE(prewhiten.crn)){
     crn <- as.vector(as.numeric(df$crn_window[ ,i]))
     clim<- as.vector(as.numeric(df$clim_window[ , ]))
     cor <- cor.test( clim, dplyr::lead(crn, leads[j]), conf.level = alpha, type = type, alternative = alternative)
-    cors_table[k, ] <- cbind(crn_names[i], leads[j], cor$estimate, cor$p.value)
+    cors_table[k, ] <- cbind(crn_names[i], leads[j], 0, cor$estimate, cor$p.value)
 }
  }
+
+ if(!is.null(lag)) {
+   lags <- c(1:lag)
+   k <- 0
+   for (j in 1:length(lags)) {
+     for (i in 1:length(crn_names)) {
+       k <- k + 1
+       crn <- as.vector(as.numeric(df$crn_window[ ,i]))
+       clim<- as.vector(as.numeric(df$clim_window[ , ]))
+       cor <- cor.test( clim, dplyr::lag(crn, lags[j]), conf.level = alpha, type = type, alternative = alternative)
+       newrow <- data.frame(cbind(chronology = crn_names[i], leads =  0, lags = lags[[j]], correlation = cor$estimate, p_value = cor$p.value))
+       cors_table <- rbind(cors_table, newrow)
+     }
+   }
+ }
+
     class(cors_table$p_value) <- "numeric"
     class(cors_table$correlation) <- "numeric"
     class(cors_table$leads) <- "integer"
@@ -93,9 +110,17 @@ crns_table <- function(crns = crns, cors_table_small = cors_table_small) {
     chron <- data.frame(chron_lead)
     colnames(chron) <- chronology_name
   } else {
+  if (cors_table_small$lags[i] != 0){
+    lag_val <- as.integer(cors_table_small$lags[i])
+    chronology_name <- paste0(cors_table_small$chronology[i], "_lag", lag_val)
+    chron_lag <- dplyr::lag(chron, lag_val)
+    chron <- data.frame(chron_lag)
+    colnames(chron) <- chronology_name
+  } else {
   chronology_name <- cors_table_small$chronology[i]
   chron <- data.frame(chron)
   colnames(chron) <- chronology_name
+  }
   }
   if (i == 1) {
     crns_select <- cbind(year = crns$year, chron)
@@ -103,7 +128,8 @@ crns_table <- function(crns = crns, cors_table_small = cors_table_small) {
     crns_select <- cbind(crns_select, chron)
   }
 
- }
+  }
+
   crns_select <- dplyr::arrange(crns_select, year)
   return (crns_select)
 
