@@ -50,7 +50,7 @@ pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc =
     df <- mod_df(clim = clim, data = select_PC$PC_vals, eig = select_PC$eigval_small, nest_yrs = nest_yrs, calib = calib)
 
 
-    full_mod <- lm(formula = clim~., data = df)
+    full_mod <- lm(formula = clim~., data = df, na.action = na.omit)
 
     step_mod <- stepAICc(full_mod) ## check and document the k = 3 option. During test runs this is what made it select the same model as PCreg.
 
@@ -114,10 +114,10 @@ pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc =
     #### scale to variance of calibration
 
     full_est <-dplyr::filter(recon_nest, year %in% full)
-    mn <- mean(calib_est$fit)
+    mn <- mean(calib_est$fit, na.rm = TRUE)
 
-    sd_recon <- sd(calib_est$fit)
-    sd_clim <- sd(obs_cal$values)
+    sd_recon <- sd(calib_est$fit, na.rm = TRUE)
+    sd_clim <- sd(obs_cal$values, na.rm = TRUE)
 
     recon_nest$fit <- mn + (recon_nest$fit - mn) * sd_clim/sd_recon
 
