@@ -4,6 +4,7 @@ devtools::load_all()
 
 ## parse json files from metadata folder
 metadata <- parse_json(dir = system.file("extdata/metadata", package = "pcreg", mustWork = TRUE), center = TRUE)
+metadata <- metadata[-58, ]
 
 ## filter chronologies based on radius from a point
 select_crns_rad <- filter_rad(data = metadata, cent_lat = 36.21, cent_lon = -105.9, radius = 150)
@@ -132,7 +133,7 @@ clim_long <- clim_long[ ,-3]
 
 ## eval clim
 
-data <- eval_clim(crns = crns_df, lead = 1, prewhiten.crn = FALSE, climate = clim_long, mos = 5:8, method = "mean", prewhiten.clim = TRUE, calib = 1927:1945, valid = 1946:1972, cor.window = "calib", type = "pearson", alternative = "two.sided", r = .35, alpha = 0.6, print.out = TRUE, save.out = "csv", dir = "test/")
+data <- eval_clim(crns = crns_df, lead = 1, lag = 1, prewhiten.crn = FALSE, climate = clim_long, mos = -12:3, method = "mean", prewhiten.clim = TRUE, calib = 1927:1945, valid = 1946:1972, cor.window = "calib", type = "pearson", alternative = "two.sided", r = -1, alpha = 0.9, print.out = TRUE, save.out = "csv", dir = "test/")
 
 
 ## run PCreg function!
