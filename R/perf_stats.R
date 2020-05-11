@@ -23,11 +23,11 @@ perf_stats <- function(valid_est, calib_est, observed, valid_yrs = valid, calib_
   x_calib <- dplyr::filter(observed, observed$year %in% calib_yrs)
 
   # Validation
-  R2 <- (sum((x_valid$fit - mean(x_valid$values))^2)) / (sum((x_valid$values - mean(x_valid$values))^2))
+  R2 <- (sum((x_valid$fit - mean(x_valid$values, na.rm = TRUE))^2, na.rm = TRUE)) / (sum((x_valid$values - mean(x_valid$values, na.rm = TRUE))^2, na.rm = TRUE))
 
   Pearson_R2 <- (sum((x_valid$values - mean(x_valid$values)) * (valid_est$fit - mean(valid_est$fit))))^2 / (sum((x_valid$values - mean(x_valid$values))^2) * sum((valid_est$fit - mean(valid_est$fit))^2))
 
-  RE <- 1 - sum((x_valid$values - valid_est$fit) ^ 2) / sum((x_valid$values - mean(x_calib$values, na.rm = TRUE))^2)
+  RE <- 1 - sum((x_valid$values - valid_est$fit) ^ 2) / sum((x_valid$values - mean(x_calib$values))^2)
 
   CE <- 1 - sum((x_valid$values - valid_est$fit) ^ 2) / sum((x_valid$values - mean(x_valid$values)) ^ 2)
 
@@ -38,7 +38,7 @@ perf_stats <- function(valid_est, calib_est, observed, valid_yrs = valid, calib_
 
   Pearson_R2 <- (sum((x_calib$values - mean(x_calib$values)) * (calib_est$fit - mean(calib_est$fit))))^2 / (sum((x_calib$values - mean(x_calib$values))^2) * sum((calib_est$fit - mean(calib_est$fit))^2))
 
-  RE <- 1 - sum((x_calib$values - calib_est$fit) ^ 2) / sum((x_calib$values - mean(x_valid$values, na.rm = TRUE))^2)
+  RE <- 1 - sum((x_calib$values - calib_est$fit) ^ 2) / sum((x_calib$values - mean(x_valid$values))^2)
 
   CE <- 1 - sum((x_calib$values - calib_est$fit) ^ 2) / sum((x_calib$values - mean(x_calib$values)) ^ 2)
 
