@@ -12,14 +12,22 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' set.seed(92831)
 #' df <- data.frame(year = 1:20, values = rnorm(20), fit = rnorm(20))
 #' perf_stats(valid_est = df[1:10, c("year", "fit")], calib_est = df[11:20, c("year", "fit")], observed = df[1:20 , c("year", "values")], valid_yrs = 1:10, calib_yrs = 11:20)
 #'
+#' df <- data.frame(year = 1:20, values = rnorm(20))
+#' df$fit <- df$values * 0.75 + rnorm(20, 0, 0.5)
+#' perf_stats(valid_est = df[1:10, c("year", "fit")], calib_est = df[11:20, c("year", "fit")], observed = df[1:20 , c("year", "values")], valid_yrs = 1:10, calib_yrs = 11:20)
+#'
+#' df$fit <- df$values * 0.75 # Rsq should = 1, RE and CE should be very high
+#' perf_stats(valid_est = df[1:10, c("year", "fit")], calib_est = df[11:20, c("year", "fit")], observed = df[1:20 , c("year", "values")], valid_yrs = 1:10, calib_yrs = 11:20)
+#'
+#' df$fit <- df$values * 0.75 + 2 # Rsq should = 1 but RE and CE very low
+#' perf_stats(valid_est = df[1:10, c("year", "fit")], calib_est = df[11:20, c("year", "fit")], observed = df[1:20 , c("year", "values")], valid_yrs = 1:10, calib_yrs = 11:20)
+#'
 #' df[19, "values"] <- NA_real_
 #' perf_stats(valid_est = df[1:10, c("year", "fit")], calib_est = df[11:20, c("year", "fit")], observed = df[1:20 , c("year", "values")], valid_yrs = 1:10, calib_yrs = 11:20)
-#' }
 perf_stats <- function(valid_est, calib_est, observed, valid_yrs = valid, calib_yrs = calib, mod_id = "m") {
   if(!all(colnames(observed) == c("year", "values"))) {
     stop("observed must be a dataframe that includes the columns year and values")
