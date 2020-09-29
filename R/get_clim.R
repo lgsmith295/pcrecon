@@ -6,6 +6,7 @@
 #'
 #'
 #' @return dataframe of monthly data
+#' @export
 #'
 #' @examples
 load_clim <- function(clim, mos, method = "mean", prewhiten.clim = TRUE, full = full) {
