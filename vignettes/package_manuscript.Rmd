@@ -29,12 +29,23 @@ Due to the time consuming nature of data collection and the specialized statisti
 
 Incredible efforts have been made over the last 40 years in the development of statistical techniques for tree-ring data analysis and associated software which allow users to standardize series, develop chronologies, cross-date, correlate to climate field, estimate climate reconstructions, and much more. These programs revolutionized dendrochronolgy, and their free availability to the community is a testament to the importance of open commucication and collaboration in science. Many of these programs utilize an interactive user interface and are based in FORTRAN, which is a powerful and verstile language well suited to scientific computing. They efficiently perform complex calculations, preventing the user from having to program them.
 
+### R Environment 
 R is a similarly powerful statistical programming language and software environment which has several advantages over common FORTRAN or MATLAB based programs. R is free and open source, in addition to being extremely versatile in its application for many different types of statisical analyses, data processing, simulations, etc. It has a large global user-base across a wide variety of disciplines, many of whom are actively engaged in various wikis, newsletters, and web forums (such as stack exchange) which create a community of support through active dialogue and problem solving. 
 
-- replicability and transparency - scripts vs log files
-- documentation
-- all platforms, documentation, testing (CRAN)
+In contrast to the commonly used FORTRAN programs for tree-ring analysis (PCreg, ARSTAN, COFECHA), R utilizes the command-line rather than an interactive user interface. On it's surface, this may seem like a disadvantage to some users. However, most common tree-ring packages in R are well-documented with vignettes that provide worked examples. There are great workflow advantages in having repeatable scripts that can be adjusted and rerun all within Rstudio, without having to open a seperate text file, close and reopen the program file, and re-run that logfile. It's also simple to reorganize and do any number of manipulations to the data (i.e. transformations), as well as many types of analyses (tree-ring specific or not), and produce publication quality visualizations, all in one environment. 
 
+The implications for reproducibility in using script-based code are perhaps the most important aspect. Peer-reviewed journals are increasingly requiring data and analysis to be provided as part of the manuscipt submission. This is not feasible with the many output files that are rendered in programs like PCreg or ARSTAN, and the outputs are not universally very readable outside of those individuals who work with them frequently. A standard, versatile, common, and cross-disciplinary environment for analysis is important for clear communication and reproducibility of results.
+
+In the case of the FORTRAN version of PCreg, there is no documentation for the use of the program and the interactive interface is not intuitive, therefore the use of the program has become an oral tradition. 
+
+
+### Principal Component Analysis
+
+Regression reconstruction models are used to estimate past climate based on the statistical relationship between the climate variable of interest and tree-ring characteristics. We can capture more of the variability in annual climate and dampen the effect of spatially autocorrelated, non-climatic influences on tree growth by using data from multiple tree species (cite (Fritz?)). An assumption made in these models is that the signal shared among many trees across a region is related to climate (Fritz 1976). Having many samples from different sitesspecies can help to parse the local, autocorrelated ecological noise related to things like succession, competition, disturbance, and gap dynamics from desired climate signal.
+
+A problem with using many chronologies from different species and sites is that it increases the dimensionality of the predictors, which can cause the resulting model to be overfit. Principal Components Analysis (PCA) is commonly used to reduce the dimensionality of predictors, in this case tree ring chronologies, down to a few principal component eigenvectors which represent the most shared variance among the many datasets. A linear regression model is used to estimate the relationship between the eigenvectors (predictor) and climate (predictand). This is referred to as principal component regression (PCR) with “inverse calibration”, as it inverts the direction of relationship from our conceptual model that climate influences tree growth (Briffa 1983, Cook 1999, Briffa 2002). This method has been used extensively in climate reconstructions throughout the eastern U.S. where climate-growth relationships are messier due to forest dynamics and temperate climate (Alexander et al., 2019; Cook, Meko, Stahle, & Cleaveland, 1999; Maxwell et al., 2017, p. @Harley2017; Maxwell, Hessl, Cook, & Pederson, 2011; Pederson et al., 2012). 
+
+## PCreg Package
 
 ### Functions
 
@@ -48,16 +59,17 @@ There are three main functions in the pcreg package for making reconstruction es
 
 Additional functions are used to retrieve metadata from ITRDB downloaded tree ring files, filter tree rings for inclusion based on spatial location or correlation to target climate, and to upload and summarize climate data from various formats. These include:
 
-* parse_json - write descriptions for each of these...
+* parse_json
 * filter_spat
 * filter_cor
 * get_clim
 
+*Should I go into descriptions of these? Or leave for the vignette rather than publication?*
 
 ## Worked Example
 ### Data
 Tree ring data downloaded form the ITRDB using the FedData package (include code to procure? used a bounding box)
-Climate data is USGS Streamflow gage data for gauge #XXX, downloaded from XXX 
+Climate data is USGS Streamflow gage data for gauge #347432, downloaded from waterdata.usgs.gov
 
 ### Code
 
