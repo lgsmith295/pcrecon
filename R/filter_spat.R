@@ -89,7 +89,7 @@ filter_foot <- function(x, footprint, r = 0.3, cent.lat, cent.lon, radius = 500,
 
   # check class of footprint object, convert to polygon from raster if needed
   if (class(footprint) == "RasterLayer") {
-    contour <- sf::st_as_sf(raster::rasterToPolygons(clump(footprint$correlation >= r), dissolve = TRUE))
+    contour <- sf::st_as_sf(raster::rasterToPolygons(raster::clump(footprint$correlation >= r), dissolve = TRUE))
     footprint <- sf::st_as_sf(raster::rasterToPolygons(footprint))
   } else {
     contour <- clump(footprint$correlation >= r, dissolve = TRUE)
