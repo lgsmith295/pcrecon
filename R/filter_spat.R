@@ -1,10 +1,13 @@
 
 #' Spatial Filtering of Points Based on Radius From a Point
 #'
-#' @param data  dataframe containing columns labeled ID, lat, and lon
 #' @param cent.lat latitude of center point
 #' @param cent.lon longitude of center point
 #' @param radius distance from center in km, default 150
+#' @param x
+#' @param climate
+#' @param plot
+#' @param buff
 #'
 #' @return character vector of chronology names within the selected radius
 #'
@@ -64,12 +67,13 @@ filter_rad <- function(x, cent.lat, cent.lon, radius = 150, climate = NULL, plot
 
 #' Spatial Filtering of Points Based on Climate Footprint
 #'
-#' @param data dataframe containing columns labeled ID, lat, and lon
 #' @param footprint Raster or SpatialPolygonDataFrame object
 #' @param r minimum correlation coefficient for spatial selection
 #' @param cent.lat
 #' @param cent.lon
 #' @param plot
+#' @param x
+#' @param radius
 #'
 #' @return character vector of chronology names that fall within the area where correlation >= r
 #' @export

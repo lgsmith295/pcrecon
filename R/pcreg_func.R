@@ -14,7 +14,7 @@
 #'
 #' @examples
 #'
-pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc = NULL, m = NULL, scale.var = "calib", weight = NULL, plot = TRUE, save.out = "csv", dir = "PCregOutput/"){
+pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc = NULL, m = NULL, scale.var = "calib", weight = NULL, plot = TRUE, out.fmt = "csv", out.dir = "PCregOutput/"){
 
   if(class(data) != "PCreg_data"){ stop( "data must be object class PCreg_data, as is returned from the eval_clim function. See documentation for details")}
 
@@ -186,7 +186,7 @@ pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc =
 
   class(recon_list) <- "PCReg_recon"
 
-  if(!is.null(save.out)){
+  if(!is.null(out.fmt)){
     to_save <- list(reconstruction = recon_list$recon, model_statistics = cbind(recon_list$model_stats, recon_list$calibration_stats[ ,-c(1:3)]), validation_statistics = recon_list$validation_stats)
     save_data(data = to_save, save.out, dir)
   }

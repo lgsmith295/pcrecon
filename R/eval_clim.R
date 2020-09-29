@@ -16,15 +16,15 @@
 #' @param alternative
 #' @param r
 #' @param alpha
-#' @param print.out
-#' @param save.out
-#' @param dir
+#' @param out.print
+#' @param out.fmt
+#' @param out.dir
 #'
 #' @return
 #' @export
 #'
 #' @examples
-eval_clim <- function(crns, lead = 1, lag = NULL, prewhiten.crn = TRUE, climate, mos = 5:8, method = "mean", prewhiten.clim = TRUE, calib, valid, cor.window = "calib", type = "pearson", alternative = "two.sided", r = 0.25, alpha = 0.90, print.out = TRUE, save.out = "R", dir = "PCregOutput/") {
+eval_clim <- function(crns, lead = 1, lag = NULL, prewhiten.crn = TRUE, climate, mos = 5:8, method = "mean", prewhiten.clim = TRUE, calib, valid, cor.window = "calib", type = "pearson", alternative = "two.sided", r = 0.25, alpha = 0.90, out.print = TRUE, out.fmt = "R", out.dir = "PCregOutput/") {
 
   full <- min(c(valid, calib)): max(c(valid,calib))
 
@@ -47,7 +47,7 @@ if(!all(full %in% clim$year)) {
 
   message(paste0("FYI: The full evaluation period (calibration and validation) you've designated is ", min(full) , " to ", max(full),". The common period between your climate and tree ring variables is: ", min(common_period), " to ", max(common_period)))
 
-  if(print.out == TRUE){
+  if(out.print == TRUE){
     print(PCR_crns$cors_table_small)
     print(PCR_crns$nests)
   }
@@ -63,9 +63,9 @@ if(!all(full %in% clim$year)) {
 
   class(eval) <- "PCreg_data"
 
-  if(!is.null(save.out)){
+  if(!is.null(out.fmt)){
 to_save <- list(clim = clim, cors_table = PCR_crns$cors_table, cors_table_small = PCR_crns$cors_table_small, select_crns = PCR_crns$select_crns, nests = PCR_crns$nests)
-save_data(data = to_save, save.out, dir)
+save_data(data = to_save, out.fmt, dir)
   }
     return(eval)
 }
