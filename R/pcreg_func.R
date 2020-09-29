@@ -36,6 +36,17 @@ pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc =
 
   for (i in 1 : number_nests) {
     nest_yrs <- c(periods_df$startYR[i] : min(periods_df$endYR))
+
+    # temp hack - skip if nest years already all in recon - future change construction of nests and how chronologies dropped out - based on start years - do in git branch
+    if(i > 1) {
+      if(all(nest_yrs %in% recon$year)) {
+        #### drop out shortest chronology
+        PCA_chrons <- PCA_chrons %>%
+          dplyr::select(-!!periods_df$ID[i])
+        next
+      }
+    } # end hack
+
     ## make check for start year < end year
     PCA <- calc_PCs(periods_df, PCA_chrons, pc.calc, nest_yrs, calib, full)
 
@@ -114,12 +125,18 @@ pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc =
     #### scale to variance of calibration
 
     full_est <-dplyr::filter(recon_nest, year %in% full)
+    lower_diff <- recon_nest$fit - recon_nest$lwr
+    upper_diff <- recon_nest$upr - recon_nest$fit
+
     mn <- mean(calib_est$fit, na.rm = TRUE)
 
     sd_recon <- sd(calib_est$fit, na.rm = TRUE)
     sd_clim <- sd(obs_cal$values, na.rm = TRUE)
 
+
     recon_nest$fit <- mn + (recon_nest$fit - mn) * sd_clim/sd_recon
+    recon_nest$lwr <- recon_nest$fit - lower_diff
+    recon_nest$upr <- recon_nest$fit + upper_diff
 
     #### redden nest values
 
@@ -155,7 +172,7 @@ pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc =
     }
 
     #### drop out shortest chronology
-
+# drop all with same start year
     PCA_chrons <- PCA_chrons %>%
       dplyr::select(-!!periods_df$ID[i])
 

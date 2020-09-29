@@ -28,12 +28,9 @@ eval_clim <- function(crns, lead = 1, lag = NULL, prewhiten.crn = TRUE, climate,
 
   full <- min(c(valid, calib)): max(c(valid,calib))
 
-  if(prewhiten.clim == TRUE) { clim_ar <- load_clim(clim = climate, mos = mos, type = method, prewhiten.clim = prewhiten.clim, full = full)
+  clim <- climate$clim_small
 
-  clim <- data.frame(clim_ar[[1]])
-  } else {
-    clim <- load_clim(clim = climate, mos = mos, type = method, prewhiten.clim = prewhiten.clim, full = full)
-  }
+  prewhiten.clim <- climate$prewhiten.clim
 
   df <- dplyr::full_join(crns, clim)
 
@@ -57,10 +54,11 @@ if(!all(full %in% clim$year)) {
 
 
   if(prewhiten.clim == TRUE){
-    eval <- list(clim = clim, calib = calib, valid = valid, full = full, prewhiten.clim = prewhiten.clim, prewhiten.crn = prewhiten.crn,  cors_table = PCR_crns$cors_table, cors_table_small = PCR_crns$cors_table_small, select_crns = PCR_crns$select_crns, nests = PCR_crns$nests, clim_ar = clim_ar[[2]], crn_ar = PCR_crns$crn.ar, dir = dir)
+    clim_ar <- climate$clim_ar
+    eval <- list(clim = clim, calib = calib, valid = valid, full = full, prewhiten.clim = prewhiten.clim, prewhiten.crn = prewhiten.crn,  cors_table = PCR_crns$cors_table, cors_table_small = PCR_crns$cors_table_small, select_crns = PCR_crns$select_crns, nests = PCR_crns$nests, clim_ar = clim_ar, crn_ar = PCR_crns$crn.ar, dir = dir)
 
   } else {
-    eval <- list(calib = calib, valid = valid, full = full, prewhiten.clim = prewhiten.clim, prewhiten.crn = prewhiten.crn, clim = clim,  cors_table = PCR_crns$cors_table, cors_table_small = PCR_crns$cors_table_small, select_crns = PCR_crns$select_crns, nests = PCR_crns$nests, dir = dir)
+    eval <- list(clim = clim, calib = calib, valid = valid, full = full, prewhiten.clim = prewhiten.clim, prewhiten.crn = prewhiten.crn, cors_table = PCR_crns$cors_table, cors_table_small = PCR_crns$cors_table_small, select_crns = PCR_crns$select_crns, nests = PCR_crns$nests, dir = dir)
   }
 
   class(eval) <- "PCreg_data"

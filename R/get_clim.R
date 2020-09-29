@@ -8,7 +8,7 @@
 #' @return dataframe of monthly data
 #'
 #' @examples
-load_clim <- function(clim, mos, type = method, prewhiten.clim = TRUE, full = full) {
+load_clim <- function(clim, mos, method = "mean", prewhiten.clim = TRUE, full = full) {
   if (!(ncol(clim) %in% c(3,13))) {
     stop("Climate data must being in 13 column or long formats. See documentation for description")
   }  else {
@@ -24,6 +24,8 @@ load_clim <- function(clim, mos, type = method, prewhiten.clim = TRUE, full = fu
    if (ncol(clim) == 3) {
       names <- c("year", "month", "value")
    }
+
+      clim_small <- data.frame(cbind(year = clim$year, clim$value))
    if (!all(names == colnames(clim))) {
         stop("If climate dataframe is in long format, 3 columns must be named: year, month, value.")
       } else {
@@ -40,7 +42,7 @@ load_clim <- function(clim, mos, type = method, prewhiten.clim = TRUE, full = fu
 
 
   }
-  if (type == "individual") {
+  if (method == "individual") {
     clim_small <- tidyr::pivot_wider(clim_small, values = month)
     if (ncol(clim) > 2){
       stop("For individual month option, select only one month at a time")
@@ -48,7 +50,7 @@ load_clim <- function(clim, mos, type = method, prewhiten.clim = TRUE, full = fu
 
   }
 
-  if (type == "mean") {
+  if (method == "mean") {
     clim <- tidyr::pivot_wider(clim_small, names_from = month)
     values  <- clim %>%
      dplyr::select(-year)
@@ -59,7 +61,7 @@ load_clim <- function(clim, mos, type = method, prewhiten.clim = TRUE, full = fu
      #clim_small <- dplyr::filter(clim_small, year %in% full)
   }
 
-  if (type == "sum") {
+  if (method == "sum") {
     clim <- tidyr::pivot_wider(clim_small, names_from = month)
     values  <- clim %>%
      dplyr::select(-year)
@@ -77,12 +79,10 @@ load_clim <- function(clim, mos, type = method, prewhiten.clim = TRUE, full = fu
       values <- x.ar$clim_small...2.[[1]]
       ar <- x.ar$clim_small...2.[[2]]
 
-      clim_small <- data.frame(cbind(year = clim$year, values))
 
-
-      clim_return <- list(clim_small, ar)
+      clim_return <- list(clim_small = clim_small, clim_ar = ar, prewhiten.clim = prewhiten.clim)
     } else {
-    clim_return <- clim_small
+    clim_return <- list(clim_small = clim_small,  prewhiten.clim = prewhiten.clim)
   }
   return(clim_return)
 }
