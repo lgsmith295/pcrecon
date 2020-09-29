@@ -7,6 +7,7 @@
 filter_cor(
   crns,
   lead = 1,
+  lag = NULL,
   clim,
   cor.window,
   type = "pearson",

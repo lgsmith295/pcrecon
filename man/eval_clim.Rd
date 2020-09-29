@@ -7,6 +7,7 @@
 eval_clim(
   crns,
   lead = 1,
+  lag = NULL,
   prewhiten.crn = TRUE,
   climate,
   mos = 5:8,

@@ -4,16 +4,24 @@
 \alias{filter_foot}
 \title{Spatial Filtering of Points Based on Climate Footprint}
 \usage{
-filter_foot(data, footprint, r = 0.5, alpha = NULL)
+filter_foot(
+  x,
+  footprint,
+  r = 0.3,
+  cent.lat,
+  cent.lon,
+  radius = 500,
+  plot = TRUE
+)
 }
 \arguments{
-\item{data}{dataframe containing columns labeled ID, lat, and lon}
-
 \item{footprint}{Raster or SpatialPolygonDataFrame object}
 
 \item{r}{minimum correlation coefficient for spatial selection}
 
-\item{alpha}{alpha value , default null because you set this when making the footprint in KNMI}
+\item{plot}{}
+
+\item{data}{dataframe containing columns labeled ID, lat, and lon}
 }
 \value{
 character vector of chronology names that fall within the area where correlation >= r

@@ -4,16 +4,24 @@
 \alias{filter_rad}
 \title{Spatial Filtering of Points Based on Radius From a Point}
 \usage{
-filter_rad(data, cent_lat, cent_lon, radius = 150, climate = NULL)
+filter_rad(
+  x,
+  cent.lat,
+  cent.lon,
+  radius = 150,
+  climate = NULL,
+  plot = TRUE,
+  buff = 5
+)
 }
 \arguments{
-\item{data}{dataframe containing columns labeled ID, lat, and lon}
+\item{cent.lat}{latitude of center point}
 
-\item{cent_lat}{latitude of center point}
-
-\item{cent_lon}{longitude of center point}
+\item{cent.lon}{longitude of center point}
 
 \item{radius}{distance from center in km, default 150}
+
+\item{data}{dataframe containing columns labeled ID, lat, and lon}
 }
 \value{
 character vector of chronology names within the selected radius
@@ -23,6 +31,6 @@ Spatial Filtering of Points Based on Radius From a Point
 }
 \examples{
 # metadata returned from parse_json function, must be a dataframe or matrix containing columns lat, lon, and ID
-select_crns_rad <- filter_rad(data = metadata, cent_lat = 35.65, cent_lon = -105.32, radius = 150)
+select_crns_rad <- filter_rad(data = metadata, cent.lat = 35.65, cent.lon = -105.32, radius = 150)
 
 }
