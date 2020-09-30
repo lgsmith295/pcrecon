@@ -18,8 +18,8 @@ save_data <- function(data, out_fmt = out_fmt, out_dir = out_dir) {
     object <- data[[i]]
     name <- names(data)[i]
     switch(out_fmt,
-           csv = write.csv(object, file = paste0(dir, name, ".csv"), quote = FALSE, row.names = FALSE),
-           table = write.table(object, file = paste0(dir, name, ".txt")),
-           R = save(object, file = paste0(dir, name, ".rd")))
+           csv = write.csv(object, file = paste0(out_dir, name, ".csv"), quote = FALSE, row.names = FALSE),
+           table = write.table(object, file = paste0(out_dir, name, ".txt")),
+           R = save(object, file = paste0(out_dir, name, ".rd")))
   }
 }
