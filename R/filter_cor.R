@@ -4,19 +4,24 @@
 #' @param lead single value indicating the maximum number of years to shift chronology data forward. 0 indicates no lead, 2 will evaluate 0, 1, and 2 year leads, etc. Defaults to 1.
 #' @param lag
 #' @param clim dataframe, such as returned by the get_clim function, containing columns for year and either: individual months climate data (may be more than one), a sum of >1 months climate data, or the average of >1 months data
-#' @param window years to include in correlation analysis, calibration period in original PCreg software
-#' @param method type of correlation analysis, "pearson" or "spearman". Defaults to "pearson"
 #' @param alternative indicates the alternative hypothesiss and must be one of "two.sided", "greater", or "less".
 #' @param r minimum correlation coefficient needed to retain chronology. Defaults to 0.25.
 #' @param alpha minimum alpha value for rejection of null hypothesis. Defaults to 0.90
+#' @param cor_window
+#' @param type
+#' @param prewhiten_crn
+#' @param prewhiten_clim
+#' @param calib
+#' @param valid
+#' @param full
 #'
 #' @return
 #' @export
 #'
 #' @examples
-filter_cor <- function(crns, lead = 1, lag = NULL, clim, cor.window, type = "pearson", alternative = "two.sided", r = 0.25, alpha = 0.90, prewhiten.crn = TRUE, prewhiten.clim = TRUE, calib = calib, valid = valid, full = full){
+filter_cor <- function(crns, lead = 1, lag = NULL, clim, cor_window, type = "pearson", alternative = "two.sided", r = 0.25, alpha = 0.90, prewhiten_crn = TRUE, prewhiten_clim = TRUE, calib = calib, valid = valid, full = full){
 
-if(isTRUE(prewhiten.crn)){
+if(isTRUE(prewhiten_crn)){
     year <- crns$year
     x <- dplyr::select(crns, -year)
     ar <- apply(x, 2, ar_prewhiten, return = "resid")
@@ -24,7 +29,7 @@ if(isTRUE(prewhiten.crn)){
     ar_keep <- apply(x, 2, ar_prewhiten, return = "model")
 }
 
-  df <- window_filter(crns = crns, clim = clim, cor.window = cor.window, calib = calib, valid = valid, full = full)
+  df <- window_filter(crns = crns, clim = clim, cor_window = cor_window, calib = calib, valid = valid, full = full)
 
 
   leads <- c(0:lead)
@@ -79,8 +84,8 @@ if(isTRUE(prewhiten.crn)){
       dplyr::filter(year <= max(nests$endYR))
 
     list <- list(cors_table = cors_table, cors_table_small = cors_table_small, select_crns = select_crns, nests = nests)
-    if(isTRUE(prewhiten.clim)){
-    list <- list(cors_table = cors_table, cors_table_small = cors_table_small, select_crns = select_crns, nests = nests) #, crn.ar = ar_keep
+    if(isTRUE(prewhiten_clim)){
+    list <- list(cors_table = cors_table, cors_table_small = cors_table_small, select_crns = select_crns, nests = nests) #, crn_ar = ar_keep
     }
     class(list) <- "PCR_crns"
 
@@ -138,24 +143,24 @@ crns_table <- function(crns = crns, cors_table_small = cors_table_small) {
 #' Select windows for screening by correlation
 #'
 #' @param crns
-#' @param cor.window
+#' @param cor_window
 #' @param clim
 #'
 #' @return
 #'
 #' @examples
-window_filter <- function(crns, clim, cor.window, calib, valid, full){
+window_filter <- function(crns, clim, cor_window, calib, valid, full){
 
-  if(!(cor.window %in% c("calib", "valid", "full"))) {
-    stop("cor.window must be indicated as either valid, calib, or full")
+  if(!(cor_window %in% c("calib", "valid", "full"))) {
+    stop("cor_window must be indicated as either valid, calib, or full")
   }
 
-  crn_window <- switch(cor.window,
+  crn_window <- switch(cor_window,
                        calib = dplyr::filter(crns, year %in% calib),
                        valid = dplyr::filter(crns, year %in% valid),
                        full = dplyr::filter(crns, year %in% full))
 
-  clim_window <- switch(cor.window,
+  clim_window <- switch(cor_window,
                        calib = dplyr::filter(clim, year %in% calib),
                        valid = dplyr::filter(clim, year %in% valid),
                        full = dplyr::filter(clim, year %in% full))

@@ -2,15 +2,15 @@
 #'
 #' @param data list object from calc_PCs
 #' @param type eigenvalue1, firstm, cum.perc, mean, and all
-#' @param cum.perc
 #' @param m
+#' @param cum.perc
 #'
 #' @return
 #'
 #' @examples
-select_PCs <- function(data = PCA, type = select.pc, cum.perc = NULL, m = NULL ) {
+select_PCs <- function(data = PCA, type = select_pc, cum.perc = NULL, m = NULL ) {
   if(!type %in% c("eigenvalue1", "cum.perc", "mean")) {
-    stop("select.pc must be one of: eigenvalue1, cum.perc, or mean")
+    stop("select_pc must be one of: eigenvalue1, cum.perc, or mean")
   }
   #extract PC values
   PCs <- as.data.frame(data$PCA$x)

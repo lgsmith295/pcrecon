@@ -2,27 +2,29 @@
 #'
 #' @param data
 #' @param plot
-#' @param pc.calc
-#' @param select.pc
-#' @param cum.perc
 #' @param m
-#' @param scale.var
 #' @param weight
+#' @param pc_calc
+#' @param select_pc
+#' @param cum_perc
+#' @param scale_var
+#' @param out_fmt
+#' @param out_dir
 #'
 #' @return
 #' @export
 #'
 #' @examples
 #'
-pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc = NULL, m = NULL, scale.var = "calib", weight = NULL, plot = TRUE, out.fmt = "csv", out.dir = "PCregOutput/"){
+pcreg <- function(data, pc_calc = "calib", select_pc = "eigenvalue1", cum_perc = NULL, m = NULL, scale_var = "calib", weight = NULL, plot = TRUE, out_fmt = "csv", out_dir = "PCregOutput/"){
 
   if(class(data) != "PCreg_data"){ stop( "data must be object class PCreg_data, as is returned from the eval_clim function. See documentation for details")}
 
   calib <- data$calib
   valid <- data$valid
   full <- data$full
-  prewhiten.crn <- data$prewhiten.crn
-  prewhiten.clim <-data$prewhiten.clim
+  prewhiten_crn <- data$prewhiten_crn
+  prewhiten_clim <-data$prewhiten_clim
   dir <- data$dir
 
 
@@ -48,7 +50,7 @@ pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc =
     } # end hack
 
     ## make check for start year < end year
-    PCA <- calc_PCs(periods_df, PCA_chrons, pc.calc, nest_yrs, calib, full)
+    PCA <- calc_PCs(periods_df, PCA_chrons, pc_calc, nest_yrs, calib, full)
 
     if(i ==1){
     PCA_list <- list(PCA$PCA)
@@ -56,7 +58,7 @@ pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc =
     PCA_list[[i]] <- PCA$PCA
     }
 
-    select_PC <- select_PCs(data = PCA, type = select.pc, m = m, cum.perc = cum.perc)
+    select_PC <- select_PCs(data = PCA, type = select_pc, m = m, cum_perc = cum_perc)
 
     df <- mod_df(clim = clim, data = select_PC$PC_vals, eig = select_PC$eigval_small, nest_yrs = nest_yrs, calib = calib)
 
@@ -140,8 +142,8 @@ pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc =
 
     #### redden nest values
 
-    if(prewhiten.clim == TRUE){
-      recon_nest <- redden_recon(recon = recon_nest, ar.model = data$clim_ar)
+    if(prewhiten_clim == TRUE){
+      recon_nest <- redden_recon(recon = recon_nest, ar_model = data$clim_ar)
 }
 
     ################### SAVE - THIS IS HOW SCALING FOR NPW WORKS IN PCREG########## dunno why it's different for reddened recons... :/
@@ -181,14 +183,14 @@ pcreg <- function(data, pc.calc = "calib", select.pc = "eigenvalue1", cum.perc =
 
     recon_list <- list(clim = clim, recon = recon, validation_stats = val_stats_table, model_stats = model_table,                         calibration_stats = cal_stats_table, PCA = PCA_list, LM = LM_list)
 
-    if(isTRUE(prewhiten.clim)){recon_list <- list(clim = clim, recon = recon, validation_stats = val_stats_table,
+    if(isTRUE(prewhiten_clim)){recon_list <- list(clim = clim, recon = recon, validation_stats = val_stats_table,
                        model_stats = model_table, calibration_stats = cal_stats_table, clim_ar = data$clim_ar,                            crn_ar = data$crn_ar, PCA = PCA_list, LM = LM_list)}
 
   class(recon_list) <- "PCReg_recon"
 
-  if(!is.null(out.fmt)){
+  if(!is.null(out_fmt)){
     to_save <- list(reconstruction = recon_list$recon, model_statistics = cbind(recon_list$model_stats, recon_list$calibration_stats[ ,-c(1:3)]), validation_statistics = recon_list$validation_stats)
-    save_data(data = to_save, save.out, dir)
+    save_data(data = to_save, save_out, dir)
   }
 
   if(plot == TRUE){

@@ -4,33 +4,33 @@
 #' @param crns
 #' @param lead
 #' @param lag
-#' @param prewhiten.crn
 #' @param climate
 #' @param mos
 #' @param method
-#' @param prewhiten.clim
 #' @param calib
 #' @param valid
-#' @param cor.window
 #' @param type
 #' @param alternative
 #' @param r
+#' @param prewhiten_crn
+#' @param prewhiten_clim
+#' @param cor_window
+#' @param print
+#' @param out_fmt
+#' @param out_dir
 #' @param alpha
-#' @param out.print
-#' @param out.fmt
-#' @param out.dir
 #'
 #' @return
 #' @export
 #'
 #' @examples
-eval_clim <- function(crns, lead = 1, lag = NULL, prewhiten.crn = TRUE, climate, mos = 5:8, method = "mean", prewhiten.clim = TRUE, calib, valid, cor.window = "calib", type = "pearson", alternative = "two.sided", r = 0.25, alpha = 0.90, out.print = TRUE, out.fmt = "R", out.dir = "PCregOutput/") {
+eval_clim <- function(crns, lead = 1, lag = NULL, prewhiten_crn = TRUE, climate, mos = 5:8, method = "mean", calib, valid, cor_window = "calib", type = "pearson", alternative = "two.sided", r = 0.25, alpha = 0.90, print = TRUE, out_fmt = "R", out_dir = "PCregOutput/") {
 
   full <- min(c(valid, calib)): max(c(valid,calib))
 
   clim <- climate$clim_small
 
-  prewhiten.clim <- climate$prewhiten.clim
+  prewhiten_clim <- climate$prewhiten_clim
 
   df <- dplyr::full_join(crns, clim)
 
@@ -39,7 +39,7 @@ if(!all(full %in% clim$year)) {
   stop("There are years in the calibration and validation period that are not in your climate data")
 }
 
-  PCR_crns <- filter_cor(crns = crns, clim = clim, lead = lead, lag = lag, cor.window = cor.window, type = type, alternative = alternative, r = r, alpha = alpha, prewhiten.crn = prewhiten.crn, prewhiten.clim = prewhiten.clim, calib = calib, full = full, valid = valid)
+  PCR_crns <- filter_cor(crns = crns, clim = clim, lead = lead, lag = lag, cor_window = cor_window, type = type, alternative = alternative, r = r, alpha = alpha, prewhiten_crn = prewhiten_crn, prewhiten_clim = prewhiten_clim, calib = calib, full = full, valid = valid)
 
   cp_df <- dplyr::full_join(PCR_crns$select_crns, clim)
   common_period <- cp_df$year[complete.cases(cp_df)]
@@ -47,25 +47,25 @@ if(!all(full %in% clim$year)) {
 
   message(paste0("FYI: The full evaluation period (calibration and validation) you've designated is ", min(full) , " to ", max(full),". The common period between your climate and tree ring variables is: ", min(common_period), " to ", max(common_period)))
 
-  if(out.print == TRUE){
+  if(out_print == TRUE){
     print(PCR_crns$cors_table_small)
     print(PCR_crns$nests)
   }
 
 
-  if(prewhiten.clim == TRUE){
+  if(prewhiten_clim == TRUE){
     clim_ar <- climate$clim_ar
-    eval <- list(clim = clim, calib = calib, valid = valid, full = full, prewhiten.clim = prewhiten.clim, prewhiten.crn = prewhiten.crn,  cors_table = PCR_crns$cors_table, cors_table_small = PCR_crns$cors_table_small, select_crns = PCR_crns$select_crns, nests = PCR_crns$nests, clim_ar = clim_ar, crn_ar = PCR_crns$crn.ar, dir = dir)
+    eval <- list(clim = clim, calib = calib, valid = valid, full = full, prewhiten_clim = prewhiten_clim, prewhiten_crn = prewhiten_crn,  cors_table = PCR_crns$cors_table, cors_table_small = PCR_crns$cors_table_small, select_crns = PCR_crns$select_crns, nests = PCR_crns$nests, clim_ar = clim_ar, crn_ar = PCR_crns$crn_ar, dir = dir)
 
   } else {
-    eval <- list(clim = clim, calib = calib, valid = valid, full = full, prewhiten.clim = prewhiten.clim, prewhiten.crn = prewhiten.crn, cors_table = PCR_crns$cors_table, cors_table_small = PCR_crns$cors_table_small, select_crns = PCR_crns$select_crns, nests = PCR_crns$nests, dir = dir)
+    eval <- list(clim = clim, calib = calib, valid = valid, full = full, prewhiten_clim = prewhiten_clim, prewhiten_crn = prewhiten_crn, cors_table = PCR_crns$cors_table, cors_table_small = PCR_crns$cors_table_small, select_crns = PCR_crns$select_crns, nests = PCR_crns$nests, dir = dir)
   }
 
   class(eval) <- "PCreg_data"
 
-  if(!is.null(out.fmt)){
+  if(!is.null(out_fmt)){
 to_save <- list(clim = clim, cors_table = PCR_crns$cors_table, cors_table_small = PCR_crns$cors_table_small, select_crns = PCR_crns$select_crns, nests = PCR_crns$nests)
-save_data(data = to_save, out.fmt, dir)
+save_data(data = to_save, out_fmt, dir)
   }
     return(eval)
 }

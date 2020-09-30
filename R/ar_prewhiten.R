@@ -1,8 +1,8 @@
 #' Autoregressive Prewhitening
 #'
-#' @param x
-#' @param model
+#' @param x univariate or multivariate time series
 #' @param ...
+#' @param return character string, determines whether to return model residuals ("resid"), the ar model ("model"), or both ("both")
 #'
 #' @details Function modified from ar.prewhiten in the dplR package
 #'

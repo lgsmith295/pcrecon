@@ -1,15 +1,16 @@
 #' Get months of interest for climate analysis, sum or average them
 #'
-#' @param climate dataframe or matrix in either 13 column (where there is a column for year and for each month) or long (where there are columns for year, month, and value) formats.
+#' @param clim
+#' @param method
+#' @param prewhiten_clim
+#' @param full
 #' @param mos months of interest
-#' @param type output either individual months, sums of months, or means. "individual", "sum", or "mean"
-#'
 #'
 #' @return dataframe of monthly data
 #' @export
 #'
 #' @examples
-load_clim <- function(clim, mos, method = "mean", prewhiten.clim = TRUE, full = full) {
+load_clim <- function(clim, mos, method = "mean", prewhiten_clim = TRUE, full = full) {
   if (!(ncol(clim) %in% c(3,13))) {
     stop("Climate data must being in 13 column or long formats. See documentation for description")
   }  else {
@@ -72,7 +73,7 @@ load_clim <- function(clim, mos, method = "mean", prewhiten.clim = TRUE, full = 
     clim_small <- data.frame(cbind(year = clim$year, values = values))
     #clim_small <- dplyr::filter(clim_small, year %in% full)
 }
-    if (isTRUE(prewhiten.clim)){
+    if (isTRUE(prewhiten_clim)){
 
       x <- data.frame(clim_small[ , 2])
       x.ar <- apply(x, 2, ar_prewhiten, return = "both")
@@ -81,9 +82,9 @@ load_clim <- function(clim, mos, method = "mean", prewhiten.clim = TRUE, full = 
       ar <- x.ar$clim_small...2.[[2]]
 
 
-      clim_return <- list(clim_small = clim_small, clim_ar = ar, prewhiten.clim = prewhiten.clim)
+      clim_return <- list(clim_small = clim_small, clim_ar = ar, prewhiten_clim = prewhiten_clim)
     } else {
-    clim_return <- list(clim_small = clim_small,  prewhiten.clim = prewhiten.clim)
+    clim_return <- list(clim_small = clim_small,  prewhiten_clim = prewhiten_clim)
   }
   return(clim_return)
 }

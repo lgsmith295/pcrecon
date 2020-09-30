@@ -2,13 +2,14 @@
 #'
 #' @param x
 #' @param y
-#' @param scale.var
 #' @param calib
+#' @param scale_var
+#' @param step_mod
 #'
 #' @return
 #'
 #' @examples
-scale_var <- function(x = recon_nest, y = clim_full, scale.var = scale.var, calib, step_mod) {
+scale_var <- function(x = recon_nest, y = clim_full, scale_var = scale_var, calib, step_mod) {
   if(isTRUE(length(step_mod$coefficients) == 1)) {
     scale_fit <- x$fit
   } else {
@@ -17,7 +18,7 @@ scale_var <- function(x = recon_nest, y = clim_full, scale.var = scale.var, cali
   mn <- mean(x$fit)
   sd_recon <- sd(x$fit)
 
-  sd_clim <- switch(scale.var,
+  sd_clim <- switch(scale_var,
          calib = sd(clim_calib$values),
          full = sd(y$values))
 
