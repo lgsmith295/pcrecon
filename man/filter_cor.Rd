@@ -9,13 +9,13 @@ filter_cor(
   lead = 1,
   lag = NULL,
   clim,
-  cor.window,
+  cor_window,
   type = "pearson",
   alternative = "two.sided",
   r = 0.25,
   alpha = 0.9,
-  prewhiten.crn = TRUE,
-  prewhiten.clim = TRUE,
+  prewhiten_crn = TRUE,
+  prewhiten_clim = TRUE,
   calib = calib,
   valid = valid,
   full = full
@@ -34,9 +34,7 @@ filter_cor(
 
 \item{alpha}{minimum alpha value for rejection of null hypothesis. Defaults to 0.90}
 
-\item{window}{years to include in correlation analysis, calibration period in original PCreg software}
-
-\item{method}{type of correlation analysis, "pearson" or "spearman". Defaults to "pearson"}
+\item{full}{}
 }
 \value{
 

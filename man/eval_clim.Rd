@@ -8,25 +8,24 @@ eval_clim(
   crns,
   lead = 1,
   lag = NULL,
-  prewhiten.crn = TRUE,
+  prewhiten_crn = TRUE,
   climate,
   mos = 5:8,
   method = "mean",
-  prewhiten.clim = TRUE,
   calib,
   valid,
-  cor.window = "calib",
+  cor_window = "calib",
   type = "pearson",
   alternative = "two.sided",
   r = 0.25,
   alpha = 0.9,
-  print.out = TRUE,
-  save.out = "R",
-  dir = "PCregOutput/"
+  print = TRUE,
+  out_fmt = "R",
+  out_dir = "PCregOutput/"
 )
 }
 \arguments{
-\item{dir}{}
+\item{alpha}{}
 }
 \value{
 

@@ -4,14 +4,14 @@
 \alias{select_PCs}
 \title{select PCs}
 \usage{
-select_PCs(data = PCA, type = select.pc, cum.perc = NULL, m = NULL)
+select_PCs(data = PCA, type = select_pc, cum_perc = NULL, m = NULL)
 }
 \arguments{
 \item{data}{list object from calc_PCs}
 
 \item{type}{eigenvalue1, firstm, cum.perc, mean, and all}
 
-\item{m}{}
+\item{cum.perc}{}
 }
 \value{
 

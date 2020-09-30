@@ -4,7 +4,7 @@
 \alias{radius}
 \title{Radius Polygon Around Point}
 \usage{
-radius(cent.lat, cent.lon, radius)
+radius(cent_lat, cent_lon, radius)
 }
 \arguments{
 \item{radius}{}

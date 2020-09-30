@@ -8,8 +8,8 @@ filter_foot(
   x,
   footprint,
   r = 0.3,
-  cent.lat,
-  cent.lon,
+  cent_lat,
+  cent_lon,
   radius = 500,
   plot = TRUE
 )
@@ -19,9 +19,7 @@ filter_foot(
 
 \item{r}{minimum correlation coefficient for spatial selection}
 
-\item{plot}{}
-
-\item{data}{dataframe containing columns labeled ID, lat, and lon}
+\item{radius}{}
 }
 \value{
 character vector of chronology names that fall within the area where correlation >= r

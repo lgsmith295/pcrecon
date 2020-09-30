@@ -7,7 +7,9 @@
 ar_prewhiten(x, return = "both", ...)
 }
 \arguments{
-\item{...}{}
+\item{x}{univariate or multivariate time series}
+
+\item{return}{character string, determines whether to return model residuals ("resid"), the ar model ("model"), or both ("both")}
 }
 \value{
 

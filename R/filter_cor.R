@@ -24,7 +24,7 @@ filter_cor <- function(crns, lead = 1, lag = NULL, clim, cor_window, type = "pea
 if(isTRUE(prewhiten_crn)){
     year <- crns$year
     x <- dplyr::select(crns, -year)
-    ar <- apply(x, 2, ar_prewhiten, return = "resid")
+    ar <- apply(x, 2, ar_prewhiten, return = "est")
     crns <- data.frame(cbind(year, ar))
     ar_keep <- apply(x, 2, ar_prewhiten, return = "model")
 }

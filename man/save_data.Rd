@@ -4,14 +4,10 @@
 \alias{save_data}
 \title{Save data from PCreg objects}
 \usage{
-save_data(data, save.out = "R", dir)
+save_data(data, out_fmt = out_fmt, out_dir = out_dir)
 }
 \arguments{
 \item{data}{list containing objects to sabe}
-
-\item{save.out}{how to save the object: comma- delimited, text, or R data. Must be one of "csv", "table", or "R".}
-
-\item{dir}{directory}
 }
 \value{
 

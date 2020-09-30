@@ -13,6 +13,9 @@
 #' @return
 #'
 #' @examples
+#'
+#'
+#'
 calc_PCs <- function(period_df, PCA_chrons, pc_calc, nest_yrs, calib, full, valid) {
   nest <- PCA_chrons %>%
     dplyr::filter(PCA_chrons$year %in% nest_yrs) %>%

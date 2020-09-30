@@ -1,4 +1,4 @@
-Package: pcreg
+Package: pcrecon
 Type: Package
 Title: Principal Component Regression for Dendroclimatology
 Version: 0.1.0

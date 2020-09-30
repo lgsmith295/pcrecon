@@ -7,19 +7,18 @@
 \usage{
 pcreg(
   data,
-  pc.calc = "calib",
-  select.pc = "eigenvalue1",
-  cum.perc = NULL,
+  pc_calc = "calib",
+  select_pc = "eigenvalue1",
+  cum_perc = NULL,
   m = NULL,
-  scale.var = "calib",
+  scale_var = "calib",
   weight = NULL,
   plot = TRUE,
-  save.out = "csv",
-  dir = "PCregOutput/"
+  out_fmt = "csv"
 )
 }
 \arguments{
-\item{weight}{}
+\item{out_fmt}{}
 }
 \value{
 

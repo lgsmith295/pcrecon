@@ -4,14 +4,22 @@
 \alias{calc_PCs}
 \title{calculate PCs}
 \usage{
-calc_PCs(periods_df, PCA_chrons, pc.calc, nest_yrs, calib, full)
+calc_PCs(period_df, PCA_chrons, pc_calc, nest_yrs, calib, full, valid)
 }
 \arguments{
-\item{periods_df}{dataframe of nests}
+\item{period_df}{}
 
 \item{PCA_chrons}{dataframe containing chronologies}
 
-\item{period}{period of time over which to calculate PCs, calibration or nest_yrs}
+\item{pc_calc}{period over which to calculate principal components ("calib", "valid", or "full")}
+
+\item{nest_yrs}{years of the current nest being analyzed}
+
+\item{calib}{calibration period years}
+
+\item{full}{calibration and validation period}
+
+\item{valid}{validation period years}
 }
 \value{
 

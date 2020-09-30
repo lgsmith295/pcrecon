@@ -7,13 +7,13 @@
 scale_var(
   x = recon_nest,
   y = clim_full,
-  scale.var = scale.var,
+  scale_var = scale_var,
   calib,
   step_mod
 )
 }
 \arguments{
-\item{calib}{}
+\item{step_mod}{}
 }
 \value{
 

@@ -4,7 +4,7 @@
 \alias{window_filter}
 \title{Select windows for screening by correlation}
 \usage{
-window_filter(crns, clim, cor.window, calib, valid, full)
+window_filter(crns, clim, cor_window, calib, valid, full)
 }
 \arguments{
 \item{clim}{}
