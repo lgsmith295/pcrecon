@@ -8,7 +8,7 @@
 #' @return
 #'
 #' @examples
-select_PCs <- function(data = PCA, type = select_pc, cum.perc = NULL, m = NULL ) {
+select_PCs <- function(data = PCA, type = select_pc, cum_perc = NULL, m = NULL ) {
   if(!type %in% c("eigenvalue1", "cum.perc", "mean")) {
     stop("select_pc must be one of: eigenvalue1, cum.perc, or mean")
   }
