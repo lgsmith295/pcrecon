@@ -27,3 +27,8 @@ calc_PCs(period_df, PCA_chrons, pc_calc, nest_yrs, calib, full, valid)
 \description{
 calculate PCs
 }
+\examples{
+
+
+
+}
