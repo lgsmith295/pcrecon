@@ -47,7 +47,7 @@ if(!all(full %in% clim$year)) {
 
   message(paste0("FYI: The full evaluation period (calibration and validation) you've designated is ", min(full) , " to ", max(full),". The common period between your climate and tree ring variables is: ", min(common_period), " to ", max(common_period)))
 
-  if(out_print == TRUE){
+  if(print == TRUE){
     print(PCR_crns$cors_table_small)
     print(PCR_crns$nests)
   }
