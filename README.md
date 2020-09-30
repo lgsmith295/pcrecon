@@ -60,7 +60,7 @@ See the [DESCRIPTION](DESCRIPTION) and [LICENSE](LICENSE) files.
 ## Reporting Issues
 
 Please report bugs to Github Issues
-<https://github.com/lgsmith295/pcreg/issues>. Search existing issues
+<https://github.com/lgsmith295/pcrecon/issues>. Search existing issues
 before reporting to see if it’s already been reported and to check on
 the current status. If reporting a new issue add the “bug” label. Try to
 describe the problem in detail and include your OS and R
