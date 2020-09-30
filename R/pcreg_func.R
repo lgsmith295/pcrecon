@@ -9,14 +9,13 @@
 #' @param cum_perc
 #' @param scale_var
 #' @param out_fmt
-#' @param out_dir
 #'
 #' @return
 #' @export
 #'
 #' @examples
 #'
-pcreg <- function(data, pc_calc = "calib", select_pc = "eigenvalue1", cum_perc = NULL, m = NULL, scale_var = "calib", weight = NULL, plot = TRUE, out_fmt = "csv", out_dir = "PCregOutput/"){
+pcreg <- function(data, pc_calc = "calib", select_pc = "eigenvalue1", cum_perc = NULL, m = NULL, scale_var = "calib", weight = NULL, plot = TRUE, out_fmt = "csv"){
 
   if(class(data) != "PCreg_data"){ stop( "data must be object class PCreg_data, as is returned from the eval_clim function. See documentation for details")}
 
@@ -25,7 +24,7 @@ pcreg <- function(data, pc_calc = "calib", select_pc = "eigenvalue1", cum_perc =
   full <- data$full
   prewhiten_crn <- data$prewhiten_crn
   prewhiten_clim <-data$prewhiten_clim
-  dir <- data$dir
+  out_dir <- data$out_dir
 
 
   periods_df <- data$nests
@@ -190,7 +189,7 @@ pcreg <- function(data, pc_calc = "calib", select_pc = "eigenvalue1", cum_perc =
 
   if(!is.null(out_fmt)){
     to_save <- list(reconstruction = recon_list$recon, model_statistics = cbind(recon_list$model_stats, recon_list$calibration_stats[ ,-c(1:3)]), validation_statistics = recon_list$validation_stats)
-    save_data(data = to_save, save_out, dir)
+    save_data(data = to_save, out_fmt, out_dir)
   }
 
   if(plot == TRUE){

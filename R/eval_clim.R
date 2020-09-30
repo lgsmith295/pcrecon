@@ -55,10 +55,10 @@ if(!all(full %in% clim$year)) {
 
   if(prewhiten_clim == TRUE){
     clim_ar <- climate$clim_ar
-    eval <- list(clim = clim, calib = calib, valid = valid, full = full, prewhiten_clim = prewhiten_clim, prewhiten_crn = prewhiten_crn,  cors_table = PCR_crns$cors_table, cors_table_small = PCR_crns$cors_table_small, select_crns = PCR_crns$select_crns, nests = PCR_crns$nests, clim_ar = clim_ar, crn_ar = PCR_crns$crn_ar, dir = dir)
+    eval <- list(clim = clim, calib = calib, valid = valid, full = full, prewhiten_clim = prewhiten_clim, prewhiten_crn = prewhiten_crn,  cors_table = PCR_crns$cors_table, cors_table_small = PCR_crns$cors_table_small, select_crns = PCR_crns$select_crns, nests = PCR_crns$nests, clim_ar = clim_ar, crn_ar = PCR_crns$crn_ar, out_dir = out_dir)
 
   } else {
-    eval <- list(clim = clim, calib = calib, valid = valid, full = full, prewhiten_clim = prewhiten_clim, prewhiten_crn = prewhiten_crn, cors_table = PCR_crns$cors_table, cors_table_small = PCR_crns$cors_table_small, select_crns = PCR_crns$select_crns, nests = PCR_crns$nests, dir = out_dir)
+    eval <- list(clim = clim, calib = calib, valid = valid, full = full, prewhiten_clim = prewhiten_clim, prewhiten_crn = prewhiten_crn, cors_table = PCR_crns$cors_table, cors_table_small = PCR_crns$cors_table_small, select_crns = PCR_crns$select_crns, nests = PCR_crns$nests, out_dir = out_dir)
   }
 
   class(eval) <- "PCreg_data"
