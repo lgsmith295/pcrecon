@@ -45,7 +45,7 @@ if(!all(full %in% clim$year)) {
   common_period <- cp_df$year[complete.cases(cp_df)]
 
 
-  message(paste0("FYI: The full evaluation period (calibration and validation) you've designated is ", min(full) , " to ", max(full),". The common period between your climate and tree ring variables is: ", min(common_period), " to ", max(common_period)))
+  message(paste0("The full evaluation period (calibration and validation) you've designated is ", min(full) , " to ", max(full),". The common period between your climate and tree ring variables is: ", min(common_period), " to ", max(common_period)))
 
   if(print == TRUE){
     print(PCR_crns$cors_table_small)
@@ -58,14 +58,14 @@ if(!all(full %in% clim$year)) {
     eval <- list(clim = clim, calib = calib, valid = valid, full = full, prewhiten_clim = prewhiten_clim, prewhiten_crn = prewhiten_crn,  cors_table = PCR_crns$cors_table, cors_table_small = PCR_crns$cors_table_small, select_crns = PCR_crns$select_crns, nests = PCR_crns$nests, clim_ar = clim_ar, crn_ar = PCR_crns$crn_ar, dir = dir)
 
   } else {
-    eval <- list(clim = clim, calib = calib, valid = valid, full = full, prewhiten_clim = prewhiten_clim, prewhiten_crn = prewhiten_crn, cors_table = PCR_crns$cors_table, cors_table_small = PCR_crns$cors_table_small, select_crns = PCR_crns$select_crns, nests = PCR_crns$nests, dir = dir)
+    eval <- list(clim = clim, calib = calib, valid = valid, full = full, prewhiten_clim = prewhiten_clim, prewhiten_crn = prewhiten_crn, cors_table = PCR_crns$cors_table, cors_table_small = PCR_crns$cors_table_small, select_crns = PCR_crns$select_crns, nests = PCR_crns$nests, dir = out_dir)
   }
 
   class(eval) <- "PCreg_data"
 
   if(!is.null(out_fmt)){
 to_save <- list(clim = clim, cors_table = PCR_crns$cors_table, cors_table_small = PCR_crns$cors_table_small, select_crns = PCR_crns$select_crns, nests = PCR_crns$nests)
-save_data(data = to_save, out_fmt, dir)
+save_data(data = to_save, out_fmt, out_dir)
   }
     return(eval)
 }
