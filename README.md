@@ -1,23 +1,23 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# pcreg: Principal Component Regression for tree ring data
+# pcrecon: Principal Component Regression for tree ring data
 
 ## Motivation
 
 ## How to Cite
 
     #> 
-    #> To cite package 'pcreg' in publications use:
+    #> To cite package 'pcrecon' in publications use:
     #> 
-    #>   Laura Hocking-Smith, Daniel Hocking and Nicholas Nagle (2020). pcreg:
+    #>   Laura Hocking-Smith, Daniel Hocking and Nicholas Nagle (2020). pcrgecon
     #>   Princpal Component Regression for Dendroclimatology. R package
     #>   version 0.1.0.
     #> 
     #> A BibTeX entry for LaTeX users is
     #> 
     #>   @Manual{,
-    #>     title = {pcreg: Princpal Component Regression for Dendroclimatology},
+    #>     title = {pcrecon: Princpal Component Regression for Dendroclimatology},
     #>     author = {Laura Hocking-Smith and Daniel Hocking and Nicholas Nagle},
     #>     year = {2020},
     #>     note = {R package version 0.1.0},
@@ -35,7 +35,7 @@ install packages from online sources besides CRAN.
 ``` r
 # install.packages("remotes")
 library(remotes)
-remotes::install_github("lgsmith295/pcreg", build_vignettes = TRUE)
+remotes::install_github("lgsmith295/pcrecon", build_vignettes = TRUE)
 ```
 
 ## Versioning
