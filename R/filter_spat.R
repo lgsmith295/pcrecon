@@ -47,8 +47,8 @@ filter_rad <- function(x, cent_lat, cent_lon, radius = 150, climate = NULL, plot
   if(length(select_crns) == 0) warning("No chronologies found within this radius")
 
   if(isTRUE(plot)){
-    load(system.file("data/world_map.rds", package = "pcreg", mustWork = TRUE))
-    load(system.file("data/us_map.rds", package = "pcreg", mustWork = TRUE))
+    load(system.file("data/world_map.rds", package = "pcrecon", mustWork = TRUE))
+    load(system.file("data/us_map.rds", package = "pcrecon", mustWork = TRUE))
     bbox <- sf::st_bbox(stores)
     print(ggplot() +
       geom_sf(data = world, color = "#2b2b2b", fill = "white", size=0.125) +
