@@ -65,7 +65,8 @@ if(!all(full %in% clim$year)) {
 
   if(!is.null(out_fmt)){
 to_save <- list(clim = clim, cors_table = PCR_crns$cors_table, cors_table_small = PCR_crns$cors_table_small, select_crns = PCR_crns$select_crns, nests = PCR_crns$nests)
-save_data(data = to_save, out_fmt, out_dir)
+data <- to_save
+save_data(data, out_fmt, out_dir)
   }
     return(eval)
 }
