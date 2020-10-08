@@ -33,10 +33,7 @@ load_clim <- function(clim, mos, method = "mean", prewhiten_clim = TRUE, full = 
       } else {
         as.character(mos)
 
-        clim_prev <- data.frame(year = clim$year, month = as.numeric(clim$month) *-1, value = lag(clim$value, 12))
-
-        clim <- rbind(clim, clim_prev)
-        clim <- dplyr::arrange(clim, year)
+###### FIX PREVIOUS YEARS CLIMATE
 
         clim_small <- clim[which(clim$month %in% mos), ]
 

@@ -44,7 +44,7 @@
 #'
 #' @examples
 #' df <- load_crns(dir = system.file("extdata/crns",
-#' package = "pcreg"),
+#' package = "pcrecon"),
 #' crns = c("nm014", "nm537", "nm545", "nm576"),
 #'  type_crn = "S",
 #'  type_measure = "R")
