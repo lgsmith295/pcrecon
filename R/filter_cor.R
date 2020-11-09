@@ -19,14 +19,24 @@
 #' @export
 #'
 #' @examples
-filter_cor <- function(crns, lead = 1, lag = NULL, clim, cor_window, type = "pearson", alternative = "two.sided", r = 0.25, alpha = 0.90, prewhiten_crn = TRUE, prewhiten_clim = TRUE, calib = calib, valid = valid, full = full){
+filter_cor <- function(crns, lead = 1, lag = NULL, clim, cor_window, type = "pearson", alternative = "two.sided", r = 0.25, alpha = 0.90, prewhiten_crn = TRUE, prewhiten_clim = TRUE, calib = calib, valid = valid, full = full, pr_years = NULL){
 
 if(isTRUE(prewhiten_crn)){
+  if(isTRUE(is.null(pr_years))){
     year <- crns$year
     x <- dplyr::select(crns, -year)
     ar <- apply(x, 2, ar_prewhiten, return = "est")
     crns <- data.frame(cbind(year, ar))
     ar_keep <- apply(x, 2, ar_prewhiten, return = "model")
+  } else {
+    ### ADD CHECK FOR INTEGER VECTOR
+    year <- crns$year
+    x <- crns %>% dplyr::filter(year %in% pr_years) %>% dplyr::select(-year)
+    ar <- apply(x, 2, ar_prewhiten, return = "est")
+    crns <- data.frame(cbind(year, ar))
+    ar_keep <- apply(x, 2, ar_prewhiten, return = "model")
+  }
+
 }
 
   df <- window_filter(crns = crns, clim = clim, cor_window = cor_window, calib = calib, valid = valid, full = full)
