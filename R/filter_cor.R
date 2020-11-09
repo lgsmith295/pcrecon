@@ -30,7 +30,7 @@ if(isTRUE(prewhiten_crn)){
     ar_keep <- apply(x, 2, ar_prewhiten, return = "model")
   } else {
     ### ADD CHECK FOR INTEGER VECTOR
-    year <- crns$year
+    year <- crns %>% dplyr::filter(year %in% pr_years) %>% dplyr::select(year)
     x <- crns %>% dplyr::filter(year %in% pr_years) %>% dplyr::select(-year)
     ar <- apply(x, 2, ar_prewhiten, return = "est")
     crns <- data.frame(cbind(year, ar))

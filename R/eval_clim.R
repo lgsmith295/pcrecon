@@ -18,13 +18,13 @@
 #' @param print
 #' @param out_fmt
 #' @param out_dir
-#' @param alpha
+#' @param conf
 #'
 #' @return
 #' @export
 #'
 #' @examples
-eval_clim <- function(crns, lead = 1, lag = NULL, prewhiten_crn = TRUE, climate, mos = 5:8, method = "mean", calib, valid, cor_window = "calib", type = "pearson", alternative = "two.sided", r = 0.25, alpha = 0.90, print = TRUE, out_fmt = "R", out_dir = "PCregOutput/", pr_years = NULL) {
+eval_clim <- function(crns, lead = 1, lag = NULL, prewhiten_crn = TRUE, climate, mos = 5:8, method = "mean", calib, valid, cor_window = "calib", type = "pearson", alternative = "two.sided", r = 0.25, conf = 0.90, print = TRUE, out_fmt = "R", out_dir = "PCregOutput/", pr_years = NULL) {
 
   full <- min(c(valid, calib)): max(c(valid,calib))
 
@@ -39,7 +39,7 @@ if(!all(full %in% clim$year)) {
   stop("There are years in the calibration and validation period that are not in your climate data")
 }
 
-  PCR_crns <- filter_cor(crns = crns, clim = clim, lead = lead, lag = lag, cor_window = cor_window, type = type, alternative = alternative, r = r, alpha = alpha, prewhiten_crn = prewhiten_crn, prewhiten_clim = prewhiten_clim, calib = calib, full = full, valid = valid, pr_years = pr_years)
+  PCR_crns <- filter_cor(crns = crns, clim = clim, lead = lead, lag = lag, cor_window = cor_window, type = type, alternative = alternative, r = r, conf = conf, prewhiten_crn = prewhiten_crn, prewhiten_clim = prewhiten_clim, calib = calib, full = full, valid = valid, pr_years = pr_years)
 
   cp_df <- dplyr::full_join(PCR_crns$select_crns, clim)
   common_period <- cp_df$year[complete.cases(cp_df)]
