@@ -39,7 +39,7 @@ if(!all(full %in% clim$year)) {
   stop("There are years in the calibration and validation period that are not in your climate data")
 }
 
-  PCR_crns <- filter_cor(crns = crns, clim = clim, lead = lead, lag = lag, cor_window = cor_window, type = type, alternative = alternative, r = r, alpha = alpha, prewhiten_crn = prewhiten_crn, prewhiten_clim = prewhiten_clim, calib = calib, full = full, valid = valid)
+  PCR_crns <- filter_cor(crns = crns, clim = clim, lead = lead, lag = lag, cor_window = cor_window, type = type, alternative = alternative, r = r, alpha = alpha, prewhiten_crn = prewhiten_crn, prewhiten_clim = prewhiten_clim, calib = calib, full = full, valid = valid, pr_years = pr_years)
 
   cp_df <- dplyr::full_join(PCR_crns$select_crns, clim)
   common_period <- cp_df$year[complete.cases(cp_df)]
