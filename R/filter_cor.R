@@ -6,7 +6,7 @@
 #' @param clim dataframe, such as returned by the get_clim function, containing columns for year and either: individual months climate data (may be more than one), a sum of >1 months climate data, or the average of >1 months data
 #' @param alternative indicates the alternative hypothesiss and must be one of "two.sided", "greater", or "less".
 #' @param r minimum correlation coefficient needed to retain chronology. Defaults to 0.25.
-#' @param alpha minimum alpha value for rejection of null hypothesis. Defaults to 0.90
+#' @param conf
 #' @param cor_window
 #' @param type
 #' @param prewhiten_crn
@@ -19,7 +19,7 @@
 #' @export
 #'
 #' @examples
-filter_cor <- function(crns, lead = 1, lag = NULL, clim, cor_window, type = "pearson", alternative = "two.sided", r = 0.25, alpha = 0.90, prewhiten_crn = TRUE, prewhiten_clim = TRUE, calib = calib, valid = valid, full = full, pr_years = NULL){
+filter_cor <- function(crns, lead = 1, lag = NULL, clim, cor_window, type = "pearson", alternative = "two.sided", r = 0.25, conf = 0.90, prewhiten_crn = TRUE, prewhiten_clim = TRUE, calib = calib, valid = valid, full = full, pr_years = NULL){
 
 if(isTRUE(prewhiten_crn)){
   if(isTRUE(is.null(pr_years))){
@@ -58,7 +58,7 @@ if(isTRUE(prewhiten_crn)){
     k <- k + 1
     crn <- as.vector(as.numeric(df$crn_window[ ,i]))
     clim<- as.vector(as.numeric(df$clim_window[ , ]))
-    cor <- cor.test( clim, dplyr::lead(crn, leads[j]), conf.level = alpha, type = type, alternative = alternative)
+    cor <- cor.test( clim, dplyr::lead(crn, leads[j]), conf.level = conf, type = type, alternative = alternative)
     cors_table[k, ] <- cbind(crn_names[i], leads[j], 0, cor$estimate, cor$p.value)
 }
  }
@@ -71,7 +71,7 @@ if(isTRUE(prewhiten_crn)){
        k <- k + 1
        crn <- as.vector(as.numeric(df$crn_window[ ,i]))
        clim<- as.vector(as.numeric(df$clim_window[ , ]))
-       cor <- cor.test( clim, dplyr::lag(crn, lags[j]), conf.level = alpha, type = type, alternative = alternative)
+       cor <- cor.test( clim, dplyr::lag(crn, lags[j]), conf.level = conf, type = type, alternative = alternative)
        newrow <- data.frame(cbind(chronology = crn_names[i], leads =  0, lags = lags[[j]], correlation = cor$estimate, p_value = cor$p.value))
        cors_table <- rbind(cors_table, newrow)
      }
@@ -82,7 +82,7 @@ if(isTRUE(prewhiten_crn)){
     class(cors_table$correlation) <- "numeric"
     class(cors_table$leads) <- "integer"
     cors_table_small <- dplyr::filter(cors_table, cors_table$correlation >= r ) %>%
-      dplyr::filter(p_value <= 1-alpha)
+      dplyr::filter(p_value <= 1-conf)
 
     select_crns <- crns_table(crns, cors_table_small)
 
