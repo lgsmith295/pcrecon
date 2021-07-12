@@ -31,6 +31,8 @@ load_clim <- function(clim, mos, method = "mean", prewhiten_clim = TRUE, full = 
    }
 
   }
+
+  clim_small <- clim[which(clim$month %in% mos), ]
   if (method == "individual") {
     clim_small <- tidyr::pivot_wider(clim_small, values = month)
     if (ncol(clim) > 2){
