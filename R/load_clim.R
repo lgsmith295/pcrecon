@@ -37,27 +37,27 @@ load_clim <- function(clim, mos, method = "mean", prewhiten_clim = TRUE, full = 
       stop("For individual month option, select only one month at a time")
     }
 
-  mos <- convert_mos(mos)
-  if(mos[1] < 0){
-    prev_year <- lag(clim$value, n = 12)
-
-    clim_prev <- cbind(clim[ ,1:2], prev_year) %>%
-      mutate(month_prev = month * -1) %>%
-      dplyr::select(-month)
-
-    clim_prev_small <- clim[which(clim$month %in% mos), ]
-    clim_curr_small <- clim[which(clim$month %in% mos), ]
-
-    clim_small <- full_join(clim_prev_small, clim_curr_small, by = year)
-
-
-  } else {
-
+# mos <- convert_mos(mos)
+#   if(mos[1] < 0){
+#     prev_year <- lag(clim$value, n = 12)
+#
+#     clim_prev <- cbind(clim[ ,1:2], prev_year) %>%
+#       mutate(month_prev = month * -1) %>%
+#       dplyr::select(-month)
+#
+#     clim_prev_small <- clim[which(clim$month %in% mos), ]
+#     clim_curr_small <- clim[which(clim$month %in% mos), ]
+#
+#     clim_small <- full_join(clim_prev_small, clim_curr_small, by = year)
+#
+#
+#   } else {
+#
   clim_small <- clim[which(clim$month %in% mos), ]
 
-    #clim_small <- data.frame(cbind(year = clim$year, clim$value))
+  clim_small <- data.frame(cbind(year = clim$year, clim$value))
 
-}
+# }
 
   }
 
