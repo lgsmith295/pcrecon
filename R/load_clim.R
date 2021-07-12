@@ -25,20 +25,10 @@ load_clim <- function(clim, mos, method = "mean", prewhiten_clim = TRUE, full = 
   }
    if (ncol(clim) == 3) {
       names <- c("year", "month", "value")
-   }
-
-      clim_small <- data.frame(cbind(year = clim$year, clim$value))
-   if (!all(names == colnames(clim))) {
+    if (!all(names == colnames(clim))) {
         stop("If climate dataframe is in long format, 3 columns must be named: year, month, value.")
-      } else {
-        as.character(mos)
-
-###### FIX PREVIOUS YEARS CLIMATE
-
-        clim_small <- clim[which(clim$month %in% mos), ]
-
-      }
-
+    }
+   }
 
   }
   if (method == "individual") {
@@ -46,6 +36,28 @@ load_clim <- function(clim, mos, method = "mean", prewhiten_clim = TRUE, full = 
     if (ncol(clim) > 2){
       stop("For individual month option, select only one month at a time")
     }
+
+  mos <- convert_mos(mos)
+  if(mos[1] < 0){
+    prev_year <- lag(clim$value, n = 12)
+
+    clim_prev <- cbind(clim[ ,1:2], prev_year) %>%
+      mutate(month_prev = month * -1) %>%
+      dplyr::select(-month)
+
+    clim_prev_small <- clim[which(clim$month %in% mos), ]
+    clim_curr_small <- clim[which(clim$month %in% mos), ]
+
+    clim_small <- full_join(clim_prev_small, clim_curr_small, by = year)
+
+
+  } else {
+
+  clim_small <- clim[which(clim$month %in% mos), ]
+
+    #clim_small <- data.frame(cbind(year = clim$year, clim$value))
+
+}
 
   }
 
@@ -86,4 +98,22 @@ load_clim <- function(clim, mos, method = "mean", prewhiten_clim = TRUE, full = 
   return(clim_return)
 }
 
+#' convert_mos
+#'
+#' @param mos
+#'
+#' @return
+#'
+#'
+#' @examples
+convert_mos <- function(mos) {
+  if(mos[1] < 0) {
+    prev <- sort(c(-12:mos[1]), decreasing = TRUE)
+    curr <- c(1:utils::tail(mos, n=1))
+    mos <- c(prev,curr)
+    return(mos)
+  } else {
+    return(mos)
 
+  }
+}

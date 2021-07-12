@@ -10,22 +10,21 @@ eval_clim(
   lag = NULL,
   prewhiten_crn = TRUE,
   climate,
-  mos = 5:8,
-  method = "mean",
   calib,
   valid,
   cor_window = "calib",
   type = "pearson",
   alternative = "two.sided",
   r = 0.25,
-  alpha = 0.9,
+  conf = 0.9,
   print = TRUE,
   out_fmt = "R",
-  out_dir = "PCregOutput/"
+  out_dir = "PCregOutput/",
+  pr_years = NULL
 )
 }
 \arguments{
-\item{alpha}{}
+\item{conf}{}
 }
 \value{
 

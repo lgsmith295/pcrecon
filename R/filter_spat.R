@@ -50,7 +50,7 @@ filter_rad <- function(x, cent_lat, cent_lon, radius = 150, climate = NULL, plot
     load(system.file("data/world_map.rds", package = "pcrecon", mustWork = TRUE))
     load(system.file("data/us_map.rds", package = "pcrecon", mustWork = TRUE))
     bbox <- sf::st_bbox(stores)
-    print(ggplot() +
+   plot <- (ggplot() +
       geom_sf(data = world, color = "#2b2b2b", fill = "white", size=0.125) +
       geom_sf(data = usa, color = "#2b2b2b", fill = "white", size=0.125) +
       coord_sf(crs = sf::st_crs("+proj=laea +lat_0=45 +lon_0=-100 +x_0=0 +y_0=0 +a=6370997 +b=6370997 +units=m +no_defs"), datum = NA) +
@@ -59,10 +59,14 @@ filter_rad <- function(x, cent_lat, cent_lon, radius = 150, climate = NULL, plot
       geom_point(aes(x = cent_lon, y = cent_lat), shape = 22, fill = "red") +
       labs(x = " ", y = " ") +
       coord_sf(xlim = c(bbox$xmin-buff, bbox$xmax+buff), ylim = c(bbox$ymin-buff, bbox$ymax+buff), expand = FALSE))
+   ret <- list(select_crns = select_crns, plot = plot)
+   class(ret) <- "spatial_filter"
+   return(ret)
 
-  }
+  } else {
 
   return (select_crns)
+  }
 }
 
 #' Spatial Filtering of Points Based on Climate Footprint
@@ -116,15 +120,18 @@ filter_foot <- function(x, footprint, r = 0.3, cent_lat, cent_lon, radius = 500,
 
   if(length(select_crns) == 0) warning("No chronologies found within this area")
   if(isTRUE(plot)){
-    print(ggplot() + geom_sf(data = footprint, aes(fill = correlation), color = NA) +
+    plot <- (ggplot() + geom_sf(data = footprint, aes(fill = correlation), color = NA) +
       scale_fill_gradientn(colours = viridisLite::viridis(3)) +
       geom_sf(data = contour, alpha = 0.05, color = "red") +
       geom_sf(data = select_poly, alpha = 0.05, color = "black") +
       geom_sf(data = tr_points, alpha = 0.3, size = 1) +
       geom_point(aes(x = cent_lon, y = cent_lat), shape = 21, fill = "blue", size = 1))
-  }
-
+    ret <- list(select_crns = select_crns, plot = plot)
+    class(ret) <- "spatial_filter"
+    return(ret)
+  } else {
   return(select_crns)
+  }
 
 }
 

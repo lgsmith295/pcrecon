@@ -145,13 +145,6 @@ pcreg <- function(data, pc_calc = "calib", select_pc = "eigenvalue1", cum_perc =
       recon_nest <- redden_recon(recon = recon_nest, ar_model = data$clim_ar)
 }
 
-    ################### SAVE - THIS IS HOW SCALING FOR NPW WORKS IN PCREG########## dunno why it's different for reddened recons... :/
-    # mn <- mean(calib_est$fit)
-    #
-    # sd_recon <- sd(calib_est$fit)
-    # sd_clim <- sd(obs_cal$values)
-    # recon_nest$fit <- mn + (recon_nest$fit - mn) * sd_clim/sd_recon
-
 
     #### filter recon to new nest years
 
@@ -195,11 +188,18 @@ pcreg <- function(data, pc_calc = "calib", select_pc = "eigenvalue1", cum_perc =
   if(plot == TRUE){
     df <- dplyr::full_join(recon_list$recon, data$clim)
 
-    print(ggplot2::ggplot(df) +
+  plot <- (ggplot2::ggplot(df) +
             ggplot2::geom_line(ggplot2::aes(y = fit, x = year, colour = "reconstructed")) +
             ggplot2::geom_line(ggplot2::aes(y = rollingmean(x = df$fit, 10), x = year, colour = "10 year rolling avg"),                                             size = 0.75) +
             ggplot2::geom_line(ggplot2::aes(y = values, x = year, colour = "observed"))) +
+            ggplot2::geom_hline(aes(yintercept = mean(values, na.rm = TRUE)), colour = "black", size = 0.75) +
       ggplot2::theme_bw()
+
+  recon_list <- list(clim = clim, recon = recon, validation_stats = val_stats_table, model_stats = model_table,                         calibration_stats = cal_stats_table, PCA = PCA_list, LM = LM_list, plot = plot)
+
+  if(isTRUE(prewhiten_clim)){recon_list <- list(clim = clim, recon = recon, validation_stats = val_stats_table, model_stats = model_table, calibration_stats = cal_stats_table, clim_ar = data$clim_ar,crn_ar = data$crn_ar, PCA = PCA_list, LM = LM_list, plot = plot)}
+
+
   }
 
   return(recon_list)

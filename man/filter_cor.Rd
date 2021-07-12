@@ -13,12 +13,13 @@ filter_cor(
   type = "pearson",
   alternative = "two.sided",
   r = 0.25,
-  alpha = 0.9,
+  conf = 0.9,
   prewhiten_crn = TRUE,
   prewhiten_clim = TRUE,
   calib = calib,
   valid = valid,
-  full = full
+  full = full,
+  pr_years = NULL
 )
 }
 \arguments{
@@ -31,8 +32,6 @@ filter_cor(
 \item{alternative}{indicates the alternative hypothesiss and must be one of "two.sided", "greater", or "less".}
 
 \item{r}{minimum correlation coefficient needed to retain chronology. Defaults to 0.25.}
-
-\item{alpha}{minimum alpha value for rejection of null hypothesis. Defaults to 0.90}
 
 \item{full}{}
 }

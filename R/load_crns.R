@@ -50,6 +50,10 @@
 #'  type_measure = "R")
 load_crns <- function(dir, crns, type_crn = "S", type_measure = "R", logfile = "read_crns.log") {
 
+  if(class(crns) == "spatial_filter") {
+    crns <- crns[[1]]
+    }
+
   if(!(type_crn %in% c("S", "A"))) stop("Chronology type must be specified as 'S' or 'A'.")
   if(!(type_measure %in% c("R", "E", "L", "T", "X"))) stop("Chronology type must be specified as 'E', 'L', 'T', or 'X'.")
   if(type_crn == "A" & type_measure != "R") stop("Chronology type must be Standard ('S') when using earlywood, latewood, or density measurements")

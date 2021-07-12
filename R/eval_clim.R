@@ -5,8 +5,6 @@
 #' @param lead
 #' @param lag
 #' @param climate
-#' @param mos
-#' @param method
 #' @param calib
 #' @param valid
 #' @param type
@@ -24,7 +22,7 @@
 #' @export
 #'
 #' @examples
-eval_clim <- function(crns, lead = 1, lag = NULL, prewhiten_crn = TRUE, climate, mos = 5:8, method = "mean", calib, valid, cor_window = "calib", type = "pearson", alternative = "two.sided", r = 0.25, conf = 0.90, print = TRUE, out_fmt = "R", out_dir = "PCregOutput/", pr_years = NULL) {
+eval_clim <- function(crns, lead = 1, lag = NULL, prewhiten_crn = TRUE, climate, calib, valid, cor_window = "calib", type = "pearson", alternative = "two.sided", r = 0.25, conf = 0.90, print = TRUE, out_fmt = "R", out_dir = "PCregOutput/", pr_years = NULL) {
 
   full <- min(c(valid, calib)): max(c(valid,calib))
 
