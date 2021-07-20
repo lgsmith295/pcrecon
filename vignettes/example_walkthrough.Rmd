@@ -11,14 +11,11 @@ output:
 
 
 
-
-
-
 ```{r}
 #install.packages("remotes")
-#remotes::install_github("lgsmith295/pcrecon", build_vignettes = FALSE)
+remotes::install_github("lgsmith295/pcrecon", build_vignettes = FALSE)
 library(remotes)
-library(pcreg)
+library(pcrecon)
 library(dplyr)
 library(ggplot2)
 ```
@@ -36,67 +33,100 @@ Tree ring data from ITRDB
 ![Bounding Box for retrieving ITRDB tree ring chronologies]("bb.png")
 
 
-The first helpful function if you've downloaded tree ring data from the ITRDB is parse_json(), which creates a table from JSON metadata files. You will need to indicate the directory location for the folder containing the .json metadata files using the dir = argument. When center = TRUE, the mean between the minimum/maximum elevation, northernmost/southernmost latitude, and easternmost/westernmost longitude is reported. The output for this function is a dataframe.
+If you've downloaded tree ring data from the ITRDB, parse_json() can be used to extract metadata to creates a table which includes location information, chronology length, species, elevation, and NOAA ID. You will need to indicate the directory location for the folder containing the .json files using the "dir" argument. When center = TRUE, the mean between the minimum/maximum elevation, northernmost/southernmost latitude, and easternmost/westernmost longitude is reported.
 
 ```{r}
-metadata_full <- parse_json(dir = system.file("extdata/metadata", package = "pcreg", mustWork = TRUE), center = TRUE)
 
-metadata_full
+
+metadata <- parse_json(dir = system.file("extdata/metadata", package = "pcrecon", mustWork = TRUE), center = TRUE)
+
+
 
 ```
 
-This allows you to do a bulk download of data, then filter based on variables you might care about for your study, such as species, elevation, chronology length, etc. We will filter these data to make sure that we don't include any datasets that end before 1970 to maximize our calibration/validation periods.
+This allows you to do a bulk download of data, then filter based on variables you might want to isolate for your study. We will filter these data to make sure that we don't include any datasets that end before 1970 to maximize our calibration/validation periods. You may want to select particular species or elevation. The location can be used in subsequent spatial filtering functions.
 
 ```{r}
-metadata <- metadata_full %>% dplyr::filter(mostRecentYearCE > 1970)
+metadata_sm <- metadata %>% dplyr::filter(mostRecentYearCE > 1970)
 
 ```
 
-There are two functions that will filter your chronology based on spatial location. The first filters chronologies based on a radius from a particular point. The inputs are the metadata file with lat/long, the lat/lon of the center point of the radius, and the radius you want to include in km. The output of this function is a list of chronology IDs that fall within that radius
+There are two functions that will filter your chronology based on spatial location. The first filters chronologies based on a radius from a point. The inputs are the metadata file with column names "lat", "lon", and "ID" (such as what's produced from the parse_json function), the lat/lon of the center point of the radius, and the radius you want to include in km. The output of this function is a list of chronology IDs that fall within that radius
 
-we will filter within a 75km radius of the streamgauge, and save the output as an object called select_crns_rad.
+we will filter within a 150km radius of the streamgauge, and save the output as an object called select_crns_rad.
 
 ```{r}
 
-select_crns_rad <- filter_rad(x = metadata, cent.lat = 35.65, cent.lon = -105.32, radius = 150, plot = TRUE)
+select_crns_rad <- filter_rad(x = metadata, cent_lat = 35.65, cent_lon = -105.32, radius = 150, plot = TRUE)
+
+print(select_crns_rad$plot)
 
 ```
 
 
-The other option for spatial filtering is by using a climate footprint (cite harley, s. maxwell, j. maxwell). This requires a climate footprint spatial data file, in most cases this of correlation between streamflow and some metric of precipitation or soil moisture. 
+Another option for spatial filtering is with a climate footprint (cite harley, s. maxwell, j. maxwell). This requires a spatial data file, in most cases this of correlation between streamflow and some metric of precipitation or soil moisture. 
 
-This example uses a .nc file created in the KNMI climate explorer, https://climexp.knmi.nl/start.cgi. This file can be loaded in using the raster package
+This example uses a .nc file created in the KNMI climate explorer (https://climexp.knmi.nl/start.cgi) of the correlation between PRISM 4km gridcell precipitation and Gallinas Creek streamflow. This file type can be loaded in using the raster package.
 
 ```{r}
-footprint <- raster::raster(system.file("extdata/gallinas_cf.nc", package = "pcreg", mustWork = TRUE))
+footprint <- raster::raster(system.file("extdata/gallinas_cf.nc", package = "pcrecon", mustWork = TRUE))
+
+raster::plot(footprint)
   
 
 ```
 
 select_crns_fp() filters the tree ring chronologies based on the location within the footprint.
 
-In this example, we select chronologies that are in an area where correlation between streamflow and precipitation is 0.5 or higher (r = 0.5) -* for the sake of keeping things small *
+We select chronologies that are in an area where correlation between streamflow and precipitation is 0.5 or higher (r = 0.5). This is a lower threshold than is typically used for the purpose of keeping the dataset small.
+
+*This is the functin that wasn't working correctly on Stockton's machine. There should not be gridcells within the red and black polygons*
 
 
 ```{r}
-select_crns_fp <- filter_foot(x = metadata_full, footprint = footprint, r = 0.5, cent.lat = 35.65, cent.lon = -105.32, radius = 150, plot = TRUE)
+select_crns_fp <- filter_foot(x = metadata, footprint = footprint, r = 0.5, cent_lat = 35.65, cent_lon = -105.32, radius = 150, plot = TRUE)
 
 ```
 
-The load_crns function pulls the chronologies that are selected by the previous spatial filtering functions from the folder where you .crns files are.
+filter_foot and filter_rad return a character vector containing IDs of the chronologies that should be included in the next step of the analysis, which is to evaluate and filter based on correlation between chronologies and the target climate variable. The load_crns function reads those .crn files from a folder, such as those downloaded from the ITRDB or produced using ARSTAN. The user can select which measurement and chronology types associated with each ID to read in. The default is the standard ring width chronology. Other options include:
+
+   Code Measurement Type (`type_measure`)
+   D Total Ring Density
+   E Earlywood Width
+   I Earlywood Density
+   L Latewood Width
+   N Minimum Density
+   R Ring Width
+   T Latewood Density
+   X Maximum Density
+   P Latewood Percent
+    
+   Code Chronology Type (`type_crn`)
+   A ARSTND
+   P Low Pass Filter
+   R Residual
+   S Standard
+   W Re-Whitened Residual
+   N Measurements Only
+    
+ The output is a dataframe in which columns contain chronologies and rows are ring width observations 
 
 ```{r}
-crns_df <- load_crns(dir = system.file("extdata/crns", package = "pcreg", mustWork = TRUE), crns = select_crns_fp)
+crns_df <- load_crns(dir = system.file("extdata/crns", package = "pcrecon", mustWork = TRUE), crns = select_crns_fp)
 crns_df <- dplyr::arrange(crns_df, year)
 
 ```
 
-Next, you'll need to bring in the climate data. I've saved the streamflow data I downloaded from https://waterdata.usgs.gov/nwis as a csv file. The load_clim function, which aggregates the climate data based on the months of interest, require that these data be in 13 column or long (3 column) format.
+Next, I'll read in the streamflow data I downloaded from https://waterdata.usgs.gov/nwis. A big advantage of using R for these analyses is that any intermediary procedures (plotting, transformations) can be done in one environment and saved in a script for posterity. Here, I will take a look at the distribution and autoregressive order of the streamflow data.
 
 ```{r}
-climate <- read.csv(system.file("extdata/gallinas_flow.csv", package = "pcreg"))
-names(climate) <- c("year", 1:12)
-climate_long <- climate %>%
+
+# 13 column format with renamed columns
+data("gallinas_flow")
+names(gallinas_flow) <- c("year", 1:12)
+
+# long format
+climate_long <- gallinas_flow %>%
   tidyr::pivot_longer(2:13, names_to = "month", values_to = "value")
 
 ggplot(data = climate_long, aes(x = value)) + geom_histogram()
@@ -105,7 +135,7 @@ ar(climate_long$value)
 ```
 
 
-log transform
+These data are highly skewed. I'll do a log transform to try to make things a little more symmetric:
 ```{r}
 
 climate_long$value <- log(climate_long$value)
@@ -117,43 +147,70 @@ ar(climate_long$value)
 
 ```
 
-load_clim()
+The load_clim function aggregates the climate by calculating the mean or sum over particular months of interest. You can also select individual months. This function requires that these data be in 13 column (year and months 1:12) or long (3 column - "ID", "month", and "value") format. See examples above for how to use name() and/or pivot_longer to easily reformat to compatible data structures. 
 
 ```{r}
-climate <- load_clim(clim = climate_long, mos = -10:11, method = "mean", prewhiten.clim = TRUE)
+climate <- load_clim(clim = climate_long, mos = c(-6:6), method = "mean", prewhiten_clim = TRUE)
 
 ar(climate$clim_small$values)
 ```
 
-eval_clim() calculates correlations between the climate variable and the chronologies. 
-```{r}
-data <- eval_clim(crns = crns_df, lead = 1, lag = 1, prewhiten.crn = TRUE, climate = climate, calib = 1945:1972, valid = 1928:1944, cor.window = "calib", type = "pearson", alternative = "two.sided", r = 0.3, alpha = 0.9, print.out = TRUE, save.out = "csv", dir = "test/")
-```
-
-pcreg() 
-```{r}
-recon <- pcreg(data = data, pc.calc = "calib", select.pc = "eigenvalue1", scale.var = "calib", plot = TRUE, weight = NULL, cum.perc = NULL, save.out = "csv", dir = dir)
-```
+eval_clim() calculates correlations between the climate variable and the chronologies. Here, the user indicates the calibration/validation period for the intended model, the window over which to correlate the chronologies and climate, leads/lags, correlation test type, alpha value, and a correlation cutoff for selecting chronologies. Weighting features will be added later. See function documentation for options.
 
 ```{r}
-recon$model_stats
-recon$calibration_stats
-recon$validation_stats
-data$nests
+data_obj <- eval_clim(crns = crns_df, lead = 0, lag = 1, prewhiten_crn = TRUE, climate = climate, calib = 1950:1972, valid = 1928:1949, cor_window = "calib", type = "pearson", alternative = "two.sided", r = -1.0, conf = 0.95, print = TRUE, out_fmt = "csv", out_dir = "test/")
+```
+
+The output of eval_clim() is an S3 object of class "PCreg_data". This object contains lots of necessary pieces that feed into the final regression model function. You can view the the components of the object using the "$" operator:
+
+
+```{r}
+class(data_obj)
+
+data_obj$cors_table #table of all cross correlations
+data_obj$cors_table_small #table of selected chronology correlatons
+data_obj$nests 
+data_obj$clim_ar #autoregressive model selected for climate
+
+#etc.
+```
+
+
+
+The pcreg() function takes the information from the previous step in the form of the PCreg_data object, and performs the principal component regression estimates for each nest. The user indicates the selection threshold for PCs, the window over which to calculate PCs, and the window over which to scale the variance. 
+
+```{r}
+recon <- pcreg(data = data_obj, pc_calc = "calib", select_pc = "eigenvalue1", scale_var = "calib", plot = TRUE, weight = NULL, cum_perc = NULL)
+
+print(recon$plot)
+```
+
+
+The output of this function is an object of class PCreg_recon, and you can call the pieces of it as was done above. Output includes model estimates, validation and calibration period statistics (RE, CE, R2), as well as linear model and Principal Component Analysis objects for each nest, and autoregressive model statistics for climate and chronologies if AR prewhitening is used.
+
+```{r}
+recon$recon # model estimates with confidence intervals and reddened values
+recon$model_stats # linear regression model statistics
+recon$calibration_stats #calibration period statistics
+recon$validation_stats #validation period statistics
 
 ```
+
+Since we log transformed the target climate before running the model, let's exponentiate the reddened values and take a look:
 
 ```{r}
 
 reconstruction <- recon$recon %>%
-  mutate(recon_exp = exp(fit))
+  mutate(recon_exp = exp(reds))
 
-reconstruction <- full_join(reconstruction, climate$clim_small, by = "year")
+clim_NPW <- climate <- load_clim(clim = climate_long, mos = c(1:12), method = "mean", prewhiten_clim = FALSE)
+
+reconstruction <- full_join(reconstruction, clim_NPW$clim_small, by = "year")
 
 reconstruction$value <- exp(reconstruction$value)
 
 recon_recent <- reconstruction %>%
-  filter(year > 1850)
+  dplyr::filter(year > 1850)
 
 ggplot(data = reconstruction, aes(x = year, y = recon_exp)) + geom_line() + geom_line(aes(x = year, y = value), color = "blue")
 
