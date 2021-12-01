@@ -1,8 +1,8 @@
 #' Autoregressive Prewhitening
 #'
 #' @param x univariate or multivariate time series
-#' @param ...
 #' @param return character string, determines whether to return model estimates ("est"), the ar model ("model"), or both ("both")
+#' @param ... any additional arguments to ar()
 #'
 #' @details Function modified from ar.prewhiten in the dplR package by Andy Bunn.
 #'

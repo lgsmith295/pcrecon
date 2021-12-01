@@ -111,8 +111,8 @@ filter_foot and filter_rad return a character vector containing IDs of the chron
     
  The output is a dataframe in which columns contain chronologies and rows are ring width observations 
 
-```{r}
-crns_df <- load_crns(dir = system.file("extdata/crns", package = "pcrecon", mustWork = TRUE), crns = select_crns_fp)
+```{r, message=FALSE, warning=FALSE}
+crns_df <- load_crns(dir = system.file("extdata/crns", package = "pcrecon", mustWork = TRUE), crns = select_crns_fp$select_crns)
 crns_df <- dplyr::arrange(crns_df, year)
 
 ```

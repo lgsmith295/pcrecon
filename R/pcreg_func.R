@@ -15,7 +15,7 @@
 #'
 #' @examples
 #'
-pcreg <- function(data, pc_calc = "calib", select_pc = "eigenvalue1", cum_perc = NULL, m = NULL, scale_var = "calib", weight = NULL, plot = TRUE, out_fmt = "csv"){
+pcreg <- function(data, pc_calc = "calib", select_pc = "eigenvalue1", cum_perc = NULL, n = NULL, scale_var = "calib", weight = NULL, plot = TRUE, out_fmt = "csv"){
 
   if(class(data) != "PCreg_data"){ stop( "data must be object class PCreg_data, as is returned from the eval_clim function. See documentation for details")}
 
@@ -57,7 +57,7 @@ pcreg <- function(data, pc_calc = "calib", select_pc = "eigenvalue1", cum_perc =
     PCA_list[[i]] <- PCA$PCA
     }
 
-    select_PC <- select_PCs(data = PCA, type = select_pc, m = m, cum_perc = cum_perc)
+    select_PC <- select_PCs(data = PCA, type = select_pc, n = n, cum_perc = cum_perc)
 
     df <- mod_df(clim = clim, data = select_PC$PC_vals, eig = select_PC$eigval_small, nest_yrs = nest_yrs, calib = calib)
 
