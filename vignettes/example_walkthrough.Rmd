@@ -13,7 +13,7 @@ output:
 
 ```{r}
 #install.packages("remotes")
-remotes::install_github("lgsmith295/pcrecon", build_vignettes = FALSE)
+#remotes::install_github("lgsmith295/pcrecon", build_vignettes = FALSE)
 library(remotes)
 library(pcrecon)
 library(dplyr)
@@ -61,6 +61,7 @@ select_crns_rad <- filter_rad(x = metadata, cent_lat = 35.65, cent_lon = -105.32
 
 print(select_crns_rad$plot)
 
+
 ```
 
 
@@ -84,7 +85,7 @@ We select chronologies that are in an area where correlation between streamflow 
 
 
 ```{r}
-select_crns_fp <- filter_foot(x = metadata, footprint = footprint, r = 0.5, cent_lat = 35.65, cent_lon = -105.32, radius = 150, plot = TRUE)
+select_crns_fp <- filter_foot(x = metadata, footprint = footprint, r = 0.4, cent_lat = 35.65, cent_lon = -105.32, radius = 150, plot = TRUE)
 
 ```
 
@@ -158,7 +159,7 @@ ar(climate$clim_small$values)
 eval_clim() calculates correlations between the climate variable and the chronologies. Here, the user indicates the calibration/validation period for the intended model, the window over which to correlate the chronologies and climate, leads/lags, correlation test type, alpha value, and a correlation cutoff for selecting chronologies. Weighting features will be added later. See function documentation for options.
 
 ```{r}
-data_obj <- eval_clim(crns = crns_df, lead = 0, lag = 1, prewhiten_crn = TRUE, climate = climate, calib = 1950:1972, valid = 1928:1949, cor_window = "calib", type = "pearson", alternative = "two.sided", r = -1.0, conf = 0.95, print = TRUE, out_fmt = "csv", out_dir = "test/")
+data_obj <- eval_clim(crns = crns_df, lead = 0, lag = 1, prewhiten_crn = TRUE, climate = climate, calib = 1950:1972, valid = 1928:1949, cor_window = "calib", type = "pearson", alternative = "two.sided", conf = 0.95, print = TRUE, out_fmt = "csv", out_dir = "test/")
 ```
 
 The output of eval_clim() is an S3 object of class "PCreg_data". This object contains lots of necessary pieces that feed into the final regression model function. You can view the the components of the object using the "$" operator:
@@ -180,7 +181,7 @@ data_obj$clim_ar #autoregressive model selected for climate
 The pcreg() function takes the information from the previous step in the form of the PCreg_data object, and performs the principal component regression estimates for each nest. The user indicates the selection threshold for PCs, the window over which to calculate PCs, and the window over which to scale the variance. 
 
 ```{r}
-recon <- pcreg(data = data_obj, pc_calc = "calib", select_pc = "eigenvalue1", scale_var = "calib", plot = TRUE, weight = NULL, cum_perc = NULL)
+recon <- pcreg(data = data_obj, pc_calc = "calib", select_pc = "eigenvalue1",  scale_var = "calib", plot = TRUE, weight = NULL, cum_perc = NULL)
 
 print(recon$plot)
 ```
