@@ -173,9 +173,9 @@ pcreg <- function(data, pc_calc = "calib", select_pc = "eigenvalue1", cum_perc =
   }
 
 
-    recon_list <- list(clim = clim, recon = recon, validation_stats = val_stats_table, model_stats = model_table,                         calibration_stats = cal_stats_table, PCA = PCA_list, LM = LM_list)
+    recon_list <- list(clim = clim, recon = recon, nests = data$nests, validation_stats = val_stats_table, model_stats = model_table,                         calibration_stats = cal_stats_table, PCA = PCA_list, LM = LM_list)
 
-    if(isTRUE(prewhiten_clim)){recon_list <- list(clim = clim, recon = recon, validation_stats = val_stats_table,
+    if(isTRUE(prewhiten_clim)){recon_list <- list(clim = clim, recon = recon, nests = data$nests, validation_stats = val_stats_table,
                        model_stats = model_table, calibration_stats = cal_stats_table, clim_ar = data$clim_ar,                            crn_ar = data$crn_ar, PCA = PCA_list, LM = LM_list)}
 
   class(recon_list) <- "PCReg_recon"
@@ -195,9 +195,9 @@ pcreg <- function(data, pc_calc = "calib", select_pc = "eigenvalue1", cum_perc =
             ggplot2::geom_hline(aes(yintercept = mean(values, na.rm = TRUE)), colour = "black", size = 0.75) +
       ggplot2::theme_bw()
 
-  recon_list <- list(clim = clim, recon = recon, validation_stats = val_stats_table, model_stats = model_table,                         calibration_stats = cal_stats_table, PCA = PCA_list, LM = LM_list, plot = plot)
+  recon_list <- list(clim = clim, recon = recon, nests = data$nests, validation_stats = val_stats_table, model_stats = model_table,                         calibration_stats = cal_stats_table, PCA = PCA_list, LM = LM_list, plot = plot)
 
-  if(isTRUE(prewhiten_clim)){recon_list <- list(clim = clim, recon = recon, validation_stats = val_stats_table, model_stats = model_table, calibration_stats = cal_stats_table, clim_ar = data$clim_ar,crn_ar = data$crn_ar, PCA = PCA_list, LM = LM_list, plot = plot)}
+  if(isTRUE(prewhiten_clim)){recon_list <- list(clim = clim, recon = recon, nests = data$nests, validation_stats = val_stats_table, model_stats = model_table, calibration_stats = cal_stats_table, clim_ar = data$clim_ar,crn_ar = data$crn_ar, PCA = PCA_list, LM = LM_list, plot = plot)}
 
 
   }
